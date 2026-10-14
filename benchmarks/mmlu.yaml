@@ -50,8 +50,7 @@ variants:
               url: https://github.com/EleutherAI/lm-evaluation-harness/tree/6d642546f4688648fced259eb3302efd36ece5af/lm_eval/tasks
             - label: Completed biology run
               url: https://github.com/marin-community/marin/issues/9258
-    work:
-      - https://github.com/marin-community/marin/issues/9258
+    work: []
     notes:
       - "Access: Public data and native YAMLs for seven subjects. Three-subject biology integration
         validated with GLM-5.3 (554/554); four optional biomedical subjects remain unrun."

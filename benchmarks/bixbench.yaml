@@ -44,7 +44,6 @@ variants:
             - label: Execution evidence
               url: https://github.com/marin-community/marin/issues/9258#issuecomment-5744365667
     work:
-      - https://github.com/marin-community/marin/issues/9258
       - https://github.com/marin-community/harbor/pull/174
       - https://github.com/marin-community/harbor/issues/166
       - https://github.com/marin-community/harbor/issues/167
