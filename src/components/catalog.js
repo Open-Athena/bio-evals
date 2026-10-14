@@ -32,15 +32,16 @@ export function catalogTable(families, snapshot, Inputs) {
   // Primitive column values let native Inputs.table sort the displayed content.
   const rows=families.flatMap(f=>f.variants.map(v=>({
     name:f.name, description:f.description, creators:f.creators.join('; '),
+    framework:v.implementations.map(i=>i.framework).join('; '),
     variant:v.name, assignment:v.assignment || 'Unassigned',
-    implementation:v.implementations.map(i=>`${implementationRank(i.status)} ${implementationLabel(i.status)} (${i.framework})`).sort().join('; '),
+    implementation:v.implementations.map(i=>`${implementationRank(i.status)} ${implementationLabel(i.status)}`).sort().join('; '),
     work:v.work.map(url=>snapshot.items[url]?.title || url).join('; ') || 'No linked work',
     family:f, detail:v
   })));
   const container=node('div',undefined,'catalog-table card');
   container.append(Inputs.table(rows, {
-    columns:['name','description','creators','variant','assignment','implementation','work'],
-    header:{name:'Benchmark',description:'What it measures',creators:'Creator organization(s)',variant:'Version',assignment:'ID/OOD',implementation:'Implementation',work:'Linked work'},
+    columns:['name','description','creators','variant','assignment','framework','implementation','work'],
+    header:{name:'Benchmark',description:'What it measures',creators:'Creator organization(s)',variant:'Version',assignment:'ID/OOD',framework:'Framework',implementation:'Implementation',work:'Linked work'},
     format:{
       name:(_,i)=>familyLink(rows[i].family),
       variant:(_,i)=>{
@@ -52,7 +53,7 @@ export function catalogTable(families, snapshot, Inputs) {
         const container=node('div');
         for(const i of rows[index].detail.implementations) {
           const line=node('div',undefined,'implementation-entry');
-          line.append(node('small',i.framework),node('span',implementationLabel(i.status),`badge ${i.status}`));
+          line.append(node('span',implementationLabel(i.status),`badge ${i.status}`));
           if(i.assessment) {
             const details=node('details',undefined,'status-reason');
             details.append(node('summary','Status details'),node('p',i.assessment.reason));
@@ -66,7 +67,7 @@ export function catalogTable(families, snapshot, Inputs) {
       },
       work:(_,i)=>workCell({variants:[rows[i].detail]},snapshot)
     },
-    width:{name:160,description:280,creators:170,variant:200,assignment:100,implementation:210,work:230},
+    width:{name:160,description:280,creators:170,variant:200,assignment:80,framework:110,implementation:190,work:230},
     rows:15,maxHeight:1100,select:false,sort:'implementation'
   }));
   return container;
@@ -87,4 +88,20 @@ export function workCell(f,snapshot) {
     li.append(meta);list.append(li);
   }
   return list;
+}
+
+// Count benchmarks once per category, even if future entries have multiple integrations.
+export function catalogCounts(benchmarks, field, domain) {
+  return domain.map(key=>({key, label:field==='status'?implementationLabel(key):key,
+    count:benchmarks.filter(b=>b.variants.some(v=>v.implementations.some(i=>i[field]===key))).length}));
+}
+export function countChart(data, Plot, width, label) {
+  const colors={yes:'var(--theme-green)',in_progress:'var(--theme-blue)',no:'var(--theme-foreground-muted)',blocked:'var(--theme-red)'};
+  return Plot.plot({width, height:170, marginLeft:100, marginRight:32, marginTop:8, marginBottom:30,
+    ariaLabel:`${label}: ${data.map(d=>`${d.label} ${d.count}`).join(', ')}`,
+    x:{domain:[0,Math.max(1,...data.map(d=>d.count))], label:'Benchmarks', grid:true, ticks:4, tickFormat:d=>Number.isInteger(d)?d:''},
+    y:{domain:data.map(d=>d.label), label:null},
+    marks:[Plot.barX(data,{x:'count',y:'label',fill:d=>colors[d.key] || 'var(--theme-blue)',insetTop:5,insetBottom:5}),
+      Plot.text(data,{x:'count',y:'label',text:d=>String(d.count),textAnchor:'start',dx:5}),Plot.ruleX([0])]
+  });
 }

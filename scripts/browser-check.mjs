@@ -45,12 +45,16 @@ try {
   const filterPositions=await page.locator('.filters > form').evaluateAll(forms=>forms.map(f=>f.getBoundingClientRect().top));
   assert.equal(filterPositions.length,3);
   assert.ok(Math.max(...filterPositions)-Math.min(...filterPositions)<2,'Desktop filters share one row');
+  await page.waitForFunction(()=>document.querySelector('.status-chart svg')?.getAttribute('aria-label')?.includes('Implemented 4'));
+  assert.match(await page.locator('.status-chart svg').getAttribute('aria-label'), /Implemented 4/);
   const search=page.getByLabel('Search evaluations');
   await search.fill('BixBench');
   await page.waitForFunction(()=>document.querySelectorAll('.catalog-table tbody tr').length===1 && document.querySelector('.catalog-table tbody')?.textContent.includes('BixBench v1.5'));
+  await page.waitForFunction(()=>document.querySelector('.status-chart svg')?.getAttribute('aria-label')?.includes('Implemented 1'));
+  assert.match(await page.locator('.framework-chart svg').getAttribute('aria-label'), /Harbor 1/);
   assert.equal(await page.locator('.catalog-table tbody').count(),1);
   assert.equal(await page.locator('.catalog-table tbody tr').count(),1);
-  for(const title of ['Benchmark','What it measures','Creator organization(s)','Version','ID/OOD','Implementation','Linked work']) {
+  for(const title of ['Benchmark','What it measures','Creator organization(s)','Version','ID/OOD','Framework','Implementation','Linked work']) {
     assert.equal(await page.getByRole('columnheader',{name:title,exact:false}).count(),1);
   }
   await search.fill('MMLU');
@@ -68,6 +72,7 @@ try {
   await page.waitForFunction(()=>document.querySelector('.catalog-table tbody')?.querySelectorAll('.variant-cell').length===1);
   await page.getByLabel('Framework',{exact:true}).selectOption({label:'Evalchemy'});
   await page.waitForFunction(()=>document.querySelectorAll('.catalog-table tbody tr').length===0);
+  await page.waitForFunction(()=>document.querySelector('.status-chart svg')?.getAttribute('aria-label')?.includes('Implemented 0'));
   await page.getByLabel('Framework',{exact:true}).selectOption({label:'All frameworks'});
   await page.getByLabel('Implementation',{exact:true}).selectOption({label:'All states'});
   await search.fill('');

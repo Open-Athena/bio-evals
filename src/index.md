@@ -7,17 +7,11 @@ title: Biology evaluations
 What the evaluations measure, and where implementation stands. Explore benchmarks and follow the work across repositories.
 
 ```js
-import {filterCatalog, catalogTable, trackedCatalog} from './components/catalog.js';
+import {filterCatalog, catalogTable, trackedCatalog, catalogCounts, countChart} from './components/catalog.js';
 const catalog = trackedCatalog(await FileAttachment('./data/catalog.json').json());
 const snapshot = await FileAttachment('./data/github-status.json').json();
 const variants = catalog.flatMap(f => f.variants);
 ```
-
-<div class="summary">
-  <div class="card"><strong>${catalog.length}</strong>benchmarks</div>
-  <div class="card"><strong>${variants.filter(v => v.implementations.some(i => i.status === 'yes')).length}</strong>implemented</div>
-  <div class="card"><strong>${new Set(variants.flatMap(v => v.work)).size}</strong>linked issues & PRs</div>
-</div>
 
 ```js
 const filters = view(Inputs.form({
@@ -30,6 +24,16 @@ const filters = view(Inputs.form({
 ```js
 const filtered = filterCatalog(catalog, filters.query || '', filters.framework, filters.implementation);
 ```
+
+```js
+const frameworkCounts = catalogCounts(filtered, 'framework', [...new Set(variants.flatMap(v => v.implementations.map(i => i.framework)))]);
+const statusCounts = catalogCounts(filtered, 'status', ['yes', 'in_progress', 'no', 'blocked']);
+```
+
+<div class="catalog-charts">
+  <div class="card framework-chart"><h2>Framework</h2>${resize(width => countChart(frameworkCounts, Plot, width, 'Framework'))}</div>
+  <div class="card status-chart"><h2>Implementation</h2>${resize(width => countChart(statusCounts, Plot, width, 'Implementation'))}</div>
+</div>
 
 ```js
 display(catalogTable(filtered, snapshot, Inputs));

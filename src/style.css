@@ -36,3 +36,8 @@ a:focus-visible, summary:focus-visible { outline:2px solid var(--theme-foregroun
 .badge.blocked { color:var(--theme-red); }
 .status-reason { margin-top:5px; font-size:12px; }
 .status-reason summary { cursor:pointer; color:var(--theme-foreground-muted); }
+
+.catalog-charts { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; margin:20px 0; }
+.catalog-charts .card { margin:0; min-width:0; }
+.catalog-charts h2 { margin:0 0 12px; font-size:16px; }
+@media (max-width:640px) { .catalog-charts { grid-template-columns:1fr; } }
