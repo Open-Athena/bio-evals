@@ -95,8 +95,8 @@ try {
   assert.equal(await page.locator('.variant-notes details').count(),3);
   assert.match(await page.locator('.variant-notes').innerText(),/Verified-50/);
   assert.match(await page.getByRole('link',{name:'Edit this entry'}).getAttribute('href'),/benchmarks\/bixbench.yaml$/);
-  await page.locator('summary').first().click();
-  assert.ok(await page.locator('details').first().getAttribute('open')!==null);
+  await page.locator('.variant-detail summary').first().click();
+  assert.ok(await page.locator('.variant-detail details').first().getAttribute('open')!==null);
   await page.screenshot({path:artifacts+'/family-desktop.png',fullPage:true});
   await page.getByRole('link',{name:'← All evaluations'}).click();
   await page.waitForSelector('.catalog-table tbody tr');
