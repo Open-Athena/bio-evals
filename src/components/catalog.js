@@ -1,3 +1,10 @@
+export function selectedVersion(benchmark) {
+  return benchmark.variants.find(v=>v.id===benchmark.selected_variant) || (benchmark.variants.length===1?benchmark.variants[0]:undefined);
+}
+export function trackedCatalog(benchmarks) {
+  return benchmarks.map(b=>({...b, variants:[selectedVersion(b)]}));
+}
+
 export function filterCatalog(families, query='', framework='All frameworks', status='All states') {
   const words=query.toLowerCase().trim().split(/\s+/).filter(Boolean);
   return families.flatMap(f=>{
@@ -32,7 +39,7 @@ export function catalogTable(families, snapshot, Inputs) {
   const container=node('div',undefined,'catalog-table card');
   container.append(Inputs.table(rows, {
     columns:['name','description','creators','variant','assignment','implementation','work'],
-    header:{name:'Benchmark family',description:'What it measures',creators:'Creator organization(s)',variant:'Variants',assignment:'ID/OOD',implementation:'Implementation',work:'Linked work'},
+    header:{name:'Benchmark',description:'What it measures',creators:'Creator organization(s)',variant:'Version',assignment:'ID/OOD',implementation:'Implementation',work:'Linked work'},
     format:{
       name:(_,i)=>familyLink(rows[i].family),
       variant:(_,i)=>{
@@ -52,7 +59,7 @@ export function catalogTable(families, snapshot, Inputs) {
       work:(_,i)=>workCell({variants:[rows[i].detail]},snapshot)
     },
     width:{name:160,description:280,creators:170,variant:200,assignment:100,implementation:210,work:230},
-    rows:15,maxHeight:1100,select:false,sort:'name'
+    rows:15,maxHeight:1100,select:false,sort:'implementation'
   }));
   return container;
 }

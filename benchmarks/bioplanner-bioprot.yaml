@@ -19,7 +19,7 @@ variants:
       - Francis Crick Institute
       - University of Oxford
       - FutureHouse
-    assignment: TBD
+    assignment: ID
     sources:
       - label: Benchmark
         url: https://aclanthology.org/2023.emnlp-main.162/

@@ -13,7 +13,7 @@ variants:
     description: Expert biology problems from FrontierScience’s Olympiad and Research tracks.
     creators:
       - OpenAI
-    assignment: TBD
+    assignment: ID
     sources:
       - label: Benchmark
         url: https://openai.com/index/frontierscience/

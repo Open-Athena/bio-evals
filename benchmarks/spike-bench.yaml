@@ -13,7 +13,7 @@ variants:
     description: Biosecurity evaluation of model refusal and computationally assessed biological outputs.
     creators:
       - Peking University (PKU-Alignment)
-    assignment: TBD
+    assignment: ID
     sources:
       - label: Benchmark
         url: https://github.com/PKU-Alignment/SPIKE-Bench

@@ -19,7 +19,7 @@ variants:
       - Scale AI
       - SecureBio
       - multi-institution collaboration
-    assignment: TBD
+    assignment: ID
     sources:
       - label: Benchmark
         url: https://www.wmdp.ai/

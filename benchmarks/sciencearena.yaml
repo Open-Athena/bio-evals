@@ -19,7 +19,7 @@ variants:
       - Tsinghua University
       - University of Hong Kong
       - Peking University
-    assignment: TBD
+    assignment: ID
     sources:
       - label: Benchmark
         url: https://arxiv.org/abs/2608.30517

@@ -17,7 +17,7 @@ variants:
     creators:
       - DP Technology
       - AI for Science Institute, Beijing
-    assignment: TBD
+    assignment: ID
     sources:
       - label: Benchmark
         url: https://arxiv.org/abs/2403.01976

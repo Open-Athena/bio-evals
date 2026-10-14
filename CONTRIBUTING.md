@@ -1,21 +1,27 @@
 # Updating the catalog
 
-Edit a file in `benchmarks/`, or follow **Edit this entry** from a family page.
-Each YAML file represents a benchmark family, with distinct variant/protocol
-records inside it. Routine updates may go directly to `main`; larger code
+Edit a file in `benchmarks/`, or follow **Edit this entry** from a benchmark page.
+Each YAML file represents one benchmark. Only one version is tracked; other
+variant/protocol records are retained as historical context for the notes. Routine updates may go directly to `main`; larger code
 changes may use a PR. GitHub Actions validates and deploys changes.
 
 ## Fields
 
-- Family: stable `id`, `name`, free-text `description` (what it measures),
+- Benchmark: stable `id`, `name`, free-text `description` (what it measures),
   `creators`, `sources` (label and URL), `notes`, and `variants`.
+- `selected_variant` identifies the sole tracked version when multiple records
+  exist. A single-record benchmark selects that record automatically. Prefer
+  verified end-to-end evidence, otherwise the main/original version; flag
+  ambiguous choices in `notes`. Only the selected record supplies table status,
+  filters, counters, and refreshed GitHub work. Other records are historical
+  context, rendered in the notes without separate implementation tracking.
 - Variant: stable `id`, `name`, `description`, `creators`, internal `assignment`,
   `sources`, `notes`, `work`, `implementations`, and `provenance`.
 - Each implementation pairs a `framework` with `status`: quoted `yes`, `no`, or
   `unknown`. `evidence` is a list of URL, tested `scope`, and `checked_at` date.
   A yes requires end-to-end execution including grading. An adapter or merged
   PR is insufficient. Keep incomplete/modified protocol coverage explicit.
-- ID/OOD is the editable `assignment`. Preserve TBD or use null when unknown.
+- ID/OOD is the editable `assignment`. Use ID or OOD, or null when unknown. Existing TBD assignments were changed to ID on October 14, 2026.
   It is our internal assignment, not a contamination claim. Updating it does
   not require rewriting the historical import snapshot.
 - `work` contains canonical public GitHub issue/PR URLs, for example
@@ -59,7 +65,7 @@ npm run build
 npm run dev
 ```
 
-`npm run build` generates family Markdown pages and browser JSON from the YAML,
+`npm run build` generates benchmark Markdown pages and browser JSON from the YAML,
 then compiles Observable Framework. Generated `src/benchmarks/`, `src/data/`,
 `src/github-status.json`, and `dist/` are ignored; do not edit them.
 

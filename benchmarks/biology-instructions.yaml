@@ -15,7 +15,7 @@ variants:
     creators:
       - Shanghai AI Laboratory
       - collaborators (see note)
-    assignment: TBD
+    assignment: ID
     sources:
       - label: Benchmark
         url: https://github.com/hhnqqq/Biology-Instructions

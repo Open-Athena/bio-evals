@@ -18,7 +18,7 @@ variants:
       - Southern University of Science and Technology
       - Pengcheng Laboratory
       - Institute of Mechanics, CAS
-    assignment: TBD
+    assignment: ID
     sources:
       - label: Benchmark
         url: https://arxiv.org/abs/2604.03361

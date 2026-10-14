@@ -13,7 +13,7 @@ variants:
     description: Five figure-based biological reasoning pilot cases.
     creators:
       - Unverified institutional affiliation — nayala1
-    assignment: TBD
+    assignment: ID
     sources:
       - label: Benchmark
         url: https://github.com/nayala1/BioReasonBench

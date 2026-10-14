@@ -15,7 +15,7 @@ variants:
     creators:
       - Toursun Synbio
       - collaborators (see note)
-    assignment: TBD
+    assignment: ID
     sources:
       - label: Benchmark
         url: https://arxiv.org/abs/2406.05540

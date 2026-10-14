@@ -15,7 +15,7 @@ variants:
     creators:
       - NIH CARD
       - DataTecnica
-    assignment: TBD
+    assignment: ID
     sources:
       - label: Benchmark
         url: https://pmc.ncbi.nlm.nih.gov/articles/PMC12974222/

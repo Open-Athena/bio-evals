@@ -23,7 +23,7 @@ variants:
       - University of Sheffield
       - University of Manchester
       - CRUK Manchester Institute
-    assignment: TBD
+    assignment: ID
     sources:
       - label: Benchmark
         url: https://arxiv.org/abs/2606.13020

@@ -13,7 +13,7 @@ variants:
     description: Identify consequential errors in laboratory protocols.
     creators:
       - Oxford Biosecurity Group
-    assignment: TBD
+    assignment: ID
     sources:
       - label: Benchmark
         url: https://www.biorxiv.org/content/10.1101/2024.08.21.608694v4

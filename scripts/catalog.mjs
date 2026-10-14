@@ -1,3 +1,4 @@
+import {selectedVersion} from '../src/components/catalog.js';
 import {readdir, readFile} from 'node:fs/promises';
 import {parse} from 'yaml';
 
@@ -28,6 +29,7 @@ export function validateCatalog(families, inventory) {
     check(string(f.name) && string(f.description), `${label}: name and description required`);
     check(strings(f.creators) && sources(f.sources) && strings(f.notes), `${label}: invalid creators/sources/notes`);
     check(Array.isArray(f.variants) && f.variants.length, `${label}: variants required`);
+    check(f.variants?.length===1 && f.selected_variant===undefined || f.variants?.some(v=>v.id===f.selected_variant), `${label}: selected_variant must identify the tracked version`);
     for (const v of f.variants || []) {
       const key = `${label}/${v.id}`;
       check(id(v.id) && !variantIds.has(v.id), `${key}: invalid or duplicate variant ID`);
@@ -69,5 +71,5 @@ export function validateCatalog(families, inventory) {
 }
 
 export function linkedWork(families) {
-  return [...new Set(families.flatMap(f => f.variants.flatMap(v => v.work)))].sort();
+  return [...new Set(families.flatMap(f => selectedVersion(f).work))].sort();
 }

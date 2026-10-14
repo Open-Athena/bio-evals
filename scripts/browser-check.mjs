@@ -27,28 +27,37 @@ try {
     viewport:{width:1440,height:1000},
     args:process.env.GITHUB_ACTIONS?[]:['--disable-gpu','--disable-software-rasterizer','--use-gl=disabled','--no-zygote','--single-process','--renderer-process-limit=1','--js-flags=--max-old-space-size=96']});
   page=browser.pages()[0] || await browser.newPage();
+  page.setDefaultTimeout(20000);
   page.on('pageerror',error=>errors.push(error.message));
   page.on('response',response=>{if(response.status()>=400 && response.url().startsWith(base))failed.push(`${response.status()} ${response.url()}`);});
   assert.equal((await page.goto(base)).status(),200);
   await page.waitForSelector('.catalog-table tbody tr',{timeout:20000});
   assert.equal(await page.locator('.observablehq--error').count(),0,await page.locator('body').innerText());
+  assert.match(await page.locator('.catalog-table tbody tr').first().innerText(),/BixBench/);
+  const filterPositions=await page.locator('.filters > form').evaluateAll(forms=>forms.map(f=>f.getBoundingClientRect().top));
+  assert.equal(filterPositions.length,3);
+  assert.ok(Math.max(...filterPositions)-Math.min(...filterPositions)<2,'Desktop filters share one row');
   const search=page.getByLabel('Search evaluations');
   await search.fill('BixBench');
-  await page.waitForFunction(()=>document.querySelector('.catalog-table tbody')?.textContent.includes('Verified-50'));
+  await page.waitForFunction(()=>document.querySelector('.catalog-table tbody')?.textContent.includes('BixBench v1.5'));
   assert.equal(await page.locator('.catalog-table tbody').count(),1);
-  assert.equal(await page.locator('.catalog-table tbody tr').count(),4);
-  for(const title of ['Benchmark family','What it measures','Creator organization(s)','Variants','ID/OOD','Implementation','Linked work']) {
+  assert.equal(await page.locator('.catalog-table tbody tr').count(),1);
+  for(const title of ['Benchmark','What it measures','Creator organization(s)','Version','ID/OOD','Implementation','Linked work']) {
     assert.equal(await page.getByRole('columnheader',{name:title,exact:false}).count(),1);
   }
-  const variantHeader=page.getByRole('columnheader',{name:'Variants',exact:false});
+  await search.fill('MMLU');
+  await page.waitForFunction(()=>document.querySelectorAll('.catalog-table tbody tr').length===3);
+  const variantHeader=page.getByRole('columnheader',{name:'Version',exact:false});
   await variantHeader.click();
   const ascending=await page.locator('.variant-cell').allTextContents();
   await variantHeader.click();
   const descending=await page.locator('.variant-cell').allTextContents();
   assert.deepEqual(descending,[...ascending].reverse(),'Native column sorting reverses variant order');
+  await search.fill('BixBench');
+  await page.waitForFunction(()=>document.querySelectorAll('.catalog-table tbody tr').length===1);
   assert.match(await page.locator('.catalog-table').innerText(),/merged/);
   await page.getByLabel('Implementation',{exact:true}).selectOption({label:'Implemented'});
-  await page.waitForFunction(()=>document.querySelector('.catalog-table tbody')?.querySelectorAll('.variant-cell').length===2);
+  await page.waitForFunction(()=>document.querySelector('.catalog-table tbody')?.querySelectorAll('.variant-cell').length===1);
   await page.getByLabel('Framework',{exact:true}).selectOption({label:'Evalchemy'});
   await page.waitForFunction(()=>document.querySelectorAll('.catalog-table tbody tr').length===0);
   await page.getByLabel('Framework',{exact:true}).selectOption({label:'All frameworks'});
@@ -61,7 +70,9 @@ try {
   await search.fill('BixBench');
   await page.getByRole('link',{name:'BixBench',exact:true}).first().click();
   await page.waitForURL('**/benchmarks/bixbench');
-  assert.equal(await page.locator('.variant-detail').count(),4);
+  assert.equal(await page.locator('.variant-detail').count(),1);
+  assert.equal(await page.locator('.variant-notes details').count(),3);
+  assert.match(await page.locator('.variant-notes').innerText(),/Verified-50/);
   assert.match(await page.getByRole('link',{name:'Edit this entry'}).getAttribute('href'),/benchmarks\/bixbench.yaml$/);
   await page.locator('summary').first().click();
   assert.ok(await page.locator('details').first().getAttribute('open')!==null);

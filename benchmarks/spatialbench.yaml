@@ -6,9 +6,8 @@ creators:
 sources:
   - label: Benchmark
     url: https://arxiv.org/abs/2512.21907
-notes:
-  - Family grouping is for navigation; variants may have different creators, datasets, grading
-    protocols, and internal assignments.
+notes: []
+selected_variant: spatialbench
 variants:
   - id: spatialbench
     name: SpatialBench

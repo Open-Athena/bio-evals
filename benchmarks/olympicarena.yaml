@@ -17,7 +17,7 @@ variants:
       - Shanghai Jiao Tong University / GAIR
       - Shanghai AI Laboratory
       - Soochow University
-    assignment: TBD
+    assignment: ID
     sources:
       - label: Benchmark
         url: https://github.com/GAIR-NLP/OlympicArena

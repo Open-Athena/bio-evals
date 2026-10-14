@@ -13,7 +13,7 @@ variants:
     description: Protein-related LLM predictions using sequences, optionally with structure images.
     creators:
       - Unverified institutional affiliation — Rongdingyi
-    assignment: TBD
+    assignment: ID
     sources:
       - label: Benchmark
         url: https://github.com/Rongdingyi/LiveProteinBench

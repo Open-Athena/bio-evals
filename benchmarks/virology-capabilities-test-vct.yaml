@@ -20,7 +20,7 @@ variants:
       - Center for AI Safety
       - UFABC
       - MIT Media Lab
-    assignment: TBD
+    assignment: ID
     sources:
       - label: Benchmark
         url: https://securebio.org/virologytest/

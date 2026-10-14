@@ -17,7 +17,7 @@ variants:
       - University of Pittsburgh
       - Carnegie Mellon University
       - Google AI
-    assignment: TBD
+    assignment: ID
     sources:
       - label: Benchmark
         url: https://arxiv.org/abs/1909.06146

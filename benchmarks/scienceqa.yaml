@@ -17,7 +17,7 @@ variants:
       - UCLA
       - Allen Institute for AI
       - Arizona State University
-    assignment: TBD
+    assignment: ID
     sources:
       - label: Benchmark
         url: https://scienceqa.github.io/

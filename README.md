@@ -5,9 +5,9 @@ implementation status, and linked GitHub issues and PRs.
 
 **[Open the explorer](https://openathena.ai/bio-evals/)**
 
-The catalog contains 94 benchmark families and 120 variant/protocol entries,
-imported from both spreadsheet tabs. It uses Observable Framework with a
-searchable overview, family pages, and daily GitHub issue/PR status snapshots.
+The catalog contains 94 benchmarks, each tracking one selected version. Notes retain
+other versions from the 120 original spreadsheet entries. It uses Observable Framework with a
+searchable overview, benchmark pages, and daily GitHub issue/PR status snapshots.
 
 [Project issues and scope](docs/issues/README.md) ·
 [Contributing](CONTRIBUTING.md) · [Import reconciliation](docs/import.md)

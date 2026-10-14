@@ -6,9 +6,8 @@ creators:
 sources:
   - label: Benchmark
     url: https://arxiv.org/abs/2602.09063
-notes:
-  - Family grouping is for navigation; variants may have different creators, datasets, grading
-    protocols, and internal assignments.
+notes: []
+selected_variant: scbench
 variants:
   - id: scbench
     name: scBench

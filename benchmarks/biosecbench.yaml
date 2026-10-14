@@ -8,8 +8,8 @@ sources:
   - label: Benchmark
     url: https://github.com/latchbio/biosecbench-surveillance
 notes:
-  - Family grouping is for navigation; variants may have different creators, datasets, grading
-    protocols, and internal assignments.
+  - "Version selection needs review: BioSecBench-Surveillance is the provisional tracked scope; the source lists multiple task types or protocols without a single unambiguous default."
+selected_variant: biosecbench-surveillance
 variants:
   - id: biosecbench-surveillance
     name: BioSecBench-Surveillance
@@ -115,7 +115,7 @@ variants:
       risk-bearing tasks."
     creators:
       - LatchBio
-    assignment: TBD
+    assignment: ID
     sources:
       - label: Benchmark
         url: https://arxiv.org/abs/2607.05462

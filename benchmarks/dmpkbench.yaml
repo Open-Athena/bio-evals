@@ -13,7 +13,7 @@ variants:
     description: Drug metabolism/pharmacokinetics, ADMET reasoning, interpretation and modeling.
     creators:
       - Global Health Drug Discovery Institute (GHDDI)
-    assignment: TBD
+    assignment: ID
     sources:
       - label: Benchmark
         url: https://github.com/GHDDI-AILab/DMPKBench

@@ -15,7 +15,7 @@ variants:
     creators:
       - Princeton University
       - Stanford University
-    assignment: TBD
+    assignment: ID
     sources:
       - label: Benchmark
         url: https://arxiv.org/abs/2505.19501

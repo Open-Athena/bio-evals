@@ -10,9 +10,8 @@ creators:
 sources:
   - label: Benchmark
     url: https://arxiv.org/abs/2009.03300
-notes:
-  - Family grouping is for navigation; variants may have different creators, datasets, grading
-    protocols, and internal assignments.
+notes: []
+selected_variant: mmlu-biology-biomedical-subjects
 variants:
   - id: mmlu-biology-biomedical-subjects
     name: MMLU — biology / biomedical subjects

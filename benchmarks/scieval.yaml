@@ -13,7 +13,7 @@ variants:
     description: Biology subset of a roughly 18k-question scientific knowledge, reasoning and application suite.
     creators:
       - Shanghai Jiao Tong University
-    assignment: TBD
+    assignment: ID
     sources:
       - label: Benchmark
         url: https://github.com/OpenDFM/SciEval

@@ -10,9 +10,8 @@ creators:
 sources:
   - label: Benchmark
     url: https://mmmu-benchmark.github.io/
-notes:
-  - Family grouping is for navigation; variants may have different creators, datasets, grading
-    protocols, and internal assignments.
+notes: []
+selected_variant: mmmu-biology-basic-medical-science
 variants:
   - id: mmmu-biology-basic-medical-science
     name: MMMU — biology / basic medical science
@@ -22,7 +21,7 @@ variants:
       - Waterloo
       - Ohio State
       - collaborators (see note)
-    assignment: TBD
+    assignment: ID
     sources:
       - label: Benchmark
         url: https://mmmu-benchmark.github.io/
@@ -53,7 +52,7 @@ variants:
     description: More robust multimodal academic questions; biology/basic medical science slice.
     creators:
       - MMMU Team
-    assignment: TBD
+    assignment: ID
     sources:
       - label: Benchmark
         url: https://arxiv.org/abs/2409.02813

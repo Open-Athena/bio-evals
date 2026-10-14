@@ -8,8 +8,8 @@ sources:
   - label: Benchmark
     url: https://www.bioasq.org/
 notes:
-  - Family grouping is for navigation; variants may have different creators, datasets, grading
-    protocols, and internal assignments.
+  - "Version selection needs review: BioASQ — retrieval / end-to-end QA is the provisional tracked scope; the source lists multiple task types or protocols without a single unambiguous default."
+selected_variant: bioasq-retrieval-end-to-end-qa
 variants:
   - id: bioasq-retrieval-end-to-end-qa
     name: BioASQ — retrieval / end-to-end QA
@@ -49,7 +49,7 @@ variants:
     creators:
       - BioASQ consortium
       - Microsoft Research (BLURB adaptation)
-    assignment: TBD
+    assignment: ID
     sources:
       - label: Benchmark
         url: https://microsoft.github.io/BLURB/tasks.html
@@ -81,7 +81,7 @@ variants:
     description: BioASQ factoid/list biomedical QA with supporting snippets supplied to the model.
     creators:
       - BioASQ consortium
-    assignment: TBD
+    assignment: ID
     sources:
       - label: Benchmark
         url: https://www.bioasq.org/
@@ -114,7 +114,7 @@ variants:
     description: BioASQ ideal-answer synthesis from supplied biomedical evidence snippets.
     creators:
       - BioASQ consortium
-    assignment: TBD
+    assignment: ID
     sources:
       - label: Benchmark
         url: https://www.bioasq.org/

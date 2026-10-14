@@ -15,7 +15,7 @@ variants:
     creators:
       - Stony Brook University
       - University of Arizona
-    assignment: TBD
+    assignment: ID
     sources:
       - label: Benchmark
         url: https://arxiv.org/abs/2210.14814

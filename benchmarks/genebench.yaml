@@ -7,9 +7,8 @@ creators:
 sources:
   - label: Benchmark
     url: https://huggingface.co/datasets/openai/genebench-pro-public-package
-notes:
-  - Family grouping is for navigation; variants may have different creators, datasets, grading
-    protocols, and internal assignments.
+notes: []
+selected_variant: genebench-original
 variants:
   - id: genebench-pro
     name: GeneBench-Pro

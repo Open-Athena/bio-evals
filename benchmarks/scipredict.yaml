@@ -19,7 +19,7 @@ variants:
       - UCLA
       - University of Maryland
       - Princeton University
-    assignment: TBD
+    assignment: ID
     sources:
       - label: Benchmark
         url: https://github.com/scaleapi/scipredict

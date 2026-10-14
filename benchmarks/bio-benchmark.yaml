@@ -19,7 +19,7 @@ variants:
       - Chinese University of Hong Kong
       - University of Hong Kong
       - Shanghai AI Laboratory
-    assignment: TBD
+    assignment: ID
     sources:
       - label: Benchmark
         url: https://arxiv.org/abs/2503.04013

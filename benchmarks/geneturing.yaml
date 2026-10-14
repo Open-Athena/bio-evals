@@ -17,7 +17,7 @@ variants:
     creators:
       - Columbia University
       - Duke University
-    assignment: TBD
+    assignment: ID
     sources:
       - label: Benchmark
         url: https://github.com/Winnie09/GeneTuring

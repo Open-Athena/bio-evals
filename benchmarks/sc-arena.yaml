@@ -19,7 +19,7 @@ variants:
       - Shenzhen University of Advanced Technology
       - Northeastern University (China)
       - collaborators (see note)
-    assignment: TBD
+    assignment: ID
     sources:
       - label: Benchmark
         url: https://arxiv.org/abs/2602.23199

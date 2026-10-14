@@ -9,9 +9,8 @@ creators:
 sources:
   - label: Benchmark
     url: https://arxiv.org/abs/2503.13399
-notes:
-  - Family grouping is for navigation; variants may have different creators, datasets, grading
-    protocols, and internal assignments.
+notes: []
+selected_variant: microvqa
 variants:
   - id: microvqa
     name: MicroVQA
@@ -20,7 +19,7 @@ variants:
       - Stanford University
       - Chan Zuckerberg Biohub Network
       - collaborators (see note)
-    assignment: TBD
+    assignment: ID
     sources:
       - label: Benchmark
         url: https://arxiv.org/abs/2503.13399
@@ -51,7 +50,7 @@ variants:
     description: Microscopy reasoning dataset/evaluation proposal extending the MicroVQA research direction.
     creators:
       - Fudan University
-    assignment: TBD
+    assignment: ID
     sources:
       - label: Benchmark
         url: https://arxiv.org/abs/2511.11407

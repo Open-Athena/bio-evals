@@ -15,7 +15,7 @@ variants:
     creators:
       - Fudan University
       - East China Normal University
-    assignment: TBD
+    assignment: ID
     sources:
       - label: Benchmark
         url: https://arxiv.org/abs/2305.12474

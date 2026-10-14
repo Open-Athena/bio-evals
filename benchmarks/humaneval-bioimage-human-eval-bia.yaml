@@ -17,7 +17,7 @@ variants:
       - Leipzig University / ScaDS.AI
       - EMBL
       - Max Planck Institute for Human Cognitive and Brain Sciences
-    assignment: TBD
+    assignment: ID
     sources:
       - label: Benchmark
         url: https://doi.org/10.1101/2024.04.19.590278

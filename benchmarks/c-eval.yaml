@@ -19,7 +19,7 @@ variants:
       - Tsinghua University
       - University of Edinburgh
       - HKUST
-    assignment: TBD
+    assignment: ID
     sources:
       - label: Benchmark
         url: https://arxiv.org/abs/2305.08322

@@ -8,15 +8,15 @@ sources:
   - label: Benchmark
     url: https://arxiv.org/abs/2505.07889
 notes:
-  - Family grouping is for navigation; variants may have different creators, datasets, grading
-    protocols, and internal assignments.
+  - "Version selection needs review: BioProBench — PQA / ERR is the provisional tracked scope; the source lists multiple task types or protocols without a single unambiguous default."
+selected_variant: bioprobench-pqa-err
 variants:
   - id: bioprobench-pqa-err
     name: BioProBench — PQA / ERR
     description: Protocol MCQ and context-dependent step-error detection.
     creators:
       - Peking University
-    assignment: TBD
+    assignment: ID
     sources:
       - label: Benchmark
         url: https://arxiv.org/abs/2505.07889
@@ -49,7 +49,7 @@ variants:
     description: "BioProBench step ordering (ORD): recover the order of biological protocol steps."
     creators:
       - Peking University
-    assignment: TBD
+    assignment: ID
     sources:
       - label: Benchmark
         url: https://arxiv.org/abs/2505.07889
@@ -80,7 +80,7 @@ variants:
     description: BioProBench protocol generation (GEN).
     creators:
       - Peking University
-    assignment: TBD
+    assignment: ID
     sources:
       - label: Benchmark
         url: https://arxiv.org/abs/2505.07889
@@ -111,7 +111,7 @@ variants:
     description: BioProBench reasoning conditions, including REA-ERR and REA-GEN.
     creators:
       - Peking University
-    assignment: TBD
+    assignment: ID
     sources:
       - label: Benchmark
         url: https://arxiv.org/abs/2505.07889

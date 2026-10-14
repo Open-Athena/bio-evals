@@ -8,8 +8,8 @@ sources:
   - label: Benchmark
     url: https://latch.bio/txbench-pp
 notes:
-  - Family grouping is for navigation; variants may have different creators, datasets, grading
-    protocols, and internal assignments.
+  - "Version selection needs review: TxBench-PP — preclinical pharmacology is the provisional tracked scope; the source lists multiple task types or protocols without a single unambiguous default."
+selected_variant: txbench-pp-preclinical-pharmacology
 variants:
   - id: txbench-pp-preclinical-pharmacology
     name: TxBench-PP — preclinical pharmacology

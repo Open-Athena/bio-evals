@@ -8,9 +8,8 @@ creators:
 sources:
   - label: Benchmark
     url: https://github.com/harbor-framework/harbor/tree/main/adapters/bixbench
-notes:
-  - Family grouping is for navigation; variants may have different creators, datasets, grading
-    protocols, and internal assignments.
+notes: []
+selected_variant: bixbench-v1-5-harbor-cli
 variants:
   - id: bixbench-v1-5-harbor-cli
     name: BixBench v1.5, Harbor CLI

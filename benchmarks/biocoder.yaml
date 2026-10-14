@@ -15,7 +15,7 @@ variants:
     creators:
       - Yale University
       - Google DeepMind
-    assignment: TBD
+    assignment: ID
     sources:
       - label: Benchmark
         url: https://github.com/gersteinlab/BioCoder
