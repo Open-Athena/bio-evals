@@ -39,7 +39,7 @@ const filtered = filterCatalog(catalog, query || '', framework, implementation);
 <p class="muted">Families: ${filtered.length} · Variants: ${filtered.reduce((n,f) => n + f.variants.length, 0)}. ID/OOD is our editable internal assignment. Inclusion is not a commitment to implement.</p>
 
 ```js
-display(catalogTable(filtered, snapshot));
+display(catalogTable(filtered, snapshot, Inputs));
 ```
 
 <p class="muted">GitHub last successfully fetched: ${snapshot.last_successful_fetch_at ? new Date(snapshot.last_successful_fetch_at).toLocaleString() : 'not yet fetched'}. ${snapshot.complete ? '' : 'Some statuses are unavailable or stale; follow the links for current work.'} Refreshes daily and on catalog updates.</p>

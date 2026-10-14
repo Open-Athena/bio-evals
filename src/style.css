@@ -18,7 +18,6 @@
 .catalog-table table { table-layout:fixed; width:100%; min-width:1350px; margin:0; max-width:none; }
 .catalog-table th, .catalog-table td { white-space:normal !important; vertical-align:top; overflow-wrap:anywhere; padding:12px 10px; }
 .catalog-table thead { position:sticky; top:0; z-index:1; background:var(--theme-background-alt); }
-.catalog-table tbody + tbody { border-top:2px solid var(--theme-foreground-faintest); }
 .catalog-table td a { text-decoration:none; }
 .summary { display:flex; flex-wrap:wrap; gap:12px; margin:24px 0; }
 .summary .card { flex:1; min-width:150px; margin:0; }

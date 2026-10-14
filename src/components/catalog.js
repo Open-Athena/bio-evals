@@ -19,43 +19,41 @@ function node(tag,text,className) {
 }
 function link(label,href){const a=node('a',label);a.href=href;return a;}
 export function familyLink(f){return link(f.name,`./benchmarks/${f.id}`);}
-export function catalogTable(families, snapshot) {
+const implementationLabel = status => status==='yes'?'Implemented':status==='no'?'Not implemented':'Unknown';
+export function catalogTable(families, snapshot, Inputs) {
+  // Primitive column values let native Inputs.table sort the displayed content.
+  const rows=families.flatMap(f=>f.variants.map(v=>({
+    name:f.name, description:f.description, creators:f.creators.join('; '),
+    variant:v.name, assignment:v.assignment || 'Unassigned',
+    implementation:v.implementations.map(i=>`${implementationLabel(i.status)} (${i.framework})`).join('; '),
+    work:v.work.map(url=>snapshot.items[url]?.title || url).join('; ') || 'No linked work',
+    family:f, detail:v
+  })));
   const container=node('div',undefined,'catalog-table card');
-  const table=node('table');
-  table.setAttribute('aria-label','Evaluation catalog');
-  const columns=['Benchmark family','What it measures','Creator organization(s)','Variants','ID/OOD','Implementation','Linked work'];
-  const colgroup=node('colgroup');
-  for(const width of [160,280,170,200,100,210,230]) {
-    const col=node('col');col.style.width=`${width}px`;colgroup.append(col);
-  }
-  const head=node('thead'), header=node('tr');
-  for(const title of columns){const th=node('th',title);th.scope='col';header.append(th);}
-  head.append(header);table.append(colgroup,head);
-  for(const f of [...families].sort((a,b)=>a.name.localeCompare(b.name))) {
-    const body=node('tbody');
-    f.variants.forEach((v,index)=>{
-      const row=node('tr');
-      const cell=(content,className)=>{
-        const td=node('td',undefined,className);td.append(content);row.append(td);return td;
-      };
-      if(index===0) {
-        for(const content of [familyLink(f),f.description,f.creators.join('; ')])cell(content).rowSpan=f.variants.length;
-      }
-      cell(link(v.name,`./benchmarks/${f.id}#${v.id}`),'variant-cell');
-      cell(node('span',v.assignment || 'Unassigned','badge'),'assignment-cell');
-      const implementations=node('div');
-      for(const i of v.implementations) {
-        const line=node('div',undefined,'implementation-entry');
-        line.append(node('small',i.framework),node('span',i.status==='yes'?'Implemented':i.status==='no'?'Not implemented':'Unknown',`badge ${i.status}`));
-        implementations.append(line);
-      }
-      cell(implementations,'implementation-cell');
-      if(index===0)cell(workCell(f,snapshot)).rowSpan=f.variants.length;
-      body.append(row);
-    });
-    table.append(body);
-  }
-  container.append(table);
+  container.append(Inputs.table(rows, {
+    columns:['name','description','creators','variant','assignment','implementation','work'],
+    header:{name:'Benchmark family',description:'What it measures',creators:'Creator organization(s)',variant:'Variants',assignment:'ID/OOD',implementation:'Implementation',work:'Linked work'},
+    format:{
+      name:(_,i)=>familyLink(rows[i].family),
+      variant:(_,i)=>{
+        const {family:f,detail:v}=rows[i];
+        const a=link(v.name,`./benchmarks/${f.id}#${v.id}`);a.className='variant-cell';return a;
+      },
+      assignment:value=>node('span',value,'badge'),
+      implementation:(_,index)=>{
+        const container=node('div');
+        for(const i of rows[index].detail.implementations) {
+          const line=node('div',undefined,'implementation-entry');
+          line.append(node('small',i.framework),node('span',implementationLabel(i.status),`badge ${i.status}`));
+          container.append(line);
+        }
+        return container;
+      },
+      work:(_,i)=>workCell({variants:[rows[i].detail]},snapshot)
+    },
+    width:{name:160,description:280,creators:170,variant:200,assignment:100,implementation:210,work:230},
+    rows:15,maxHeight:1100,select:false,sort:'name'
+  }));
   return container;
 }
 export function workCell(f,snapshot) {

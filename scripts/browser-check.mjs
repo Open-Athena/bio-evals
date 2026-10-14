@@ -37,8 +37,15 @@ try {
   await page.waitForFunction(()=>document.querySelector('.catalog-table tbody')?.textContent.includes('Verified-50'));
   assert.equal(await page.locator('.catalog-table tbody').count(),1);
   assert.equal(await page.locator('.catalog-table tbody tr').count(),4);
-  assert.deepEqual(await page.locator('.catalog-table thead th').allTextContents(),['Benchmark family','What it measures','Creator organization(s)','Variants','ID/OOD','Implementation','Linked work']);
-  assert.equal(await page.locator('.catalog-table tbody tr').first().locator('td[rowspan="4"]').count(),4);
+  for(const title of ['Benchmark family','What it measures','Creator organization(s)','Variants','ID/OOD','Implementation','Linked work']) {
+    assert.equal(await page.getByRole('columnheader',{name:title,exact:false}).count(),1);
+  }
+  const variantHeader=page.getByRole('columnheader',{name:'Variants',exact:false});
+  await variantHeader.click();
+  const ascending=await page.locator('.variant-cell').allTextContents();
+  await variantHeader.click();
+  const descending=await page.locator('.variant-cell').allTextContents();
+  assert.deepEqual(descending,[...ascending].reverse(),'Native column sorting reverses variant order');
   assert.match(await page.locator('.catalog-table').innerText(),/merged/);
   await page.getByLabel('Implementation',{exact:true}).selectOption({label:'Implemented'});
   await page.waitForFunction(()=>document.querySelector('.catalog-table tbody')?.querySelectorAll('.variant-cell').length===2);
@@ -47,12 +54,12 @@ try {
   await page.getByLabel('Framework',{exact:true}).selectOption({label:'All frameworks'});
   await page.getByLabel('Implementation',{exact:true}).selectOption({label:'All states'});
   await search.fill('');
-  await page.waitForFunction(()=>document.querySelectorAll('.catalog-table tbody').length>1);
+  await page.waitForFunction(()=>document.querySelectorAll('.catalog-table tbody tr').length>4);
   await search.focus();await page.keyboard.press('Tab');
   assert.ok(await page.evaluate(()=>document.activeElement?.tagName==='SELECT'));
   await page.screenshot({path:artifacts+'/catalog-desktop.png',fullPage:true});
   await search.fill('BixBench');
-  await page.getByRole('link',{name:'BixBench',exact:true}).click();
+  await page.getByRole('link',{name:'BixBench',exact:true}).first().click();
   await page.waitForURL('**/benchmarks/bixbench');
   assert.equal(await page.locator('.variant-detail').count(),4);
   assert.match(await page.getByRole('link',{name:'Edit this entry'}).getAttribute('href'),/benchmarks\/bixbench.yaml$/);
