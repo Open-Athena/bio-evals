@@ -12,7 +12,6 @@ const families=await loadCatalog();
 const errors=validateCatalog(families);
 if(errors.length)throw new Error(errors.join('\n'));
 const examples=await loadExamples(families);
-for(const b of families)b.example_count=examples.get(b.id)?.examples.length || 0;
 const snapshot=JSON.parse(await readFile(new URL('data/github-status.json',root)));
 const directory=new URL('src/benchmarks/',root);
 // Only generated pages live here; source records are in benchmarks/.

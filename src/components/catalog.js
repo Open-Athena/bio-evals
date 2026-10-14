@@ -43,7 +43,7 @@ export function catalogTable(families, snapshot, Inputs) {
     columns:['name','description','creators','variant','assignment','framework','implementation','work'],
     header:{name:'Benchmark',description:'What it measures',creators:'Creator organization(s)',variant:'Version',assignment:'ID/OOD',framework:'Framework',implementation:'Implementation',work:'Linked work'},
     format:{
-      name:(_,i)=>{const f=rows[i].family, cell=node('div');cell.append(familyLink(f));if(f.example_count){cell.append(node('br'),link(`${f.example_count} examples`, `./benchmarks/${f.id}#task-examples`));}return cell;},
+      name:(_,i)=>familyLink(rows[i].family),
       variant:(_,i)=>{
         const {family:f,detail:v}=rows[i];
         const a=link(v.name,`./benchmarks/${f.id}#${v.id}`);a.className='variant-cell';return a;
