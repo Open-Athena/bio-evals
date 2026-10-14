@@ -1,0 +1,112 @@
+id: txbench
+name: TxBench
+description: Assay-grounded decisions in preclinical pharmacology, antibody discovery, and
+  oligonucleotide discovery.
+creators:
+  - LatchBio
+sources:
+  - label: Benchmark
+    url: https://latch.bio/txbench-pp
+notes:
+  - Family grouping is for navigation; variants may have different creators, datasets, grading
+    protocols, and internal assignments.
+variants:
+  - id: txbench-pp-preclinical-pharmacology
+    name: TxBench-PP — preclinical pharmacology
+    description: 100 assay-grounded preclinical pharmacology decisions.
+    creators:
+      - LatchBio
+    assignment: ID
+    sources:
+      - label: Benchmark
+        url: https://latch.bio/txbench-pp
+      - label: Scorer / data
+        url: https://github.com/latchbio/txbench-pp/tree/a4e0913d76c3dbc433ecf39903afbe7711a6a807/evals
+      - label: Harbor / integration
+        url: https://github.com/josancamon19/sci-benches/tree/1fc392943dce9c847a62574dcf4e4c6ad943d2ab/src/txbench_pp
+    implementations:
+      - framework: Harbor
+        status: unknown
+        evidence: []
+    work: []
+    notes:
+      - "Access: 12 public eval JSONs in audited tree, all with graders and data pointers; README
+        still says7."
+      - "Grading: Released Latch deterministic graders, including numeric, label, ranking and
+        composite checks."
+      - "Limitations: Drug-discovery reasoning coverage. Some tasks need image inspection; filter
+        explicitly for text-only served models."
+      - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
+        notes are historical."
+    provenance:
+      - sheet: Agentic (Harbor)
+        gid: 846608904
+        row: 23
+        evidence_date: 9/19/2026
+        imported_at: 2026-10-14
+  - id: txbench-ab-antibody-discovery
+    name: TxBench-Ab — antibody discovery
+    description: 100 evaluations across 10 antibody-discovery competencies.
+    creators:
+      - LatchBio
+    assignment: ID
+    sources:
+      - label: Benchmark
+        url: https://latch.bio/txbench-ab
+      - label: Scorer / data
+        url: https://github.com/latchbio/txbench-antibody-discovery/tree/3e9a40b2bad520b1a62ff21c308b57e3c8fbe508/evals
+      - label: Harbor / integration
+        url: https://github.com/marin-community/harbor/tree/9551f376157d90104011107dcbf9ca3621228126/adapters
+    implementations:
+      - framework: Harbor
+        status: unknown
+        evidence: []
+    work: []
+    notes:
+      - "Access: 6 public eval.json files audited; README says7. Input bundles, graders and targets
+        absent from inspected configs."
+      - "Grading: Paper describes deterministic decision/endpoint scoring; public metadata names
+        grader types."
+      - "Limitations: New September2026 release. Images may be essential for some assays; protocol
+        is explicitly offline."
+      - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
+        notes are historical."
+    provenance:
+      - sheet: Agentic (Harbor)
+        gid: 846608904
+        row: 24
+        evidence_date: 9/18/2026
+        imported_at: 2026-10-14
+  - id: txbench-od-oligonucleotide-discovery
+    name: TxBench-OD — oligonucleotide discovery
+    description: 113 ASO/siRNA discovery decision tasks.
+    creators:
+      - LatchBio
+    assignment: ID
+    sources:
+      - label: Benchmark
+        url: https://blog.latch.bio/p/an-agent-benchmark-for-therapeutic
+      - label: Scorer / data
+        url: https://github.com/latchbio/txbench-oligo-discovery/tree/2ca404140b322f96713f140b275e99a02a038222/evals
+      - label: Harbor / integration
+        url: https://github.com/marin-community/harbor/tree/9551f376157d90104011107dcbf9ca3621228126/adapters
+    implementations:
+      - framework: Harbor
+        status: unknown
+        evidence: []
+    work: []
+    notes:
+      - "Access: 4 public eval.json files audited; README says7. Inputs and executable graders
+        absent from inspected configs."
+      - "Grading: Deterministic decisions from supplied experimental evidence; full scoring assets
+        needed."
+      - "Limitations: September9,2026 release; direct answer to internet constraint: task execution
+        is explicitly offline."
+      - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
+        notes are historical."
+    provenance:
+      - sheet: Agentic (Harbor)
+        gid: 846608904
+        row: 25
+        evidence_date: 9/18/2026
+        imported_at: 2026-10-14

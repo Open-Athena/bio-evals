@@ -1,0 +1,45 @@
+id: drugdiscoverybench
+name: DrugDiscoveryBench
+description: 82 early-stage drug-discovery tasks across 7 capabilities, using scientific databases,
+  chemistry, genetics and literature.
+creators:
+  - Scale AI
+sources:
+  - label: Benchmark
+    url: https://labs.scale.com/leaderboard/drugdiscoverybench
+notes: []
+variants:
+  - id: drugdiscoverybench
+    name: DrugDiscoveryBench
+    description: 82 early-stage drug-discovery tasks across 7 capabilities, using scientific databases,
+      chemistry, genetics and literature.
+    creators:
+      - Scale AI
+    assignment: ID
+    sources:
+      - label: Benchmark
+        url: https://labs.scale.com/leaderboard/drugdiscoverybench
+      - label: Scorer / data
+        url: https://huggingface.co/datasets/ScaleAI/DrugDiscoveryBench
+      - label: Harbor / integration
+        url: https://github.com/scaleapi/DrugDiscoveryBench/tree/d58c703841abbad0ba1cc439488e15fbbeae3bd2/benchmark/tasks
+    implementations:
+      - framework: Harbor
+        status: unknown
+        evidence: []
+    work: []
+    notes:
+      - "Access: Public Harbor tasks; reference answers/rubrics require gated
+        ScaleAI/DrugDiscoveryBench access."
+      - "Grading: LLM rubric judge; weighted outcome score 0–100, pass only at 100; process rubric
+        reported separately."
+      - "Limitations: Official Harbor release; promising comparison candidate. Community Daytona
+        importer has a syntax error at the audited pin."
+      - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
+        notes are historical."
+    provenance:
+      - sheet: Agentic (Harbor)
+        gid: 846608904
+        row: 32
+        evidence_date: 9/19/2026
+        imported_at: 2026-10-14

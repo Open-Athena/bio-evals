@@ -1,0 +1,49 @@
+id: c-eval
+name: C-Eval
+description: Chinese middle-school, high-school and college biology subjects in C-Eval.
+creators:
+  - Shanghai Jiao Tong University
+  - Tsinghua University
+  - University of Edinburgh
+  - HKUST
+sources:
+  - label: Benchmark
+    url: https://arxiv.org/abs/2305.08322
+notes: []
+variants:
+  - id: c-eval-biology
+    name: C-Eval — biology
+    description: Chinese middle-school, high-school and college biology subjects in C-Eval.
+    creators:
+      - Shanghai Jiao Tong University
+      - Tsinghua University
+      - University of Edinburgh
+      - HKUST
+    assignment: TBD
+    sources:
+      - label: Benchmark
+        url: https://arxiv.org/abs/2305.08322
+      - label: Scorer / data
+        url: https://huggingface.co/datasets/ceval/ceval-exam
+      - label: Evalchemy / integration
+        url: https://github.com/EleutherAI/lm-evaluation-harness/tree/v0.4.12/lm_eval/tasks/ceval
+    implementations:
+      - framework: Evalchemy
+        status: unknown
+        evidence: []
+    work: []
+    notes:
+      - "Access: Public dataset/evaluator; test labels withheld and submissions scored by the
+        official service."
+      - "Grading: Four-choice accuracy; public validation labels, externally scored private test
+        labels."
+      - "Limitations: Language and exam level affect comparison. Public validation performance is
+        not canonical test performance."
+      - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
+        notes are historical."
+    provenance:
+      - sheet: Non-agentic (Evalchemy)
+        gid: 776831399
+        row: 70
+        evidence_date: 9/21/2026
+        imported_at: 2026-10-14

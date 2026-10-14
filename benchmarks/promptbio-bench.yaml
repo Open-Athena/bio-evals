@@ -1,0 +1,43 @@
+id: promptbio-bench
+name: PromptBio-Bench
+description: "244 tasks: 131 bioinformatics + 113 data science; 27 subfields and varied difficulty."
+creators:
+  - PromptBio
+sources:
+  - label: Benchmark
+    url: https://www.biorxiv.org/content/10.64898/2026.05.05.723092v2
+notes: []
+variants:
+  - id: promptbio-bench
+    name: PromptBio-Bench
+    description: "244 tasks: 131 bioinformatics + 113 data science; 27 subfields and varied difficulty."
+    creators:
+      - PromptBio
+    assignment: ID
+    sources:
+      - label: Benchmark
+        url: https://www.biorxiv.org/content/10.64898/2026.05.05.723092v2
+      - label: Scorer / data
+        url: https://huggingface.co/datasets/promptbio-ai/promptbio-bench-data/tree/078420b69e25c41c99a79135724b6ae6a6c82b69
+      - label: Harbor / integration
+        url: https://github.com/PromptBio/promptbio-bench/tree/e2a1947894eac530900247f00c0b726363b540ed
+    implementations:
+      - framework: Harbor
+        status: unknown
+        evidence: []
+    work: []
+    notes:
+      - "Access: 244 public task/eval JSON pairs and reference-script directories; input/reference
+        files on ungated HF; evaluator on GitHub."
+      - "Grading: LLM-assisted file matching/strategy selection + format-specific comparison; mean
+        file similarity (0–1)."
+      - "Limitations: Useful MVP candidate with reference scripts for sibling validation. Some tasks
+        are elementary; choose a teacher/student gap. Score is not a binary pass rate."
+      - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
+        notes are historical."
+    provenance:
+      - sheet: Agentic (Harbor)
+        gid: 846608904
+        row: 33
+        evidence_date: 9/19/2026
+        imported_at: 2026-10-14

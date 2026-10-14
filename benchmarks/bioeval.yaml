@@ -1,0 +1,43 @@
+id: bioeval
+name: BioEval
+description: Repository-stage biology reasoning suite; base 296 / extended 400 items across 12 components.
+creators:
+  - Unverified institutional affiliation — jang1563
+sources:
+  - label: Benchmark
+    url: https://github.com/jang1563/BioEval
+notes: []
+variants:
+  - id: bioeval-repository-stage-suite
+    name: BioEval — repository-stage suite
+    description: Repository-stage biology reasoning suite; base 296 / extended 400 items across 12 components.
+    creators:
+      - Unverified institutional affiliation — jang1563
+    assignment: TBD
+    sources:
+      - label: Benchmark
+        url: https://github.com/jang1563/BioEval
+      - label: Scorer / data
+        url: https://huggingface.co/datasets/jang1563/BioEval
+      - label: Evalchemy / integration
+        url: https://github.com/marin-community/evalchemy/tree/ab8e78f12abb8ed0d1659f56c24f2e01f3c85b54/eval/chat_benchmarks
+    implementations:
+      - framework: Evalchemy
+        status: unknown
+        evidence: []
+    work: []
+    notes:
+      - "Access: Public repository and HF dataset; no independently established leaderboard evidence
+        verified."
+      - "Grading: Released reference JSON/rubrics and evaluation framework; scorer reliability still
+        needs independent validation."
+      - "Limitations: Early repository-stage suite, not equivalent evidence maturity to an
+        established benchmark."
+      - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
+        notes are historical."
+    provenance:
+      - sheet: Non-agentic (Evalchemy)
+        gid: 776831399
+        row: 53
+        evidence_date: 9/21/2026
+        imported_at: 2026-10-14

@@ -1,0 +1,43 @@
+id: biomysterybench
+name: BioMysteryBench
+description: analysis of anonymized biological datasets
+creators:
+  - Anthropic
+sources:
+  - label: Benchmark
+    url: https://huggingface.co/datasets/Anthropic/BioMysteryBench-full
+notes: []
+variants:
+  - id: biomysterybench
+    name: BioMysteryBench
+    description: analysis of anonymized biological datasets
+    creators:
+      - Anthropic
+    assignment: OOD
+    sources:
+      - label: Benchmark
+        url: https://huggingface.co/datasets/Anthropic/BioMysteryBench-full
+      - label: Scorer / data
+        url: https://huggingface.co/datasets/Anthropic/BioMysteryBench-full
+      - label: Harbor / integration
+        url: https://github.com/josancamon19/sci-benches/tree/1fc392943dce9c847a62574dcf4e4c6ad943d2ab/src/biomistery_bench
+    implementations:
+      - framework: Harbor
+        status: unknown
+        evidence: []
+    work: []
+    notes:
+      - "Access: 90 gated, eval-only tasks; 5 previews. Community importer skips >1 GB archives by
+        default."
+      - "Grading: Community LLM judge uses answer rubric + trajectory/source-lookup compliance;
+        official equivalence unvalidated."
+      - "Limitations: Packaging and a community judge exist; access, judge fidelity and
+        source-lookup compliance remain blockers."
+      - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
+        notes are historical."
+    provenance:
+      - sheet: Agentic (Harbor)
+        gid: 846608904
+        row: 17
+        evidence_date: 9/19/2026
+        imported_at: 2026-10-14

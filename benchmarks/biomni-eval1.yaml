@@ -1,0 +1,43 @@
+id: biomni-eval1
+name: Biomni-Eval1
+description: Biomni-Eval1 biomedical tasks spanning genetics, variants, literature and experimental reasoning.
+creators:
+  - Stanford University
+sources:
+  - label: Benchmark
+    url: https://huggingface.co/datasets/biomni/Eval1
+notes: []
+variants:
+  - id: biomni-eval1-tool-enabled
+    name: Biomni-Eval1 — tool-enabled
+    description: Biomni-Eval1 biomedical tasks spanning genetics, variants, literature and experimental
+      reasoning.
+    creators:
+      - Stanford University
+    assignment: ID
+    sources:
+      - label: Benchmark
+        url: https://huggingface.co/datasets/biomni/Eval1
+      - label: Scorer / data
+        url: https://huggingface.co/datasets/biomni/Eval1
+      - label: Harbor / integration
+        url: https://github.com/marin-community/harbor/tree/b78a0e52af98015fc8416d5bd5ee649a284e5a4c/adapters
+    implementations:
+      - framework: Harbor
+        status: unknown
+        evidence: []
+    work: []
+    notes:
+      - "Access: Public biomni/Eval1 data and evaluator in the Biomni agent repository."
+      - "Grading: Official BiomniEval1 task-specific evaluator; answer matching/structured-output
+        checks vary by task."
+      - "Limitations: Some tasks overlap existing benchmark families such as LAB-Bench.
+        Stars/citations describe the broader Biomni project."
+      - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
+        notes are historical."
+    provenance:
+      - sheet: Agentic (Harbor)
+        gid: 846608904
+        row: 36
+        evidence_date: 9/21/2026
+        imported_at: 2026-10-14

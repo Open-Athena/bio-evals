@@ -1,0 +1,45 @@
+id: humaneval-bioimage-human-eval-bia
+name: HumanEval-BioImage (human-eval-bia)
+description: 57 Python function-completion problems for bioimage analysis.
+creators:
+  - Leipzig University / ScaDS.AI
+  - EMBL
+  - Max Planck Institute for Human Cognitive and Brain Sciences
+sources:
+  - label: Benchmark
+    url: https://doi.org/10.1101/2024.04.19.590278
+notes: []
+variants:
+  - id: humaneval-bioimage-human-eval-bia
+    name: HumanEval-BioImage (human-eval-bia)
+    description: 57 Python function-completion problems for bioimage analysis.
+    creators:
+      - Leipzig University / ScaDS.AI
+      - EMBL
+      - Max Planck Institute for Human Cognitive and Brain Sciences
+    assignment: TBD
+    sources:
+      - label: Benchmark
+        url: https://doi.org/10.1101/2024.04.19.590278
+      - label: Scorer / data
+        url: https://github.com/haesleinhuepf/human-eval-bia/tree/f6edaa15545e84951f5428d07e16db04155f2266
+      - label: Evalchemy / integration
+        url: https://github.com/marin-community/evalchemy/tree/ab8e78f12abb8ed0d1659f56c24f2e01f3c85b54/eval/chat_benchmarks
+    implementations:
+      - framework: Evalchemy
+        status: unknown
+        evidence: []
+    work: []
+    notes:
+      - "Access: Public task definitions, reference solutions and tests in human-eval-bia."
+      - "Grading: Unit-test correctness and pass@k; pin Python/image-analysis dependencies."
+      - "Limitations: Small function-level suite; distinct from an autonomous microscopy analysis
+        workflow."
+      - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
+        notes are historical."
+    provenance:
+      - sheet: Non-agentic (Evalchemy)
+        gid: 776831399
+        row: 19
+        evidence_date: 9/21/2026
+        imported_at: 2026-10-14

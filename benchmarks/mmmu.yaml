@@ -1,0 +1,81 @@
+id: mmmu
+name: MMMU
+description: Multimodal academic biology and basic medical science questions, including original and
+  Pro variants.
+creators:
+  - MMMU Team — IN.AI Research
+  - Waterloo
+  - Ohio State
+  - collaborators (see note)
+sources:
+  - label: Benchmark
+    url: https://mmmu-benchmark.github.io/
+notes:
+  - Family grouping is for navigation; variants may have different creators, datasets, grading
+    protocols, and internal assignments.
+variants:
+  - id: mmmu-biology-basic-medical-science
+    name: MMMU — biology / basic medical science
+    description: College-level Biology and Basic Medical Science among multimodal academic subjects.
+    creators:
+      - MMMU Team — IN.AI Research
+      - Waterloo
+      - Ohio State
+      - collaborators (see note)
+    assignment: TBD
+    sources:
+      - label: Benchmark
+        url: https://mmmu-benchmark.github.io/
+      - label: Scorer / data
+        url: https://huggingface.co/datasets/MMMU/MMMU
+      - label: Evalchemy / integration
+        url: https://github.com/EleutherAI/lm-evaluation-harness/tree/v0.4.12/lm_eval/tasks/mmmu
+    implementations:
+      - framework: Evalchemy
+        status: unknown
+        evidence: []
+    work: []
+    notes:
+      - "Access: Public MMMU code and HF data; confirm availability of labels for the chosen split."
+      - "Grading: Official multiple-choice/open-answer parsing and accuracy."
+      - "Limitations: Keep biology and basic medical science separate; full MMMU
+        stars/citations/likes cover all subjects."
+      - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
+        notes are historical."
+    provenance:
+      - sheet: Non-agentic (Evalchemy)
+        gid: 776831399
+        row: 46
+        evidence_date: 9/21/2026
+        imported_at: 2026-10-14
+  - id: mmmu-pro-biology-basic-medical-science
+    name: MMMU-Pro — biology / basic medical science
+    description: More robust multimodal academic questions; biology/basic medical science slice.
+    creators:
+      - MMMU Team
+    assignment: TBD
+    sources:
+      - label: Benchmark
+        url: https://arxiv.org/abs/2409.02813
+      - label: Scorer / data
+        url: https://huggingface.co/datasets/MMMU/MMMU_Pro
+      - label: Evalchemy / integration
+        url: https://github.com/marin-community/evalchemy/tree/ab8e78f12abb8ed0d1659f56c24f2e01f3c85b54/eval/chat_benchmarks
+    implementations:
+      - framework: Evalchemy
+        status: unknown
+        evidence: []
+    work: []
+    notes:
+      - "Access: Public MMMU-Pro dataset and code in the shared MMMU repository."
+      - "Grading: Official answer parsing/accuracy; standard and vision-only configurations differ."
+      - "Limitations: Shares source material with MMMU; revised options/vision conditions change
+        difficulty. Repository stars are shared."
+      - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
+        notes are historical."
+    provenance:
+      - sheet: Non-agentic (Evalchemy)
+        gid: 776831399
+        row: 47
+        evidence_date: 9/21/2026
+        imported_at: 2026-10-14

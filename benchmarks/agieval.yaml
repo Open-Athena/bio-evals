@@ -1,0 +1,42 @@
+id: agieval
+name: AGIEval
+description: Chinese Gaokao biology questions in AGIEval.
+creators:
+  - Microsoft
+sources:
+  - label: Benchmark
+    url: https://arxiv.org/abs/2304.06364
+notes: []
+variants:
+  - id: agieval-gaokao-biology
+    name: AGIEval — Gaokao biology
+    description: Chinese Gaokao biology questions in AGIEval.
+    creators:
+      - Microsoft
+    assignment: TBD
+    sources:
+      - label: Benchmark
+        url: https://arxiv.org/abs/2304.06364
+      - label: Scorer / data
+        url: https://github.com/ruixiangcui/AGIEval/tree/84ab72d94318290aad2e4ec820d535a95a1f7552
+      - label: Evalchemy / integration
+        url: https://github.com/EleutherAI/lm-evaluation-harness/tree/v0.4.12/lm_eval/tasks/agieval
+    implementations:
+      - framework: Evalchemy
+        status: unknown
+        evidence: []
+    work: []
+    notes:
+      - "Access: Public repository contains v1.1 data and scoring code; biology updated with 2023
+        questions."
+      - "Grading: Official answer extraction and accuracy; pin dataset version and prompt mode."
+      - "Limitations: Likely source overlap with other Gaokao collections; do not assume independent
+        test questions."
+      - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
+        notes are historical."
+    provenance:
+      - sheet: Non-agentic (Evalchemy)
+        gid: 776831399
+        row: 72
+        evidence_date: 9/21/2026
+        imported_at: 2026-10-14

@@ -1,0 +1,48 @@
+id: dbench-bio
+name: DBench-Bio
+description: Dynamic biological knowledge-discovery QA generated from newly published abstracts
+  across 12 domains.
+creators:
+  - National University of Singapore
+  - Tsinghua University
+  - University of Science and Technology of China
+sources:
+  - label: Benchmark
+    url: https://arxiv.org/abs/2603.03322
+notes: []
+variants:
+  - id: dbench-bio
+    name: DBench-Bio
+    description: Dynamic biological knowledge-discovery QA generated from newly published abstracts
+      across 12 domains.
+    creators:
+      - National University of Singapore
+      - Tsinghua University
+      - University of Science and Technology of China
+    assignment: TBD
+    sources:
+      - label: Benchmark
+        url: https://arxiv.org/abs/2603.03322
+      - label: Scorer / data
+        url: https://github.com/transcend-0/DBench-Bio/tree/82162e8193e1357fa9d026faaafbbd6c50256d25
+      - label: Evalchemy / integration
+        url: https://github.com/marin-community/evalchemy/tree/ab8e78f12abb8ed0d1659f56c24f2e01f3c85b54/eval/chat_benchmarks
+    implementations:
+      - framework: Evalchemy
+        status: unknown
+        evidence: []
+    work: []
+    notes:
+      - "Access: Public benchmark construction and evaluation repository."
+      - "Grading: Model-based answer grading on a five-point scale; freeze grader and generation
+        settings."
+      - "Limitations: Monthly updates change the test set. Abstract-derived answer quality is a
+        proxy, not experimental validation of a discovery."
+      - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
+        notes are historical."
+    provenance:
+      - sheet: Non-agentic (Evalchemy)
+        gid: 776831399
+        row: 34
+        evidence_date: 9/21/2026
+        imported_at: 2026-10-14

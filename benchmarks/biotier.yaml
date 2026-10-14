@@ -1,0 +1,45 @@
+id: biotier
+name: BioTIER
+description: "542 prompts testing targeted biological refusal: 398 refusal-target and 144 permitted requests."
+creators:
+  - SecureBio
+  - Federal University of ABC (UFABC)
+sources:
+  - label: Benchmark
+    url: https://arxiv.org/abs/2607.14479
+notes: []
+variants:
+  - id: biotier
+    name: BioTIER
+    description: "542 prompts testing targeted biological refusal: 398 refusal-target and 144 permitted
+      requests."
+    creators:
+      - SecureBio
+      - Federal University of ABC (UFABC)
+    assignment: TBD
+    sources:
+      - label: Benchmark
+        url: https://arxiv.org/abs/2607.14479
+      - label: Scorer / data
+        url: https://arxiv.org/abs/2607.14479
+      - label: Evalchemy / integration
+        url: https://github.com/marin-community/evalchemy/tree/ab8e78f12abb8ed0d1659f56c24f2e01f3c85b54/eval/chat_benchmarks
+    implementations:
+      - framework: Evalchemy
+        status: unknown
+        evidence: []
+    work: []
+    notes:
+      - "Access: Public paper; full prompt set subject to restricted researcher access."
+      - "Grading: Refusal/permission assessment; separate provider API blocks from model refusals
+        and report both classes."
+      - "Limitations: Refusal behavior is distinct from biological competence. Do not collapse
+        permitted and refused classes."
+      - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
+        notes are historical."
+    provenance:
+      - sheet: Non-agentic (Evalchemy)
+        gid: 776831399
+        row: 51
+        evidence_date: 9/21/2026
+        imported_at: 2026-10-14

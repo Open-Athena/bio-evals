@@ -1,0 +1,43 @@
+id: compbiobench
+name: CompBioBench
+description: 100 tasks across omics, genetics, and ML
+creators:
+  - Genentech
+sources:
+  - label: Benchmark
+    url: https://github.com/Genentech/compbiobench-runner
+notes: []
+variants:
+  - id: compbiobench
+    name: CompBioBench
+    description: 100 tasks across omics, genetics, and ML
+    creators:
+      - Genentech
+    assignment: ID
+    sources:
+      - label: Benchmark
+        url: https://github.com/Genentech/compbiobench-runner
+      - label: Scorer / data
+        url: https://huggingface.co/spaces/Genentech/compbiobench-leaderboard-v1/blob/6a63e6d2cae531d9e9bf46b341606ed6b304ba3f/app.py
+      - label: Harbor / integration
+        url: https://github.com/josancamon19/sci-benches/tree/1fc392943dce9c847a62574dcf4e4c6ad943d2ab/src/compbiobench
+    implementations:
+      - framework: Harbor
+        status: unknown
+        evidence: []
+    work: []
+    notes:
+      - "Access: Public runner/inputs; HF login and answers to all 100 questions for hosted scoring;
+        2 submissions/day at audit."
+      - "Grading: Hosted exact-match scoring. Community verifier only collects answers; its fixed
+        reward=0 is not correctness."
+      - "Limitations: Community packaging covers 100 tasks; official hosted scoring remains
+        necessary."
+      - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
+        notes are historical."
+    provenance:
+      - sheet: Agentic (Harbor)
+        gid: 846608904
+        row: 15
+        evidence_date: 9/19/2026
+        imported_at: 2026-10-14

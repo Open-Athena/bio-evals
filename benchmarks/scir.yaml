@@ -1,0 +1,52 @@
+id: scir
+name: SciR
+description: Controlled deduction, induction and causal reasoning over developmental biology, drug
+  relations and signaling.
+creators:
+  - Idiap Research Institute
+  - EPFL
+  - University of Sheffield
+  - University of Manchester
+  - CRUK Manchester Institute
+sources:
+  - label: Benchmark
+    url: https://arxiv.org/abs/2606.13020
+notes: []
+variants:
+  - id: scir
+    name: SciR
+    description: Controlled deduction, induction and causal reasoning over developmental biology, drug
+      relations and signaling.
+    creators:
+      - Idiap Research Institute
+      - EPFL
+      - University of Sheffield
+      - University of Manchester
+      - CRUK Manchester Institute
+    assignment: TBD
+    sources:
+      - label: Benchmark
+        url: https://arxiv.org/abs/2606.13020
+      - label: Scorer / data
+        url: https://huggingface.co/datasets/sci-reason/scir
+      - label: Evalchemy / integration
+        url: https://github.com/marin-community/evalchemy/tree/ab8e78f12abb8ed0d1659f56c24f2e01f3c85b54/eval/chat_benchmarks
+    implementations:
+      - framework: Evalchemy
+        status: unknown
+        evidence: []
+    work: []
+    notes:
+      - "Access: Public task generation/evaluation code and author-linked HF dataset."
+      - "Grading: Verifiable task labels/rules/graph structure; evaluate each reasoning track with
+        its official scorer."
+      - "Limitations: Formalized biological reasoning rather than an autonomous wet-lab workflow;
+        report generated task settings."
+      - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
+        notes are historical."
+    provenance:
+      - sheet: Non-agentic (Evalchemy)
+        gid: 776831399
+        row: 35
+        evidence_date: 9/21/2026
+        imported_at: 2026-10-14

@@ -1,0 +1,45 @@
+id: biomaze
+name: BioMaze
+description: About 5,100 biological pathway reasoning problems, including judgments and open responses.
+creators:
+  - Peking University
+  - University of Hong Kong
+  - Xi’an Jiaotong University
+sources:
+  - label: Benchmark
+    url: https://arxiv.org/abs/2502.16660
+notes: []
+variants:
+  - id: biomaze-tool-free-reasoning
+    name: BioMaze — tool-free reasoning
+    description: About 5,100 biological pathway reasoning problems, including judgments and open responses.
+    creators:
+      - Peking University
+      - University of Hong Kong
+      - Xi’an Jiaotong University
+    assignment: TBD
+    sources:
+      - label: Benchmark
+        url: https://arxiv.org/abs/2502.16660
+      - label: Scorer / data
+        url: https://huggingface.co/datasets/haitengzhao/BioMaze
+      - label: Evalchemy / integration
+        url: https://github.com/marin-community/evalchemy/tree/ab8e78f12abb8ed0d1659f56c24f2e01f3c85b54/eval/chat_benchmarks
+    implementations:
+      - framework: Evalchemy
+        status: unknown
+        evidence: []
+    work: []
+    notes:
+      - "Access: Public BioMaze code and author-linked HF questions/answers."
+      - "Grading: Reference correctness for judgments; model-assisted assessment for open responses."
+      - "Limitations: Tool-free row; the paper’s PathSeeker graph/tool workflow is a separate
+        experimental condition."
+      - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
+        notes are historical."
+    provenance:
+      - sheet: Non-agentic (Evalchemy)
+        gid: 776831399
+        row: 25
+        evidence_date: 9/21/2026
+        imported_at: 2026-10-14

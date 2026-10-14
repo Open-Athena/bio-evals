@@ -1,0 +1,44 @@
+id: cellbench-cellvoyager
+name: CellBench (CellVoyager)
+description: "CellBench: single-cell analysis planning derived from research workflows, evaluated
+  with CellVoyager and base LLMs."
+creators:
+  - Stanford University
+sources:
+  - label: Benchmark
+    url: https://www.nature.com/articles/s41592-026-03029-6
+notes: []
+variants:
+  - id: cellbench-cellvoyager
+    name: CellBench (CellVoyager)
+    description: "CellBench: single-cell analysis planning derived from research workflows, evaluated
+      with CellVoyager and base LLMs."
+    creators:
+      - Stanford University
+    assignment: ID
+    sources:
+      - label: Benchmark
+        url: https://www.nature.com/articles/s41592-026-03029-6
+      - label: Scorer / data
+        url: https://github.com/zou-group/CellVoyager/tree/5a61f6b36bc7e2dd2210024cbb94fb0dd1cbbc0b
+      - label: Harbor / integration
+        url: https://github.com/marin-community/harbor/tree/b78a0e52af98015fc8416d5bd5ee649a284e5a4c/adapters
+    implementations:
+      - framework: Harbor
+        status: unknown
+        evidence: []
+    work: []
+    notes:
+      - "Access: CellVoyager repository contains CellBench evaluation scripts and judged outputs."
+      - "Grading: Plan-quality evaluation against research-derived references; judge configuration
+        requires validation."
+      - "Limitations: Agent protocol recorded here; base-LLM results are a different protocol.
+        Repository stars cover the whole CellVoyager project."
+      - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
+        notes are historical."
+    provenance:
+      - sheet: Agentic (Harbor)
+        gid: 846608904
+        row: 37
+        evidence_date: 9/21/2026
+        imported_at: 2026-10-14

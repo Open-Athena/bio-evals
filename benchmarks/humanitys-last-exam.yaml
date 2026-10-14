@@ -1,0 +1,47 @@
+id: humanitys-last-exam
+name: Humanity's Last Exam
+description: Frontier academic biology/medicine; text and multimodal question variants.
+creators:
+  - Center for AI Safety
+  - Scale AI
+  - academic contributors
+sources:
+  - label: Benchmark
+    url: https://arxiv.org/abs/2501.14249
+notes: []
+variants:
+  - id: humanitys-last-exam-biology-medicine
+    name: Humanity's Last Exam — biology/medicine
+    description: Frontier academic biology/medicine; text and multimodal question variants.
+    creators:
+      - Center for AI Safety
+      - Scale AI
+      - academic contributors
+    assignment: OOD
+    sources:
+      - label: Benchmark
+        url: https://arxiv.org/abs/2501.14249
+      - label: Scorer / data
+        url: https://huggingface.co/datasets/cais/hle
+      - label: Evalchemy / integration
+        url: https://github.com/marin-community/evalchemy/tree/f42990450edf4e694fe5a22b3d23ed09ab42da1e/eval/chat_benchmarks/HLE/eval_instruct.py
+    implementations:
+      - framework: Evalchemy
+        status: unknown
+        evidence: []
+    work: []
+    notes:
+      - "Access: Native Evalchemy HLE class using cais/hle; public data is still protected by
+        Marin's OOD policy."
+      - "Grading: Native HLE generation + answer judge; preserve exact variant, image filter and
+        grading settings."
+      - "Limitations: Relevant AAII 4.3 component. A biology slice is a proposed derived report, not
+        a separately approved canonical AAII score."
+      - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
+        notes are historical."
+    provenance:
+      - sheet: Non-agentic (Evalchemy)
+        gid: 776831399
+        row: 15
+        evidence_date: 9/18/2026
+        imported_at: 2026-10-14

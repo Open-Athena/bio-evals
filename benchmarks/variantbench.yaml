@@ -1,0 +1,42 @@
+id: variantbench
+name: VariantBench
+description: Variant discovery/QC, statistical genetics and personal genomics; 118 main evaluations.
+creators:
+  - LatchBio
+sources:
+  - label: Benchmark
+    url: https://blog.latch.bio/p/variantbench-an-agentic-benchmark
+notes: []
+variants:
+  - id: variantbench
+    name: VariantBench
+    description: Variant discovery/QC, statistical genetics and personal genomics; 118 main evaluations.
+    creators:
+      - LatchBio
+    assignment: ID
+    sources:
+      - label: Benchmark
+        url: https://blog.latch.bio/p/variantbench-an-agentic-benchmark
+      - label: Scorer / data
+        url: https://github.com/latchbio/variantbench/tree/a1cd271bc3671c6ecef05176d33d29e5c490438c/evals
+      - label: Harbor / integration
+        url: https://github.com/marin-community/harbor/tree/9551f376157d90104011107dcbf9ca3621228126/adapters
+    implementations:
+      - framework: Harbor
+        status: unknown
+        evidence: []
+    work: []
+    notes:
+      - "Access: 8 public eval JSONs with graders/targets and Latch pointers; 28 example
+        trajectories. Includes 2 ancillary cases outside main118."
+      - "Grading: Deterministic typed endpoint checks; composite tasks require all fields to pass."
+      - "Limitations: Adds variant interpretation absent from existing Latch rows. Full-suite access
+        and data downloads still need validation."
+      - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
+        notes are historical."
+    provenance:
+      - sheet: Agentic (Harbor)
+        gid: 846608904
+        row: 21
+        evidence_date: 9/18/2026
+        imported_at: 2026-10-14

@@ -1,0 +1,45 @@
+id: scicueval
+name: SciCUEval
+description: Scientific context understanding over text, tables and knowledge graphs; biology/biomedicine slice.
+creators:
+  - Zhejiang University
+  - Ant Group
+sources:
+  - label: Benchmark
+    url: https://www.nature.com/articles/s41597-026-06594-9
+notes: []
+variants:
+  - id: scicueval-biology-biomedicine
+    name: SciCUEval — biology / biomedicine
+    description: Scientific context understanding over text, tables and knowledge graphs;
+      biology/biomedicine slice.
+    creators:
+      - Zhejiang University
+      - Ant Group
+    assignment: TBD
+    sources:
+      - label: Benchmark
+        url: https://www.nature.com/articles/s41597-026-06594-9
+      - label: Scorer / data
+        url: https://doi.org/10.6084/m9.figshare.29924687
+      - label: Evalchemy / integration
+        url: https://github.com/marin-community/evalchemy/tree/ab8e78f12abb8ed0d1659f56c24f2e01f3c85b54/eval/chat_benchmarks
+    implementations:
+      - framework: Evalchemy
+        status: unknown
+        evidence: []
+    work: []
+    notes:
+      - "Access: Public evaluation code and author-linked Figshare dataset."
+      - "Grading: Task-dependent context relevance, absence, multi-source and inference metrics;
+        verify judge needs by task."
+      - "Limitations: Ten component datasets cover different abilities; biology subset needs
+        explicit task/domain mapping."
+      - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
+        notes are historical."
+    provenance:
+      - sheet: Non-agentic (Evalchemy)
+        gid: 776831399
+        row: 41
+        evidence_date: 9/21/2026
+        imported_at: 2026-10-14

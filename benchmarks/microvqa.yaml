@@ -1,0 +1,81 @@
+id: microvqa
+name: MicroVQA
+description: Microscopy-based scientific reasoning, with an announced extension whose independent
+  test protocol remains unverified.
+creators:
+  - Stanford University
+  - Chan Zuckerberg Biohub Network
+  - collaborators (see note)
+sources:
+  - label: Benchmark
+    url: https://arxiv.org/abs/2503.13399
+notes:
+  - Family grouping is for navigation; variants may have different creators, datasets, grading
+    protocols, and internal assignments.
+variants:
+  - id: microvqa
+    name: MicroVQA
+    description: 1,042 microscopy-based scientific reasoning questions with images and multiple-choice answers.
+    creators:
+      - Stanford University
+      - Chan Zuckerberg Biohub Network
+      - collaborators (see note)
+    assignment: TBD
+    sources:
+      - label: Benchmark
+        url: https://arxiv.org/abs/2503.13399
+      - label: Scorer / data
+        url: https://huggingface.co/datasets/jmhb/microvqa
+      - label: Evalchemy / integration
+        url: https://github.com/marin-community/evalchemy/tree/ab8e78f12abb8ed0d1659f56c24f2e01f3c85b54/eval/chat_benchmarks
+    implementations:
+      - framework: Evalchemy
+        status: unknown
+        evidence: []
+    work: []
+    notes:
+      - "Access: Public repository and author-linked HF benchmark."
+      - "Grading: Multiple-choice answer accuracy; preserve official option formatting and image
+        inputs."
+      - "Limitations: Tests image-grounded reasoning; text-only substitution changes the benchmark."
+      - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
+        notes are historical."
+    provenance:
+      - sheet: Non-agentic (Evalchemy)
+        gid: 776831399
+        row: 29
+        evidence_date: 9/21/2026
+        imported_at: 2026-10-14
+  - id: microvqa-announced-evaluation
+    name: MicroVQA++ — announced evaluation
+    description: Microscopy reasoning dataset/evaluation proposal extending the MicroVQA research direction.
+    creators:
+      - Fudan University
+    assignment: TBD
+    sources:
+      - label: Benchmark
+        url: https://arxiv.org/abs/2511.11407
+      - label: Scorer / data
+        url: https://github.com/ieellee/MicroVQA-PlusPlus/tree/57a2272e9116631db3ca136518b171cc38747f6b
+      - label: Evalchemy / integration
+        url: https://github.com/marin-community/evalchemy/tree/ab8e78f12abb8ed0d1659f56c24f2e01f3c85b54/eval/chat_benchmarks
+    implementations:
+      - framework: Evalchemy
+        status: unknown
+        evidence: []
+    work: []
+    notes:
+      - "Access: Paper and demo repository; dataset/code/model-result release still listed as
+        pending."
+      - "Grading: Independent held-out protocol/scorer release not verified; paper describes
+        evaluation of microscopy reasoning."
+      - "Limitations: Announced dataset/evaluation entry. Do not count as a new runnable benchmark
+        until test protocol and assets are verified."
+      - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
+        notes are historical."
+    provenance:
+      - sheet: Non-agentic (Evalchemy)
+        gid: 776831399
+        row: 56
+        evidence_date: 9/21/2026
+        imported_at: 2026-10-14

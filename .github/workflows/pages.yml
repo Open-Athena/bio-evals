@@ -1,0 +1,77 @@
+name: Validate and deploy catalog
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  schedule:
+    - cron: '23 10 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: catalog-${{ github.event_name == 'pull_request' && github.ref || 'production' }}
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci --no-audit --no-fund
+      - run: npm run validate
+      - run: npm test
+      - name: Restore previous GitHub snapshot
+        if: github.event_name != 'pull_request'
+        uses: actions/cache/restore@v4
+        with:
+          path: data/github-status.json
+          key: github-status-${{ github.run_id }}-${{ github.run_attempt }}
+          restore-keys: github-status-
+      - name: Refresh public issue and PR metadata
+        if: github.event_name != 'pull_request'
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: npm run refresh
+      - run: npm run build
+        env:
+          OBSERVABLE_TELEMETRY_DISABLE: 'true'
+      - name: Browser interaction checks
+        run: CHROMIUM_PATH="$(command -v google-chrome)" node scripts/browser-check.mjs
+      - name: Save browser verification screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: browser-verification
+          path: artifacts/browser/
+          if-no-files-found: ignore
+      - name: Save successful GitHub snapshot
+        if: github.event_name != 'pull_request'
+        uses: actions/cache/save@v4
+        with:
+          path: data/github-status.json
+          key: github-status-${{ github.run_id }}-${{ github.run_attempt }}
+      - uses: actions/upload-pages-artifact@v3
+        if: github.event_name != 'pull_request'
+        with:
+          path: dist
+
+  deploy:
+    if: github.event_name != 'pull_request'
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/deploy-pages@v4
+        id: deployment

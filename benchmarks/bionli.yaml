@@ -1,0 +1,45 @@
+id: bionli
+name: BioNLI
+description: Biomedical natural-language inference over abstracts with adversarially generated hypotheses.
+creators:
+  - Stony Brook University
+  - University of Arizona
+sources:
+  - label: Benchmark
+    url: https://arxiv.org/abs/2210.14814
+notes: []
+variants:
+  - id: bionli-llm-inference-protocol
+    name: BioNLI — LLM inference protocol
+    description: Biomedical natural-language inference over abstracts with adversarially generated hypotheses.
+    creators:
+      - Stony Brook University
+      - University of Arizona
+    assignment: TBD
+    sources:
+      - label: Benchmark
+        url: https://arxiv.org/abs/2210.14814
+      - label: Scorer / data
+        url: https://github.com/StonyBrookNLP/BioNLI/tree/1aa25c4abfa4b5d05a3102c85f4949cdaf97277a
+      - label: Evalchemy / integration
+        url: https://github.com/marin-community/evalchemy/tree/ab8e78f12abb8ed0d1659f56c24f2e01f3c85b54/eval/chat_benchmarks
+    implementations:
+      - framework: Evalchemy
+        status: unknown
+        evidence: []
+    work: []
+    notes:
+      - "Access: Author release links for full/balanced training and development data; test set
+        requires author contact."
+      - "Grading: Entailment/consistency classification using an explicit LLM prompt and official
+        label mapping."
+      - "Limitations: Originally an NLI dataset; later LLM studies use it. Full/balanced releases
+        share the same test set."
+      - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
+        notes are historical."
+    provenance:
+      - sheet: Non-agentic (Evalchemy)
+        gid: 776831399
+        row: 37
+        evidence_date: 9/21/2026
+        imported_at: 2026-10-14

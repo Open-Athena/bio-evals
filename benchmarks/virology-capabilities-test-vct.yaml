@@ -1,0 +1,49 @@
+id: virology-capabilities-test-vct
+name: Virology Capabilities Test (VCT)
+description: "Virology Capabilities Test: specialist virology knowledge/reasoning, including visual material."
+creators:
+  - SecureBio
+  - Center for AI Safety
+  - UFABC
+  - MIT Media Lab
+sources:
+  - label: Benchmark
+    url: https://securebio.org/virologytest/
+notes: []
+variants:
+  - id: virology-capabilities-test-vct
+    name: Virology Capabilities Test (VCT)
+    description: "Virology Capabilities Test: specialist virology knowledge/reasoning, including visual
+      material."
+    creators:
+      - SecureBio
+      - Center for AI Safety
+      - UFABC
+      - MIT Media Lab
+    assignment: TBD
+    sources:
+      - label: Benchmark
+        url: https://securebio.org/virologytest/
+      - label: Scorer / data
+        url: https://securebio.org/virologytest/
+      - label: Evalchemy / integration
+        url: https://github.com/marin-community/evalchemy/tree/ab8e78f12abb8ed0d1659f56c24f2e01f3c85b54/eval/chat_benchmarks
+    implementations:
+      - framework: Evalchemy
+        status: unknown
+        evidence: []
+    work: []
+    notes:
+      - "Access: Public SecureBio description; full benchmark access is restricted/request-based."
+      - "Grading: Expert-authored question scoring; complete answer/scorer access requires
+        confirmation with the provider."
+      - "Limitations: Record as an access-limited benchmark; do not substitute public examples for a
+        full result."
+      - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
+        notes are historical."
+    provenance:
+      - sheet: Non-agentic (Evalchemy)
+        gid: 776831399
+        row: 50
+        evidence_date: 9/21/2026
+        imported_at: 2026-10-14

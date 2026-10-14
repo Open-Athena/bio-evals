@@ -1,0 +1,42 @@
+id: able
+name: ABLE
+description: Nine evaluation tasks for LLM planning and use of biological AI/protein-design tools.
+creators:
+  - SecureBio
+sources:
+  - label: Benchmark
+    url: https://arxiv.org/abs/2609.05818
+notes: []
+variants:
+  - id: able-agentic-biological-ai-tool-use
+    name: ABLE — agentic biological AI tool use
+    description: Nine evaluation tasks for LLM planning and use of biological AI/protein-design tools.
+    creators:
+      - SecureBio
+    assignment: ID
+    sources:
+      - label: Benchmark
+        url: https://arxiv.org/abs/2609.05818
+      - label: Scorer / data
+        url: https://arxiv.org/abs/2609.05818
+      - label: Harbor / integration
+        url: https://github.com/marin-community/harbor/tree/b78a0e52af98015fc8416d5bd5ee649a284e5a4c/adapters
+    implementations:
+      - framework: Harbor
+        status: unknown
+        evidence: []
+    work: []
+    notes:
+      - "Access: Paper/methodology public; complete evaluation assets/access not verified."
+      - "Grading: Task-specific algorithmic assessment of tool use and outputs; expert baselines
+        reported."
+      - "Limitations: Evaluates LLM use of biological tools; it is not a standalone protein
+        sequence-model benchmark."
+      - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
+        notes are historical."
+    provenance:
+      - sheet: Agentic (Harbor)
+        gid: 846608904
+        row: 45
+        evidence_date: 9/21/2026
+        imported_at: 2026-10-14

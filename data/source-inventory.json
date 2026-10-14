@@ -1,0 +1,4936 @@
+{
+  "spreadsheet_url": "https://docs.google.com/spreadsheets/d/13wfLWv0dHw57_0_yf1p2h9u5z8yojaYM7I9BLFVhd3k/edit",
+  "imported_at": "2026-10-14",
+  "read_ranges": [
+    {
+      "sheet": "Agentic (Harbor)",
+      "range": "'Agentic (Harbor)'!A1:AE1000",
+      "rows": 48
+    },
+    {
+      "sheet": "Non-agentic (Evalchemy)",
+      "range": "'Non-agentic (Evalchemy)'!A1:AD999",
+      "rows": 72
+    }
+  ],
+  "records": [
+    {
+      "family_id": "bixbench",
+      "family_name": "BixBench",
+      "variant_id": "bixbench-v1-5-harbor-cli",
+      "name": "BixBench v1.5, Harbor CLI",
+      "creators": [
+        "FutureHouse",
+        "ScienceMachine"
+      ],
+      "assignment": "ID",
+      "description": "notebook-derived biological analysis questions",
+      "framework": "Harbor",
+      "sources": [
+        {
+          "label": "Benchmark",
+          "url": "https://github.com/harbor-framework/harbor/tree/main/adapters/bixbench"
+        },
+        {
+          "label": "Scorer / data",
+          "url": "https://github.com/harbor-framework/harbor/blob/0d67ca4b59206aca2734bf9fe0260ca79e08acb4/adapters/bixbench/src/bixbench/task-template/tests/llm_judge.py"
+        },
+        {
+          "label": "Harbor / integration",
+          "url": "https://github.com/harbor-framework/harbor/tree/main/adapters/bixbench"
+        }
+      ],
+      "work": [
+        "https://github.com/marin-community/marin/issues/9258"
+      ],
+      "notes": [
+        "Access: Public reference answers and adapter; validate inputs and environment.",
+        "Grading: Together openai/gpt-oss-120b; original comparison prompt, explicit JSON schema, 1,024-token cap, 600 s verifier limit. Retained 177 native grades; 10 of 11 failed grading calls recovered. Numerical tolerances unchanged; pilot precision caveat remains.",
+        "Limitations: First primary-suite candidate: existing Harbor adapter. CLI and replacement-judge scores need explicit protocol labels."
+      ],
+      "provenance": {
+        "sheet": "Agentic (Harbor)",
+        "gid": 846608904,
+        "row": 2,
+        "evidence_date": "9/19/2026",
+        "imported_at": "2026-10-14"
+      },
+      "source_status": "Evaluated — GLM-5.3; 187/205 graded"
+    },
+    {
+      "family_id": "bixbench",
+      "family_name": "BixBench",
+      "variant_id": "bixbench-verified-50-harbor-cli",
+      "name": "BixBench-Verified-50, Harbor CLI",
+      "creators": [
+        "Phylo (verified-subset curator)"
+      ],
+      "assignment": "ID",
+      "description": "50 bioinformatics analysis questions across 33 capsules; Phylo-curated subset.",
+      "framework": "Harbor",
+      "sources": [
+        {
+          "label": "Benchmark",
+          "url": "https://phylo.bio/blog/evaluating-ai-agents-in-biology"
+        },
+        {
+          "label": "Scorer / data",
+          "url": "https://huggingface.co/datasets/phylobio/BixBench-Verified-50"
+        },
+        {
+          "label": "Harbor / integration",
+          "url": "https://github.com/marin-community/harbor/tree/0dcd65486c9956e7cbb561226ca78d2a8a1725cb/adapters/bixbench-verified-50"
+        }
+      ],
+      "work": [],
+      "notes": [
+        "Access: Public pinned Harbor tasks, references and grader; public hash-verified capsules. Phylo source files require HF access for regeneration.",
+        "Grading: decimal-precision-v1 for 13 continuous targets; Together GPT-OSS-120B for remaining answers; explicit JSON schema, 1,024-token cap.",
+        "Limitations: Curated 50-question subset; two known source defects retained. Harbor grading differs from Phylo; scores are not interchangeable with original BixBench."
+      ],
+      "provenance": {
+        "sheet": "Agentic (Harbor)",
+        "gid": 846608904,
+        "row": 3,
+        "evidence_date": "9/22/2026",
+        "imported_at": "2026-10-14"
+      },
+      "source_status": "Evaluated — GLM-5.3; 49/50 graded"
+    },
+    {
+      "family_id": "terminal-bench-science",
+      "family_name": "Terminal-Bench-Science",
+      "variant_id": "terminal-bench-science-life-sciences",
+      "name": "Terminal-Bench-Science, life sciences",
+      "creators": [
+        "Terminal-Bench-Science Team"
+      ],
+      "assignment": "OOD",
+      "description": "scientific workflows",
+      "framework": "Harbor",
+      "sources": [
+        {
+          "label": "Benchmark",
+          "url": "https://github.com/harbor-framework/terminal-bench-science"
+        },
+        {
+          "label": "Scorer / data",
+          "url": "https://github.com/harbor-framework/terminal-bench-science/tree/ff55a1b0810a5cc2ebac3ebb007cbe6a26aa2e3b/tasks/life-sciences/biology/genomic-model-ranking/tests"
+        },
+        {
+          "label": "Harbor / integration",
+          "url": "https://github.com/harbor-framework/terminal-bench-science"
+        }
+      ],
+      "work": [],
+      "notes": [
+        "Access: Task files, fixtures, and oracle available; one Harbor/Daytona oracle passed.",
+        "Grading: Executable task verifier; genomic-model-ranking needs no judge API.",
+        "Limitations: Prepared smoke test, not a suite score. Diagnostic agent limit 15 minutes versus native 8 hours."
+      ],
+      "provenance": {
+        "sheet": "Agentic (Harbor)",
+        "gid": 846608904,
+        "row": 4,
+        "evidence_date": "9/18/2026",
+        "imported_at": "2026-10-14"
+      },
+      "source_status": "Serving blocked"
+    },
+    {
+      "family_id": "scienceagentbench",
+      "family_name": "ScienceAgentBench",
+      "variant_id": "scienceagentbench-bioinformatics",
+      "name": "ScienceAgentBench, bioinformatics",
+      "creators": [
+        "Ohio State University",
+        "University of Wisconsin–Madison"
+      ],
+      "assignment": "ID",
+      "description": "Python analysis and scientific computing",
+      "framework": "Harbor",
+      "sources": [
+        {
+          "label": "Benchmark",
+          "url": "https://arxiv.org/abs/2410.05080"
+        },
+        {
+          "label": "Scorer / data",
+          "url": "https://github.com/harbor-framework/harbor/blob/96a13544537e54be84c0f316f8c3156769380684/adapters/scienceagentbench/task_manifest.json"
+        },
+        {
+          "label": "Harbor / integration",
+          "url": "https://github.com/harbor-framework/harbor/blob/96a13544537e54be84c0f316f8c3156769380684/adapters/scienceagentbench/README.md"
+        }
+      ],
+      "work": [],
+      "notes": [
+        "Access: Separate SharePoint inputs and gold assets; some tasks need GPU or extra RAM.",
+        "Grading: 27 bio tasks: 11 deterministic, 16 visual. Visual grader defaults to GPT-4o; replacement needs validation.",
+        "Limitations: Next existing adapter. Choose tasks by relevance/resources; visual tasks remain eligible."
+      ],
+      "provenance": {
+        "sheet": "Agentic (Harbor)",
+        "gid": 846608904,
+        "row": 5,
+        "evidence_date": "9/18/2026",
+        "imported_at": "2026-10-14"
+      },
+      "source_status": "Packaging check"
+    },
+    {
+      "family_id": "scbench",
+      "family_name": "scBench",
+      "variant_id": "scbench",
+      "name": "scBench",
+      "creators": [
+        "LatchBio"
+      ],
+      "assignment": "ID",
+      "description": "single-cell analysis from workflow snapshots",
+      "framework": "Harbor",
+      "sources": [
+        {
+          "label": "Benchmark",
+          "url": "https://arxiv.org/abs/2602.09063"
+        },
+        {
+          "label": "Scorer / data",
+          "url": "https://github.com/latchbio/scbench/tree/0bc34032bfa402dad29fc40b4cf10ea8fc03193e"
+        },
+        {
+          "label": "Harbor / integration",
+          "url": "https://github.com/marin-community/harbor/tree/abdd67137bcd6e5c44d682d0052fbd1190e63556/adapters"
+        }
+      ],
+      "work": [],
+      "notes": [
+        "Access: Six public task configs/targets; Latch data pointers untested. Full suite withheld.",
+        "Grading: Six public examples use numeric tolerances; shared grader library is public.",
+        "Limitations: Public-subset score only. Pinned repo: 195 total / 6 public; paper: 394 / 30."
+      ],
+      "provenance": {
+        "sheet": "Agentic (Harbor)",
+        "gid": 846608904,
+        "row": 6,
+        "evidence_date": "9/18/2026",
+        "imported_at": "2026-10-14"
+      },
+      "source_status": "Port needed"
+    },
+    {
+      "family_id": "genebench",
+      "family_name": "GeneBench",
+      "variant_id": "genebench-pro",
+      "name": "GeneBench-Pro",
+      "creators": [
+        "OpenAI"
+      ],
+      "assignment": "OOD",
+      "description": "judgment-heavy genomics and quantitative biology",
+      "framework": "Harbor",
+      "sources": [
+        {
+          "label": "Benchmark",
+          "url": "https://huggingface.co/datasets/openai/genebench-pro-public-package"
+        },
+        {
+          "label": "Scorer / data",
+          "url": "https://huggingface.co/datasets/openai/genebench-pro-public-package/blob/eb75a3c0996b3cedcc9af685bad02fd166848fa2/reference_grader.py"
+        },
+        {
+          "label": "Harbor / integration",
+          "url": "https://github.com/josancamon19/sci-benches/tree/1fc392943dce9c847a62574dcf4e4c6ad943d2ab/src/genebench_pro"
+        }
+      ],
+      "work": [],
+      "notes": [
+        "Access: Ten ungated public cases with references and schemas; full 129-task suite not in release.",
+        "Grading: Python standard-library numeric, integer, exact-match checks; 30 local interface checks passed.",
+        "Limitations: 10/10 reports document generation and estimators. Public pass rates: GLM-5.1 0%; GLM-5.2 8.9%; GLM-5.3 unmeasured. Teacher reliability is the MVP gate."
+      ],
+      "provenance": {
+        "sheet": "Agentic (Harbor)",
+        "gid": 846608904,
+        "row": 7,
+        "evidence_date": "9/19/2026",
+        "imported_at": "2026-10-14"
+      },
+      "source_status": "Packaging check"
+    },
+    {
+      "family_id": "spatialbench",
+      "family_name": "SpatialBench",
+      "variant_id": "spatialbench",
+      "name": "SpatialBench",
+      "creators": [
+        "LatchBio"
+      ],
+      "assignment": "ID",
+      "description": "spatial transcriptomics analysis",
+      "framework": "Harbor",
+      "sources": [
+        {
+          "label": "Benchmark",
+          "url": "https://arxiv.org/abs/2512.21907"
+        },
+        {
+          "label": "Scorer / data",
+          "url": "https://github.com/latchbio/spatialbench/tree/5042c4f3ee597da1590650c7b894d068ae968e26/example_evals"
+        },
+        {
+          "label": "Harbor / integration",
+          "url": "https://github.com/marin-community/harbor/tree/abdd67137bcd6e5c44d682d0052fbd1190e63556/adapters"
+        }
+      ],
+      "work": [],
+      "notes": [
+        "Access: 16 public task JSONs; Latch downloads untested. Full 159-task suite withheld.",
+        "Grading: Inspected examples include deterministic configs and targets; shared Latch grader code.",
+        "Limitations: Complementary spatial analysis. Report the exact public subset separately from full-suite results."
+      ],
+      "provenance": {
+        "sheet": "Agentic (Harbor)",
+        "gid": 846608904,
+        "row": 8,
+        "evidence_date": "9/18/2026",
+        "imported_at": "2026-10-14"
+      },
+      "source_status": "Port needed"
+    },
+    {
+      "family_id": "bioagent-bench",
+      "family_name": "BioAgent Bench",
+      "variant_id": "bioagent-bench",
+      "name": "BioAgent Bench",
+      "creators": [
+        "Entropic",
+        "University of Zagreb (TakeLab)"
+      ],
+      "assignment": "ID",
+      "description": "ten bioinformatics pipelines, including RNA-seq, variant calling, and metagenomics; corrupted-input, decoy-file, and prompt perturbations",
+      "framework": "Harbor",
+      "sources": [
+        {
+          "label": "Benchmark",
+          "url": "https://arxiv.org/abs/2601.21800v4"
+        },
+        {
+          "label": "Scorer / data",
+          "url": "https://github.com/bioagent-bench/bioagent-bench/tree/6d098b602b8a8fdc33a9d25e410a502be7ed9ce0"
+        },
+        {
+          "label": "Harbor / integration",
+          "url": "https://github.com/marin-community/harbor/tree/abdd67137bcd6e5c44d682d0052fbd1190e63556/adapters"
+        }
+      ],
+      "work": [],
+      "notes": [
+        "Access: Public data downloader and reference pipelines; runtime/memory staging untested.",
+        "Grading: Deterministic results_match plus LLM progress judge; keep scores separate. Default judge uses OpenRouter.",
+        "Limitations: Pipeline execution and perturbation robustness. Paper targets <4 hours / 48 GB; not measured pilot costs."
+      ],
+      "provenance": {
+        "sheet": "Agentic (Harbor)",
+        "gid": 846608904,
+        "row": 9,
+        "evidence_date": "9/18/2026",
+        "imported_at": "2026-10-14"
+      },
+      "source_status": "Port needed"
+    },
+    {
+      "family_id": "sc-heurekabench",
+      "family_name": "sc-HeurekaBench",
+      "variant_id": "sc-heurekabench",
+      "name": "sc-HeurekaBench",
+      "creators": [
+        "EPFL",
+        "ETH Zurich"
+      ],
+      "assignment": "ID",
+      "description": "open-ended single-cell scientific reasoning",
+      "framework": "Harbor",
+      "sources": [
+        {
+          "label": "Benchmark",
+          "url": "https://arxiv.org/abs/2601.01678"
+        },
+        {
+          "label": "Scorer / data",
+          "url": "https://github.com/mlbio-epfl/HeurekaBench/tree/c2a2b2fcdc5244220ff60f65483bc084c72a8cf1/scheurekabench"
+        },
+        {
+          "label": "Harbor / integration",
+          "url": "https://github.com/marin-community/harbor/tree/abdd67137bcd6e5c44d682d0052fbd1190e63556/adapters"
+        }
+      ],
+      "work": [],
+      "notes": [
+        "Access: Released evaluator; 50 open-ended and 50 multiple-choice questions. Data access untested.",
+        "Grading: Open answers: LLM judge (default GPT-4o). MCQ: exact option-set accuracy plus precision/recall/F1.",
+        "Limitations: Single-cell scientific reasoning; report open-answer and MC results separately."
+      ],
+      "provenance": {
+        "sheet": "Agentic (Harbor)",
+        "gid": 846608904,
+        "row": 10,
+        "evidence_date": "9/18/2026",
+        "imported_at": "2026-10-14"
+      },
+      "source_status": "Port needed"
+    },
+    {
+      "family_id": "liu-et-al-single-cell-agent-benchmark",
+      "family_name": "Liu et al. single-cell agent benchmark",
+      "variant_id": "liu-et-al-single-cell-agent-benchmark",
+      "name": "Liu et al., single-cell agent benchmark",
+      "creators": [
+        "Guangzhou National Laboratory",
+        "Guangzhou Medical University",
+        "collaborators (see note)"
+      ],
+      "assignment": "ID",
+      "description": "50 single-cell and multi-omics tasks",
+      "framework": "Harbor",
+      "sources": [
+        {
+          "label": "Benchmark",
+          "url": "https://doi.org/10.1186/s13059-026-03998-z"
+        },
+        {
+          "label": "Scorer / data",
+          "url": "https://github.com/lyyang01/bioagent-benchmark/tree/1605e6e38bd69307e2f7b68a4367de21043c89b6/evaluation"
+        },
+        {
+          "label": "Harbor / integration",
+          "url": "https://github.com/marin-community/harbor/tree/abdd67137bcd6e5c44d682d0052fbd1190e63556/adapters"
+        }
+      ],
+      "work": [],
+      "notes": [
+        "Access: Public evaluation code and reference analyses for 50 tasks; downloads/scorer untested.",
+        "Grading: LLM evaluation plus output consistency, code, execution, and knowledge-use metrics.",
+        "Limitations: Workflow diagnostics. Separate from BioAgent Bench; process metrics do not establish biological correctness."
+      ],
+      "provenance": {
+        "sheet": "Agentic (Harbor)",
+        "gid": 846608904,
+        "row": 11,
+        "evidence_date": "9/18/2026",
+        "imported_at": "2026-10-14"
+      },
+      "source_status": "Port needed"
+    },
+    {
+      "family_id": "baisbench",
+      "family_name": "BAISBench",
+      "variant_id": "baisbench",
+      "name": "BAISBench",
+      "creators": [
+        "Tsinghua University",
+        "Beijing Jiaotong University",
+        "Capital Medical University"
+      ],
+      "assignment": "ID",
+      "description": "single-cell annotation and data-grounded biological discovery",
+      "framework": "Harbor",
+      "sources": [
+        {
+          "label": "Benchmark",
+          "url": "https://arxiv.org/abs/2505.08341"
+        },
+        {
+          "label": "Scorer / data",
+          "url": "https://github.com/EperLuo/BaisBench/tree/cfab1beb09a7cba999c16f01475fdca37fee5cac"
+        },
+        {
+          "label": "Harbor / integration",
+          "url": "https://github.com/marin-community/harbor/tree/abdd67137bcd6e5c44d682d0052fbd1190e63556/adapters"
+        }
+      ],
+      "work": [],
+      "notes": [
+        "Access: Public notebooks: 15 annotated datasets; 193 MC questions from 41 studies.",
+        "Grading: Annotation metrics and MC reference answers; validate end-to-end extraction/scoring.",
+        "Limitations: Single-cell annotation and discovery are separate evaluation targets and metrics."
+      ],
+      "provenance": {
+        "sheet": "Agentic (Harbor)",
+        "gid": 846608904,
+        "row": 12,
+        "evidence_date": "9/18/2026",
+        "imported_at": "2026-10-14"
+      },
+      "source_status": "Port needed"
+    },
+    {
+      "family_id": "bioml-bench",
+      "family_name": "BioML-bench",
+      "variant_id": "bioml-bench",
+      "name": "BioML-bench",
+      "creators": [
+        "ScienceMachine"
+      ],
+      "assignment": "ID",
+      "description": "biomedical ML engineering across omics, proteins, imaging, and drug discovery",
+      "framework": "Harbor",
+      "sources": [
+        {
+          "label": "Benchmark",
+          "url": "https://github.com/science-machine/biomlbench/tree/673f3d8d3462fc6cdcbbd9695fba612b9332ca65"
+        },
+        {
+          "label": "Scorer / data",
+          "url": "https://github.com/science-machine/biomlbench/blob/673f3d8d3462fc6cdcbbd9695fba612b9332ca65/biomlbench/grade.py"
+        },
+        {
+          "label": "Harbor / integration",
+          "url": "https://github.com/marin-community/harbor/tree/abdd67137bcd6e5c44d682d0052fbd1190e63556/adapters"
+        }
+      ],
+      "work": [],
+      "notes": [
+        "Access: Alpha release; dataset permissions/reference labels vary by source.",
+        "Grading: Released numerical scorers; inspected examples use F1 and Pearson correlation.",
+        "Limitations: Complementary biomedical ML engineering; budget model fitting separately from agent inference."
+      ],
+      "provenance": {
+        "sheet": "Agentic (Harbor)",
+        "gid": 846608904,
+        "row": 13,
+        "evidence_date": "9/18/2026",
+        "imported_at": "2026-10-14"
+      },
+      "source_status": "Port needed"
+    },
+    {
+      "family_id": "lab-bench",
+      "family_name": "LAB-Bench",
+      "variant_id": "labbench2",
+      "name": "LABBench2",
+      "creators": [
+        "Edison Scientific"
+      ],
+      "assignment": "ID",
+      "description": "broad research skills, including literature, sequences, and cloning",
+      "framework": "Harbor",
+      "sources": [
+        {
+          "label": "Benchmark",
+          "url": "https://github.com/EdisonScientific/labbench2"
+        },
+        {
+          "label": "Scorer / data",
+          "url": "https://github.com/EdisonScientific/labbench2/blob/c028ecdcf144b55ffcd92b68be45081df5628c20/evals/evaluators.py"
+        },
+        {
+          "label": "Harbor / integration",
+          "url": "https://github.com/marin-community/harbor/tree/abdd67137bcd6e5c44d682d0052fbd1190e63556/adapters"
+        }
+      ],
+      "work": [],
+      "notes": [
+        "Access: Gated HF dataset; released evaluators and external reference files.",
+        "Grading: Sequence/cloning executable checks; other categories use LLM judging, defaulting to Anthropic.",
+        "Limitations: Broader research skills. Harbor labbench covers original FigQA, not LABBench2."
+      ],
+      "provenance": {
+        "sheet": "Agentic (Harbor)",
+        "gid": 846608904,
+        "row": 14,
+        "evidence_date": "9/18/2026",
+        "imported_at": "2026-10-14"
+      },
+      "source_status": "Port needed"
+    },
+    {
+      "family_id": "compbiobench",
+      "family_name": "CompBioBench",
+      "variant_id": "compbiobench",
+      "name": "CompBioBench",
+      "creators": [
+        "Genentech"
+      ],
+      "assignment": "ID",
+      "description": "100 tasks across omics, genetics, and ML",
+      "framework": "Harbor",
+      "sources": [
+        {
+          "label": "Benchmark",
+          "url": "https://github.com/Genentech/compbiobench-runner"
+        },
+        {
+          "label": "Scorer / data",
+          "url": "https://huggingface.co/spaces/Genentech/compbiobench-leaderboard-v1/blob/6a63e6d2cae531d9e9bf46b341606ed6b304ba3f/app.py"
+        },
+        {
+          "label": "Harbor / integration",
+          "url": "https://github.com/josancamon19/sci-benches/tree/1fc392943dce9c847a62574dcf4e4c6ad943d2ab/src/compbiobench"
+        }
+      ],
+      "work": [],
+      "notes": [
+        "Access: Public runner/inputs; HF login and answers to all 100 questions for hosted scoring; 2 submissions/day at audit.",
+        "Grading: Hosted exact-match scoring. Community verifier only collects answers; its fixed reward=0 is not correctness.",
+        "Limitations: Community packaging covers 100 tasks; official hosted scoring remains necessary."
+      ],
+      "provenance": {
+        "sheet": "Agentic (Harbor)",
+        "gid": 846608904,
+        "row": 15,
+        "evidence_date": "9/19/2026",
+        "imported_at": "2026-10-14"
+      },
+      "source_status": "Assets / protocol"
+    },
+    {
+      "family_id": "bixbench",
+      "family_name": "BixBench",
+      "variant_id": "bixbench3",
+      "name": "BixBench3",
+      "creators": [
+        "Edison Scientific"
+      ],
+      "assignment": "ID",
+      "description": "20 research-scale analyses from raw data",
+      "framework": "Harbor",
+      "sources": [
+        {
+          "label": "Benchmark",
+          "url": "https://github.com/EdisonScientific/BixBench3"
+        },
+        {
+          "label": "Scorer / data",
+          "url": "https://github.com/EdisonScientific/BixBench3/blob/d0e0bbb41222335b1b8878f533a58466a3a782dc/src/bixbench3/grading/grader.py"
+        },
+        {
+          "label": "Harbor / integration",
+          "url": "https://github.com/marin-community/harbor/tree/abdd67137bcd6e5c44d682d0052fbd1190e63556/adapters"
+        }
+      ],
+      "work": [],
+      "notes": [
+        "Access: Gated HF dataset; reference artifact packages on GCS; full downloads untested.",
+        "Grading: Deterministic artifact scoring; separate LLM process review. Default runner uses OpenAI.",
+        "Limitations: Later study-scale evaluation: 20 analyses. Keep artifact and process scores separate."
+      ],
+      "provenance": {
+        "sheet": "Agentic (Harbor)",
+        "gid": 846608904,
+        "row": 16,
+        "evidence_date": "9/18/2026",
+        "imported_at": "2026-10-14"
+      },
+      "source_status": "Port needed"
+    },
+    {
+      "family_id": "biomysterybench",
+      "family_name": "BioMysteryBench",
+      "variant_id": "biomysterybench",
+      "name": "BioMysteryBench",
+      "creators": [
+        "Anthropic"
+      ],
+      "assignment": "OOD",
+      "description": "analysis of anonymized biological datasets",
+      "framework": "Harbor",
+      "sources": [
+        {
+          "label": "Benchmark",
+          "url": "https://huggingface.co/datasets/Anthropic/BioMysteryBench-full"
+        },
+        {
+          "label": "Scorer / data",
+          "url": "https://huggingface.co/datasets/Anthropic/BioMysteryBench-full"
+        },
+        {
+          "label": "Harbor / integration",
+          "url": "https://github.com/josancamon19/sci-benches/tree/1fc392943dce9c847a62574dcf4e4c6ad943d2ab/src/biomistery_bench"
+        }
+      ],
+      "work": [],
+      "notes": [
+        "Access: 90 gated, eval-only tasks; 5 previews. Community importer skips >1 GB archives by default.",
+        "Grading: Community LLM judge uses answer rubric + trajectory/source-lookup compliance; official equivalence unvalidated.",
+        "Limitations: Packaging and a community judge exist; access, judge fidelity and source-lookup compliance remain blockers."
+      ],
+      "provenance": {
+        "sheet": "Agentic (Harbor)",
+        "gid": 846608904,
+        "row": 17,
+        "evidence_date": "9/19/2026",
+        "imported_at": "2026-10-14"
+      },
+      "source_status": "Assets / protocol"
+    },
+    {
+      "family_id": "bioxarena",
+      "family_name": "BioXArena",
+      "variant_id": "bioxarena",
+      "name": "BioXArena",
+      "creators": [
+        "MBZUAI",
+        "University of Chinese Academy of Sciences",
+        "Carnegie Mellon University"
+      ],
+      "assignment": "ID",
+      "description": "76 biomedical ML tasks across nine domains",
+      "framework": "Harbor",
+      "sources": [
+        {
+          "label": "Benchmark",
+          "url": "https://arxiv.org/abs/2605.15766"
+        },
+        {
+          "label": "Scorer / data",
+          "url": "https://github.com/mbzuai-ai4bio/BioXArena/blob/29f88d4d573001405abf0694aee72d91c3f47e6c/README.md"
+        },
+        {
+          "label": "Harbor / integration",
+          "url": "https://github.com/marin-community/harbor/tree/abdd67137bcd6e5c44d682d0052fbd1190e63556/adapters"
+        }
+      ],
+      "work": [],
+      "notes": [
+        "Access: Public runner/inputs for 76 tasks; no verified complete local scorer.",
+        "Grading: Authors score predictions against private answers.csv; numerical metrics.",
+        "Limitations: Biomedical ML across 9 domains; agent inference and task model fitting have separate costs."
+      ],
+      "provenance": {
+        "sheet": "Agentic (Harbor)",
+        "gid": 846608904,
+        "row": 18,
+        "evidence_date": "9/18/2026",
+        "imported_at": "2026-10-14"
+      },
+      "source_status": "Assets / protocol"
+    },
+    {
+      "family_id": "epibench",
+      "family_name": "EpiBench",
+      "variant_id": "epibench",
+      "name": "EpiBench",
+      "creators": [
+        "LatchBio"
+      ],
+      "assignment": "ID",
+      "description": "epigenomics workflow steps across accessibility, chromatin, and methylation assays",
+      "framework": "Harbor",
+      "sources": [
+        {
+          "label": "Benchmark",
+          "url": "https://arxiv.org/abs/2606.13602"
+        },
+        {
+          "label": "Scorer / data",
+          "url": "https://github.com/latchbio/epibench/tree/6bc01f15125f5a01ab78ce1fd2fc2c51c4ca04f3/evals"
+        },
+        {
+          "label": "Harbor / integration",
+          "url": "https://github.com/josancamon19/sci-benches/tree/1fc392943dce9c847a62574dcf4e4c6ad943d2ab/src/epibench"
+        }
+      ],
+      "work": [],
+      "notes": [
+        "Access: 7 public examples with Latch pointers; full paper suite has 106 tasks.",
+        "Grading: Official targets missing; community reconstructs deterministic checks for 7 public examples.",
+        "Limitations: Community packaging covers 7 examples; reconstructed grading must be reported as a separate variant."
+      ],
+      "provenance": {
+        "sheet": "Agentic (Harbor)",
+        "gid": 846608904,
+        "row": 19,
+        "evidence_date": "9/19/2026",
+        "imported_at": "2026-10-14"
+      },
+      "source_status": "Assets / protocol"
+    },
+    {
+      "family_id": "spatialbench",
+      "family_name": "SpatialBench",
+      "variant_id": "spatialbench-long",
+      "name": "SpatialBench-Long",
+      "creators": [
+        "LatchBio"
+      ],
+      "assignment": "ID",
+      "description": "study-scale spatial biological inference",
+      "framework": "Harbor",
+      "sources": [
+        {
+          "label": "Benchmark",
+          "url": "https://arxiv.org/abs/2605.28065"
+        },
+        {
+          "label": "Scorer / data",
+          "url": "https://github.com/latchbio/spatialbench-long/tree/7de13d39ebbffee4db42675620fe0d97647e399e/evals"
+        },
+        {
+          "label": "Harbor / integration",
+          "url": "https://github.com/marin-community/harbor/tree/abdd67137bcd6e5c44d682d0052fbd1190e63556/adapters"
+        }
+      ],
+      "work": [],
+      "notes": [
+        "Access: 4 public examples include prompts/vocabularies but omit graders and targets; Latch inputs.",
+        "Grading: Deterministic final answers plus separate LLM trajectory rubrics in paper.",
+        "Limitations: Later long-workflow comparison. Public examples do not establish full-suite reproducibility."
+      ],
+      "provenance": {
+        "sheet": "Agentic (Harbor)",
+        "gid": 846608904,
+        "row": 20,
+        "evidence_date": "9/18/2026",
+        "imported_at": "2026-10-14"
+      },
+      "source_status": "Assets / protocol"
+    },
+    {
+      "family_id": "variantbench",
+      "family_name": "VariantBench",
+      "variant_id": "variantbench",
+      "name": "VariantBench",
+      "creators": [
+        "LatchBio"
+      ],
+      "assignment": "ID",
+      "description": "Variant discovery/QC, statistical genetics and personal genomics; 118 main evaluations.",
+      "framework": "Harbor",
+      "sources": [
+        {
+          "label": "Benchmark",
+          "url": "https://blog.latch.bio/p/variantbench-an-agentic-benchmark"
+        },
+        {
+          "label": "Scorer / data",
+          "url": "https://github.com/latchbio/variantbench/tree/a1cd271bc3671c6ecef05176d33d29e5c490438c/evals"
+        },
+        {
+          "label": "Harbor / integration",
+          "url": "https://github.com/marin-community/harbor/tree/9551f376157d90104011107dcbf9ca3621228126/adapters"
+        }
+      ],
+      "work": [],
+      "notes": [
+        "Access: 8 public eval JSONs with graders/targets and Latch pointers; 28 example trajectories. Includes 2 ancillary cases outside main118.",
+        "Grading: Deterministic typed endpoint checks; composite tasks require all fields to pass.",
+        "Limitations: Adds variant interpretation absent from existing Latch rows. Full-suite access and data downloads still need validation."
+      ],
+      "provenance": {
+        "sheet": "Agentic (Harbor)",
+        "gid": 846608904,
+        "row": 21,
+        "evidence_date": "9/18/2026",
+        "imported_at": "2026-10-14"
+      },
+      "source_status": "Port needed"
+    },
+    {
+      "family_id": "scbench",
+      "family_name": "scBench",
+      "variant_id": "scbench-long",
+      "name": "scBench-Long",
+      "creators": [
+        "LatchBio"
+      ],
+      "assignment": "ID",
+      "description": "21 long-horizon single-cell evaluations across 5 study systems.",
+      "framework": "Harbor",
+      "sources": [
+        {
+          "label": "Benchmark",
+          "url": "https://latch.bio/scbench-long"
+        },
+        {
+          "label": "Scorer / data",
+          "url": "https://github.com/latchbio/scbench-long/tree/99da791f028343b3a0a08933c1089ee294c9c253/evals"
+        },
+        {
+          "label": "Harbor / integration",
+          "url": "https://github.com/marin-community/harbor/tree/9551f376157d90104011107dcbf9ca3621228126/adapters"
+        }
+      ],
+      "work": [],
+      "notes": [
+        "Access: 4 public examples with prompt/vocabulary files and trajectories; public release does not establish full-suite scoring access.",
+        "Grading: Paper: deterministic final answers plus separate trajectory rubrics.",
+        "Limitations: Separate from short-step scBench and SpatialBench-Long; end-to-end claim recovery."
+      ],
+      "provenance": {
+        "sheet": "Agentic (Harbor)",
+        "gid": 846608904,
+        "row": 22,
+        "evidence_date": "9/18/2026",
+        "imported_at": "2026-10-14"
+      },
+      "source_status": "Assets / protocol"
+    },
+    {
+      "family_id": "txbench",
+      "family_name": "TxBench",
+      "variant_id": "txbench-pp-preclinical-pharmacology",
+      "name": "TxBench-PP — preclinical pharmacology",
+      "creators": [
+        "LatchBio"
+      ],
+      "assignment": "ID",
+      "description": "100 assay-grounded preclinical pharmacology decisions.",
+      "framework": "Harbor",
+      "sources": [
+        {
+          "label": "Benchmark",
+          "url": "https://latch.bio/txbench-pp"
+        },
+        {
+          "label": "Scorer / data",
+          "url": "https://github.com/latchbio/txbench-pp/tree/a4e0913d76c3dbc433ecf39903afbe7711a6a807/evals"
+        },
+        {
+          "label": "Harbor / integration",
+          "url": "https://github.com/josancamon19/sci-benches/tree/1fc392943dce9c847a62574dcf4e4c6ad943d2ab/src/txbench_pp"
+        }
+      ],
+      "work": [],
+      "notes": [
+        "Access: 12 public eval JSONs in audited tree, all with graders and data pointers; README still says7.",
+        "Grading: Released Latch deterministic graders, including numeric, label, ranking and composite checks.",
+        "Limitations: Drug-discovery reasoning coverage. Some tasks need image inspection; filter explicitly for text-only served models."
+      ],
+      "provenance": {
+        "sheet": "Agentic (Harbor)",
+        "gid": 846608904,
+        "row": 23,
+        "evidence_date": "9/19/2026",
+        "imported_at": "2026-10-14"
+      },
+      "source_status": "Packaging check"
+    },
+    {
+      "family_id": "txbench",
+      "family_name": "TxBench",
+      "variant_id": "txbench-ab-antibody-discovery",
+      "name": "TxBench-Ab — antibody discovery",
+      "creators": [
+        "LatchBio"
+      ],
+      "assignment": "ID",
+      "description": "100 evaluations across 10 antibody-discovery competencies.",
+      "framework": "Harbor",
+      "sources": [
+        {
+          "label": "Benchmark",
+          "url": "https://latch.bio/txbench-ab"
+        },
+        {
+          "label": "Scorer / data",
+          "url": "https://github.com/latchbio/txbench-antibody-discovery/tree/3e9a40b2bad520b1a62ff21c308b57e3c8fbe508/evals"
+        },
+        {
+          "label": "Harbor / integration",
+          "url": "https://github.com/marin-community/harbor/tree/9551f376157d90104011107dcbf9ca3621228126/adapters"
+        }
+      ],
+      "work": [],
+      "notes": [
+        "Access: 6 public eval.json files audited; README says7. Input bundles, graders and targets absent from inspected configs.",
+        "Grading: Paper describes deterministic decision/endpoint scoring; public metadata names grader types.",
+        "Limitations: New September2026 release. Images may be essential for some assays; protocol is explicitly offline."
+      ],
+      "provenance": {
+        "sheet": "Agentic (Harbor)",
+        "gid": 846608904,
+        "row": 24,
+        "evidence_date": "9/18/2026",
+        "imported_at": "2026-10-14"
+      },
+      "source_status": "Assets / protocol"
+    },
+    {
+      "family_id": "txbench",
+      "family_name": "TxBench",
+      "variant_id": "txbench-od-oligonucleotide-discovery",
+      "name": "TxBench-OD — oligonucleotide discovery",
+      "creators": [
+        "LatchBio"
+      ],
+      "assignment": "ID",
+      "description": "113 ASO/siRNA discovery decision tasks.",
+      "framework": "Harbor",
+      "sources": [
+        {
+          "label": "Benchmark",
+          "url": "https://blog.latch.bio/p/an-agent-benchmark-for-therapeutic"
+        },
+        {
+          "label": "Scorer / data",
+          "url": "https://github.com/latchbio/txbench-oligo-discovery/tree/2ca404140b322f96713f140b275e99a02a038222/evals"
+        },
+        {
+          "label": "Harbor / integration",
+          "url": "https://github.com/marin-community/harbor/tree/9551f376157d90104011107dcbf9ca3621228126/adapters"
+        }
+      ],
+      "work": [],
+      "notes": [
+        "Access: 4 public eval.json files audited; README says7. Inputs and executable graders absent from inspected configs.",
+        "Grading: Deterministic decisions from supplied experimental evidence; full scoring assets needed.",
+        "Limitations: September9,2026 release; direct answer to internet constraint: task execution is explicitly offline."
+      ],
+      "provenance": {
+        "sheet": "Agentic (Harbor)",
+        "gid": 846608904,
+        "row": 25,
+        "evidence_date": "9/18/2026",
+        "imported_at": "2026-10-14"
+      },
+      "source_status": "Assets / protocol"
+    },
+    {
+      "family_id": "biosecbench",
+      "family_name": "BioSecBench",
+      "variant_id": "biosecbench-surveillance",
+      "name": "BioSecBench-Surveillance",
+      "creators": [
+        "LatchBio"
+      ],
+      "assignment": "ID",
+      "description": "100 defensive pathogen-surveillance analysis evaluations.",
+      "framework": "Harbor",
+      "sources": [
+        {
+          "label": "Benchmark",
+          "url": "https://github.com/latchbio/biosecbench-surveillance"
+        },
+        {
+          "label": "Scorer / data",
+          "url": "https://github.com/latchbio/biosecbench-surveillance/blob/main/METHODS.md"
+        },
+        {
+          "label": "Harbor / integration",
+          "url": "https://github.com/marin-community/harbor/tree/9551f376157d90104011107dcbf9ca3621228126/adapters"
+        }
+      ],
+      "work": [],
+      "notes": [
+        "Access: 7 public metadata/prompt examples; input nodes, graders, ground truth and trajectories withheld.",
+        "Grading: Deterministic endpoint pass/fail; timeouts fail; refusals excluded from pass-rate denominator.",
+        "Limitations: Track for completeness; access prevents a reproducible public Harbor implementation."
+      ],
+      "provenance": {
+        "sheet": "Agentic (Harbor)",
+        "gid": 846608904,
+        "row": 26,
+        "evidence_date": "9/18/2026",
+        "imported_at": "2026-10-14"
+      },
+      "source_status": "Assets / protocol"
+    },
+    {
+      "family_id": "biosecbench",
+      "family_name": "BioSecBench",
+      "variant_id": "biosecbench-function",
+      "name": "BioSecBench-Function",
+      "creators": [
+        "LatchBio"
+      ],
+      "assignment": "ID",
+      "description": "111 defensive functional-interpretation evaluations.",
+      "framework": "Harbor",
+      "sources": [
+        {
+          "label": "Benchmark",
+          "url": "https://github.com/latchbio/biosecbench-function"
+        },
+        {
+          "label": "Scorer / data",
+          "url": "https://github.com/latchbio/biosecbench-function/blob/main/METHODS.md"
+        },
+        {
+          "label": "Harbor / integration",
+          "url": "https://github.com/marin-community/harbor/tree/9551f376157d90104011107dcbf9ca3621228126/adapters"
+        }
+      ],
+      "work": [],
+      "notes": [
+        "Access: 7 public descriptive examples; data, graders, ground truth and trajectories withheld.",
+        "Grading: Deterministic functional endpoint scoring; refusals reported separately.",
+        "Limitations: Completeness/access-tracking candidate. Official methods explicitly disable internet."
+      ],
+      "provenance": {
+        "sheet": "Agentic (Harbor)",
+        "gid": 846608904,
+        "row": 27,
+        "evidence_date": "9/18/2026",
+        "imported_at": "2026-10-14"
+      },
+      "source_status": "Assets / protocol"
+    },
+    {
+      "family_id": "biosecbench",
+      "family_name": "BioSecBench",
+      "variant_id": "biosecbench-refusal-direct-framing",
+      "name": "BioSecBench-Refusal — direct framing",
+      "creators": [
+        "LatchBio"
+      ],
+      "assignment": "ID",
+      "description": "107 paired routine/hazard-detection scenarios; direct and meta framings.",
+      "framework": "Harbor",
+      "sources": [
+        {
+          "label": "Benchmark",
+          "url": "https://github.com/latchbio/biosecbench-refusal"
+        },
+        {
+          "label": "Scorer / data",
+          "url": "https://github.com/latchbio/biosecbench-refusal/blob/main/METHODS.md"
+        },
+        {
+          "label": "Harbor / integration",
+          "url": "https://github.com/marin-community/harbor/tree/9551f376157d90104011107dcbf9ca3621228126/adapters"
+        }
+      ],
+      "work": [],
+      "notes": [
+        "Access: 2 public examples; full107 tasks, hazard rationales and data restricted; no trajectories.",
+        "Grading: Direct: API-block detection plus trajectory refusal judge. Meta: deterministic decision/rationale scoring.",
+        "Limitations: Measures appropriate refusal/hazard recognition, not ordinary biology accuracy. Keep separate from capability aggregate."
+      ],
+      "provenance": {
+        "sheet": "Agentic (Harbor)",
+        "gid": 846608904,
+        "row": 28,
+        "evidence_date": "9/18/2026",
+        "imported_at": "2026-10-14"
+      },
+      "source_status": "Assets / protocol"
+    },
+    {
+      "family_id": "terminal-bench-science",
+      "family_name": "Terminal-Bench-Science",
+      "variant_id": "terminal-bench-science-lite-upcoming",
+      "name": "Terminal-Bench-Science-lite — upcoming",
+      "creators": [
+        "Unverified — upcoming lite release"
+      ],
+      "assignment": "OOD",
+      "description": "Upcoming science-lite life-sciences slice; composition pending release.",
+      "framework": "Harbor",
+      "sources": [
+        {
+          "label": "Benchmark",
+          "url": "https://docs.google.com/document/d/1UnoAHNlkRAskxC9fAnF1SMpiU4QnFg-A8x9aXoEQ_MI/edit"
+        },
+        {
+          "label": "Scorer / data",
+          "url": "https://github.com/harbor-framework/terminal-bench-science"
+        },
+        {
+          "label": "Harbor / integration",
+          "url": "https://github.com/marin-community/harbor/tree/9551f376157d90104011107dcbf9ca3621228126/adapters"
+        }
+      ],
+      "work": [],
+      "notes": [
+        "Access: Planning entry only; distinct from existing public Terminal-Bench-Science smoke test.",
+        "Grading: Expected Harbor task verifiers; exact release and task assets not yet available.",
+        "Limitations: Planning document explicitly says Science-lite should be OOD. Do not reuse inspected public tasks as a clean holdout."
+      ],
+      "provenance": {
+        "sheet": "Agentic (Harbor)",
+        "gid": 846608904,
+        "row": 29,
+        "evidence_date": "9/18/2026",
+        "imported_at": "2026-10-14"
+      },
+      "source_status": "Assets / protocol"
+    },
+    {
+      "family_id": "scicode",
+      "family_name": "SciCode",
+      "variant_id": "scicode-biology-harbor-variant",
+      "name": "SciCode — biology (Harbor variant)",
+      "creators": [
+        "UIUC",
+        "Argonne National Laboratory",
+        "Princeton University",
+        "collaborators (see note)"
+      ],
+      "assignment": "OOD",
+      "description": "Scientific coding; biology among 5 domains and 16 subdomains.",
+      "framework": "Harbor",
+      "sources": [
+        {
+          "label": "Benchmark",
+          "url": "https://arxiv.org/abs/2407.13168"
+        },
+        {
+          "label": "Scorer / data",
+          "url": "https://github.com/scicode-bench/SciCode"
+        },
+        {
+          "label": "Harbor / integration",
+          "url": "https://github.com/marin-community/harbor/tree/9551f376157d90104011107dcbf9ca3621228126/adapters/scicode"
+        }
+      ],
+      "work": [],
+      "notes": [
+        "Access: Existing Harbor adapter; shared≈1GB HDF5 test data staged once. Test solutions not publicly released.",
+        "Grading: Executable scientific test cases; main/subproblem reporting must match chosen protocol.",
+        "Limitations: AAII4.3 OOD component. Harbor's agentic variant changes the execution protocol; do not present it as canonical AAII performance."
+      ],
+      "provenance": {
+        "sheet": "Agentic (Harbor)",
+        "gid": 846608904,
+        "row": 30,
+        "evidence_date": "9/18/2026",
+        "imported_at": "2026-10-14"
+      },
+      "source_status": "Packaging check"
+    },
+    {
+      "family_id": "biomnibench-da",
+      "family_name": "BiomniBench-DA",
+      "variant_id": "biomnibench-da",
+      "name": "BiomniBench-DA",
+      "creators": [
+        "Phylo",
+        "xbench",
+        "Humanlaya Data Lab"
+      ],
+      "assignment": "ID",
+      "description": "Paper: 100 biomedical data-analysis tasks across 17 types, 5 disease areas, and general biology.",
+      "framework": "Harbor",
+      "sources": [
+        {
+          "label": "Benchmark",
+          "url": "https://www.biorxiv.org/content/10.64898/2026.05.12.724604v2"
+        },
+        {
+          "label": "Scorer / data",
+          "url": "https://huggingface.co/datasets/phylobio/BiomniBench-DA"
+        },
+        {
+          "label": "Harbor / integration",
+          "url": "https://huggingface.co/datasets/phylobio/BiomniBench-DA/tree/e1c8ca5e11a620087bc48d97888eb69176a1f235"
+        }
+      ],
+      "work": [],
+      "notes": [
+        "Access: HF metadata lists 50 Harbor-style task directories with instructions, Dockerfiles, and tests at e1c8ca5e11a620087bc48d97888eb69176a1f235. Auto-gated; unauthenticated content fetch returned 401.",
+        "Grading: Process-level scoring against expert task-specific rubrics; llm_judge.py and rubric.txt listed for all 50 released tasks. Judge provider and scoring contract unverified.",
+        "Limitations: Harbor-style packaging is listed but execution is unvalidated. Adds process diagnostics beyond final-answer checks. Distinguish the 50-task release from the paper's 100 tasks."
+      ],
+      "provenance": {
+        "sheet": "Agentic (Harbor)",
+        "gid": 846608904,
+        "row": 31,
+        "evidence_date": "9/19/2026",
+        "imported_at": "2026-10-14"
+      },
+      "source_status": "Assets / protocol"
+    },
+    {
+      "family_id": "drugdiscoverybench",
+      "family_name": "DrugDiscoveryBench",
+      "variant_id": "drugdiscoverybench",
+      "name": "DrugDiscoveryBench",
+      "creators": [
+        "Scale AI"
+      ],
+      "assignment": "ID",
+      "description": "82 early-stage drug-discovery tasks across 7 capabilities, using scientific databases, chemistry, genetics and literature.",
+      "framework": "Harbor",
+      "sources": [
+        {
+          "label": "Benchmark",
+          "url": "https://labs.scale.com/leaderboard/drugdiscoverybench"
+        },
+        {
+          "label": "Scorer / data",
+          "url": "https://huggingface.co/datasets/ScaleAI/DrugDiscoveryBench"
+        },
+        {
+          "label": "Harbor / integration",
+          "url": "https://github.com/scaleapi/DrugDiscoveryBench/tree/d58c703841abbad0ba1cc439488e15fbbeae3bd2/benchmark/tasks"
+        }
+      ],
+      "work": [],
+      "notes": [
+        "Access: Public Harbor tasks; reference answers/rubrics require gated ScaleAI/DrugDiscoveryBench access.",
+        "Grading: LLM rubric judge; weighted outcome score 0–100, pass only at 100; process rubric reported separately.",
+        "Limitations: Official Harbor release; promising comparison candidate. Community Daytona importer has a syntax error at the audited pin."
+      ],
+      "provenance": {
+        "sheet": "Agentic (Harbor)",
+        "gid": 846608904,
+        "row": 32,
+        "evidence_date": "9/19/2026",
+        "imported_at": "2026-10-14"
+      },
+      "source_status": "Assets / protocol"
+    },
+    {
+      "family_id": "promptbio-bench",
+      "family_name": "PromptBio-Bench",
+      "variant_id": "promptbio-bench",
+      "name": "PromptBio-Bench",
+      "creators": [
+        "PromptBio"
+      ],
+      "assignment": "ID",
+      "description": "244 tasks: 131 bioinformatics + 113 data science; 27 subfields and varied difficulty.",
+      "framework": "Harbor",
+      "sources": [
+        {
+          "label": "Benchmark",
+          "url": "https://www.biorxiv.org/content/10.64898/2026.05.05.723092v2"
+        },
+        {
+          "label": "Scorer / data",
+          "url": "https://huggingface.co/datasets/promptbio-ai/promptbio-bench-data/tree/078420b69e25c41c99a79135724b6ae6a6c82b69"
+        },
+        {
+          "label": "Harbor / integration",
+          "url": "https://github.com/PromptBio/promptbio-bench/tree/e2a1947894eac530900247f00c0b726363b540ed"
+        }
+      ],
+      "work": [],
+      "notes": [
+        "Access: 244 public task/eval JSON pairs and reference-script directories; input/reference files on ungated HF; evaluator on GitHub.",
+        "Grading: LLM-assisted file matching/strategy selection + format-specific comparison; mean file similarity (0–1).",
+        "Limitations: Useful MVP candidate with reference scripts for sibling validation. Some tasks are elementary; choose a teacher/student gap. Score is not a binary pass rate."
+      ],
+      "provenance": {
+        "sheet": "Agentic (Harbor)",
+        "gid": 846608904,
+        "row": 33,
+        "evidence_date": "9/19/2026",
+        "imported_at": "2026-10-14"
+      },
+      "source_status": "Port needed"
+    },
+    {
+      "family_id": "lifescibench",
+      "family_name": "LifeSciBench",
+      "variant_id": "lifescibench",
+      "name": "LifeSciBench",
+      "creators": [
+        "OpenAI",
+        "Tacit Labs"
+      ],
+      "assignment": "ID",
+      "description": "750 expert-authored tasks, 7 workflows and 7 domains; 1,062 artifacts and 19,020 rubric criteria.",
+      "framework": "Harbor",
+      "sources": [
+        {
+          "label": "Benchmark",
+          "url": "https://openai.com/index/introducing-life-sci-bench/"
+        },
+        {
+          "label": "Scorer / data",
+          "url": "https://cdn.openai.com/pdf/b4299379-0a97-4ffa-8b9b-c3fbb299caa9/lifescibench_preprint.pdf"
+        },
+        {
+          "label": "Harbor / integration",
+          "url": "https://github.com/marin-community/harbor/tree/b78a0e52af98015fc8416d5bd5ee649a284e5a4c/adapters"
+        }
+      ],
+      "work": [],
+      "notes": [
+        "Access: Paper and examples public; full tasks, artifacts, rubrics and runnable scorer not located. Release may be restricted.",
+        "Grading: Task-specific weighted rubrics; mean normalized score and pass rate at a 70% threshold; automated/model-assisted grading.",
+        "Limitations: Single user request permits unrestricted browsing; not a tool-free protocol. Broad applied research, not a measure of live discovery impact."
+      ],
+      "provenance": {
+        "sheet": "Agentic (Harbor)",
+        "gid": 846608904,
+        "row": 34,
+        "evidence_date": "9/21/2026",
+        "imported_at": "2026-10-14"
+      },
+      "source_status": "Assets / protocol"
+    },
+    {
+      "family_id": "genebench",
+      "family_name": "GeneBench",
+      "variant_id": "genebench-original",
+      "name": "GeneBench — original",
+      "creators": [
+        "OpenAI"
+      ],
+      "assignment": "OOD",
+      "description": "Multi-stage quantitative genomics: noisy data, QC, statistical models, confounding and downstream inference.",
+      "framework": "Harbor",
+      "sources": [
+        {
+          "label": "Benchmark",
+          "url": "https://cdn.openai.com/pdf/6dc7175d-d9e7-4b8d-96b8-48fe5798cd5b/oai_genebench_benchmark.pdf"
+        },
+        {
+          "label": "Scorer / data",
+          "url": "https://cdn.openai.com/pdf/6dc7175d-d9e7-4b8d-96b8-48fe5798cd5b/oai_genebench_benchmark.pdf"
+        },
+        {
+          "label": "Harbor / integration",
+          "url": "https://github.com/marin-community/harbor/tree/b78a0e52af98015fc8416d5bd5ee649a284e5a4c/adapters"
+        }
+      ],
+      "work": [],
+      "notes": [
+        "Access: Paper and worked example available; full original benchmark assets/scorer not verified.",
+        "Grading: Quantitative reference answers with task-specific checks; synthetic construction and ablations constrain valid solutions.",
+        "Limitations: Original OpenAI benchmark, separate from the GeneBench-Pro row. A public worked example is not the complete evaluation."
+      ],
+      "provenance": {
+        "sheet": "Agentic (Harbor)",
+        "gid": 846608904,
+        "row": 35,
+        "evidence_date": "9/21/2026",
+        "imported_at": "2026-10-14"
+      },
+      "source_status": "Assets / protocol"
+    },
+    {
+      "family_id": "biomni-eval1",
+      "family_name": "Biomni-Eval1",
+      "variant_id": "biomni-eval1-tool-enabled",
+      "name": "Biomni-Eval1 — tool-enabled",
+      "creators": [
+        "Stanford University"
+      ],
+      "assignment": "ID",
+      "description": "Biomni-Eval1 biomedical tasks spanning genetics, variants, literature and experimental reasoning.",
+      "framework": "Harbor",
+      "sources": [
+        {
+          "label": "Benchmark",
+          "url": "https://huggingface.co/datasets/biomni/Eval1"
+        },
+        {
+          "label": "Scorer / data",
+          "url": "https://huggingface.co/datasets/biomni/Eval1"
+        },
+        {
+          "label": "Harbor / integration",
+          "url": "https://github.com/marin-community/harbor/tree/b78a0e52af98015fc8416d5bd5ee649a284e5a4c/adapters"
+        }
+      ],
+      "work": [],
+      "notes": [
+        "Access: Public biomni/Eval1 data and evaluator in the Biomni agent repository.",
+        "Grading: Official BiomniEval1 task-specific evaluator; answer matching/structured-output checks vary by task.",
+        "Limitations: Some tasks overlap existing benchmark families such as LAB-Bench. Stars/citations describe the broader Biomni project."
+      ],
+      "provenance": {
+        "sheet": "Agentic (Harbor)",
+        "gid": 846608904,
+        "row": 36,
+        "evidence_date": "9/21/2026",
+        "imported_at": "2026-10-14"
+      },
+      "source_status": "Port needed"
+    },
+    {
+      "family_id": "cellbench-cellvoyager",
+      "family_name": "CellBench (CellVoyager)",
+      "variant_id": "cellbench-cellvoyager",
+      "name": "CellBench (CellVoyager)",
+      "creators": [
+        "Stanford University"
+      ],
+      "assignment": "ID",
+      "description": "CellBench: single-cell analysis planning derived from research workflows, evaluated with CellVoyager and base LLMs.",
+      "framework": "Harbor",
+      "sources": [
+        {
+          "label": "Benchmark",
+          "url": "https://www.nature.com/articles/s41592-026-03029-6"
+        },
+        {
+          "label": "Scorer / data",
+          "url": "https://github.com/zou-group/CellVoyager/tree/5a61f6b36bc7e2dd2210024cbb94fb0dd1cbbc0b"
+        },
+        {
+          "label": "Harbor / integration",
+          "url": "https://github.com/marin-community/harbor/tree/b78a0e52af98015fc8416d5bd5ee649a284e5a4c/adapters"
+        }
+      ],
+      "work": [],
+      "notes": [
+        "Access: CellVoyager repository contains CellBench evaluation scripts and judged outputs.",
+        "Grading: Plan-quality evaluation against research-derived references; judge configuration requires validation.",
+        "Limitations: Agent protocol recorded here; base-LLM results are a different protocol. Repository stars cover the whole CellVoyager project."
+      ],
+      "provenance": {
+        "sheet": "Agentic (Harbor)",
+        "gid": 846608904,
+        "row": 37,
+        "evidence_date": "9/21/2026",
+        "imported_at": "2026-10-14"
+      },
+      "source_status": "Judge integration"
+    },
+    {
+      "family_id": "scigym",
+      "family_name": "SciGym",
+      "variant_id": "scigym",
+      "name": "SciGym",
+      "creators": [
+        "University of Toronto",
+        "SickKids",
+        "Axiom",
+        "Mila",
+        "Vector Institute"
+      ],
+      "assignment": "ID",
+      "description": "Systems-biology dry lab: infer hidden reaction mechanisms from interventions on 350 SBML systems.",
+      "framework": "Harbor",
+      "sources": [
+        {
+          "label": "Benchmark",
+          "url": "https://arxiv.org/abs/2507.02083"
+        },
+        {
+          "label": "Scorer / data",
+          "url": "https://huggingface.co/datasets/h4duan/scigym-eval"
+        },
+        {
+          "label": "Harbor / integration",
+          "url": "https://github.com/marin-community/harbor/tree/b78a0e52af98015fc8416d5bd5ee649a284e5a4c/adapters"
+        }
+      ],
+      "work": [],
+      "notes": [
+        "Access: Public simulator/evaluation code and small/large evaluation datasets.",
+        "Grading: Simulator-grounded recovery of system structure/parameters; use the task’s official metrics.",
+        "Limitations: Controlled simulated experiments, not wet-lab execution; do not pool small/large tracks without reporting them."
+      ],
+      "provenance": {
+        "sheet": "Agentic (Harbor)",
+        "gid": 846608904,
+        "row": 38,
+        "evidence_date": "9/21/2026",
+        "imported_at": "2026-10-14"
+      },
+      "source_status": "Port needed"
+    },
+    {
+      "family_id": "biokgbench",
+      "family_name": "BioKGBench",
+      "variant_id": "biokgbench",
+      "name": "BioKGBench",
+      "creators": [
+        "Westlake University",
+        "Zhejiang University",
+        "Samsung AI Center Cambridge"
+      ],
+      "assignment": "ID",
+      "description": "Biomedical knowledge-graph verification and question answering with scientific evidence.",
+      "framework": "Harbor",
+      "sources": [
+        {
+          "label": "Benchmark",
+          "url": "https://arxiv.org/abs/2407.00466"
+        },
+        {
+          "label": "Scorer / data",
+          "url": "https://huggingface.co/datasets/AutoLab-Westlake/BioKGBench-Dataset"
+        },
+        {
+          "label": "Harbor / integration",
+          "url": "https://github.com/marin-community/harbor/tree/b78a0e52af98015fc8416d5bd5ee649a284e5a4c/adapters"
+        }
+      ],
+      "work": [],
+      "notes": [
+        "Access: Public BioKGBench code and author-linked dataset.",
+        "Grading: Task-specific knowledge/claim verification and QA scoring; reproduce official evidence and answer checks.",
+        "Limitations: Graph verification and question answering test different abilities; report both. Live sources can change reproducibility."
+      ],
+      "provenance": {
+        "sheet": "Agentic (Harbor)",
+        "gid": 846608904,
+        "row": 39,
+        "evidence_date": "9/21/2026",
+        "imported_at": "2026-10-14"
+      },
+      "source_status": "Port needed"
+    },
+    {
+      "family_id": "targetval-popper",
+      "family_name": "TargetVal (Popper)",
+      "variant_id": "targetval-popper",
+      "name": "TargetVal (Popper)",
+      "creators": [
+        "Stanford University",
+        "Harvard University"
+      ],
+      "assignment": "ID",
+      "description": "Drug-target hypothesis validation with Popper’s sequential statistical experiments.",
+      "framework": "Harbor",
+      "sources": [
+        {
+          "label": "Benchmark",
+          "url": "https://arxiv.org/abs/2502.09858"
+        },
+        {
+          "label": "Scorer / data",
+          "url": "https://github.com/snap-stanford/POPPER/tree/59611864e09dd15d7528e240ad87c7ddbb4a701c"
+        },
+        {
+          "label": "Harbor / integration",
+          "url": "https://github.com/marin-community/harbor/tree/b78a0e52af98015fc8416d5bd5ee649a284e5a4c/adapters"
+        }
+      ],
+      "work": [],
+      "notes": [
+        "Access: Public POPPER code and linked TargetVal evaluation data/setup.",
+        "Grading: Hypothesis decisions supported by sequential falsification/statistical testing; preserve error-control protocol.",
+        "Limitations: TargetVal is the benchmark within the larger Popper project; stars/citations cover the full project/paper."
+      ],
+      "provenance": {
+        "sheet": "Agentic (Harbor)",
+        "gid": 846608904,
+        "row": 40,
+        "evidence_date": "9/21/2026",
+        "imported_at": "2026-10-14"
+      },
+      "source_status": "Port needed"
+    },
+    {
+      "family_id": "discoverybench",
+      "family_name": "DiscoveryBench",
+      "variant_id": "discoverybench-biology",
+      "name": "DiscoveryBench — biology",
+      "creators": [
+        "Allen Institute for AI",
+        "OpenLocus",
+        "University of Massachusetts Amherst"
+      ],
+      "assignment": "ID",
+      "description": "Data-driven scientific discovery; biology slice of 264 real tasks, with a separate synthetic collection.",
+      "framework": "Harbor",
+      "sources": [
+        {
+          "label": "Benchmark",
+          "url": "https://arxiv.org/abs/2407.01725"
+        },
+        {
+          "label": "Scorer / data",
+          "url": "https://huggingface.co/datasets/allenai/discoverybench"
+        },
+        {
+          "label": "Harbor / integration",
+          "url": "https://github.com/marin-community/harbor/tree/b78a0e52af98015fc8416d5bd5ee649a284e5a4c/adapters"
+        }
+      ],
+      "work": [],
+      "notes": [
+        "Access: Public datasets and evaluation code on GitHub/HF.",
+        "Grading: Facet-based hypothesis comparison with model-assisted grading against reference discoveries.",
+        "Limitations: Real and synthetic tasks are separate tracks; the whole benchmark count is not the biology count."
+      ],
+      "provenance": {
+        "sheet": "Agentic (Harbor)",
+        "gid": 846608904,
+        "row": 41,
+        "evidence_date": "9/21/2026",
+        "imported_at": "2026-10-14"
+      },
+      "source_status": "Judge integration"
+    },
+    {
+      "family_id": "scholarqabench",
+      "family_name": "ScholarQABench",
+      "variant_id": "scholarqabench-biomedicine",
+      "name": "ScholarQABench — biomedicine",
+      "creators": [
+        "Allen Institute for AI",
+        "University of Washington",
+        "collaborators (see note)"
+      ],
+      "assignment": "ID",
+      "description": "Biomedical scientific literature retrieval and long-form synthesis in ScholarQABench/OpenScholar.",
+      "framework": "Harbor",
+      "sources": [
+        {
+          "label": "Benchmark",
+          "url": "https://allenai.org/blog/openscilm"
+        },
+        {
+          "label": "Scorer / data",
+          "url": "https://github.com/AkariAsai/ScholarQABench/tree/95e6fc52b0a8a0ce0a74956029991e3bb00c38b9"
+        },
+        {
+          "label": "Harbor / integration",
+          "url": "https://github.com/marin-community/harbor/tree/b78a0e52af98015fc8416d5bd5ee649a284e5a4c/adapters"
+        }
+      ],
+      "work": [],
+      "notes": [
+        "Access: Public ScholarQABench benchmark repository; retrieval corpus/index and evaluator setup required.",
+        "Grading: Answer quality, evidence/citation and task-specific reference grading; some scoring uses model judges.",
+        "Limitations: Suite reuses tasks including SciFact and PubMedQA; mark overlap rather than count all as independent evidence."
+      ],
+      "provenance": {
+        "sheet": "Agentic (Harbor)",
+        "gid": 846608904,
+        "row": 42,
+        "evidence_date": "9/21/2026",
+        "imported_at": "2026-10-14"
+      },
+      "source_status": "Judge integration"
+    },
+    {
+      "family_id": "core-bench",
+      "family_name": "CORE-Bench",
+      "variant_id": "core-bench-biomedical-papers",
+      "name": "CORE-Bench — biomedical papers",
+      "creators": [
+        "Princeton University"
+      ],
+      "assignment": "ID",
+      "description": "Computational reproducibility of biomedical papers within 270 tasks from 90 papers across three fields.",
+      "framework": "Harbor",
+      "sources": [
+        {
+          "label": "Benchmark",
+          "url": "https://arxiv.org/abs/2409.11363"
+        },
+        {
+          "label": "Scorer / data",
+          "url": "https://huggingface.co/datasets/siegelz/core-bench"
+        },
+        {
+          "label": "Harbor / integration",
+          "url": "https://github.com/marin-community/harbor/tree/b78a0e52af98015fc8416d5bd5ee649a284e5a4c/adapters"
+        }
+      ],
+      "work": [],
+      "notes": [
+        "Access: Public benchmark/harness and linked computational capsules; dependencies and capsule access must be checked.",
+        "Grading: Reference result checks, including numeric tolerances; all task questions must meet the chosen success rule.",
+        "Limitations: Easy/medium/hard reveal different code/environment information. Some capsules require substantial compute."
+      ],
+      "provenance": {
+        "sheet": "Agentic (Harbor)",
+        "gid": 846608904,
+        "row": 43,
+        "evidence_date": "9/21/2026",
+        "imported_at": "2026-10-14"
+      },
+      "source_status": "Port needed"
+    },
+    {
+      "family_id": "abc-bench-securebio",
+      "family_name": "ABC-Bench (SecureBio)",
+      "variant_id": "abc-bench-securebio",
+      "name": "ABC-Bench (SecureBio)",
+      "creators": [
+        "SecureBio",
+        "Active Site"
+      ],
+      "assignment": "ID",
+      "description": "SecureBio agentic biological capability tasks, including scientific automation and bioinformatics.",
+      "framework": "Harbor",
+      "sources": [
+        {
+          "label": "Benchmark",
+          "url": "https://arxiv.org/abs/2606.11150"
+        },
+        {
+          "label": "Scorer / data",
+          "url": "https://arxiv.org/abs/2606.11150"
+        },
+        {
+          "label": "Harbor / integration",
+          "url": "https://github.com/marin-community/harbor/tree/b78a0e52af98015fc8416d5bd5ee649a284e5a4c/adapters"
+        }
+      ],
+      "work": [],
+      "notes": [
+        "Access: Public paper/methodology; full task assets and scoring release not verified.",
+        "Grading: Task-specific programmatic/reference assessment in the published agentic protocol.",
+        "Limitations: SecureBio ABC-Bench is not the similarly named backend-coding ABC-Bench adapter."
+      ],
+      "provenance": {
+        "sheet": "Agentic (Harbor)",
+        "gid": 846608904,
+        "row": 44,
+        "evidence_date": "9/21/2026",
+        "imported_at": "2026-10-14"
+      },
+      "source_status": "Assets / protocol"
+    },
+    {
+      "family_id": "able",
+      "family_name": "ABLE",
+      "variant_id": "able-agentic-biological-ai-tool-use",
+      "name": "ABLE — agentic biological AI tool use",
+      "creators": [
+        "SecureBio"
+      ],
+      "assignment": "ID",
+      "description": "Nine evaluation tasks for LLM planning and use of biological AI/protein-design tools.",
+      "framework": "Harbor",
+      "sources": [
+        {
+          "label": "Benchmark",
+          "url": "https://arxiv.org/abs/2609.05818"
+        },
+        {
+          "label": "Scorer / data",
+          "url": "https://arxiv.org/abs/2609.05818"
+        },
+        {
+          "label": "Harbor / integration",
+          "url": "https://github.com/marin-community/harbor/tree/b78a0e52af98015fc8416d5bd5ee649a284e5a4c/adapters"
+        }
+      ],
+      "work": [],
+      "notes": [
+        "Access: Paper/methodology public; complete evaluation assets/access not verified.",
+        "Grading: Task-specific algorithmic assessment of tool use and outputs; expert baselines reported.",
+        "Limitations: Evaluates LLM use of biological tools; it is not a standalone protein sequence-model benchmark."
+      ],
+      "provenance": {
+        "sheet": "Agentic (Harbor)",
+        "gid": 846608904,
+        "row": 45,
+        "evidence_date": "9/21/2026",
+        "imported_at": "2026-10-14"
+      },
+      "source_status": "Assets / protocol"
+    },
+    {
+      "family_id": "bio-task-bench",
+      "family_name": "Bio-Task Bench",
+      "variant_id": "bio-task-bench-original-tasks",
+      "name": "Bio-Task Bench — original tasks",
+      "creators": [
+        "GPTomics (project team)"
+      ],
+      "assignment": "ID",
+      "description": "34 original executable biological tasks across 10 domains in Bio-Task Bench.",
+      "framework": "Harbor",
+      "sources": [
+        {
+          "label": "Benchmark",
+          "url": "https://github.com/GPTomics/bioTaskBench"
+        },
+        {
+          "label": "Scorer / data",
+          "url": "https://github.com/GPTomics/bioTaskBench/tree/c9206d570098349143fec3d14d97699928a3bb13"
+        },
+        {
+          "label": "Harbor / integration",
+          "url": "https://github.com/marin-community/harbor/tree/b78a0e52af98015fc8416d5bd5ee649a284e5a4c/adapters"
+        }
+      ],
+      "work": [],
+      "notes": [
+        "Access: Public original tasks, runners and tests; external benchmark adapters also present.",
+        "Grading: Task-specific deterministic tests over produced outputs.",
+        "Limitations: Count original tasks separately from adapters to other benchmark families; repository coverage is not all independent data."
+      ],
+      "provenance": {
+        "sheet": "Agentic (Harbor)",
+        "gid": 846608904,
+        "row": 46,
+        "evidence_date": "9/21/2026",
+        "imported_at": "2026-10-14"
+      },
+      "source_status": "Port needed"
+    },
+    {
+      "family_id": "lab-bench",
+      "family_name": "LAB-Bench",
+      "variant_id": "lab-bench-tool-enabled-literature-database",
+      "name": "LAB-Bench — tool-enabled literature / database",
+      "creators": [
+        "FutureHouse"
+      ],
+      "assignment": "ID",
+      "description": "LAB-Bench literature/database retrieval tasks, including LitQA2, DbQA and SuppQA.",
+      "framework": "Harbor",
+      "sources": [
+        {
+          "label": "Benchmark",
+          "url": "https://arxiv.org/abs/2407.10362"
+        },
+        {
+          "label": "Scorer / data",
+          "url": "https://huggingface.co/datasets/futurehouse/lab-bench"
+        },
+        {
+          "label": "Harbor / integration",
+          "url": "https://github.com/marin-community/harbor/tree/b78a0e52af98015fc8416d5bd5ee649a284e5a4c/adapters/labbench"
+        }
+      ],
+      "work": [],
+      "notes": [
+        "Access: Public subset and evaluator; tool/API/corpus access depends on retrieval configuration.",
+        "Grading: Official multiple-choice accuracy, precision and coverage; preserve abstention.",
+        "Limitations: Tool-enabled protocol of LAB-Bench v1, not LABBench2. A FigQA adapter does not implement this retrieval protocol."
+      ],
+      "provenance": {
+        "sheet": "Agentic (Harbor)",
+        "gid": 846608904,
+        "row": 47,
+        "evidence_date": "9/21/2026",
+        "imported_at": "2026-10-14"
+      },
+      "source_status": "Port needed"
+    },
+    {
+      "family_id": "bioasq",
+      "family_name": "BioASQ",
+      "variant_id": "bioasq-retrieval-end-to-end-qa",
+      "name": "BioASQ — retrieval / end-to-end QA",
+      "creators": [
+        "BioASQ consortium"
+      ],
+      "assignment": "ID",
+      "description": "BioASQ biomedical document/snippet retrieval and end-to-end question answering.",
+      "framework": "Harbor",
+      "sources": [
+        {
+          "label": "Benchmark",
+          "url": "https://www.bioasq.org/"
+        },
+        {
+          "label": "Scorer / data",
+          "url": "https://github.com/BioASQ/Evaluation-Measures/tree/8c8e689068a41c1370fec55260e5fbfe3a6a6016"
+        },
+        {
+          "label": "Harbor / integration",
+          "url": "https://github.com/marin-community/harbor/tree/b78a0e52af98015fc8416d5bd5ee649a284e5a4c/adapters"
+        }
+      ],
+      "work": [],
+      "notes": [
+        "Access: Public evaluation tools and annual data; corpus/index and challenge access need staging.",
+        "Grading: Official retrieval ranking metrics plus task-specific exact/ideal answer scores.",
+        "Limitations: Retrieval plus QA is a distinct protocol from supplied-evidence QA; do not combine scores without naming the track."
+      ],
+      "provenance": {
+        "sheet": "Agentic (Harbor)",
+        "gid": 846608904,
+        "row": 48,
+        "evidence_date": "9/21/2026",
+        "imported_at": "2026-10-14"
+      },
+      "source_status": "Port needed"
+    },
+    {
+      "family_id": "bixbench",
+      "family_name": "BixBench",
+      "variant_id": "bixbench-original-notebook-protocols",
+      "name": "BixBench — original notebook protocols",
+      "creators": [
+        "FutureHouse",
+        "ScienceMachine"
+      ],
+      "assignment": "ID",
+      "description": "Original BixBench notebook-based data analysis; current v1.5 has 205 questions from 60 capsules.",
+      "framework": "Harbor",
+      "sources": [
+        {
+          "label": "Benchmark",
+          "url": "https://arxiv.org/abs/2503.00096"
+        },
+        {
+          "label": "Scorer / data",
+          "url": "https://huggingface.co/datasets/futurehouse/BixBench"
+        },
+        {
+          "label": "Harbor / integration",
+          "url": "https://github.com/marin-community/harbor/tree/b78a0e52af98015fc8416d5bd5ee649a284e5a4c/adapters/bixbench"
+        }
+      ],
+      "work": [],
+      "notes": [
+        "Access: Public authors’ notebook environment, configuration, grading scripts and HF release.",
+        "Grading: Open-answer model grading or exact MCQ matching; majority vote/replicas are optional protocol choices.",
+        "Limitations: Same benchmark family as Harbor CLI row but a different execution interface; do not count notebook/CLI as independent tasks."
+      ],
+      "provenance": {
+        "sheet": "Agentic (Harbor)",
+        "gid": 846608904,
+        "row": 49,
+        "evidence_date": "9/21/2026",
+        "imported_at": "2026-10-14"
+      },
+      "source_status": "Port needed"
+    },
+    {
+      "family_id": "lab-bench",
+      "family_name": "LAB-Bench",
+      "variant_id": "lab-bench-tool-free-text-mcq",
+      "name": "LAB-Bench — tool-free text MCQ",
+      "creators": [
+        "FutureHouse"
+      ],
+      "assignment": "TBD",
+      "description": "Protocol reasoning, sequence manipulation, cloning; text-only subsets.",
+      "framework": "Evalchemy",
+      "sources": [
+        {
+          "label": "Benchmark",
+          "url": "https://arxiv.org/abs/2407.10362"
+        },
+        {
+          "label": "Scorer / data",
+          "url": "https://huggingface.co/datasets/futurehouse/lab-bench"
+        },
+        {
+          "label": "Evalchemy / integration",
+          "url": "https://github.com/marin-community/evalchemy/tree/f42990450edf4e694fe5a22b3d23ed09ab42da1e/eval/chat_benchmarks"
+        }
+      ],
+      "work": [],
+      "notes": [
+        "Access: Public slices: ProtocolQA108, SeqQA600, CloningScenarios33; evaluator released. Private holdout excluded.",
+        "Grading: Official generation protocol: accuracy, precision and coverage with abstention. Likelihood scoring is a separately labelled variant.",
+        "Limitations: Direct research-skill complement to MMLU. FigQA/TableQA require images; literature/database slices test a different retrieval burden."
+      ],
+      "provenance": {
+        "sheet": "Non-agentic (Evalchemy)",
+        "gid": 776831399,
+        "row": 2,
+        "evidence_date": "9/18/2026",
+        "imported_at": "2026-10-14"
+      },
+      "source_status": "Port needed"
+    },
+    {
+      "family_id": "genome-bench",
+      "family_name": "Genome-Bench",
+      "variant_id": "genome-bench",
+      "name": "Genome-Bench",
+      "creators": [
+        "Princeton University",
+        "Stanford University"
+      ],
+      "assignment": "TBD",
+      "description": "CRISPR/genome-editing knowledge and experimental reasoning; 5-choice MCQ.",
+      "framework": "Evalchemy",
+      "sources": [
+        {
+          "label": "Benchmark",
+          "url": "https://arxiv.org/abs/2505.19501"
+        },
+        {
+          "label": "Scorer / data",
+          "url": "https://huggingface.co/datasets/Mingyin0312/Genome-Bench"
+        },
+        {
+          "label": "Evalchemy / integration",
+          "url": "https://github.com/marin-community/evalchemy/tree/f42990450edf4e694fe5a22b3d23ed09ab42da1e/eval/chat_benchmarks"
+        }
+      ],
+      "work": [],
+      "notes": [
+        "Access: Public dataset: 3,332 items (2,671 train / 661 test).",
+        "Grading: Accuracy on the final a–e choice; optional generated explanation scored separately.",
+        "Limitations: Knowledge/protocol QA, not raw genomic sequence prediction. Forum-derived and model-assisted construction need contamination and label checks."
+      ],
+      "provenance": {
+        "sheet": "Non-agentic (Evalchemy)",
+        "gid": 776831399,
+        "row": 3,
+        "evidence_date": "9/18/2026",
+        "imported_at": "2026-10-14"
+      },
+      "source_status": "Port needed"
+    },
+    {
+      "family_id": "bioprobench",
+      "family_name": "BioProBench",
+      "variant_id": "bioprobench-pqa-err",
+      "name": "BioProBench — PQA / ERR",
+      "creators": [
+        "Peking University"
+      ],
+      "assignment": "TBD",
+      "description": "Protocol MCQ and context-dependent step-error detection.",
+      "framework": "Evalchemy",
+      "sources": [
+        {
+          "label": "Benchmark",
+          "url": "https://arxiv.org/abs/2505.07889"
+        },
+        {
+          "label": "Scorer / data",
+          "url": "https://github.com/YuyangSunshine/bioprobench/tree/cf00fecd62583b98350cc48e26a29c92d3f21e5d/Data"
+        },
+        {
+          "label": "Evalchemy / integration",
+          "url": "https://github.com/marin-community/evalchemy/tree/f42990450edf4e694fe5a22b3d23ed09ab42da1e/eval/chat_benchmarks"
+        }
+      ],
+      "work": [],
+      "notes": [
+        "Access: Public JSON tests: 1,200 PQA and 1,200 ERR items at the audited revision; scorer code available.",
+        "Grading: PQA exact choice accuracy + confidence Brier score; ERR accuracy/precision/recall/F1. No LLM judge for these slices.",
+        "Limitations: Procedural reasoning beyond broad biology facts. Current release differs from the older paper; pin dataset, prompts and scorer together."
+      ],
+      "provenance": {
+        "sheet": "Non-agentic (Evalchemy)",
+        "gid": 776831399,
+        "row": 4,
+        "evidence_date": "9/18/2026",
+        "imported_at": "2026-10-14"
+      },
+      "source_status": "Port needed"
+    },
+    {
+      "family_id": "blurb",
+      "family_name": "BLURB",
+      "variant_id": "blurb-non-qa-task-families",
+      "name": "BLURB — non-QA task families",
+      "creators": [
+        "Microsoft Research"
+      ],
+      "assignment": "TBD",
+      "description": "13 datasets / 6 task families: NER, PICO, relations, similarity, classification and QA.",
+      "framework": "Evalchemy",
+      "sources": [
+        {
+          "label": "Benchmark",
+          "url": "https://microsoft.github.io/BLURB/"
+        },
+        {
+          "label": "Scorer / data",
+          "url": "https://microsoft.github.io/BLURB/tasks.html"
+        },
+        {
+          "label": "Evalchemy / integration",
+          "url": "https://github.com/marin-community/evalchemy/tree/f42990450edf4e694fe5a22b3d23ed09ab42da1e/eval/chat_benchmarks"
+        }
+      ],
+      "work": [],
+      "notes": [
+        "Access: Public task pages, data and baseline code; QA subsets listed separately below.",
+        "Grading: Task-specific F1/accuracy/correlation. Original fine-tuned encoder aggregate is not directly comparable to prompted LLMs.",
+        "Limitations: Useful biomedical NLP coverage but not a single MCQ benchmark. Do not double-count the QA rows in a BLURB aggregate."
+      ],
+      "provenance": {
+        "sheet": "Non-agentic (Evalchemy)",
+        "gid": 776831399,
+        "row": 5,
+        "evidence_date": "9/18/2026",
+        "imported_at": "2026-10-14"
+      },
+      "source_status": "Port needed"
+    },
+    {
+      "family_id": "mmlu",
+      "family_name": "MMLU",
+      "variant_id": "mmlu-biology-biomedical-subjects",
+      "name": "MMLU — biology / biomedical subjects",
+      "creators": [
+        "UC Berkeley",
+        "Columbia University",
+        "University of Chicago",
+        "UIUC"
+      ],
+      "assignment": "ID",
+      "description": "School/college biology, medical genetics, anatomy and clinical/medical knowledge; 4-choice MCQ.",
+      "framework": "Evalchemy",
+      "sources": [
+        {
+          "label": "Benchmark",
+          "url": "https://arxiv.org/abs/2009.03300"
+        },
+        {
+          "label": "Scorer / data",
+          "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/v0.4.12/lm_eval/tasks/mmlu/default"
+        },
+        {
+          "label": "Evalchemy / integration",
+          "url": "https://github.com/marin-community/marin/blob/a28c29a008a3ddc1a62fb348c52217a4429e5491/experiments/evaluation/glm53_mmlu_biology.py"
+        }
+      ],
+      "work": [],
+      "notes": [
+        "Access: Public data and native YAMLs for seven subjects. Three-subject biology integration validated with GLM-5.3 (554/554); four optional biomedical subjects remain unrun.",
+        "Grading: Native multiple-choice likelihood accuracy; preserve Marin's 5-shot protocol.",
+        "Limitations: Low-effort biology baseline with optional biomedical coverage. Existing ID exposure and possible saturation; keep clinical subjects out of the pooled biology score."
+      ],
+      "provenance": {
+        "sheet": "Non-agentic (Evalchemy)",
+        "gid": 776831399,
+        "row": 6,
+        "evidence_date": "9/18/2026",
+        "imported_at": "2026-10-14"
+      },
+      "source_status": "Evaluated — biology subset"
+    },
+    {
+      "family_id": "mmlu",
+      "family_name": "MMLU",
+      "variant_id": "mmlu-pro-biology",
+      "name": "MMLU-Pro — biology",
+      "creators": [
+        "University of Waterloo",
+        "University of Toronto",
+        "Carnegie Mellon University"
+      ],
+      "assignment": "ID",
+      "description": "Harder biology MCQ with up to 10 options.",
+      "framework": "Evalchemy",
+      "sources": [
+        {
+          "label": "Benchmark",
+          "url": "https://arxiv.org/abs/2406.01574"
+        },
+        {
+          "label": "Scorer / data",
+          "url": "https://huggingface.co/datasets/TIGER-Lab/MMLU-Pro"
+        },
+        {
+          "label": "Evalchemy / integration",
+          "url": "https://github.com/marin-community/evalchemy/tree/f42990450edf4e694fe5a22b3d23ed09ab42da1e/eval/chat_benchmarks/MMLUPro/eval_instruct.py"
+        }
+      ],
+      "work": [],
+      "notes": [
+        "Access: Native MMLUPro class; public TIGER-Lab/MMLU-Pro category metadata.",
+        "Grading: Generated-answer extraction and accuracy; implementation already returns category statistics.",
+        "Limitations: Low effort category reporting from an existing Marin ID eval. Keep separate from MMLU."
+      ],
+      "provenance": {
+        "sheet": "Non-agentic (Evalchemy)",
+        "gid": 776831399,
+        "row": 7,
+        "evidence_date": "9/18/2026",
+        "imported_at": "2026-10-14"
+      },
+      "source_status": "Packaging check"
+    },
+    {
+      "family_id": "gpqa",
+      "family_name": "GPQA",
+      "variant_id": "gpqa-diamond-biology",
+      "name": "GPQA Diamond — biology",
+      "creators": [
+        "New York University",
+        "Cohere",
+        "Anthropic"
+      ],
+      "assignment": "ID",
+      "description": "Graduate-level biology reasoning; 4-choice MCQ.",
+      "framework": "Evalchemy",
+      "sources": [
+        {
+          "label": "Benchmark",
+          "url": "https://arxiv.org/abs/2311.12022"
+        },
+        {
+          "label": "Scorer / data",
+          "url": "https://huggingface.co/datasets/Idavidrein/gpqa"
+        },
+        {
+          "label": "Evalchemy / integration",
+          "url": "https://github.com/marin-community/evalchemy/tree/f42990450edf4e694fe5a22b3d23ed09ab42da1e/eval/chat_benchmarks/GPQADiamond/eval_instruct.py"
+        }
+      ],
+      "work": [],
+      "notes": [
+        "Access: Native GPQADiamond base task; gated dataset access/terms. Full Diamond=198, biology count must be derived from metadata.",
+        "Grading: Native generated-answer accuracy; preserve option shuffle, seeds and 3-sample aggregation.",
+        "Limitations: Existing Marin ID eval. Subset uncertainty will be wider than full Diamond; no reclassification to OOD."
+      ],
+      "provenance": {
+        "sheet": "Non-agentic (Evalchemy)",
+        "gid": 776831399,
+        "row": 8,
+        "evidence_date": "9/18/2026",
+        "imported_at": "2026-10-14"
+      },
+      "source_status": "Packaging check"
+    },
+    {
+      "family_id": "pubmedqa",
+      "family_name": "PubMedQA",
+      "variant_id": "pubmedqa-labeled-abstract-qa",
+      "name": "PubMedQA — labeled abstract QA",
+      "creators": [
+        "University of Pittsburgh",
+        "Carnegie Mellon University",
+        "Google AI"
+      ],
+      "assignment": "TBD",
+      "description": "Biomedical question + abstract context; yes/no/maybe.",
+      "framework": "Evalchemy",
+      "sources": [
+        {
+          "label": "Benchmark",
+          "url": "https://arxiv.org/abs/1909.06146"
+        },
+        {
+          "label": "Scorer / data",
+          "url": "https://github.com/pubmedqa/pubmedqa"
+        },
+        {
+          "label": "Evalchemy / integration",
+          "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/v0.4.12/lm_eval/tasks/pubmedqa/pubmedqa.yaml"
+        }
+      ],
+      "work": [],
+      "notes": [
+        "Access: 1,000 expert-labeled PQA-L examples; native bigbio labeled-fold0 train/validation/test config.",
+        "Grading: Native likelihood accuracy over yes/no/maybe; deterministic reference label.",
+        "Limitations: Direct BLURB QA slice and reference from Genome-Bench. Cheap offline biomedical reading baseline; original split matters."
+      ],
+      "provenance": {
+        "sheet": "Non-agentic (Evalchemy)",
+        "gid": 776831399,
+        "row": 9,
+        "evidence_date": "9/18/2026",
+        "imported_at": "2026-10-14"
+      },
+      "source_status": "Packaging check"
+    },
+    {
+      "family_id": "bioasq",
+      "family_name": "BioASQ",
+      "variant_id": "bioasq-supplied-snippet-yes-no",
+      "name": "BioASQ — supplied-snippet yes/no",
+      "creators": [
+        "BioASQ consortium",
+        "Microsoft Research (BLURB adaptation)"
+      ],
+      "assignment": "TBD",
+      "description": "Biomedical literature QA with provided supporting snippets.",
+      "framework": "Evalchemy",
+      "sources": [
+        {
+          "label": "Benchmark",
+          "url": "https://microsoft.github.io/BLURB/tasks.html"
+        },
+        {
+          "label": "Scorer / data",
+          "url": "https://www.bioasq.org/"
+        },
+        {
+          "label": "Evalchemy / integration",
+          "url": "https://github.com/marin-community/evalchemy/tree/f42990450edf4e694fe5a22b3d23ed09ab42da1e/eval/chat_benchmarks"
+        }
+      ],
+      "work": [],
+      "notes": [
+        "Access: BioASQ task data and BLURB preprocessing; source-specific access/registration may apply.",
+        "Grading: Yes/no accuracy for the BLURB-style QA slice; retain official split/scorer.",
+        "Limitations: Offline reading candidate. Full BioASQ retrieval and ideal-answer tasks are different protocols."
+      ],
+      "provenance": {
+        "sheet": "Non-agentic (Evalchemy)",
+        "gid": 776831399,
+        "row": 10,
+        "evidence_date": "9/18/2026",
+        "imported_at": "2026-10-14"
+      },
+      "source_status": "Port needed"
+    },
+    {
+      "family_id": "biolp-bench",
+      "family_name": "BioLP-bench",
+      "variant_id": "biolp-bench",
+      "name": "BioLP-bench",
+      "creators": [
+        "Oxford Biosecurity Group"
+      ],
+      "assignment": "TBD",
+      "description": "Identify consequential errors in laboratory protocols.",
+      "framework": "Evalchemy",
+      "sources": [
+        {
+          "label": "Benchmark",
+          "url": "https://www.biorxiv.org/content/10.1101/2024.08.21.608694v4"
+        },
+        {
+          "label": "Scorer / data",
+          "url": "https://github.com/baceolus/BioLP-bench"
+        },
+        {
+          "label": "Evalchemy / integration",
+          "url": "https://github.com/marin-community/evalchemy/tree/f42990450edf4e694fe5a22b3d23ed09ab42da1e/eval/chat_benchmarks"
+        }
+      ],
+      "work": [],
+      "notes": [
+        "Access: Public Inspect implementation and protocol CSV; separate model judge/API required.",
+        "Grading: Official implementation uses model_graded_qa; default self-grading is unreliable for weaker models.",
+        "Limitations: Followed BioProBench references. Strong procedural diagnostic, but not a deterministic MCQ drop-in."
+      ],
+      "provenance": {
+        "sheet": "Non-agentic (Evalchemy)",
+        "gid": 776831399,
+        "row": 11,
+        "evidence_date": "9/18/2026",
+        "imported_at": "2026-10-14"
+      },
+      "source_status": "Judge integration"
+    },
+    {
+      "family_id": "sciknoweval",
+      "family_name": "SciKnowEval",
+      "variant_id": "sciknoweval-v2-biology-closed-choice",
+      "name": "SciKnowEval v2 — biology closed-choice",
+      "creators": [
+        "Zhejiang University"
+      ],
+      "assignment": "TBD",
+      "description": "Scientific biology knowledge/reasoning across difficulty levels.",
+      "framework": "Evalchemy",
+      "sources": [
+        {
+          "label": "Benchmark",
+          "url": "https://arxiv.org/abs/2406.09098"
+        },
+        {
+          "label": "Scorer / data",
+          "url": "https://huggingface.co/datasets/hicai-zju/SciKnowEval"
+        },
+        {
+          "label": "Evalchemy / integration",
+          "url": "https://github.com/marin-community/evalchemy/tree/f42990450edf4e694fe5a22b3d23ed09ab42da1e/eval/chat_benchmarks"
+        }
+      ],
+      "work": [],
+      "notes": [
+        "Access: Public v2 release: 28,392 examples / 58 tasks across 4 domains; biology-slice count needs metadata aggregation.",
+        "Grading: Closed-choice accuracy only for this slice; other tasks can require GPT judging or embedding models.",
+        "Limitations: Adds biological breadth beyond exam questions. Do not silently omit judge-requiring tasks from a claimed full-suite score."
+      ],
+      "provenance": {
+        "sheet": "Non-agentic (Evalchemy)",
+        "gid": 776831399,
+        "row": 12,
+        "evidence_date": "9/18/2026",
+        "imported_at": "2026-10-14"
+      },
+      "source_status": "Port needed"
+    },
+    {
+      "family_id": "genomeqa",
+      "family_name": "GenomeQA",
+      "variant_id": "genomeqa-sequence-understanding",
+      "name": "GenomeQA — sequence understanding",
+      "creators": [
+        "HKUST (Guangzhou)",
+        "University of Hong Kong",
+        "Peking University"
+      ],
+      "assignment": "TBD",
+      "description": "Raw DNA sequence classification across 6 task families; 5,200 examples.",
+      "framework": "Evalchemy",
+      "sources": [
+        {
+          "label": "Benchmark",
+          "url": "https://arxiv.org/abs/2604.05774"
+        },
+        {
+          "label": "Scorer / data",
+          "url": "https://arxiv.org/html/2604.05774v1"
+        },
+        {
+          "label": "Evalchemy / integration",
+          "url": "https://github.com/marin-community/evalchemy/tree/f42990450edf4e694fe5a22b3d23ed09ab42da1e/eval/chat_benchmarks"
+        }
+      ],
+      "work": [],
+      "notes": [
+        "Access: Paper accessible; no author-linked runnable release located in this audit.",
+        "Grading: Task-label classification metrics; reproduce the paper's task-level protocol.",
+        "Limitations: Native sequence capability complement to Genome-Bench's text knowledge QA. Distinct from ClawBio's same-name agent benchmark."
+      ],
+      "provenance": {
+        "sheet": "Non-agentic (Evalchemy)",
+        "gid": 776831399,
+        "row": 13,
+        "evidence_date": "9/18/2026",
+        "imported_at": "2026-10-14"
+      },
+      "source_status": "Assets / protocol"
+    },
+    {
+      "family_id": "proteingym-llm-pg-llm",
+      "family_name": "ProteinGym-LLM (PG-LLM)",
+      "variant_id": "proteingym-llm-pg-llm",
+      "name": "ProteinGym-LLM (PG-LLM)",
+      "creators": [
+        "Harvard University",
+        "Capable"
+      ],
+      "assignment": "TBD",
+      "description": "Rank protein variants by measured fitness from full sequences and assay context.",
+      "framework": "Evalchemy",
+      "sources": [
+        {
+          "label": "Benchmark",
+          "url": "https://doi.org/10.64898/2026.07.27.741045"
+        },
+        {
+          "label": "Scorer / data",
+          "url": "https://github.com/rohitarorayyc/proteingym-llm"
+        },
+        {
+          "label": "Evalchemy / integration",
+          "url": "https://github.com/marin-community/evalchemy/tree/f42990450edf4e694fe5a22b3d23ed09ab42da1e/eval/chat_benchmarks"
+        }
+      ],
+      "work": [],
+      "notes": [
+        "Access: Public code and evaluation data; primary protocol 217 assays × 3 seeds at N=50.",
+        "Grading: Spearman rho within assay; equal-weight aggregation assay → protein → functional category.",
+        "Limitations: Native protein reasoning complement to text QA. Evaluation-only splits prohibit benchmark-specific training/tuning."
+      ],
+      "provenance": {
+        "sheet": "Non-agentic (Evalchemy)",
+        "gid": 776831399,
+        "row": 14,
+        "evidence_date": "9/18/2026",
+        "imported_at": "2026-10-14"
+      },
+      "source_status": "Port needed"
+    },
+    {
+      "family_id": "humanitys-last-exam",
+      "family_name": "Humanity's Last Exam",
+      "variant_id": "humanitys-last-exam-biology-medicine",
+      "name": "Humanity's Last Exam — biology/medicine",
+      "creators": [
+        "Center for AI Safety",
+        "Scale AI",
+        "academic contributors"
+      ],
+      "assignment": "OOD",
+      "description": "Frontier academic biology/medicine; text and multimodal question variants.",
+      "framework": "Evalchemy",
+      "sources": [
+        {
+          "label": "Benchmark",
+          "url": "https://arxiv.org/abs/2501.14249"
+        },
+        {
+          "label": "Scorer / data",
+          "url": "https://huggingface.co/datasets/cais/hle"
+        },
+        {
+          "label": "Evalchemy / integration",
+          "url": "https://github.com/marin-community/evalchemy/tree/f42990450edf4e694fe5a22b3d23ed09ab42da1e/eval/chat_benchmarks/HLE/eval_instruct.py"
+        }
+      ],
+      "work": [],
+      "notes": [
+        "Access: Native Evalchemy HLE class using cais/hle; public data is still protected by Marin's OOD policy.",
+        "Grading: Native HLE generation + answer judge; preserve exact variant, image filter and grading settings.",
+        "Limitations: Relevant AAII 4.3 component. A biology slice is a proposed derived report, not a separately approved canonical AAII score."
+      ],
+      "provenance": {
+        "sheet": "Non-agentic (Evalchemy)",
+        "gid": 776831399,
+        "row": 15,
+        "evidence_date": "9/18/2026",
+        "imported_at": "2026-10-14"
+      },
+      "source_status": "Packaging check"
+    },
+    {
+      "family_id": "aa-omniscience",
+      "family_name": "AA-Omniscience",
+      "variant_id": "aa-omniscience-biology-health-slice",
+      "name": "AA-Omniscience — biology/health slice",
+      "creators": [
+        "Artificial Analysis"
+      ],
+      "assignment": "OOD",
+      "description": "Factual recall, abstention and hallucination in biology/health.",
+      "framework": "Evalchemy",
+      "sources": [
+        {
+          "label": "Benchmark",
+          "url": "https://arxiv.org/abs/2511.13029"
+        },
+        {
+          "label": "Scorer / data",
+          "url": "https://artificialanalysis.ai/evaluations/omniscience"
+        },
+        {
+          "label": "Evalchemy / integration",
+          "url": "https://github.com/marin-community/evalchemy/tree/f42990450edf4e694fe5a22b3d23ed09ab42da1e/eval/chat_benchmarks"
+        }
+      ],
+      "work": [],
+      "notes": [
+        "Access: Full benchmark 6,000 questions / 42 topics / 6 domains; public preview is not the full canonical suite.",
+        "Grading: Official correctness/abstention judge; report accuracy, hallucination and signed Omniscience Index.",
+        "Limitations: AAII 4.3 OOD component. Health includes clinical knowledge; confirm topic mapping before calling it a biology score."
+      ],
+      "provenance": {
+        "sheet": "Non-agentic (Evalchemy)",
+        "gid": 776831399,
+        "row": 16,
+        "evidence_date": "9/18/2026",
+        "imported_at": "2026-10-14"
+      },
+      "source_status": "Assets / protocol"
+    },
+    {
+      "family_id": "bioplanner-bioprot",
+      "family_name": "BioPlanner / BioProt",
+      "variant_id": "bioplanner-bioprot",
+      "name": "BioPlanner / BioProt",
+      "creators": [
+        "Align to Innovate",
+        "Francis Crick Institute",
+        "University of Oxford",
+        "FutureHouse"
+      ],
+      "assignment": "TBD",
+      "description": "Biological protocol planning and next-step prediction using the BioProt protocol corpus.",
+      "framework": "Evalchemy",
+      "sources": [
+        {
+          "label": "Benchmark",
+          "url": "https://aclanthology.org/2023.emnlp-main.162/"
+        },
+        {
+          "label": "Scorer / data",
+          "url": "https://github.com/bioplanner/bioplanner/tree/80b69543f6d4c3abbeb5fcc9cb1bacef76bf974a"
+        },
+        {
+          "label": "Evalchemy / integration",
+          "url": "https://github.com/marin-community/evalchemy/tree/ab8e78f12abb8ed0d1659f56c24f2e01f3c85b54/eval/chat_benchmarks"
+        }
+      ],
+      "work": [],
+      "notes": [
+        "Access: Public BioProt data, prompts and evaluation code in the authors’ repository.",
+        "Grading: Automatic protocol/action-sequence evaluation; reproduce task-specific reference matching and planning metrics.",
+        "Limitations: Planning text/pseudocode is not physical protocol execution. Keep next-step and full-plan results separate."
+      ],
+      "provenance": {
+        "sheet": "Non-agentic (Evalchemy)",
+        "gid": 776831399,
+        "row": 17,
+        "evidence_date": "9/21/2026",
+        "imported_at": "2026-10-14"
+      },
+      "source_status": "Port needed"
+    },
+    {
+      "family_id": "biocoder",
+      "family_name": "BioCoder",
+      "variant_id": "biocoder",
+      "name": "BioCoder",
+      "creators": [
+        "Yale University",
+        "Google DeepMind"
+      ],
+      "assignment": "TBD",
+      "description": "Bioinformatics function generation in Python/Java and related programming tasks.",
+      "framework": "Evalchemy",
+      "sources": [
+        {
+          "label": "Benchmark",
+          "url": "https://github.com/gersteinlab/BioCoder"
+        },
+        {
+          "label": "Scorer / data",
+          "url": "https://huggingface.co/datasets/lilbillbiscuit/biocoder_public"
+        },
+        {
+          "label": "Evalchemy / integration",
+          "url": "https://github.com/marin-community/evalchemy/tree/ab8e78f12abb8ed0d1659f56c24f2e01f3c85b54/eval/chat_benchmarks"
+        }
+      ],
+      "work": [],
+      "notes": [
+        "Access: Public code, testing framework and author-linked HF release.",
+        "Grading: Executable correctness tests, including fuzz testing; pass@k depends on sampling and test configuration.",
+        "Limitations: One-shot code generation is the stated protocol; code execution by the grader does not itself make the model agentic."
+      ],
+      "provenance": {
+        "sheet": "Non-agentic (Evalchemy)",
+        "gid": 776831399,
+        "row": 18,
+        "evidence_date": "9/21/2026",
+        "imported_at": "2026-10-14"
+      },
+      "source_status": "Port needed"
+    },
+    {
+      "family_id": "humaneval-bioimage-human-eval-bia",
+      "family_name": "HumanEval-BioImage (human-eval-bia)",
+      "variant_id": "humaneval-bioimage-human-eval-bia",
+      "name": "HumanEval-BioImage (human-eval-bia)",
+      "creators": [
+        "Leipzig University / ScaDS.AI",
+        "EMBL",
+        "Max Planck Institute for Human Cognitive and Brain Sciences"
+      ],
+      "assignment": "TBD",
+      "description": "57 Python function-completion problems for bioimage analysis.",
+      "framework": "Evalchemy",
+      "sources": [
+        {
+          "label": "Benchmark",
+          "url": "https://doi.org/10.1101/2024.04.19.590278"
+        },
+        {
+          "label": "Scorer / data",
+          "url": "https://github.com/haesleinhuepf/human-eval-bia/tree/f6edaa15545e84951f5428d07e16db04155f2266"
+        },
+        {
+          "label": "Evalchemy / integration",
+          "url": "https://github.com/marin-community/evalchemy/tree/ab8e78f12abb8ed0d1659f56c24f2e01f3c85b54/eval/chat_benchmarks"
+        }
+      ],
+      "work": [],
+      "notes": [
+        "Access: Public task definitions, reference solutions and tests in human-eval-bia.",
+        "Grading: Unit-test correctness and pass@k; pin Python/image-analysis dependencies.",
+        "Limitations: Small function-level suite; distinct from an autonomous microscopy analysis workflow."
+      ],
+      "provenance": {
+        "sheet": "Non-agentic (Evalchemy)",
+        "gid": 776831399,
+        "row": 19,
+        "evidence_date": "9/21/2026",
+        "imported_at": "2026-10-14"
+      },
+      "source_status": "Port needed"
+    },
+    {
+      "family_id": "biollmbench",
+      "family_name": "BioLLMBench",
+      "variant_id": "biollmbench",
+      "name": "BioLLMBench",
+      "creators": [
+        "UCLA",
+        "Technical University of Moldova",
+        "University of Southern California"
+      ],
+      "assignment": "TBD",
+      "description": "24 tasks in 6 bioinformatics skill areas, including knowledge, mathematics, coding, plots and summarization.",
+      "framework": "Evalchemy",
+      "sources": [
+        {
+          "label": "Benchmark",
+          "url": "https://doi.org/10.1101/2023.12.19.572483"
+        },
+        {
+          "label": "Scorer / data",
+          "url": "https://doi.org/10.1101/2023.12.19.572483"
+        },
+        {
+          "label": "Evalchemy / integration",
+          "url": "https://github.com/marin-community/evalchemy/tree/ab8e78f12abb8ed0d1659f56c24f2e01f3c85b54/eval/chat_benchmarks"
+        }
+      ],
+      "work": [],
+      "notes": [
+        "Access: Paper identified; no authoritative complete runnable dataset/scorer release located in this audit.",
+        "Grading: Task-specific assessment, including expert review and code/output evaluation; executable scoring contract unverified.",
+        "Limitations: Paper-reported evaluation suite. Mixed task formats cannot be reduced to one MCQ accuracy."
+      ],
+      "provenance": {
+        "sheet": "Non-agentic (Evalchemy)",
+        "gid": 776831399,
+        "row": 20,
+        "evidence_date": "9/21/2026",
+        "imported_at": "2026-10-14"
+      },
+      "source_status": "Assets / protocol"
+    },
+    {
+      "family_id": "bioinfo-bench",
+      "family_name": "Bioinfo-Bench",
+      "variant_id": "bioinfo-bench",
+      "name": "Bioinfo-Bench",
+      "creators": [
+        "Shanghai Jiao Tong University"
+      ],
+      "assignment": "TBD",
+      "description": "Bioinformatics knowledge acquisition, analysis and application across 10 domains.",
+      "framework": "Evalchemy",
+      "sources": [
+        {
+          "label": "Benchmark",
+          "url": "https://doi.org/10.1101/2023.10.18.563023"
+        },
+        {
+          "label": "Scorer / data",
+          "url": "https://huggingface.co/datasets/Qiyuan04/bioinfo-bench"
+        },
+        {
+          "label": "Evalchemy / integration",
+          "url": "https://github.com/marin-community/evalchemy/tree/ab8e78f12abb8ed0d1659f56c24f2e01f3c85b54/eval/chat_benchmarks"
+        }
+      ],
+      "work": [],
+      "notes": [
+        "Access: Author repository and public Qiyuan04/bioinfo-bench dataset; schema/scorer need validation.",
+        "Grading: Task-specific QA/analysis evaluation; validate released reference fields and answer normalization.",
+        "Limitations: Distinct from BioinformaticsBench and BioLLMBench despite similar names."
+      ],
+      "provenance": {
+        "sheet": "Non-agentic (Evalchemy)",
+        "gid": 776831399,
+        "row": 21,
+        "evidence_date": "9/21/2026",
+        "imported_at": "2026-10-14"
+      },
+      "source_status": "Port needed"
+    },
+    {
+      "family_id": "bioinformaticsbench",
+      "family_name": "BioinformaticsBench",
+      "variant_id": "bioinformaticsbench",
+      "name": "BioinformaticsBench",
+      "creators": [
+        "Unverified institutional attribution"
+      ],
+      "assignment": "TBD",
+      "description": "602 human-annotated questions across 9 bioinformatics domains; MCQ, true/false and open questions.",
+      "framework": "Evalchemy",
+      "sources": [
+        {
+          "label": "Benchmark",
+          "url": "https://openreview.net/pdf?id=eKw7delVSM"
+        },
+        {
+          "label": "Scorer / data",
+          "url": "https://openreview.net/pdf?id=eKw7delVSM"
+        },
+        {
+          "label": "Evalchemy / integration",
+          "url": "https://github.com/marin-community/evalchemy/tree/ab8e78f12abb8ed0d1659f56c24f2e01f3c85b54/eval/chat_benchmarks"
+        }
+      ],
+      "work": [],
+      "notes": [
+        "Access: OpenReview paper available; complete author-linked data/scorer not located.",
+        "Grading: Question-type-specific correctness; open-response judge and reproducible scorer need verification.",
+        "Limitations: Catalogued separately from Bioinfo-Bench; reported task count does not establish a runnable public release."
+      ],
+      "provenance": {
+        "sheet": "Non-agentic (Evalchemy)",
+        "gid": 776831399,
+        "row": 22,
+        "evidence_date": "9/21/2026",
+        "imported_at": "2026-10-14"
+      },
+      "source_status": "Assets / protocol"
+    },
+    {
+      "family_id": "geneturing",
+      "family_name": "GeneTuring",
+      "variant_id": "geneturing",
+      "name": "GeneTuring",
+      "creators": [
+        "Columbia University",
+        "Duke University"
+      ],
+      "assignment": "TBD",
+      "description": "Genomic factual knowledge: gene names, locations, functions and associations; repository lists 16 modules.",
+      "framework": "Evalchemy",
+      "sources": [
+        {
+          "label": "Benchmark",
+          "url": "https://github.com/Winnie09/GeneTuring"
+        },
+        {
+          "label": "Scorer / data",
+          "url": "https://github.com/Winnie09/GeneTuring/tree/4bc94391321991125bddfe0a726f35b87495fd6f"
+        },
+        {
+          "label": "Evalchemy / integration",
+          "url": "https://github.com/marin-community/evalchemy/tree/ab8e78f12abb8ed0d1659f56c24f2e01f3c85b54/eval/chat_benchmarks"
+        }
+      ],
+      "work": [],
+      "notes": [
+        "Access: Public benchmark/reference materials and model-output collections in GeneTuring.",
+        "Grading: Reference-based QA correctness; pin module definitions and answer normalization.",
+        "Limitations: This row is direct LLM QA. GeneGPT/tool-augmented runs require a separately specified protocol; output-row counts are not task counts."
+      ],
+      "provenance": {
+        "sheet": "Non-agentic (Evalchemy)",
+        "gid": 776831399,
+        "row": 23,
+        "evidence_date": "9/21/2026",
+        "imported_at": "2026-10-14"
+      },
+      "source_status": "Port needed"
+    },
+    {
+      "family_id": "sc-arena",
+      "family_name": "SC-Arena",
+      "variant_id": "sc-arena",
+      "name": "SC-Arena",
+      "creators": [
+        "Shenzhen University of Advanced Technology",
+        "Northeastern University (China)",
+        "collaborators (see note)"
+      ],
+      "assignment": "TBD",
+      "description": "Five single-cell language tasks: annotation, captioning, generation, perturbation prediction and QA.",
+      "framework": "Evalchemy",
+      "sources": [
+        {
+          "label": "Benchmark",
+          "url": "https://arxiv.org/abs/2602.23199"
+        },
+        {
+          "label": "Scorer / data",
+          "url": "https://github.com/SUAT-AIRI/SC-Arena/tree/f4480a220fa4872c4c747f52f8fc784401c592fc"
+        },
+        {
+          "label": "Evalchemy / integration",
+          "url": "https://github.com/marin-community/evalchemy/tree/ab8e78f12abb8ed0d1659f56c24f2e01f3c85b54/eval/chat_benchmarks"
+        }
+      ],
+      "work": [],
+      "notes": [
+        "Access: Public evaluation repository and example data/configurations; complete data coverage needs validation.",
+        "Grading: Knowledge-augmented, task-specific metrics using ontology, marker and literature information.",
+        "Limitations: Language-model evaluation of single-cell reasoning; keep task metrics distinct and verify full versus example release."
+      ],
+      "provenance": {
+        "sheet": "Non-agentic (Evalchemy)",
+        "gid": 776831399,
+        "row": 24,
+        "evidence_date": "9/21/2026",
+        "imported_at": "2026-10-14"
+      },
+      "source_status": "Assets / protocol"
+    },
+    {
+      "family_id": "biomaze",
+      "family_name": "BioMaze",
+      "variant_id": "biomaze-tool-free-reasoning",
+      "name": "BioMaze — tool-free reasoning",
+      "creators": [
+        "Peking University",
+        "University of Hong Kong",
+        "Xi’an Jiaotong University"
+      ],
+      "assignment": "TBD",
+      "description": "About 5,100 biological pathway reasoning problems, including judgments and open responses.",
+      "framework": "Evalchemy",
+      "sources": [
+        {
+          "label": "Benchmark",
+          "url": "https://arxiv.org/abs/2502.16660"
+        },
+        {
+          "label": "Scorer / data",
+          "url": "https://huggingface.co/datasets/haitengzhao/BioMaze"
+        },
+        {
+          "label": "Evalchemy / integration",
+          "url": "https://github.com/marin-community/evalchemy/tree/ab8e78f12abb8ed0d1659f56c24f2e01f3c85b54/eval/chat_benchmarks"
+        }
+      ],
+      "work": [],
+      "notes": [
+        "Access: Public BioMaze code and author-linked HF questions/answers.",
+        "Grading: Reference correctness for judgments; model-assisted assessment for open responses.",
+        "Limitations: Tool-free row; the paper’s PathSeeker graph/tool workflow is a separate experimental condition."
+      ],
+      "provenance": {
+        "sheet": "Non-agentic (Evalchemy)",
+        "gid": 776831399,
+        "row": 25,
+        "evidence_date": "9/21/2026",
+        "imported_at": "2026-10-14"
+      },
+      "source_status": "Port needed"
+    },
+    {
+      "family_id": "cardbiomedbench",
+      "family_name": "CARDBiomedBench",
+      "variant_id": "cardbiomedbench",
+      "name": "CARDBiomedBench",
+      "creators": [
+        "NIH CARD",
+        "DataTecnica"
+      ],
+      "assignment": "TBD",
+      "description": "Biomedical research QA with a focus on neurodegenerative disease and scientific evidence.",
+      "framework": "Evalchemy",
+      "sources": [
+        {
+          "label": "Benchmark",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12974222/"
+        },
+        {
+          "label": "Scorer / data",
+          "url": "https://huggingface.co/datasets/NIH-CARD/CARDBiomedBench"
+        },
+        {
+          "label": "Evalchemy / integration",
+          "url": "https://github.com/marin-community/evalchemy/tree/ab8e78f12abb8ed0d1659f56c24f2e01f3c85b54/eval/chat_benchmarks"
+        }
+      ],
+      "work": [],
+      "notes": [
+        "Access: Public CARDBiomedBench code and HF release.",
+        "Grading: BioScore rubric/model-assisted response evaluation; grader identity and prompts must be pinned.",
+        "Limitations: Free-response research QA; rubric scores are not directly comparable to MCQ accuracy."
+      ],
+      "provenance": {
+        "sheet": "Non-agentic (Evalchemy)",
+        "gid": 776831399,
+        "row": 26,
+        "evidence_date": "9/21/2026",
+        "imported_at": "2026-10-14"
+      },
+      "source_status": "Judge integration"
+    },
+    {
+      "family_id": "biomedsql",
+      "family_name": "BiomedSQL",
+      "variant_id": "biomedsql",
+      "name": "BiomedSQL",
+      "creators": [
+        "NIH NIA / CARD",
+        "DataTecnica",
+        "Johns Hopkins University"
+      ],
+      "assignment": "TBD",
+      "description": "Text-to-SQL scientific queries against a biomedical knowledge base.",
+      "framework": "Evalchemy",
+      "sources": [
+        {
+          "label": "Benchmark",
+          "url": "https://arxiv.org/abs/2505.20321"
+        },
+        {
+          "label": "Scorer / data",
+          "url": "https://huggingface.co/datasets/NIH-CARD/BiomedSQL"
+        },
+        {
+          "label": "Evalchemy / integration",
+          "url": "https://github.com/marin-community/evalchemy/tree/ab8e78f12abb8ed0d1659f56c24f2e01f3c85b54/eval/chat_benchmarks"
+        }
+      ],
+      "work": [],
+      "notes": [
+        "Access: Public code and HF data; original execution workflow uses the CARD knowledge base/BigQuery.",
+        "Grading: SQL execution/result comparison against reference queries; database and comparison settings matter.",
+        "Limitations: Direct SQL generation recorded here; database execution is part of scoring. An iterative SQL agent is a separate protocol."
+      ],
+      "provenance": {
+        "sheet": "Non-agentic (Evalchemy)",
+        "gid": 776831399,
+        "row": 27,
+        "evidence_date": "9/21/2026",
+        "imported_at": "2026-10-14"
+      },
+      "source_status": "Port needed"
+    },
+    {
+      "family_id": "babe-biology-arena-benchmark",
+      "family_name": "BABE (Biology Arena Benchmark)",
+      "variant_id": "babe-biology-arena-benchmark",
+      "name": "BABE (Biology Arena Benchmark)",
+      "creators": [
+        "ByteDance Seed",
+        "Peking University"
+      ],
+      "assignment": "TBD",
+      "description": "Multimodal biology reasoning across 12 fields, with correlated and multi-hop causal question groups.",
+      "framework": "Evalchemy",
+      "sources": [
+        {
+          "label": "Benchmark",
+          "url": "https://arxiv.org/abs/2602.05857"
+        },
+        {
+          "label": "Scorer / data",
+          "url": "https://arxiv.org/abs/2602.05857"
+        },
+        {
+          "label": "Evalchemy / integration",
+          "url": "https://github.com/marin-community/evalchemy/tree/ab8e78f12abb8ed0d1659f56c24f2e01f3c85b54/eval/chat_benchmarks"
+        }
+      ],
+      "work": [],
+      "notes": [
+        "Access: Paper found; authoritative full data/scorer release not located.",
+        "Grading: Paper-described question-group evaluation; executable scorer and exact judge configuration unverified.",
+        "Limitations: Keep linked question triplets together when defining splits; this is currently a paper-level inventory entry."
+      ],
+      "provenance": {
+        "sheet": "Non-agentic (Evalchemy)",
+        "gid": 776831399,
+        "row": 28,
+        "evidence_date": "9/21/2026",
+        "imported_at": "2026-10-14"
+      },
+      "source_status": "Assets / protocol"
+    },
+    {
+      "family_id": "microvqa",
+      "family_name": "MicroVQA",
+      "variant_id": "microvqa",
+      "name": "MicroVQA",
+      "creators": [
+        "Stanford University",
+        "Chan Zuckerberg Biohub Network",
+        "collaborators (see note)"
+      ],
+      "assignment": "TBD",
+      "description": "1,042 microscopy-based scientific reasoning questions with images and multiple-choice answers.",
+      "framework": "Evalchemy",
+      "sources": [
+        {
+          "label": "Benchmark",
+          "url": "https://arxiv.org/abs/2503.13399"
+        },
+        {
+          "label": "Scorer / data",
+          "url": "https://huggingface.co/datasets/jmhb/microvqa"
+        },
+        {
+          "label": "Evalchemy / integration",
+          "url": "https://github.com/marin-community/evalchemy/tree/ab8e78f12abb8ed0d1659f56c24f2e01f3c85b54/eval/chat_benchmarks"
+        }
+      ],
+      "work": [],
+      "notes": [
+        "Access: Public repository and author-linked HF benchmark.",
+        "Grading: Multiple-choice answer accuracy; preserve official option formatting and image inputs.",
+        "Limitations: Tests image-grounded reasoning; text-only substitution changes the benchmark."
+      ],
+      "provenance": {
+        "sheet": "Non-agentic (Evalchemy)",
+        "gid": 776831399,
+        "row": 29,
+        "evidence_date": "9/21/2026",
+        "imported_at": "2026-10-14"
+      },
+      "source_status": "Port needed"
+    },
+    {
+      "family_id": "biology-instructions",
+      "family_name": "Biology-Instructions",
+      "variant_id": "biology-instructions-evaluation-splits",
+      "name": "Biology-Instructions — evaluation splits",
+      "creators": [
+        "Shanghai AI Laboratory",
+        "collaborators (see note)"
+      ],
+      "assignment": "TBD",
+      "description": "Multi-omics sequence understanding across 21 classification/regression task types.",
+      "framework": "Evalchemy",
+      "sources": [
+        {
+          "label": "Benchmark",
+          "url": "https://github.com/hhnqqq/Biology-Instructions"
+        },
+        {
+          "label": "Scorer / data",
+          "url": "https://github.com/hhnqqq/Biology-Instructions/tree/600acaa08c0302e8f5ce86de0fe041f21c13b53e"
+        },
+        {
+          "label": "Evalchemy / integration",
+          "url": "https://github.com/marin-community/evalchemy/tree/ab8e78f12abb8ed0d1659f56c24f2e01f3c85b54/eval/chat_benchmarks"
+        }
+      ],
+      "work": [],
+      "notes": [
+        "Access: Stage3.xlsx released in the repository; training/inference code linked in MyTransformers.",
+        "Grading: Task-specific classification/regression metrics; pin held-out split and prompting setup.",
+        "Limitations: Actual instruction-following LLM evaluation; training corpus size is not benchmark size. Keep fine-tuning and evaluation protocols distinct."
+      ],
+      "provenance": {
+        "sheet": "Non-agentic (Evalchemy)",
+        "gid": 776831399,
+        "row": 30,
+        "evidence_date": "9/21/2026",
+        "imported_at": "2026-10-14"
+      },
+      "source_status": "Assets / protocol"
+    },
+    {
+      "family_id": "bio-benchmark",
+      "family_name": "Bio-benchmark",
+      "variant_id": "bio-benchmark-biological-tasks",
+      "name": "Bio-benchmark — biological tasks",
+      "creators": [
+        "Chinese University of Hong Kong",
+        "University of Hong Kong",
+        "Shanghai AI Laboratory"
+      ],
+      "assignment": "TBD",
+      "description": "30 prompted LLM tasks across bioinformatics/biomedical NLP, proteins, RNA, drugs and clinical records.",
+      "framework": "Evalchemy",
+      "sources": [
+        {
+          "label": "Benchmark",
+          "url": "https://arxiv.org/abs/2503.04013"
+        },
+        {
+          "label": "Scorer / data",
+          "url": "https://arxiv.org/abs/2503.04013"
+        },
+        {
+          "label": "Evalchemy / integration",
+          "url": "https://github.com/marin-community/evalchemy/tree/ab8e78f12abb8ed0d1659f56c24f2e01f3c85b54/eval/chat_benchmarks"
+        }
+      ],
+      "work": [],
+      "notes": [
+        "Access: Paper identified; official consolidated data/scorer release not located.",
+        "Grading: Heterogeneous task-specific metrics; full reproducible evaluation implementation not verified.",
+        "Limitations: General biomedical coverage; a biology-only score requires an explicit subset and original metrics."
+      ],
+      "provenance": {
+        "sheet": "Non-agentic (Evalchemy)",
+        "gid": 776831399,
+        "row": 31,
+        "evidence_date": "9/21/2026",
+        "imported_at": "2026-10-14"
+      },
+      "source_status": "Assets / protocol"
+    },
+    {
+      "family_id": "dmpkbench",
+      "family_name": "DMPKBench",
+      "variant_id": "dmpkbench",
+      "name": "DMPKBench",
+      "creators": [
+        "Global Health Drug Discovery Institute (GHDDI)"
+      ],
+      "assignment": "TBD",
+      "description": "Drug metabolism/pharmacokinetics, ADMET reasoning, interpretation and modeling.",
+      "framework": "Evalchemy",
+      "sources": [
+        {
+          "label": "Benchmark",
+          "url": "https://github.com/GHDDI-AILab/DMPKBench"
+        },
+        {
+          "label": "Scorer / data",
+          "url": "https://github.com/GHDDI-AILab/DMPKBench/tree/f2ddaff925b51aad0069b68a823bb6b2c28aac76"
+        },
+        {
+          "label": "Evalchemy / integration",
+          "url": "https://github.com/marin-community/evalchemy/tree/ab8e78f12abb8ed0d1659f56c24f2e01f3c85b54/eval/chat_benchmarks"
+        }
+      ],
+      "work": [],
+      "notes": [
+        "Access: Public code and several data subsets; ADMET-MPO reference answers withheld under licensing restrictions.",
+        "Grading: Subset-specific choice, numerical and open-response assessment; some open responses need model/expert grading.",
+        "Limitations: Questions being downloadable does not imply self-run scoring. Report subset coverage; large ADMET-MPO pool should not dominate other tasks."
+      ],
+      "provenance": {
+        "sheet": "Non-agentic (Evalchemy)",
+        "gid": 776831399,
+        "row": 32,
+        "evidence_date": "9/21/2026",
+        "imported_at": "2026-10-14"
+      },
+      "source_status": "Assets / protocol"
+    },
+    {
+      "family_id": "biomol-llm-bench",
+      "family_name": "BioMol-LLM-Bench",
+      "variant_id": "biomol-llm-bench",
+      "name": "BioMol-LLM-Bench",
+      "creators": [
+        "Southern University of Science and Technology",
+        "Pengcheng Laboratory",
+        "Institute of Mechanics, CAS"
+      ],
+      "assignment": "TBD",
+      "description": "26 biomolecular LLM tasks across four levels, including classification, regression and generation.",
+      "framework": "Evalchemy",
+      "sources": [
+        {
+          "label": "Benchmark",
+          "url": "https://arxiv.org/abs/2604.03361"
+        },
+        {
+          "label": "Scorer / data",
+          "url": "https://github.com/AI-HPC-Research-Team/BioMol-LLM-Bench/tree/9355caae207e17ea4b55440fe9350cc4290ebb23"
+        },
+        {
+          "label": "Evalchemy / integration",
+          "url": "https://github.com/marin-community/evalchemy/tree/ab8e78f12abb8ed0d1659f56c24f2e01f3c85b54/eval/chat_benchmarks"
+        }
+      ],
+      "work": [],
+      "notes": [
+        "Access: Public BioMol-LLM-Bench repository with datasets and evaluation scripts.",
+        "Grading: Official task-specific metrics and output parsers in the evaluation code.",
+        "Limitations: LLM protocol over biological representations. Tool-augmented conditions must be reported separately."
+      ],
+      "provenance": {
+        "sheet": "Non-agentic (Evalchemy)",
+        "gid": 776831399,
+        "row": 33,
+        "evidence_date": "9/21/2026",
+        "imported_at": "2026-10-14"
+      },
+      "source_status": "Port needed"
+    },
+    {
+      "family_id": "dbench-bio",
+      "family_name": "DBench-Bio",
+      "variant_id": "dbench-bio",
+      "name": "DBench-Bio",
+      "creators": [
+        "National University of Singapore",
+        "Tsinghua University",
+        "University of Science and Technology of China"
+      ],
+      "assignment": "TBD",
+      "description": "Dynamic biological knowledge-discovery QA generated from newly published abstracts across 12 domains.",
+      "framework": "Evalchemy",
+      "sources": [
+        {
+          "label": "Benchmark",
+          "url": "https://arxiv.org/abs/2603.03322"
+        },
+        {
+          "label": "Scorer / data",
+          "url": "https://github.com/transcend-0/DBench-Bio/tree/82162e8193e1357fa9d026faaafbbd6c50256d25"
+        },
+        {
+          "label": "Evalchemy / integration",
+          "url": "https://github.com/marin-community/evalchemy/tree/ab8e78f12abb8ed0d1659f56c24f2e01f3c85b54/eval/chat_benchmarks"
+        }
+      ],
+      "work": [],
+      "notes": [
+        "Access: Public benchmark construction and evaluation repository.",
+        "Grading: Model-based answer grading on a five-point scale; freeze grader and generation settings.",
+        "Limitations: Monthly updates change the test set. Abstract-derived answer quality is a proxy, not experimental validation of a discovery."
+      ],
+      "provenance": {
+        "sheet": "Non-agentic (Evalchemy)",
+        "gid": 776831399,
+        "row": 34,
+        "evidence_date": "9/21/2026",
+        "imported_at": "2026-10-14"
+      },
+      "source_status": "Judge integration"
+    },
+    {
+      "family_id": "scir",
+      "family_name": "SciR",
+      "variant_id": "scir",
+      "name": "SciR",
+      "creators": [
+        "Idiap Research Institute",
+        "EPFL",
+        "University of Sheffield",
+        "University of Manchester",
+        "CRUK Manchester Institute"
+      ],
+      "assignment": "TBD",
+      "description": "Controlled deduction, induction and causal reasoning over developmental biology, drug relations and signaling.",
+      "framework": "Evalchemy",
+      "sources": [
+        {
+          "label": "Benchmark",
+          "url": "https://arxiv.org/abs/2606.13020"
+        },
+        {
+          "label": "Scorer / data",
+          "url": "https://huggingface.co/datasets/sci-reason/scir"
+        },
+        {
+          "label": "Evalchemy / integration",
+          "url": "https://github.com/marin-community/evalchemy/tree/ab8e78f12abb8ed0d1659f56c24f2e01f3c85b54/eval/chat_benchmarks"
+        }
+      ],
+      "work": [],
+      "notes": [
+        "Access: Public task generation/evaluation code and author-linked HF dataset.",
+        "Grading: Verifiable task labels/rules/graph structure; evaluate each reasoning track with its official scorer.",
+        "Limitations: Formalized biological reasoning rather than an autonomous wet-lab workflow; report generated task settings."
+      ],
+      "provenance": {
+        "sheet": "Non-agentic (Evalchemy)",
+        "gid": 776831399,
+        "row": 35,
+        "evidence_date": "9/21/2026",
+        "imported_at": "2026-10-14"
+      },
+      "source_status": "Port needed"
+    },
+    {
+      "family_id": "scifact",
+      "family_name": "SciFact",
+      "variant_id": "scifact-llm-protocol",
+      "name": "SciFact — LLM protocol",
+      "creators": [
+        "Allen Institute for AI",
+        "University of Washington"
+      ],
+      "assignment": "TBD",
+      "description": "Scientific claim verification with biomedical abstracts and supporting/refuting evidence.",
+      "framework": "Evalchemy",
+      "sources": [
+        {
+          "label": "Benchmark",
+          "url": "https://github.com/allenai/SciRIFF/blob/main/doc/evaluation_tasks.md"
+        },
+        {
+          "label": "Scorer / data",
+          "url": "https://huggingface.co/datasets/allenai/scifact"
+        },
+        {
+          "label": "Evalchemy / integration",
+          "url": "https://github.com/marin-community/evalchemy/tree/ab8e78f12abb8ed0d1659f56c24f2e01f3c85b54/eval/chat_benchmarks"
+        }
+      ],
+      "work": [],
+      "notes": [
+        "Access: Public SciFact corpus/repository and SciRIFF LLM task specification; confirm labels for chosen split.",
+        "Grading: SciRIFF prompted-LLM protocol: claim-label and evidence scoring; retain original task definitions.",
+        "Limitations: SciFact predates modern LLMs; included here for its documented prompted-LLM protocol. Do not double-count within ScholarQABench."
+      ],
+      "provenance": {
+        "sheet": "Non-agentic (Evalchemy)",
+        "gid": 776831399,
+        "row": 36,
+        "evidence_date": "9/21/2026",
+        "imported_at": "2026-10-14"
+      },
+      "source_status": "Port needed"
+    },
+    {
+      "family_id": "bionli",
+      "family_name": "BioNLI",
+      "variant_id": "bionli-llm-inference-protocol",
+      "name": "BioNLI — LLM inference protocol",
+      "creators": [
+        "Stony Brook University",
+        "University of Arizona"
+      ],
+      "assignment": "TBD",
+      "description": "Biomedical natural-language inference over abstracts with adversarially generated hypotheses.",
+      "framework": "Evalchemy",
+      "sources": [
+        {
+          "label": "Benchmark",
+          "url": "https://arxiv.org/abs/2210.14814"
+        },
+        {
+          "label": "Scorer / data",
+          "url": "https://github.com/StonyBrookNLP/BioNLI/tree/1aa25c4abfa4b5d05a3102c85f4949cdaf97277a"
+        },
+        {
+          "label": "Evalchemy / integration",
+          "url": "https://github.com/marin-community/evalchemy/tree/ab8e78f12abb8ed0d1659f56c24f2e01f3c85b54/eval/chat_benchmarks"
+        }
+      ],
+      "work": [],
+      "notes": [
+        "Access: Author release links for full/balanced training and development data; test set requires author contact.",
+        "Grading: Entailment/consistency classification using an explicit LLM prompt and official label mapping.",
+        "Limitations: Originally an NLI dataset; later LLM studies use it. Full/balanced releases share the same test set."
+      ],
+      "provenance": {
+        "sheet": "Non-agentic (Evalchemy)",
+        "gid": 776831399,
+        "row": 37,
+        "evidence_date": "9/21/2026",
+        "imported_at": "2026-10-14"
+      },
+      "source_status": "Assets / protocol"
+    },
+    {
+      "family_id": "frontierscience",
+      "family_name": "FrontierScience",
+      "variant_id": "frontierscience-biology",
+      "name": "FrontierScience — biology",
+      "creators": [
+        "OpenAI"
+      ],
+      "assignment": "TBD",
+      "description": "Expert biology problems from FrontierScience’s Olympiad and Research tracks.",
+      "framework": "Evalchemy",
+      "sources": [
+        {
+          "label": "Benchmark",
+          "url": "https://openai.com/index/frontierscience/"
+        },
+        {
+          "label": "Scorer / data",
+          "url": "https://huggingface.co/datasets/openai/frontierscience"
+        },
+        {
+          "label": "Evalchemy / integration",
+          "url": "https://github.com/marin-community/evalchemy/tree/ab8e78f12abb8ed0d1659f56c24f2e01f3c85b54/eval/chat_benchmarks"
+        }
+      ],
+      "work": [],
+      "notes": [
+        "Access: Public openai/frontierscience release is a subset of the full benchmark; biology count/filter must be derived.",
+        "Grading: Reference-answer/rubric grading; keep Olympiad and Research scoring protocols separate.",
+        "Limitations: General-science benchmark with a biology slice; published full-suite results are not public-subset results."
+      ],
+      "provenance": {
+        "sheet": "Non-agentic (Evalchemy)",
+        "gid": 776831399,
+        "row": 38,
+        "evidence_date": "9/21/2026",
+        "imported_at": "2026-10-14"
+      },
+      "source_status": "Judge integration"
+    },
+    {
+      "family_id": "scieval",
+      "family_name": "SciEval",
+      "variant_id": "scieval-biology",
+      "name": "SciEval — biology",
+      "creators": [
+        "Shanghai Jiao Tong University"
+      ],
+      "assignment": "TBD",
+      "description": "Biology subset of a roughly 18k-question scientific knowledge, reasoning and application suite.",
+      "framework": "Evalchemy",
+      "sources": [
+        {
+          "label": "Benchmark",
+          "url": "https://github.com/OpenDFM/SciEval"
+        },
+        {
+          "label": "Scorer / data",
+          "url": "https://huggingface.co/datasets/OpenDFM/SciEval"
+        },
+        {
+          "label": "Evalchemy / integration",
+          "url": "https://github.com/marin-community/evalchemy/tree/ab8e78f12abb8ed0d1659f56c24f2e01f3c85b54/eval/chat_benchmarks"
+        }
+      ],
+      "work": [],
+      "notes": [
+        "Access: Public repository and HF dataset; BAI-SciEval URL resolves to OpenDFM/SciEval.",
+        "Grading: Official task-specific answer accuracy and open-response scoring.",
+        "Limitations: Do not report the all-science aggregate as biology; separate objective and judged task coverage."
+      ],
+      "provenance": {
+        "sheet": "Non-agentic (Evalchemy)",
+        "gid": 776831399,
+        "row": 39,
+        "evidence_date": "9/21/2026",
+        "imported_at": "2026-10-14"
+      },
+      "source_status": "Port needed"
+    },
+    {
+      "family_id": "sciassess",
+      "family_name": "SciAssess",
+      "variant_id": "sciassess-biology",
+      "name": "SciAssess — biology",
+      "creators": [
+        "DP Technology",
+        "AI for Science Institute, Beijing"
+      ],
+      "assignment": "TBD",
+      "description": "Biological/biomedical literature memorization, comprehension and analysis with article and supplement context.",
+      "framework": "Evalchemy",
+      "sources": [
+        {
+          "label": "Benchmark",
+          "url": "https://arxiv.org/abs/2403.01976"
+        },
+        {
+          "label": "Scorer / data",
+          "url": "https://github.com/deepmodeling/SciAssess/tree/d1d9a596aabcdf23f904f183bf83087775c89486"
+        },
+        {
+          "label": "Evalchemy / integration",
+          "url": "https://github.com/marin-community/evalchemy/tree/ab8e78f12abb8ed0d1659f56c24f2e01f3c85b54/eval/chat_benchmarks"
+        }
+      ],
+      "work": [],
+      "notes": [
+        "Access: Public code/questions; original PDFs and supporting information must be obtained separately by DOI.",
+        "Grading: Task-specific metrics; some depend on sentence-transformer models and custom evaluator logic.",
+        "Limitations: Document access is a practical blocker; a PDF/model context cap is not a measured prompt requirement."
+      ],
+      "provenance": {
+        "sheet": "Non-agentic (Evalchemy)",
+        "gid": 776831399,
+        "row": 40,
+        "evidence_date": "9/21/2026",
+        "imported_at": "2026-10-14"
+      },
+      "source_status": "Assets / protocol"
+    },
+    {
+      "family_id": "scicueval",
+      "family_name": "SciCUEval",
+      "variant_id": "scicueval-biology-biomedicine",
+      "name": "SciCUEval — biology / biomedicine",
+      "creators": [
+        "Zhejiang University",
+        "Ant Group"
+      ],
+      "assignment": "TBD",
+      "description": "Scientific context understanding over text, tables and knowledge graphs; biology/biomedicine slice.",
+      "framework": "Evalchemy",
+      "sources": [
+        {
+          "label": "Benchmark",
+          "url": "https://www.nature.com/articles/s41597-026-06594-9"
+        },
+        {
+          "label": "Scorer / data",
+          "url": "https://doi.org/10.6084/m9.figshare.29924687"
+        },
+        {
+          "label": "Evalchemy / integration",
+          "url": "https://github.com/marin-community/evalchemy/tree/ab8e78f12abb8ed0d1659f56c24f2e01f3c85b54/eval/chat_benchmarks"
+        }
+      ],
+      "work": [],
+      "notes": [
+        "Access: Public evaluation code and author-linked Figshare dataset.",
+        "Grading: Task-dependent context relevance, absence, multi-source and inference metrics; verify judge needs by task.",
+        "Limitations: Ten component datasets cover different abilities; biology subset needs explicit task/domain mapping."
+      ],
+      "provenance": {
+        "sheet": "Non-agentic (Evalchemy)",
+        "gid": 776831399,
+        "row": 41,
+        "evidence_date": "9/21/2026",
+        "imported_at": "2026-10-14"
+      },
+      "source_status": "Port needed"
+    },
+    {
+      "family_id": "scipredict",
+      "family_name": "SciPredict",
+      "variant_id": "scipredict-biology",
+      "name": "SciPredict — biology",
+      "creators": [
+        "Scale AI",
+        "UCLA",
+        "University of Maryland",
+        "Princeton University"
+      ],
+      "assignment": "TBD",
+      "description": "Biology subset of 405 questions about empirical outcomes across biology, chemistry and physics.",
+      "framework": "Evalchemy",
+      "sources": [
+        {
+          "label": "Benchmark",
+          "url": "https://github.com/scaleapi/scipredict"
+        },
+        {
+          "label": "Scorer / data",
+          "url": "https://github.com/scaleapi/scipredict/tree/e7f60301bdb61f09e8ed1c54a9b47c063cb4a379"
+        },
+        {
+          "label": "Evalchemy / integration",
+          "url": "https://github.com/marin-community/evalchemy/tree/ab8e78f12abb8ed0d1659f56c24f2e01f3c85b54/eval/chat_benchmarks"
+        }
+      ],
+      "work": [],
+      "notes": [
+        "Access: Public SciPredict data and evaluation code.",
+        "Grading: Choice/numerical scoring plus model-based free-response grading, depending on question format.",
+        "Limitations: Predicting published experimental outcomes differs from executing new experiments; preserve temporal/contamination controls."
+      ],
+      "provenance": {
+        "sheet": "Non-agentic (Evalchemy)",
+        "gid": 776831399,
+        "row": 42,
+        "evidence_date": "9/21/2026",
+        "imported_at": "2026-10-14"
+      },
+      "source_status": "Port needed"
+    },
+    {
+      "family_id": "researchbench",
+      "family_name": "ResearchBench",
+      "variant_id": "researchbench-biology-cell-biology",
+      "name": "ResearchBench — biology / cell biology",
+      "creators": [
+        "Shanghai AI Laboratory",
+        "Fudan University",
+        "collaborators (see note)"
+      ],
+      "assignment": "TBD",
+      "description": "Biology/cell-biology literature inspiration retrieval, hypothesis generation and ranking.",
+      "framework": "Evalchemy",
+      "sources": [
+        {
+          "label": "Benchmark",
+          "url": "https://aclanthology.org/2026.findings-acl.644/"
+        },
+        {
+          "label": "Scorer / data",
+          "url": "https://huggingface.co/datasets/ankilok/ResearchBench"
+        },
+        {
+          "label": "Evalchemy / integration",
+          "url": "https://github.com/marin-community/evalchemy/tree/ab8e78f12abb8ed0d1659f56c24f2e01f3c85b54/eval/chat_benchmarks"
+        }
+      ],
+      "work": [],
+      "notes": [
+        "Access: Paper and auto-gated ankilok/ResearchBench repository metadata public; gated contents not accessed.",
+        "Grading: Track-specific hypothesis/retrieval/ranking evaluation; executable grader configuration needs confirmation.",
+        "Limitations: Multi-discipline benchmark; direct hypothesis/ranking protocol listed here. An autonomous retrieval workflow needs its own protocol."
+      ],
+      "provenance": {
+        "sheet": "Non-agentic (Evalchemy)",
+        "gid": 776831399,
+        "row": 43,
+        "evidence_date": "9/21/2026",
+        "imported_at": "2026-10-14"
+      },
+      "source_status": "Assets / protocol"
+    },
+    {
+      "family_id": "sciencearena",
+      "family_name": "ScienceArena",
+      "variant_id": "sciencearena-biology",
+      "name": "ScienceArena — biology",
+      "creators": [
+        "Qiyuan Tech",
+        "Tsinghua University",
+        "University of Hong Kong",
+        "Peking University"
+      ],
+      "assignment": "TBD",
+      "description": "Recent science Olympiad problems, including a biology competition slice.",
+      "framework": "Evalchemy",
+      "sources": [
+        {
+          "label": "Benchmark",
+          "url": "https://arxiv.org/abs/2608.30517"
+        },
+        {
+          "label": "Scorer / data",
+          "url": "https://arxiv.org/abs/2608.30517"
+        },
+        {
+          "label": "Evalchemy / integration",
+          "url": "https://github.com/marin-community/evalchemy/tree/ab8e78f12abb8ed0d1659f56c24f2e01f3c85b54/eval/chat_benchmarks"
+        }
+      ],
+      "work": [],
+      "notes": [
+        "Access: Paper identified; official runnable data/scorer release not located.",
+        "Grading: Paper-described answer/process-rubric evaluation; released scorer not verified.",
+        "Limitations: Distinct from OlympicArena; public competition questions may overlap other exam benchmarks."
+      ],
+      "provenance": {
+        "sheet": "Non-agentic (Evalchemy)",
+        "gid": 776831399,
+        "row": 44,
+        "evidence_date": "9/21/2026",
+        "imported_at": "2026-10-14"
+      },
+      "source_status": "Assets / protocol"
+    },
+    {
+      "family_id": "olympicarena",
+      "family_name": "OlympicArena",
+      "variant_id": "olympicarena-biology",
+      "name": "OlympicArena — biology",
+      "creators": [
+        "Shanghai Jiao Tong University / GAIR",
+        "Shanghai AI Laboratory",
+        "Soochow University"
+      ],
+      "assignment": "TBD",
+      "description": "Biology subset of 11,163 competition problems across seven disciplines; text and images.",
+      "framework": "Evalchemy",
+      "sources": [
+        {
+          "label": "Benchmark",
+          "url": "https://github.com/GAIR-NLP/OlympicArena"
+        },
+        {
+          "label": "Scorer / data",
+          "url": "https://huggingface.co/datasets/GAIR/OlympicArena"
+        },
+        {
+          "label": "Evalchemy / integration",
+          "url": "https://github.com/marin-community/evalchemy/tree/ab8e78f12abb8ed0d1659f56c24f2e01f3c85b54/eval/chat_benchmarks"
+        }
+      ],
+      "work": [],
+      "notes": [
+        "Access: Public OlympicArena repository, evaluation code and HF dataset.",
+        "Grading: Official answer extraction/correctness with task-format-specific handling.",
+        "Limitations: Multidisciplinary total is not biology count. Competition sources may overlap ScienceArena or exam collections."
+      ],
+      "provenance": {
+        "sheet": "Non-agentic (Evalchemy)",
+        "gid": 776831399,
+        "row": 45,
+        "evidence_date": "9/21/2026",
+        "imported_at": "2026-10-14"
+      },
+      "source_status": "Port needed"
+    },
+    {
+      "family_id": "mmmu",
+      "family_name": "MMMU",
+      "variant_id": "mmmu-biology-basic-medical-science",
+      "name": "MMMU — biology / basic medical science",
+      "creators": [
+        "MMMU Team — IN.AI Research",
+        "Waterloo",
+        "Ohio State",
+        "collaborators (see note)"
+      ],
+      "assignment": "TBD",
+      "description": "College-level Biology and Basic Medical Science among multimodal academic subjects.",
+      "framework": "Evalchemy",
+      "sources": [
+        {
+          "label": "Benchmark",
+          "url": "https://mmmu-benchmark.github.io/"
+        },
+        {
+          "label": "Scorer / data",
+          "url": "https://huggingface.co/datasets/MMMU/MMMU"
+        },
+        {
+          "label": "Evalchemy / integration",
+          "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/v0.4.12/lm_eval/tasks/mmmu"
+        }
+      ],
+      "work": [],
+      "notes": [
+        "Access: Public MMMU code and HF data; confirm availability of labels for the chosen split.",
+        "Grading: Official multiple-choice/open-answer parsing and accuracy.",
+        "Limitations: Keep biology and basic medical science separate; full MMMU stars/citations/likes cover all subjects."
+      ],
+      "provenance": {
+        "sheet": "Non-agentic (Evalchemy)",
+        "gid": 776831399,
+        "row": 46,
+        "evidence_date": "9/21/2026",
+        "imported_at": "2026-10-14"
+      },
+      "source_status": "Packaging check"
+    },
+    {
+      "family_id": "mmmu",
+      "family_name": "MMMU",
+      "variant_id": "mmmu-pro-biology-basic-medical-science",
+      "name": "MMMU-Pro — biology / basic medical science",
+      "creators": [
+        "MMMU Team"
+      ],
+      "assignment": "TBD",
+      "description": "More robust multimodal academic questions; biology/basic medical science slice.",
+      "framework": "Evalchemy",
+      "sources": [
+        {
+          "label": "Benchmark",
+          "url": "https://arxiv.org/abs/2409.02813"
+        },
+        {
+          "label": "Scorer / data",
+          "url": "https://huggingface.co/datasets/MMMU/MMMU_Pro"
+        },
+        {
+          "label": "Evalchemy / integration",
+          "url": "https://github.com/marin-community/evalchemy/tree/ab8e78f12abb8ed0d1659f56c24f2e01f3c85b54/eval/chat_benchmarks"
+        }
+      ],
+      "work": [],
+      "notes": [
+        "Access: Public MMMU-Pro dataset and code in the shared MMMU repository.",
+        "Grading: Official answer parsing/accuracy; standard and vision-only configurations differ.",
+        "Limitations: Shares source material with MMMU; revised options/vision conditions change difficulty. Repository stars are shared."
+      ],
+      "provenance": {
+        "sheet": "Non-agentic (Evalchemy)",
+        "gid": 776831399,
+        "row": 47,
+        "evidence_date": "9/21/2026",
+        "imported_at": "2026-10-14"
+      },
+      "source_status": "Port needed"
+    },
+    {
+      "family_id": "scienceqa",
+      "family_name": "ScienceQA",
+      "variant_id": "scienceqa-biology",
+      "name": "ScienceQA — biology",
+      "creators": [
+        "UCLA",
+        "Allen Institute for AI",
+        "Arizona State University"
+      ],
+      "assignment": "TBD",
+      "description": "School-level science questions including biology, with optional image/text context.",
+      "framework": "Evalchemy",
+      "sources": [
+        {
+          "label": "Benchmark",
+          "url": "https://scienceqa.github.io/"
+        },
+        {
+          "label": "Scorer / data",
+          "url": "https://huggingface.co/datasets/derek-thomas/ScienceQA"
+        },
+        {
+          "label": "Evalchemy / integration",
+          "url": "https://github.com/marin-community/evalchemy/tree/ab8e78f12abb8ed0d1659f56c24f2e01f3c85b54/eval/chat_benchmarks"
+        }
+      ],
+      "work": [],
+      "notes": [
+        "Access: Public author repository; repository-linked HF dataset mirror.",
+        "Grading: Multiple-choice accuracy using official split and answer extraction.",
+        "Limitations: Educational QA, not research execution. HF likes refer to the author-linked mirror, not an author-owned repository."
+      ],
+      "provenance": {
+        "sheet": "Non-agentic (Evalchemy)",
+        "gid": 776831399,
+        "row": 48,
+        "evidence_date": "9/21/2026",
+        "imported_at": "2026-10-14"
+      },
+      "source_status": "Port needed"
+    },
+    {
+      "family_id": "wmdp-bio",
+      "family_name": "WMDP-Bio",
+      "variant_id": "wmdp-bio",
+      "name": "WMDP-Bio",
+      "creators": [
+        "Center for AI Safety",
+        "Scale AI",
+        "SecureBio",
+        "multi-institution collaboration"
+      ],
+      "assignment": "TBD",
+      "description": "WMDP-Bio: hazardous biological knowledge assessed by multiple-choice questions.",
+      "framework": "Evalchemy",
+      "sources": [
+        {
+          "label": "Benchmark",
+          "url": "https://www.wmdp.ai/"
+        },
+        {
+          "label": "Scorer / data",
+          "url": "https://huggingface.co/datasets/cais/wmdp"
+        },
+        {
+          "label": "Evalchemy / integration",
+          "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/v0.4.12/lm_eval/tasks/wmdp"
+        }
+      ],
+      "work": [],
+      "notes": [
+        "Access: Public WMDP repository and cais/wmdp biology configuration.",
+        "Grading: Multiple-choice accuracy; preserve choice order and likelihood/generation protocol.",
+        "Limitations: Knowledge/unlearning proxy, not a direct measure of real-world experimental capability."
+      ],
+      "provenance": {
+        "sheet": "Non-agentic (Evalchemy)",
+        "gid": 776831399,
+        "row": 49,
+        "evidence_date": "9/21/2026",
+        "imported_at": "2026-10-14"
+      },
+      "source_status": "Packaging check"
+    },
+    {
+      "family_id": "virology-capabilities-test-vct",
+      "family_name": "Virology Capabilities Test (VCT)",
+      "variant_id": "virology-capabilities-test-vct",
+      "name": "Virology Capabilities Test (VCT)",
+      "creators": [
+        "SecureBio",
+        "Center for AI Safety",
+        "UFABC",
+        "MIT Media Lab"
+      ],
+      "assignment": "TBD",
+      "description": "Virology Capabilities Test: specialist virology knowledge/reasoning, including visual material.",
+      "framework": "Evalchemy",
+      "sources": [
+        {
+          "label": "Benchmark",
+          "url": "https://securebio.org/virologytest/"
+        },
+        {
+          "label": "Scorer / data",
+          "url": "https://securebio.org/virologytest/"
+        },
+        {
+          "label": "Evalchemy / integration",
+          "url": "https://github.com/marin-community/evalchemy/tree/ab8e78f12abb8ed0d1659f56c24f2e01f3c85b54/eval/chat_benchmarks"
+        }
+      ],
+      "work": [],
+      "notes": [
+        "Access: Public SecureBio description; full benchmark access is restricted/request-based.",
+        "Grading: Expert-authored question scoring; complete answer/scorer access requires confirmation with the provider.",
+        "Limitations: Record as an access-limited benchmark; do not substitute public examples for a full result."
+      ],
+      "provenance": {
+        "sheet": "Non-agentic (Evalchemy)",
+        "gid": 776831399,
+        "row": 50,
+        "evidence_date": "9/21/2026",
+        "imported_at": "2026-10-14"
+      },
+      "source_status": "Assets / protocol"
+    },
+    {
+      "family_id": "biotier",
+      "family_name": "BioTIER",
+      "variant_id": "biotier",
+      "name": "BioTIER",
+      "creators": [
+        "SecureBio",
+        "Federal University of ABC (UFABC)"
+      ],
+      "assignment": "TBD",
+      "description": "542 prompts testing targeted biological refusal: 398 refusal-target and 144 permitted requests.",
+      "framework": "Evalchemy",
+      "sources": [
+        {
+          "label": "Benchmark",
+          "url": "https://arxiv.org/abs/2607.14479"
+        },
+        {
+          "label": "Scorer / data",
+          "url": "https://arxiv.org/abs/2607.14479"
+        },
+        {
+          "label": "Evalchemy / integration",
+          "url": "https://github.com/marin-community/evalchemy/tree/ab8e78f12abb8ed0d1659f56c24f2e01f3c85b54/eval/chat_benchmarks"
+        }
+      ],
+      "work": [],
+      "notes": [
+        "Access: Public paper; full prompt set subject to restricted researcher access.",
+        "Grading: Refusal/permission assessment; separate provider API blocks from model refusals and report both classes.",
+        "Limitations: Refusal behavior is distinct from biological competence. Do not collapse permitted and refused classes."
+      ],
+      "provenance": {
+        "sheet": "Non-agentic (Evalchemy)",
+        "gid": 776831399,
+        "row": 51,
+        "evidence_date": "9/21/2026",
+        "imported_at": "2026-10-14"
+      },
+      "source_status": "Assets / protocol"
+    },
+    {
+      "family_id": "spike-bench",
+      "family_name": "SPIKE-Bench",
+      "variant_id": "spike-bench",
+      "name": "SPIKE-Bench",
+      "creators": [
+        "Peking University (PKU-Alignment)"
+      ],
+      "assignment": "TBD",
+      "description": "Biosecurity evaluation of model refusal and computationally assessed biological outputs.",
+      "framework": "Evalchemy",
+      "sources": [
+        {
+          "label": "Benchmark",
+          "url": "https://github.com/PKU-Alignment/SPIKE-Bench"
+        },
+        {
+          "label": "Scorer / data",
+          "url": "https://huggingface.co/datasets/quanshu01/SPIKE-Bench"
+        },
+        {
+          "label": "Evalchemy / integration",
+          "url": "https://github.com/marin-community/evalchemy/tree/ab8e78f12abb8ed0d1659f56c24f2e01f3c85b54/eval/chat_benchmarks"
+        }
+      ],
+      "work": [],
+      "notes": [
+        "Access: Public pipeline repository; 631-prompt HF dataset is auto-gated.",
+        "Grading: Refusal, plausibility and computational proxy metrics; verify each evaluator and model dependency.",
+        "Limitations: Computational proxy scores are not experimental validation of biological activity."
+      ],
+      "provenance": {
+        "sheet": "Non-agentic (Evalchemy)",
+        "gid": 776831399,
+        "row": 52,
+        "evidence_date": "9/21/2026",
+        "imported_at": "2026-10-14"
+      },
+      "source_status": "Assets / protocol"
+    },
+    {
+      "family_id": "bioeval",
+      "family_name": "BioEval",
+      "variant_id": "bioeval-repository-stage-suite",
+      "name": "BioEval — repository-stage suite",
+      "creators": [
+        "Unverified institutional affiliation — jang1563"
+      ],
+      "assignment": "TBD",
+      "description": "Repository-stage biology reasoning suite; base 296 / extended 400 items across 12 components.",
+      "framework": "Evalchemy",
+      "sources": [
+        {
+          "label": "Benchmark",
+          "url": "https://github.com/jang1563/BioEval"
+        },
+        {
+          "label": "Scorer / data",
+          "url": "https://huggingface.co/datasets/jang1563/BioEval"
+        },
+        {
+          "label": "Evalchemy / integration",
+          "url": "https://github.com/marin-community/evalchemy/tree/ab8e78f12abb8ed0d1659f56c24f2e01f3c85b54/eval/chat_benchmarks"
+        }
+      ],
+      "work": [],
+      "notes": [
+        "Access: Public repository and HF dataset; no independently established leaderboard evidence verified.",
+        "Grading: Released reference JSON/rubrics and evaluation framework; scorer reliability still needs independent validation.",
+        "Limitations: Early repository-stage suite, not equivalent evidence maturity to an established benchmark."
+      ],
+      "provenance": {
+        "sheet": "Non-agentic (Evalchemy)",
+        "gid": 776831399,
+        "row": 53,
+        "evidence_date": "9/21/2026",
+        "imported_at": "2026-10-14"
+      },
+      "source_status": "Assets / protocol"
+    },
+    {
+      "family_id": "bioreasonbench",
+      "family_name": "BioReasonBench",
+      "variant_id": "bioreasonbench-pilot",
+      "name": "BioReasonBench — pilot",
+      "creators": [
+        "Unverified institutional affiliation — nayala1"
+      ],
+      "assignment": "TBD",
+      "description": "Five figure-based biological reasoning pilot cases.",
+      "framework": "Evalchemy",
+      "sources": [
+        {
+          "label": "Benchmark",
+          "url": "https://github.com/nayala1/BioReasonBench"
+        },
+        {
+          "label": "Scorer / data",
+          "url": "https://github.com/nayala1/BioReasonBench/tree/b2e1c01f1670fc12d896d8781399af490dc9909c"
+        },
+        {
+          "label": "Evalchemy / integration",
+          "url": "https://github.com/marin-community/evalchemy/tree/ab8e78f12abb8ed0d1659f56c24f2e01f3c85b54/eval/chat_benchmarks"
+        }
+      ],
+      "work": [],
+      "notes": [
+        "Access: Public pilot repository with cases and evaluation materials.",
+        "Grading: Concept/lexical proxy plus expert review; not yet a validated general-purpose judge.",
+        "Limitations: Tiny pilot with limited model comparisons; catalogued for coverage, not treated as a mature suite."
+      ],
+      "provenance": {
+        "sheet": "Non-agentic (Evalchemy)",
+        "gid": 776831399,
+        "row": 54,
+        "evidence_date": "9/21/2026",
+        "imported_at": "2026-10-14"
+      },
+      "source_status": "Assets / protocol"
+    },
+    {
+      "family_id": "biothreat-eval",
+      "family_name": "BioThreat-Eval",
+      "variant_id": "biothreat-eval-proxy-suite",
+      "name": "BioThreat-Eval — proxy suite",
+      "creators": [
+        "Weill Cornell Medicine (author affiliation)"
+      ],
+      "assignment": "TBD",
+      "description": "Repository-stage biological risk/refusal proxy evaluation.",
+      "framework": "Evalchemy",
+      "sources": [
+        {
+          "label": "Benchmark",
+          "url": "https://github.com/jang1563/biothreat-eval"
+        },
+        {
+          "label": "Scorer / data",
+          "url": "https://huggingface.co/datasets/jang1563/biothreat-eval"
+        },
+        {
+          "label": "Evalchemy / integration",
+          "url": "https://github.com/marin-community/evalchemy/tree/ab8e78f12abb8ed0d1659f56c24f2e01f3c85b54/eval/chat_benchmarks"
+        }
+      ],
+      "work": [],
+      "notes": [
+        "Access: Public framework and HF repository; code ships six benign proxy examples rather than the complete intended bank.",
+        "Grading: Cross-provider model judging and proxy risk summaries; independent validation required.",
+        "Limitations: Proxy risk scores do not establish real biological capabilities; release scope and fallback behavior must be explicit."
+      ],
+      "provenance": {
+        "sheet": "Non-agentic (Evalchemy)",
+        "gid": 776831399,
+        "row": 55,
+        "evidence_date": "9/21/2026",
+        "imported_at": "2026-10-14"
+      },
+      "source_status": "Assets / protocol"
+    },
+    {
+      "family_id": "microvqa",
+      "family_name": "MicroVQA",
+      "variant_id": "microvqa-announced-evaluation",
+      "name": "MicroVQA++ — announced evaluation",
+      "creators": [
+        "Fudan University"
+      ],
+      "assignment": "TBD",
+      "description": "Microscopy reasoning dataset/evaluation proposal extending the MicroVQA research direction.",
+      "framework": "Evalchemy",
+      "sources": [
+        {
+          "label": "Benchmark",
+          "url": "https://arxiv.org/abs/2511.11407"
+        },
+        {
+          "label": "Scorer / data",
+          "url": "https://github.com/ieellee/MicroVQA-PlusPlus/tree/57a2272e9116631db3ca136518b171cc38747f6b"
+        },
+        {
+          "label": "Evalchemy / integration",
+          "url": "https://github.com/marin-community/evalchemy/tree/ab8e78f12abb8ed0d1659f56c24f2e01f3c85b54/eval/chat_benchmarks"
+        }
+      ],
+      "work": [],
+      "notes": [
+        "Access: Paper and demo repository; dataset/code/model-result release still listed as pending.",
+        "Grading: Independent held-out protocol/scorer release not verified; paper describes evaluation of microscopy reasoning.",
+        "Limitations: Announced dataset/evaluation entry. Do not count as a new runnable benchmark until test protocol and assets are verified."
+      ],
+      "provenance": {
+        "sheet": "Non-agentic (Evalchemy)",
+        "gid": 776831399,
+        "row": 56,
+        "evidence_date": "9/21/2026",
+        "imported_at": "2026-10-14"
+      },
+      "source_status": "Assets / protocol"
+    },
+    {
+      "family_id": "proteinlmbench",
+      "family_name": "ProteinLMBench",
+      "variant_id": "proteinlmbench",
+      "name": "ProteinLMBench",
+      "creators": [
+        "Toursun Synbio",
+        "collaborators (see note)"
+      ],
+      "assignment": "TBD",
+      "description": "ProteinLMBench: 944 protein-understanding MCQs for general-purpose language models.",
+      "framework": "Evalchemy",
+      "sources": [
+        {
+          "label": "Benchmark",
+          "url": "https://arxiv.org/abs/2406.05540"
+        },
+        {
+          "label": "Scorer / data",
+          "url": "https://huggingface.co/datasets/tsynbio/ProteinLMBench"
+        },
+        {
+          "label": "Evalchemy / integration",
+          "url": "https://github.com/marin-community/evalchemy/tree/ab8e78f12abb8ed0d1659f56c24f2e01f3c85b54/eval/chat_benchmarks"
+        }
+      ],
+      "work": [],
+      "notes": [
+        "Access: Public ProteinLMDataset repository and separate ProteinLMBench HF evaluation dataset.",
+        "Grading: Multiple-choice answer accuracy under the official prompting/answer extraction protocol.",
+        "Limitations: An LLM knowledge/understanding benchmark, not ProteinGym or a dedicated protein-language-model fitness test."
+      ],
+      "provenance": {
+        "sheet": "Non-agentic (Evalchemy)",
+        "gid": 776831399,
+        "row": 57,
+        "evidence_date": "9/21/2026",
+        "imported_at": "2026-10-14"
+      },
+      "source_status": "Port needed"
+    },
+    {
+      "family_id": "bioprobench",
+      "family_name": "BioProBench",
+      "variant_id": "bioprobench-step-ordering-ord",
+      "name": "BioProBench — step ordering (ORD)",
+      "creators": [
+        "Peking University"
+      ],
+      "assignment": "TBD",
+      "description": "BioProBench step ordering (ORD): recover the order of biological protocol steps.",
+      "framework": "Evalchemy",
+      "sources": [
+        {
+          "label": "Benchmark",
+          "url": "https://arxiv.org/abs/2505.07889"
+        },
+        {
+          "label": "Scorer / data",
+          "url": "https://huggingface.co/datasets/BioProBench/BioProBench"
+        },
+        {
+          "label": "Evalchemy / integration",
+          "url": "https://github.com/marin-community/evalchemy/tree/ab8e78f12abb8ed0d1659f56c24f2e01f3c85b54/eval/chat_benchmarks"
+        }
+      ],
+      "work": [],
+      "notes": [
+        "Access: Public ORD train/test JSON and official metric script.",
+        "Grading: Exact-match order accuracy and Kendall’s tau using Metrics/ORD.py.",
+        "Limitations: Additional task family within BioProBench, not an independent benchmark; shares paper/repository/dataset popularity."
+      ],
+      "provenance": {
+        "sheet": "Non-agentic (Evalchemy)",
+        "gid": 776831399,
+        "row": 58,
+        "evidence_date": "9/21/2026",
+        "imported_at": "2026-10-14"
+      },
+      "source_status": "Port needed"
+    },
+    {
+      "family_id": "bioprobench",
+      "family_name": "BioProBench",
+      "variant_id": "bioprobench-protocol-generation-gen",
+      "name": "BioProBench — protocol generation (GEN)",
+      "creators": [
+        "Peking University"
+      ],
+      "assignment": "TBD",
+      "description": "BioProBench protocol generation (GEN).",
+      "framework": "Evalchemy",
+      "sources": [
+        {
+          "label": "Benchmark",
+          "url": "https://arxiv.org/abs/2505.07889"
+        },
+        {
+          "label": "Scorer / data",
+          "url": "https://huggingface.co/datasets/BioProBench/BioProBench"
+        },
+        {
+          "label": "Evalchemy / integration",
+          "url": "https://github.com/marin-community/evalchemy/tree/ab8e78f12abb8ed0d1659f56c24f2e01f3c85b54/eval/chat_benchmarks"
+        }
+      ],
+      "work": [],
+      "notes": [
+        "Access: Public GEN train/test data and official metric script.",
+        "Grading: BLEU, keyword-based metrics and step recall/precision via Metrics/GEN.py.",
+        "Limitations: Protocol-text similarity is a proxy, not evidence of successful physical execution; shares BioProBench corpus."
+      ],
+      "provenance": {
+        "sheet": "Non-agentic (Evalchemy)",
+        "gid": 776831399,
+        "row": 59,
+        "evidence_date": "9/21/2026",
+        "imported_at": "2026-10-14"
+      },
+      "source_status": "Port needed"
+    },
+    {
+      "family_id": "bioprobench",
+      "family_name": "BioProBench",
+      "variant_id": "bioprobench-protocol-reasoning-rea",
+      "name": "BioProBench — protocol reasoning (REA)",
+      "creators": [
+        "Peking University"
+      ],
+      "assignment": "TBD",
+      "description": "BioProBench reasoning conditions, including REA-ERR and REA-GEN.",
+      "framework": "Evalchemy",
+      "sources": [
+        {
+          "label": "Benchmark",
+          "url": "https://arxiv.org/abs/2505.07889"
+        },
+        {
+          "label": "Scorer / data",
+          "url": "https://huggingface.co/datasets/BioProBench/BioProBench"
+        },
+        {
+          "label": "Evalchemy / integration",
+          "url": "https://github.com/marin-community/evalchemy/tree/ab8e78f12abb8ed0d1659f56c24f2e01f3c85b54/eval/chat_benchmarks"
+        }
+      ],
+      "work": [],
+      "notes": [
+        "Access: Public task files and reasoning/inference scripts; exact condition-to-split mapping must be pinned.",
+        "Grading: Official REA-ERR accuracy/precision/recall/consistency; verify REA-GEN grading separately.",
+        "Limitations: Reasoning-conditioned variants reuse BioProBench tasks; do not count them as independent question banks."
+      ],
+      "provenance": {
+        "sheet": "Non-agentic (Evalchemy)",
+        "gid": 776831399,
+        "row": 60,
+        "evidence_date": "9/21/2026",
+        "imported_at": "2026-10-14"
+      },
+      "source_status": "Port needed"
+    },
+    {
+      "family_id": "lab-bench",
+      "family_name": "LAB-Bench",
+      "variant_id": "lab-bench-figqa-tableqa-tool-free",
+      "name": "LAB-Bench — FigQA / TableQA, tool-free",
+      "creators": [
+        "FutureHouse"
+      ],
+      "assignment": "TBD",
+      "description": "LAB-Bench FigQA and TableQA scientific figure/table interpretation.",
+      "framework": "Evalchemy",
+      "sources": [
+        {
+          "label": "Benchmark",
+          "url": "https://arxiv.org/abs/2407.10362"
+        },
+        {
+          "label": "Scorer / data",
+          "url": "https://huggingface.co/datasets/futurehouse/lab-bench"
+        },
+        {
+          "label": "Evalchemy / integration",
+          "url": "https://github.com/marin-community/evalchemy/tree/ab8e78f12abb8ed0d1659f56c24f2e01f3c85b54/eval/chat_benchmarks"
+        }
+      ],
+      "work": [],
+      "notes": [
+        "Access: Public LAB-Bench release includes roughly 80% of full suite; private holdout excluded.",
+        "Grading: Official accuracy, precision and coverage with abstention.",
+        "Limitations: Complements existing text-only LAB-Bench row. Harbor FigQA is a different harness/protocol."
+      ],
+      "provenance": {
+        "sheet": "Non-agentic (Evalchemy)",
+        "gid": 776831399,
+        "row": 61,
+        "evidence_date": "9/21/2026",
+        "imported_at": "2026-10-14"
+      },
+      "source_status": "Port needed"
+    },
+    {
+      "family_id": "bioasq",
+      "family_name": "BioASQ",
+      "variant_id": "bioasq-supplied-snippet-factoid-list",
+      "name": "BioASQ — supplied-snippet factoid / list",
+      "creators": [
+        "BioASQ consortium"
+      ],
+      "assignment": "TBD",
+      "description": "BioASQ factoid/list biomedical QA with supporting snippets supplied to the model.",
+      "framework": "Evalchemy",
+      "sources": [
+        {
+          "label": "Benchmark",
+          "url": "https://www.bioasq.org/"
+        },
+        {
+          "label": "Scorer / data",
+          "url": "https://github.com/BioASQ/Evaluation-Measures/tree/8c8e689068a41c1370fec55260e5fbfe3a6a6016"
+        },
+        {
+          "label": "Evalchemy / integration",
+          "url": "https://github.com/marin-community/evalchemy/tree/ab8e78f12abb8ed0d1659f56c24f2e01f3c85b54/eval/chat_benchmarks"
+        }
+      ],
+      "work": [],
+      "notes": [
+        "Access: Year/batch-specific BioASQ data and public evaluation measures; registration may apply.",
+        "Grading: Official factoid ranking/MRR and list precision/recall/F1; retain accepted synonyms.",
+        "Limitations: Complements yes/no row; supplied-snippet protocol excludes model retrieval. Annual releases can overlap."
+      ],
+      "provenance": {
+        "sheet": "Non-agentic (Evalchemy)",
+        "gid": 776831399,
+        "row": 62,
+        "evidence_date": "9/21/2026",
+        "imported_at": "2026-10-14"
+      },
+      "source_status": "Port needed"
+    },
+    {
+      "family_id": "bioasq",
+      "family_name": "BioASQ",
+      "variant_id": "bioasq-supplied-snippet-ideal-answers",
+      "name": "BioASQ — supplied-snippet ideal answers",
+      "creators": [
+        "BioASQ consortium"
+      ],
+      "assignment": "TBD",
+      "description": "BioASQ ideal-answer synthesis from supplied biomedical evidence snippets.",
+      "framework": "Evalchemy",
+      "sources": [
+        {
+          "label": "Benchmark",
+          "url": "https://www.bioasq.org/"
+        },
+        {
+          "label": "Scorer / data",
+          "url": "https://github.com/BioASQ/Evaluation-Measures/tree/8c8e689068a41c1370fec55260e5fbfe3a6a6016"
+        },
+        {
+          "label": "Evalchemy / integration",
+          "url": "https://github.com/marin-community/evalchemy/tree/ab8e78f12abb8ed0d1659f56c24f2e01f3c85b54/eval/chat_benchmarks"
+        }
+      ],
+      "work": [],
+      "notes": [
+        "Access: Year-specific reference answers and evaluation tools; challenge data may require registration.",
+        "Grading: Official ideal-answer metrics, including ROUGE and expert assessment; automatic metrics are only part of evaluation.",
+        "Limitations: Long-form answer quality is not the same outcome as factoid/list or yes/no accuracy."
+      ],
+      "provenance": {
+        "sheet": "Non-agentic (Evalchemy)",
+        "gid": 776831399,
+        "row": 63,
+        "evidence_date": "9/21/2026",
+        "imported_at": "2026-10-14"
+      },
+      "source_status": "Judge integration"
+    },
+    {
+      "family_id": "gpqa",
+      "family_name": "GPQA",
+      "variant_id": "gpqa-main-extended-biology",
+      "name": "GPQA Main / Extended — biology",
+      "creators": [
+        "New York University",
+        "Cohere",
+        "Anthropic"
+      ],
+      "assignment": "ID",
+      "description": "Graduate-level biology questions in GPQA Main and Extended, beyond the existing Diamond row.",
+      "framework": "Evalchemy",
+      "sources": [
+        {
+          "label": "Benchmark",
+          "url": "https://arxiv.org/abs/2311.12022"
+        },
+        {
+          "label": "Scorer / data",
+          "url": "https://huggingface.co/datasets/Idavidrein/gpqa"
+        },
+        {
+          "label": "Evalchemy / integration",
+          "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/v0.4.12/lm_eval/tasks/gpqa"
+        }
+      ],
+      "work": [],
+      "notes": [
+        "Access: Public password-packaged author release and gated HF dataset; Main/Extended/Diamond overlap.",
+        "Grading: Four-choice accuracy with official option shuffling and prompt settings.",
+        "Limitations: Treat conservatively as ID because of overlap with GPQA Diamond; not a fresh held-out suite."
+      ],
+      "provenance": {
+        "sheet": "Non-agentic (Evalchemy)",
+        "gid": 776831399,
+        "row": 64,
+        "evidence_date": "9/21/2026",
+        "imported_at": "2026-10-14"
+      },
+      "source_status": "Packaging check"
+    },
+    {
+      "family_id": "biosecbench",
+      "family_name": "BioSecBench",
+      "variant_id": "biosecbench-refusal-meta-framing",
+      "name": "BioSecBench-Refusal — meta framing",
+      "creators": [
+        "LatchBio"
+      ],
+      "assignment": "TBD",
+      "description": "BioSecBench-Refusal meta framing: judge accept/refuse decisions for 61 routine and 46 risk-bearing tasks.",
+      "framework": "Evalchemy",
+      "sources": [
+        {
+          "label": "Benchmark",
+          "url": "https://arxiv.org/abs/2607.05462"
+        },
+        {
+          "label": "Scorer / data",
+          "url": "https://github.com/latchbio/biosecbench-refusal/tree/79101134f26ea55a30b85c14bd81ccb3ca3cc767"
+        },
+        {
+          "label": "Evalchemy / integration",
+          "url": "https://github.com/marin-community/evalchemy/tree/ab8e78f12abb8ed0d1659f56c24f2e01f3c85b54/eval/chat_benchmarks"
+        }
+      ],
+      "work": [],
+      "notes": [
+        "Access: Two public examples and methodology; full 107-task set and sensitive reference rationales restricted.",
+        "Grading: Decision/refusal assessment under the official meta framing; report routine versus red-team behavior and API blocks separately.",
+        "Limitations: Same task family as direct-framing row; meta evaluation asks for a decision, not completion of the underlying analysis."
+      ],
+      "provenance": {
+        "sheet": "Non-agentic (Evalchemy)",
+        "gid": 776831399,
+        "row": 65,
+        "evidence_date": "9/21/2026",
+        "imported_at": "2026-10-14"
+      },
+      "source_status": "Assets / protocol"
+    },
+    {
+      "family_id": "sciknoweval",
+      "family_name": "SciKnowEval",
+      "variant_id": "sciknoweval-v2-biology-open-ended-tasks",
+      "name": "SciKnowEval v2 — biology open-ended tasks",
+      "creators": [
+        "Zhejiang University"
+      ],
+      "assignment": "TBD",
+      "description": "Open-ended biology task families in SciKnowEval v2, including relation extraction and generation.",
+      "framework": "Evalchemy",
+      "sources": [
+        {
+          "label": "Benchmark",
+          "url": "https://arxiv.org/abs/2406.09098"
+        },
+        {
+          "label": "Scorer / data",
+          "url": "https://huggingface.co/datasets/hicai-zju/SciKnowEval"
+        },
+        {
+          "label": "Evalchemy / integration",
+          "url": "https://github.com/marin-community/evalchemy/tree/ab8e78f12abb8ed0d1659f56c24f2e01f3c85b54/eval/chat_benchmarks"
+        }
+      ],
+      "work": [],
+      "notes": [
+        "Access: Public v2 dataset, prompts and evaluator; judge API and embedding assets required for affected tasks.",
+        "Grading: Task-specific scoring using GPT judging and/or word-vector similarity; official default judge gpt-4o.",
+        "Limitations: Official code skips GPT-scored tasks if its API key is absent. Complements the existing closed-choice row."
+      ],
+      "provenance": {
+        "sheet": "Non-agentic (Evalchemy)",
+        "gid": 776831399,
+        "row": 66,
+        "evidence_date": "9/21/2026",
+        "imported_at": "2026-10-14"
+      },
+      "source_status": "Judge integration"
+    },
+    {
+      "family_id": "liveproteinbench",
+      "family_name": "LiveProteinBench",
+      "variant_id": "liveproteinbench-repository-stage-suite",
+      "name": "LiveProteinBench — repository-stage suite",
+      "creators": [
+        "Unverified institutional affiliation — Rongdingyi"
+      ],
+      "assignment": "TBD",
+      "description": "Protein-related LLM predictions using sequences, optionally with structure images.",
+      "framework": "Evalchemy",
+      "sources": [
+        {
+          "label": "Benchmark",
+          "url": "https://github.com/Rongdingyi/LiveProteinBench"
+        },
+        {
+          "label": "Scorer / data",
+          "url": "https://github.com/Rongdingyi/LiveProteinBench/tree/8b9710932511f816651fc1a7e8a1bc85c3c77767"
+        },
+        {
+          "label": "Evalchemy / integration",
+          "url": "https://github.com/marin-community/evalchemy/tree/ab8e78f12abb8ed0d1659f56c24f2e01f3c85b54/eval/chat_benchmarks"
+        }
+      ],
+      "work": [],
+      "notes": [
+        "Access: Public task/prompt files and OpenAI-compatible inference runner; scorer/label completeness needs an audit.",
+        "Grading: Runner saves model answers; complete task-specific scoring contract not verified from release documentation.",
+        "Limitations: Repository-stage LLM benchmark; no peer-reviewed paper or validated full-suite grader identified."
+      ],
+      "provenance": {
+        "sheet": "Non-agentic (Evalchemy)",
+        "gid": 776831399,
+        "row": 67,
+        "evidence_date": "9/21/2026",
+        "imported_at": "2026-10-14"
+      },
+      "source_status": "Assets / protocol"
+    },
+    {
+      "family_id": "sciq",
+      "family_name": "SciQ",
+      "variant_id": "sciq-biology",
+      "name": "SciQ — biology",
+      "creators": [
+        "University College London",
+        "University of Washington",
+        "Allen Institute for AI"
+      ],
+      "assignment": "TBD",
+      "description": "Biology questions within 13,679 crowdsourced science questions.",
+      "framework": "Evalchemy",
+      "sources": [
+        {
+          "label": "Benchmark",
+          "url": "https://arxiv.org/abs/1707.06209"
+        },
+        {
+          "label": "Scorer / data",
+          "url": "https://huggingface.co/datasets/allenai/sciq"
+        },
+        {
+          "label": "Evalchemy / integration",
+          "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/v0.4.12/lm_eval/tasks/sciq"
+        }
+      ],
+      "work": [],
+      "notes": [
+        "Access: Public allenai/sciq dataset; upstream lm-eval task exists, but biology subset mapping needs verification.",
+        "Grading: Four-choice accuracy under an explicit supplied-support or closed-book protocol.",
+        "Limitations: General science bank, not a prepackaged biology benchmark. The support passage changes the evaluation condition."
+      ],
+      "provenance": {
+        "sheet": "Non-agentic (Evalchemy)",
+        "gid": 776831399,
+        "row": 68,
+        "evidence_date": "9/21/2026",
+        "imported_at": "2026-10-14"
+      },
+      "source_status": "Packaging check"
+    },
+    {
+      "family_id": "supergpqa",
+      "family_name": "SuperGPQA",
+      "variant_id": "supergpqa-biology",
+      "name": "SuperGPQA — biology",
+      "creators": [
+        "M-A-P",
+        "ByteDance Seed",
+        "2077.AI"
+      ],
+      "assignment": "TBD",
+      "description": "Graduate-level biology subset within SuperGPQA’s 285 disciplines.",
+      "framework": "Evalchemy",
+      "sources": [
+        {
+          "label": "Benchmark",
+          "url": "https://arxiv.org/abs/2502.14739"
+        },
+        {
+          "label": "Scorer / data",
+          "url": "https://huggingface.co/datasets/m-a-p/SuperGPQA"
+        },
+        {
+          "label": "Evalchemy / integration",
+          "url": "https://github.com/marin-community/evalchemy/tree/ab8e78f12abb8ed0d1659f56c24f2e01f3c85b54/eval/chat_benchmarks"
+        }
+      ],
+      "work": [],
+      "notes": [
+        "Access: Public authors’ repository and m-a-p/SuperGPQA dataset.",
+        "Grading: Official choice extraction/accuracy with sample and taxonomy-level aggregation.",
+        "Limitations: Not GPQA; incorporates some transformed data from existing benchmarks, so inspect overlap before using as a holdout."
+      ],
+      "provenance": {
+        "sheet": "Non-agentic (Evalchemy)",
+        "gid": 776831399,
+        "row": 69,
+        "evidence_date": "9/21/2026",
+        "imported_at": "2026-10-14"
+      },
+      "source_status": "Port needed"
+    },
+    {
+      "family_id": "c-eval",
+      "family_name": "C-Eval",
+      "variant_id": "c-eval-biology",
+      "name": "C-Eval — biology",
+      "creators": [
+        "Shanghai Jiao Tong University",
+        "Tsinghua University",
+        "University of Edinburgh",
+        "HKUST"
+      ],
+      "assignment": "TBD",
+      "description": "Chinese middle-school, high-school and college biology subjects in C-Eval.",
+      "framework": "Evalchemy",
+      "sources": [
+        {
+          "label": "Benchmark",
+          "url": "https://arxiv.org/abs/2305.08322"
+        },
+        {
+          "label": "Scorer / data",
+          "url": "https://huggingface.co/datasets/ceval/ceval-exam"
+        },
+        {
+          "label": "Evalchemy / integration",
+          "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/v0.4.12/lm_eval/tasks/ceval"
+        }
+      ],
+      "work": [],
+      "notes": [
+        "Access: Public dataset/evaluator; test labels withheld and submissions scored by the official service.",
+        "Grading: Four-choice accuracy; public validation labels, externally scored private test labels.",
+        "Limitations: Language and exam level affect comparison. Public validation performance is not canonical test performance."
+      ],
+      "provenance": {
+        "sheet": "Non-agentic (Evalchemy)",
+        "gid": 776831399,
+        "row": 70,
+        "evidence_date": "9/21/2026",
+        "imported_at": "2026-10-14"
+      },
+      "source_status": "Packaging check"
+    },
+    {
+      "family_id": "cmmlu",
+      "family_name": "CMMLU",
+      "variant_id": "cmmlu-biology",
+      "name": "CMMLU — biology",
+      "creators": [
+        "MBZUAI",
+        "LibrAI",
+        "Shanghai Jiao Tong University",
+        "Microsoft Research Asia",
+        "University of Melbourne"
+      ],
+      "assignment": "TBD",
+      "description": "Chinese biology subjects in the 67-subject CMMLU knowledge/reasoning suite.",
+      "framework": "Evalchemy",
+      "sources": [
+        {
+          "label": "Benchmark",
+          "url": "https://arxiv.org/abs/2306.09212"
+        },
+        {
+          "label": "Scorer / data",
+          "url": "https://huggingface.co/datasets/lmlmcat/cmmlu"
+        },
+        {
+          "label": "Evalchemy / integration",
+          "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/v0.4.12/lm_eval/tasks/cmmlu"
+        }
+      ],
+      "work": [],
+      "notes": [
+        "Access: Public subject-organized development/test data, code and HF release.",
+        "Grading: Four-choice accuracy with official zero-/few-shot prompting.",
+        "Limitations: Separate from C-Eval; report subject-level results and avoid pooling clinical subjects without stating the scope."
+      ],
+      "provenance": {
+        "sheet": "Non-agentic (Evalchemy)",
+        "gid": 776831399,
+        "row": 71,
+        "evidence_date": "9/21/2026",
+        "imported_at": "2026-10-14"
+      },
+      "source_status": "Packaging check"
+    },
+    {
+      "family_id": "agieval",
+      "family_name": "AGIEval",
+      "variant_id": "agieval-gaokao-biology",
+      "name": "AGIEval — Gaokao biology",
+      "creators": [
+        "Microsoft"
+      ],
+      "assignment": "TBD",
+      "description": "Chinese Gaokao biology questions in AGIEval.",
+      "framework": "Evalchemy",
+      "sources": [
+        {
+          "label": "Benchmark",
+          "url": "https://arxiv.org/abs/2304.06364"
+        },
+        {
+          "label": "Scorer / data",
+          "url": "https://github.com/ruixiangcui/AGIEval/tree/84ab72d94318290aad2e4ec820d535a95a1f7552"
+        },
+        {
+          "label": "Evalchemy / integration",
+          "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/v0.4.12/lm_eval/tasks/agieval"
+        }
+      ],
+      "work": [],
+      "notes": [
+        "Access: Public repository contains v1.1 data and scoring code; biology updated with 2023 questions.",
+        "Grading: Official answer extraction and accuracy; pin dataset version and prompt mode.",
+        "Limitations: Likely source overlap with other Gaokao collections; do not assume independent test questions."
+      ],
+      "provenance": {
+        "sheet": "Non-agentic (Evalchemy)",
+        "gid": 776831399,
+        "row": 72,
+        "evidence_date": "9/21/2026",
+        "imported_at": "2026-10-14"
+      },
+      "source_status": "Packaging check"
+    },
+    {
+      "family_id": "gaokao-bench",
+      "family_name": "GAOKAO-Bench",
+      "variant_id": "gaokao-bench-biology",
+      "name": "GAOKAO-Bench — biology",
+      "creators": [
+        "Fudan University",
+        "East China Normal University"
+      ],
+      "assignment": "TBD",
+      "description": "Chinese Gaokao biology objective and subjective questions.",
+      "framework": "Evalchemy",
+      "sources": [
+        {
+          "label": "Benchmark",
+          "url": "https://arxiv.org/abs/2305.12474"
+        },
+        {
+          "label": "Scorer / data",
+          "url": "https://github.com/OpenLMLab/GAOKAO-Bench/tree/6dbb24f8d8439041e5431c4c184a582182a6ce9c"
+        },
+        {
+          "label": "Evalchemy / integration",
+          "url": "https://github.com/marin-community/evalchemy/tree/ab8e78f12abb8ed0d1659f56c24f2e01f3c85b54/eval/chat_benchmarks"
+        }
+      ],
+      "work": [],
+      "notes": [
+        "Access: Public data and objective/subjective evaluation code.",
+        "Grading: Objective-answer scoring plus model/expert grading for subjective questions; keep the two reports separate.",
+        "Limitations: Overlaps exam sources used by AGIEval; whole-exam weighted scores are not a biology accuracy."
+      ],
+      "provenance": {
+        "sheet": "Non-agentic (Evalchemy)",
+        "gid": 776831399,
+        "row": 73,
+        "evidence_date": "9/21/2026",
+        "imported_at": "2026-10-14"
+      },
+      "source_status": "Judge integration"
+    }
+  ]
+}

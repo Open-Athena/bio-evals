@@ -1,0 +1,44 @@
+id: abc-bench-securebio
+name: ABC-Bench (SecureBio)
+description: SecureBio agentic biological capability tasks, including scientific automation and bioinformatics.
+creators:
+  - SecureBio
+  - Active Site
+sources:
+  - label: Benchmark
+    url: https://arxiv.org/abs/2606.11150
+notes: []
+variants:
+  - id: abc-bench-securebio
+    name: ABC-Bench (SecureBio)
+    description: SecureBio agentic biological capability tasks, including scientific automation and
+      bioinformatics.
+    creators:
+      - SecureBio
+      - Active Site
+    assignment: ID
+    sources:
+      - label: Benchmark
+        url: https://arxiv.org/abs/2606.11150
+      - label: Scorer / data
+        url: https://arxiv.org/abs/2606.11150
+      - label: Harbor / integration
+        url: https://github.com/marin-community/harbor/tree/b78a0e52af98015fc8416d5bd5ee649a284e5a4c/adapters
+    implementations:
+      - framework: Harbor
+        status: unknown
+        evidence: []
+    work: []
+    notes:
+      - "Access: Public paper/methodology; full task assets and scoring release not verified."
+      - "Grading: Task-specific programmatic/reference assessment in the published agentic protocol."
+      - "Limitations: SecureBio ABC-Bench is not the similarly named backend-coding ABC-Bench
+        adapter."
+      - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
+        notes are historical."
+    provenance:
+      - sheet: Agentic (Harbor)
+        gid: 846608904
+        row: 44
+        evidence_date: 9/21/2026
+        imported_at: 2026-10-14

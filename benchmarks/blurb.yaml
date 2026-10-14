@@ -1,0 +1,42 @@
+id: blurb
+name: BLURB
+description: "13 datasets / 6 task families: NER, PICO, relations, similarity, classification and QA."
+creators:
+  - Microsoft Research
+sources:
+  - label: Benchmark
+    url: https://microsoft.github.io/BLURB/
+notes: []
+variants:
+  - id: blurb-non-qa-task-families
+    name: BLURB — non-QA task families
+    description: "13 datasets / 6 task families: NER, PICO, relations, similarity, classification and QA."
+    creators:
+      - Microsoft Research
+    assignment: TBD
+    sources:
+      - label: Benchmark
+        url: https://microsoft.github.io/BLURB/
+      - label: Scorer / data
+        url: https://microsoft.github.io/BLURB/tasks.html
+      - label: Evalchemy / integration
+        url: https://github.com/marin-community/evalchemy/tree/f42990450edf4e694fe5a22b3d23ed09ab42da1e/eval/chat_benchmarks
+    implementations:
+      - framework: Evalchemy
+        status: unknown
+        evidence: []
+    work: []
+    notes:
+      - "Access: Public task pages, data and baseline code; QA subsets listed separately below."
+      - "Grading: Task-specific F1/accuracy/correlation. Original fine-tuned encoder aggregate is
+        not directly comparable to prompted LLMs."
+      - "Limitations: Useful biomedical NLP coverage but not a single MCQ benchmark. Do not
+        double-count the QA rows in a BLURB aggregate."
+      - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
+        notes are historical."
+    provenance:
+      - sheet: Non-agentic (Evalchemy)
+        gid: 776831399
+        row: 5
+        evidence_date: 9/18/2026
+        imported_at: 2026-10-14

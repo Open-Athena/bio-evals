@@ -1,0 +1,43 @@
+id: liveproteinbench
+name: LiveProteinBench
+description: Protein-related LLM predictions using sequences, optionally with structure images.
+creators:
+  - Unverified institutional affiliation — Rongdingyi
+sources:
+  - label: Benchmark
+    url: https://github.com/Rongdingyi/LiveProteinBench
+notes: []
+variants:
+  - id: liveproteinbench-repository-stage-suite
+    name: LiveProteinBench — repository-stage suite
+    description: Protein-related LLM predictions using sequences, optionally with structure images.
+    creators:
+      - Unverified institutional affiliation — Rongdingyi
+    assignment: TBD
+    sources:
+      - label: Benchmark
+        url: https://github.com/Rongdingyi/LiveProteinBench
+      - label: Scorer / data
+        url: https://github.com/Rongdingyi/LiveProteinBench/tree/8b9710932511f816651fc1a7e8a1bc85c3c77767
+      - label: Evalchemy / integration
+        url: https://github.com/marin-community/evalchemy/tree/ab8e78f12abb8ed0d1659f56c24f2e01f3c85b54/eval/chat_benchmarks
+    implementations:
+      - framework: Evalchemy
+        status: unknown
+        evidence: []
+    work: []
+    notes:
+      - "Access: Public task/prompt files and OpenAI-compatible inference runner; scorer/label
+        completeness needs an audit."
+      - "Grading: Runner saves model answers; complete task-specific scoring contract not verified
+        from release documentation."
+      - "Limitations: Repository-stage LLM benchmark; no peer-reviewed paper or validated full-suite
+        grader identified."
+      - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
+        notes are historical."
+    provenance:
+      - sheet: Non-agentic (Evalchemy)
+        gid: 776831399
+        row: 67
+        evidence_date: 9/21/2026
+        imported_at: 2026-10-14

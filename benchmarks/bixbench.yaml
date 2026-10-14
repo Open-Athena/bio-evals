@@ -1,0 +1,166 @@
+id: bixbench
+name: BixBench
+description: Biological data analysis, from notebook questions and a curated verified subset to
+  research-scale workflows.
+creators:
+  - FutureHouse
+  - ScienceMachine
+sources:
+  - label: Benchmark
+    url: https://github.com/harbor-framework/harbor/tree/main/adapters/bixbench
+notes:
+  - Family grouping is for navigation; variants may have different creators, datasets, grading
+    protocols, and internal assignments.
+variants:
+  - id: bixbench-v1-5-harbor-cli
+    name: BixBench v1.5, Harbor CLI
+    description: notebook-derived biological analysis questions
+    creators:
+      - FutureHouse
+      - ScienceMachine
+    assignment: ID
+    sources:
+      - label: Benchmark
+        url: https://github.com/harbor-framework/harbor/tree/main/adapters/bixbench
+      - label: Scorer / data
+        url: https://github.com/harbor-framework/harbor/blob/0d67ca4b59206aca2734bf9fe0260ca79e08acb4/adapters/bixbench/src/bixbench/task-template/tests/llm_judge.py
+      - label: Harbor / integration
+        url: https://github.com/harbor-framework/harbor/tree/main/adapters/bixbench
+    implementations:
+      - framework: Harbor
+        status: yes
+        evidence:
+          - url: https://github.com/marin-community/marin/issues/9258#issuecomment-5744365667
+            scope: "Harbor CLI v1.5: end-to-end execution and grading demonstrated in the 205-question run.
+              Partial grading coverage and modified judge protocol remain caveats."
+            checked_at: 2026-10-14
+    work:
+      - https://github.com/marin-community/marin/issues/9258
+      - https://github.com/marin-community/harbor/pull/174
+      - https://github.com/marin-community/harbor/issues/166
+    notes:
+      - "Access: Public reference answers and adapter; validate inputs and environment."
+      - "Grading: Together openai/gpt-oss-120b; original comparison prompt, explicit JSON schema,
+        1,024-token cap, 600 s verifier limit. Retained 177 native grades; 10 of 11 failed grading
+        calls recovered. Numerical tolerances unchanged; pilot precision caveat remains."
+      - "Limitations: First primary-suite candidate: existing Harbor adapter. CLI and
+        replacement-judge scores need explicit protocol labels."
+      - ID/OOD retains the spreadsheet assignment. The tracking issue described assignments as
+        unresolved; the catalog uses the internal sheet assignment as requested.
+    provenance:
+      - sheet: Agentic (Harbor)
+        gid: 846608904
+        row: 2
+        evidence_date: 9/19/2026
+        imported_at: 2026-10-14
+  - id: bixbench-verified-50-harbor-cli
+    name: BixBench-Verified-50, Harbor CLI
+    description: 50 bioinformatics analysis questions across 33 capsules; Phylo-curated subset.
+    creators:
+      - Phylo (verified-subset curator)
+    assignment: ID
+    sources:
+      - label: Benchmark
+        url: https://phylo.bio/blog/evaluating-ai-agents-in-biology
+      - label: Scorer / data
+        url: https://huggingface.co/datasets/phylobio/BixBench-Verified-50
+      - label: Harbor / integration
+        url: https://github.com/marin-community/harbor/tree/0dcd65486c9956e7cbb561226ca78d2a8a1725cb/adapters/bixbench-verified-50
+    implementations:
+      - framework: Harbor
+        status: yes
+        evidence:
+          - url: https://github.com/marin-community/harbor/pull/180#issuecomment-5766684283
+            scope: "Verified-50 v1.0: end-to-end execution and saved-answer grading demonstrated with
+              decimal-precision-v1. Known source defects and ungraded outcomes remain."
+            checked_at: 2026-10-14
+    work:
+      - https://github.com/marin-community/harbor/pull/180
+      - https://github.com/marin-community/harbor/issues/177
+      - https://github.com/marin-community/harbor/issues/192
+    notes:
+      - "Access: Public pinned Harbor tasks, references and grader; public hash-verified capsules.
+        Phylo source files require HF access for regeneration."
+      - "Grading: decimal-precision-v1 for 13 continuous targets; Together GPT-OSS-120B for
+        remaining answers; explicit JSON schema, 1,024-token cap."
+      - "Limitations: Curated 50-question subset; two known source defects retained. Harbor grading
+        differs from Phylo; scores are not interchangeable with original BixBench."
+      - ID/OOD retains the spreadsheet assignment. The tracking issue described assignments as
+        unresolved; the catalog uses the internal sheet assignment as requested.
+    provenance:
+      - sheet: Agentic (Harbor)
+        gid: 846608904
+        row: 3
+        evidence_date: 9/22/2026
+        imported_at: 2026-10-14
+  - id: bixbench3
+    name: BixBench3
+    description: 20 research-scale analyses from raw data
+    creators:
+      - Edison Scientific
+    assignment: ID
+    sources:
+      - label: Benchmark
+        url: https://github.com/EdisonScientific/BixBench3
+      - label: Scorer / data
+        url: https://github.com/EdisonScientific/BixBench3/blob/d0e0bbb41222335b1b8878f533a58466a3a782dc/src/bixbench3/grading/grader.py
+      - label: Harbor / integration
+        url: https://github.com/marin-community/harbor/tree/abdd67137bcd6e5c44d682d0052fbd1190e63556/adapters
+    implementations:
+      - framework: Harbor
+        status: unknown
+        evidence: []
+    work: []
+    notes:
+      - "Access: Gated HF dataset; reference artifact packages on GCS; full downloads untested."
+      - "Grading: Deterministic artifact scoring; separate LLM process review. Default runner uses
+        OpenAI."
+      - "Limitations: Later study-scale evaluation: 20 analyses. Keep artifact and process scores
+        separate."
+      - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
+        notes are historical."
+      - ID/OOD retains the spreadsheet assignment. The tracking issue described assignments as
+        unresolved; the catalog uses the internal sheet assignment as requested.
+    provenance:
+      - sheet: Agentic (Harbor)
+        gid: 846608904
+        row: 16
+        evidence_date: 9/18/2026
+        imported_at: 2026-10-14
+  - id: bixbench-original-notebook-protocols
+    name: BixBench — original notebook protocols
+    description: Original BixBench notebook-based data analysis; current v1.5 has 205 questions from 60
+      capsules.
+    creators:
+      - FutureHouse
+      - ScienceMachine
+    assignment: ID
+    sources:
+      - label: Benchmark
+        url: https://arxiv.org/abs/2503.00096
+      - label: Scorer / data
+        url: https://huggingface.co/datasets/futurehouse/BixBench
+      - label: Harbor / integration
+        url: https://github.com/marin-community/harbor/tree/b78a0e52af98015fc8416d5bd5ee649a284e5a4c/adapters/bixbench
+    implementations:
+      - framework: Harbor
+        status: unknown
+        evidence: []
+    work: []
+    notes:
+      - "Access: Public authors’ notebook environment, configuration, grading scripts and HF
+        release."
+      - "Grading: Open-answer model grading or exact MCQ matching; majority vote/replicas are
+        optional protocol choices."
+      - "Limitations: Same benchmark family as Harbor CLI row but a different execution interface;
+        do not count notebook/CLI as independent tasks."
+      - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
+        notes are historical."
+      - ID/OOD retains the spreadsheet assignment. The tracking issue described assignments as
+        unresolved; the catalog uses the internal sheet assignment as requested.
+    provenance:
+      - sheet: Agentic (Harbor)
+        gid: 846608904
+        row: 49
+        evidence_date: 9/21/2026
+        imported_at: 2026-10-14

@@ -1,0 +1,33 @@
+@import url('observablehq:default.css');
+@import url('observablehq:theme-air.css');
+@import url('observablehq:theme-near-midnight.css') (prefers-color-scheme: dark);
+@import url('observablehq:theme-wide.css');
+
+#observablehq-main { max-width: 1440px; }
+#observablehq-header { font-size: 13px; }
+.muted, .provenance { color: var(--theme-foreground-muted); font-size: 13px; }
+.badge { display:inline-block; border:1px solid var(--theme-foreground-faint); border-radius:4px; padding:1px 6px; font-size:12px; white-space:nowrap; }
+.badge.yes, .badge.merged { color:var(--theme-green); }
+.badge.open { color:var(--theme-blue); }
+.variant-cell { margin: 0 0 10px; }
+.variant-cell:last-child { margin-bottom: 0; }
+.variant-cell small { display:block; margin-top:3px; }
+.work-list { padding-left: 18px; margin: 0; }
+.work-list li { margin-bottom: 6px; }
+.catalog-table { overflow-x:auto; }
+.catalog-table table { table-layout:fixed; width:100%; min-width:950px; }
+.catalog-table th, .catalog-table td { white-space:normal !important; vertical-align:top; overflow-wrap:anywhere; padding:12px 10px; }
+.catalog-table td a { text-decoration:none; }
+.summary { display:flex; flex-wrap:wrap; gap:12px; margin:24px 0; }
+.summary .card { flex:1; min-width:150px; margin:0; }
+.summary strong { display:block; font-size:28px; font-weight:600; margin-bottom:4px; }
+.filters { display:flex; flex-wrap:wrap; gap:12px 24px; align-items:start; }
+.filters form { max-width:100%; }
+.family-meta { display:flex; gap:12px; flex-wrap:wrap; align-items:center; }
+.variant-detail { border-top:1px solid var(--theme-foreground-faintest); padding:24px 0; }
+.variant-detail h2 { margin-top:0; }
+.variant-detail p, .variant-detail li { max-width:85ch; }
+.variant-detail details { margin:16px 0; }
+.variant-detail summary { cursor:pointer; font-weight:500; }
+a:focus-visible, summary:focus-visible { outline:2px solid var(--theme-foreground-focus); outline-offset:3px; }
+@media (max-width:640px) { .summary .card { min-width:100px; } .summary strong { font-size:23px; } }

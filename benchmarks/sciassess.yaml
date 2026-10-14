@@ -1,0 +1,47 @@
+id: sciassess
+name: SciAssess
+description: Biological/biomedical literature memorization, comprehension and analysis with article
+  and supplement context.
+creators:
+  - DP Technology
+  - AI for Science Institute, Beijing
+sources:
+  - label: Benchmark
+    url: https://arxiv.org/abs/2403.01976
+notes: []
+variants:
+  - id: sciassess-biology
+    name: SciAssess — biology
+    description: Biological/biomedical literature memorization, comprehension and analysis with article
+      and supplement context.
+    creators:
+      - DP Technology
+      - AI for Science Institute, Beijing
+    assignment: TBD
+    sources:
+      - label: Benchmark
+        url: https://arxiv.org/abs/2403.01976
+      - label: Scorer / data
+        url: https://github.com/deepmodeling/SciAssess/tree/d1d9a596aabcdf23f904f183bf83087775c89486
+      - label: Evalchemy / integration
+        url: https://github.com/marin-community/evalchemy/tree/ab8e78f12abb8ed0d1659f56c24f2e01f3c85b54/eval/chat_benchmarks
+    implementations:
+      - framework: Evalchemy
+        status: unknown
+        evidence: []
+    work: []
+    notes:
+      - "Access: Public code/questions; original PDFs and supporting information must be obtained
+        separately by DOI."
+      - "Grading: Task-specific metrics; some depend on sentence-transformer models and custom
+        evaluator logic."
+      - "Limitations: Document access is a practical blocker; a PDF/model context cap is not a
+        measured prompt requirement."
+      - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
+        notes are historical."
+    provenance:
+      - sheet: Non-agentic (Evalchemy)
+        gid: 776831399
+        row: 40
+        evidence_date: 9/21/2026
+        imported_at: 2026-10-14

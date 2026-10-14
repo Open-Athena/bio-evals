@@ -1,0 +1,962 @@
+[
+  {
+    "sheet": "Agentic (Harbor)",
+    "row": 2,
+    "gid": 846608904,
+    "source_name": "BixBench v1.5, Harbor CLI",
+    "family_id": "bixbench",
+    "variant_id": "bixbench-v1-5-harbor-cli"
+  },
+  {
+    "sheet": "Agentic (Harbor)",
+    "row": 3,
+    "gid": 846608904,
+    "source_name": "BixBench-Verified-50, Harbor CLI",
+    "family_id": "bixbench",
+    "variant_id": "bixbench-verified-50-harbor-cli"
+  },
+  {
+    "sheet": "Agentic (Harbor)",
+    "row": 4,
+    "gid": 846608904,
+    "source_name": "Terminal-Bench-Science, life sciences",
+    "family_id": "terminal-bench-science",
+    "variant_id": "terminal-bench-science-life-sciences"
+  },
+  {
+    "sheet": "Agentic (Harbor)",
+    "row": 5,
+    "gid": 846608904,
+    "source_name": "ScienceAgentBench, bioinformatics",
+    "family_id": "scienceagentbench",
+    "variant_id": "scienceagentbench-bioinformatics"
+  },
+  {
+    "sheet": "Agentic (Harbor)",
+    "row": 6,
+    "gid": 846608904,
+    "source_name": "scBench",
+    "family_id": "scbench",
+    "variant_id": "scbench"
+  },
+  {
+    "sheet": "Agentic (Harbor)",
+    "row": 7,
+    "gid": 846608904,
+    "source_name": "GeneBench-Pro",
+    "family_id": "genebench",
+    "variant_id": "genebench-pro"
+  },
+  {
+    "sheet": "Agentic (Harbor)",
+    "row": 8,
+    "gid": 846608904,
+    "source_name": "SpatialBench",
+    "family_id": "spatialbench",
+    "variant_id": "spatialbench"
+  },
+  {
+    "sheet": "Agentic (Harbor)",
+    "row": 9,
+    "gid": 846608904,
+    "source_name": "BioAgent Bench",
+    "family_id": "bioagent-bench",
+    "variant_id": "bioagent-bench"
+  },
+  {
+    "sheet": "Agentic (Harbor)",
+    "row": 10,
+    "gid": 846608904,
+    "source_name": "sc-HeurekaBench",
+    "family_id": "sc-heurekabench",
+    "variant_id": "sc-heurekabench"
+  },
+  {
+    "sheet": "Agentic (Harbor)",
+    "row": 11,
+    "gid": 846608904,
+    "source_name": "Liu et al., single-cell agent benchmark",
+    "family_id": "liu-et-al-single-cell-agent-benchmark",
+    "variant_id": "liu-et-al-single-cell-agent-benchmark"
+  },
+  {
+    "sheet": "Agentic (Harbor)",
+    "row": 12,
+    "gid": 846608904,
+    "source_name": "BAISBench",
+    "family_id": "baisbench",
+    "variant_id": "baisbench"
+  },
+  {
+    "sheet": "Agentic (Harbor)",
+    "row": 13,
+    "gid": 846608904,
+    "source_name": "BioML-bench",
+    "family_id": "bioml-bench",
+    "variant_id": "bioml-bench"
+  },
+  {
+    "sheet": "Agentic (Harbor)",
+    "row": 14,
+    "gid": 846608904,
+    "source_name": "LABBench2",
+    "family_id": "lab-bench",
+    "variant_id": "labbench2"
+  },
+  {
+    "sheet": "Agentic (Harbor)",
+    "row": 15,
+    "gid": 846608904,
+    "source_name": "CompBioBench",
+    "family_id": "compbiobench",
+    "variant_id": "compbiobench"
+  },
+  {
+    "sheet": "Agentic (Harbor)",
+    "row": 16,
+    "gid": 846608904,
+    "source_name": "BixBench3",
+    "family_id": "bixbench",
+    "variant_id": "bixbench3"
+  },
+  {
+    "sheet": "Agentic (Harbor)",
+    "row": 17,
+    "gid": 846608904,
+    "source_name": "BioMysteryBench",
+    "family_id": "biomysterybench",
+    "variant_id": "biomysterybench"
+  },
+  {
+    "sheet": "Agentic (Harbor)",
+    "row": 18,
+    "gid": 846608904,
+    "source_name": "BioXArena",
+    "family_id": "bioxarena",
+    "variant_id": "bioxarena"
+  },
+  {
+    "sheet": "Agentic (Harbor)",
+    "row": 19,
+    "gid": 846608904,
+    "source_name": "EpiBench",
+    "family_id": "epibench",
+    "variant_id": "epibench"
+  },
+  {
+    "sheet": "Agentic (Harbor)",
+    "row": 20,
+    "gid": 846608904,
+    "source_name": "SpatialBench-Long",
+    "family_id": "spatialbench",
+    "variant_id": "spatialbench-long"
+  },
+  {
+    "sheet": "Agentic (Harbor)",
+    "row": 21,
+    "gid": 846608904,
+    "source_name": "VariantBench",
+    "family_id": "variantbench",
+    "variant_id": "variantbench"
+  },
+  {
+    "sheet": "Agentic (Harbor)",
+    "row": 22,
+    "gid": 846608904,
+    "source_name": "scBench-Long",
+    "family_id": "scbench",
+    "variant_id": "scbench-long"
+  },
+  {
+    "sheet": "Agentic (Harbor)",
+    "row": 23,
+    "gid": 846608904,
+    "source_name": "TxBench-PP — preclinical pharmacology",
+    "family_id": "txbench",
+    "variant_id": "txbench-pp-preclinical-pharmacology"
+  },
+  {
+    "sheet": "Agentic (Harbor)",
+    "row": 24,
+    "gid": 846608904,
+    "source_name": "TxBench-Ab — antibody discovery",
+    "family_id": "txbench",
+    "variant_id": "txbench-ab-antibody-discovery"
+  },
+  {
+    "sheet": "Agentic (Harbor)",
+    "row": 25,
+    "gid": 846608904,
+    "source_name": "TxBench-OD — oligonucleotide discovery",
+    "family_id": "txbench",
+    "variant_id": "txbench-od-oligonucleotide-discovery"
+  },
+  {
+    "sheet": "Agentic (Harbor)",
+    "row": 26,
+    "gid": 846608904,
+    "source_name": "BioSecBench-Surveillance",
+    "family_id": "biosecbench",
+    "variant_id": "biosecbench-surveillance"
+  },
+  {
+    "sheet": "Agentic (Harbor)",
+    "row": 27,
+    "gid": 846608904,
+    "source_name": "BioSecBench-Function",
+    "family_id": "biosecbench",
+    "variant_id": "biosecbench-function"
+  },
+  {
+    "sheet": "Agentic (Harbor)",
+    "row": 28,
+    "gid": 846608904,
+    "source_name": "BioSecBench-Refusal — direct framing",
+    "family_id": "biosecbench",
+    "variant_id": "biosecbench-refusal-direct-framing"
+  },
+  {
+    "sheet": "Agentic (Harbor)",
+    "row": 29,
+    "gid": 846608904,
+    "source_name": "Terminal-Bench-Science-lite — upcoming",
+    "family_id": "terminal-bench-science",
+    "variant_id": "terminal-bench-science-lite-upcoming"
+  },
+  {
+    "sheet": "Agentic (Harbor)",
+    "row": 30,
+    "gid": 846608904,
+    "source_name": "SciCode — biology (Harbor variant)",
+    "family_id": "scicode",
+    "variant_id": "scicode-biology-harbor-variant"
+  },
+  {
+    "sheet": "Agentic (Harbor)",
+    "row": 31,
+    "gid": 846608904,
+    "source_name": "BiomniBench-DA",
+    "family_id": "biomnibench-da",
+    "variant_id": "biomnibench-da"
+  },
+  {
+    "sheet": "Agentic (Harbor)",
+    "row": 32,
+    "gid": 846608904,
+    "source_name": "DrugDiscoveryBench",
+    "family_id": "drugdiscoverybench",
+    "variant_id": "drugdiscoverybench"
+  },
+  {
+    "sheet": "Agentic (Harbor)",
+    "row": 33,
+    "gid": 846608904,
+    "source_name": "PromptBio-Bench",
+    "family_id": "promptbio-bench",
+    "variant_id": "promptbio-bench"
+  },
+  {
+    "sheet": "Agentic (Harbor)",
+    "row": 34,
+    "gid": 846608904,
+    "source_name": "LifeSciBench",
+    "family_id": "lifescibench",
+    "variant_id": "lifescibench"
+  },
+  {
+    "sheet": "Agentic (Harbor)",
+    "row": 35,
+    "gid": 846608904,
+    "source_name": "GeneBench — original",
+    "family_id": "genebench",
+    "variant_id": "genebench-original"
+  },
+  {
+    "sheet": "Agentic (Harbor)",
+    "row": 36,
+    "gid": 846608904,
+    "source_name": "Biomni-Eval1 — tool-enabled",
+    "family_id": "biomni-eval1",
+    "variant_id": "biomni-eval1-tool-enabled"
+  },
+  {
+    "sheet": "Agentic (Harbor)",
+    "row": 37,
+    "gid": 846608904,
+    "source_name": "CellBench (CellVoyager)",
+    "family_id": "cellbench-cellvoyager",
+    "variant_id": "cellbench-cellvoyager"
+  },
+  {
+    "sheet": "Agentic (Harbor)",
+    "row": 38,
+    "gid": 846608904,
+    "source_name": "SciGym",
+    "family_id": "scigym",
+    "variant_id": "scigym"
+  },
+  {
+    "sheet": "Agentic (Harbor)",
+    "row": 39,
+    "gid": 846608904,
+    "source_name": "BioKGBench",
+    "family_id": "biokgbench",
+    "variant_id": "biokgbench"
+  },
+  {
+    "sheet": "Agentic (Harbor)",
+    "row": 40,
+    "gid": 846608904,
+    "source_name": "TargetVal (Popper)",
+    "family_id": "targetval-popper",
+    "variant_id": "targetval-popper"
+  },
+  {
+    "sheet": "Agentic (Harbor)",
+    "row": 41,
+    "gid": 846608904,
+    "source_name": "DiscoveryBench — biology",
+    "family_id": "discoverybench",
+    "variant_id": "discoverybench-biology"
+  },
+  {
+    "sheet": "Agentic (Harbor)",
+    "row": 42,
+    "gid": 846608904,
+    "source_name": "ScholarQABench — biomedicine",
+    "family_id": "scholarqabench",
+    "variant_id": "scholarqabench-biomedicine"
+  },
+  {
+    "sheet": "Agentic (Harbor)",
+    "row": 43,
+    "gid": 846608904,
+    "source_name": "CORE-Bench — biomedical papers",
+    "family_id": "core-bench",
+    "variant_id": "core-bench-biomedical-papers"
+  },
+  {
+    "sheet": "Agentic (Harbor)",
+    "row": 44,
+    "gid": 846608904,
+    "source_name": "ABC-Bench (SecureBio)",
+    "family_id": "abc-bench-securebio",
+    "variant_id": "abc-bench-securebio"
+  },
+  {
+    "sheet": "Agentic (Harbor)",
+    "row": 45,
+    "gid": 846608904,
+    "source_name": "ABLE — agentic biological AI tool use",
+    "family_id": "able",
+    "variant_id": "able-agentic-biological-ai-tool-use"
+  },
+  {
+    "sheet": "Agentic (Harbor)",
+    "row": 46,
+    "gid": 846608904,
+    "source_name": "Bio-Task Bench — original tasks",
+    "family_id": "bio-task-bench",
+    "variant_id": "bio-task-bench-original-tasks"
+  },
+  {
+    "sheet": "Agentic (Harbor)",
+    "row": 47,
+    "gid": 846608904,
+    "source_name": "LAB-Bench — tool-enabled literature / database",
+    "family_id": "lab-bench",
+    "variant_id": "lab-bench-tool-enabled-literature-database"
+  },
+  {
+    "sheet": "Agentic (Harbor)",
+    "row": 48,
+    "gid": 846608904,
+    "source_name": "BioASQ — retrieval / end-to-end QA",
+    "family_id": "bioasq",
+    "variant_id": "bioasq-retrieval-end-to-end-qa"
+  },
+  {
+    "sheet": "Agentic (Harbor)",
+    "row": 49,
+    "gid": 846608904,
+    "source_name": "BixBench — original notebook protocols",
+    "family_id": "bixbench",
+    "variant_id": "bixbench-original-notebook-protocols"
+  },
+  {
+    "sheet": "Non-agentic (Evalchemy)",
+    "row": 2,
+    "gid": 776831399,
+    "source_name": "LAB-Bench — tool-free text MCQ",
+    "family_id": "lab-bench",
+    "variant_id": "lab-bench-tool-free-text-mcq"
+  },
+  {
+    "sheet": "Non-agentic (Evalchemy)",
+    "row": 3,
+    "gid": 776831399,
+    "source_name": "Genome-Bench",
+    "family_id": "genome-bench",
+    "variant_id": "genome-bench"
+  },
+  {
+    "sheet": "Non-agentic (Evalchemy)",
+    "row": 4,
+    "gid": 776831399,
+    "source_name": "BioProBench — PQA / ERR",
+    "family_id": "bioprobench",
+    "variant_id": "bioprobench-pqa-err"
+  },
+  {
+    "sheet": "Non-agentic (Evalchemy)",
+    "row": 5,
+    "gid": 776831399,
+    "source_name": "BLURB — non-QA task families",
+    "family_id": "blurb",
+    "variant_id": "blurb-non-qa-task-families"
+  },
+  {
+    "sheet": "Non-agentic (Evalchemy)",
+    "row": 6,
+    "gid": 776831399,
+    "source_name": "MMLU — biology / biomedical subjects",
+    "family_id": "mmlu",
+    "variant_id": "mmlu-biology-biomedical-subjects"
+  },
+  {
+    "sheet": "Non-agentic (Evalchemy)",
+    "row": 7,
+    "gid": 776831399,
+    "source_name": "MMLU-Pro — biology",
+    "family_id": "mmlu",
+    "variant_id": "mmlu-pro-biology"
+  },
+  {
+    "sheet": "Non-agentic (Evalchemy)",
+    "row": 8,
+    "gid": 776831399,
+    "source_name": "GPQA Diamond — biology",
+    "family_id": "gpqa",
+    "variant_id": "gpqa-diamond-biology"
+  },
+  {
+    "sheet": "Non-agentic (Evalchemy)",
+    "row": 9,
+    "gid": 776831399,
+    "source_name": "PubMedQA — labeled abstract QA",
+    "family_id": "pubmedqa",
+    "variant_id": "pubmedqa-labeled-abstract-qa"
+  },
+  {
+    "sheet": "Non-agentic (Evalchemy)",
+    "row": 10,
+    "gid": 776831399,
+    "source_name": "BioASQ — supplied-snippet yes/no",
+    "family_id": "bioasq",
+    "variant_id": "bioasq-supplied-snippet-yes-no"
+  },
+  {
+    "sheet": "Non-agentic (Evalchemy)",
+    "row": 11,
+    "gid": 776831399,
+    "source_name": "BioLP-bench",
+    "family_id": "biolp-bench",
+    "variant_id": "biolp-bench"
+  },
+  {
+    "sheet": "Non-agentic (Evalchemy)",
+    "row": 12,
+    "gid": 776831399,
+    "source_name": "SciKnowEval v2 — biology closed-choice",
+    "family_id": "sciknoweval",
+    "variant_id": "sciknoweval-v2-biology-closed-choice"
+  },
+  {
+    "sheet": "Non-agentic (Evalchemy)",
+    "row": 13,
+    "gid": 776831399,
+    "source_name": "GenomeQA — sequence understanding",
+    "family_id": "genomeqa",
+    "variant_id": "genomeqa-sequence-understanding"
+  },
+  {
+    "sheet": "Non-agentic (Evalchemy)",
+    "row": 14,
+    "gid": 776831399,
+    "source_name": "ProteinGym-LLM (PG-LLM)",
+    "family_id": "proteingym-llm-pg-llm",
+    "variant_id": "proteingym-llm-pg-llm"
+  },
+  {
+    "sheet": "Non-agentic (Evalchemy)",
+    "row": 15,
+    "gid": 776831399,
+    "source_name": "Humanity's Last Exam — biology/medicine",
+    "family_id": "humanitys-last-exam",
+    "variant_id": "humanitys-last-exam-biology-medicine"
+  },
+  {
+    "sheet": "Non-agentic (Evalchemy)",
+    "row": 16,
+    "gid": 776831399,
+    "source_name": "AA-Omniscience — biology/health slice",
+    "family_id": "aa-omniscience",
+    "variant_id": "aa-omniscience-biology-health-slice"
+  },
+  {
+    "sheet": "Non-agentic (Evalchemy)",
+    "row": 17,
+    "gid": 776831399,
+    "source_name": "BioPlanner / BioProt",
+    "family_id": "bioplanner-bioprot",
+    "variant_id": "bioplanner-bioprot"
+  },
+  {
+    "sheet": "Non-agentic (Evalchemy)",
+    "row": 18,
+    "gid": 776831399,
+    "source_name": "BioCoder",
+    "family_id": "biocoder",
+    "variant_id": "biocoder"
+  },
+  {
+    "sheet": "Non-agentic (Evalchemy)",
+    "row": 19,
+    "gid": 776831399,
+    "source_name": "HumanEval-BioImage (human-eval-bia)",
+    "family_id": "humaneval-bioimage-human-eval-bia",
+    "variant_id": "humaneval-bioimage-human-eval-bia"
+  },
+  {
+    "sheet": "Non-agentic (Evalchemy)",
+    "row": 20,
+    "gid": 776831399,
+    "source_name": "BioLLMBench",
+    "family_id": "biollmbench",
+    "variant_id": "biollmbench"
+  },
+  {
+    "sheet": "Non-agentic (Evalchemy)",
+    "row": 21,
+    "gid": 776831399,
+    "source_name": "Bioinfo-Bench",
+    "family_id": "bioinfo-bench",
+    "variant_id": "bioinfo-bench"
+  },
+  {
+    "sheet": "Non-agentic (Evalchemy)",
+    "row": 22,
+    "gid": 776831399,
+    "source_name": "BioinformaticsBench",
+    "family_id": "bioinformaticsbench",
+    "variant_id": "bioinformaticsbench"
+  },
+  {
+    "sheet": "Non-agentic (Evalchemy)",
+    "row": 23,
+    "gid": 776831399,
+    "source_name": "GeneTuring",
+    "family_id": "geneturing",
+    "variant_id": "geneturing"
+  },
+  {
+    "sheet": "Non-agentic (Evalchemy)",
+    "row": 24,
+    "gid": 776831399,
+    "source_name": "SC-Arena",
+    "family_id": "sc-arena",
+    "variant_id": "sc-arena"
+  },
+  {
+    "sheet": "Non-agentic (Evalchemy)",
+    "row": 25,
+    "gid": 776831399,
+    "source_name": "BioMaze — tool-free reasoning",
+    "family_id": "biomaze",
+    "variant_id": "biomaze-tool-free-reasoning"
+  },
+  {
+    "sheet": "Non-agentic (Evalchemy)",
+    "row": 26,
+    "gid": 776831399,
+    "source_name": "CARDBiomedBench",
+    "family_id": "cardbiomedbench",
+    "variant_id": "cardbiomedbench"
+  },
+  {
+    "sheet": "Non-agentic (Evalchemy)",
+    "row": 27,
+    "gid": 776831399,
+    "source_name": "BiomedSQL",
+    "family_id": "biomedsql",
+    "variant_id": "biomedsql"
+  },
+  {
+    "sheet": "Non-agentic (Evalchemy)",
+    "row": 28,
+    "gid": 776831399,
+    "source_name": "BABE (Biology Arena Benchmark)",
+    "family_id": "babe-biology-arena-benchmark",
+    "variant_id": "babe-biology-arena-benchmark"
+  },
+  {
+    "sheet": "Non-agentic (Evalchemy)",
+    "row": 29,
+    "gid": 776831399,
+    "source_name": "MicroVQA",
+    "family_id": "microvqa",
+    "variant_id": "microvqa"
+  },
+  {
+    "sheet": "Non-agentic (Evalchemy)",
+    "row": 30,
+    "gid": 776831399,
+    "source_name": "Biology-Instructions — evaluation splits",
+    "family_id": "biology-instructions",
+    "variant_id": "biology-instructions-evaluation-splits"
+  },
+  {
+    "sheet": "Non-agentic (Evalchemy)",
+    "row": 31,
+    "gid": 776831399,
+    "source_name": "Bio-benchmark — biological tasks",
+    "family_id": "bio-benchmark",
+    "variant_id": "bio-benchmark-biological-tasks"
+  },
+  {
+    "sheet": "Non-agentic (Evalchemy)",
+    "row": 32,
+    "gid": 776831399,
+    "source_name": "DMPKBench",
+    "family_id": "dmpkbench",
+    "variant_id": "dmpkbench"
+  },
+  {
+    "sheet": "Non-agentic (Evalchemy)",
+    "row": 33,
+    "gid": 776831399,
+    "source_name": "BioMol-LLM-Bench",
+    "family_id": "biomol-llm-bench",
+    "variant_id": "biomol-llm-bench"
+  },
+  {
+    "sheet": "Non-agentic (Evalchemy)",
+    "row": 34,
+    "gid": 776831399,
+    "source_name": "DBench-Bio",
+    "family_id": "dbench-bio",
+    "variant_id": "dbench-bio"
+  },
+  {
+    "sheet": "Non-agentic (Evalchemy)",
+    "row": 35,
+    "gid": 776831399,
+    "source_name": "SciR",
+    "family_id": "scir",
+    "variant_id": "scir"
+  },
+  {
+    "sheet": "Non-agentic (Evalchemy)",
+    "row": 36,
+    "gid": 776831399,
+    "source_name": "SciFact — LLM protocol",
+    "family_id": "scifact",
+    "variant_id": "scifact-llm-protocol"
+  },
+  {
+    "sheet": "Non-agentic (Evalchemy)",
+    "row": 37,
+    "gid": 776831399,
+    "source_name": "BioNLI — LLM inference protocol",
+    "family_id": "bionli",
+    "variant_id": "bionli-llm-inference-protocol"
+  },
+  {
+    "sheet": "Non-agentic (Evalchemy)",
+    "row": 38,
+    "gid": 776831399,
+    "source_name": "FrontierScience — biology",
+    "family_id": "frontierscience",
+    "variant_id": "frontierscience-biology"
+  },
+  {
+    "sheet": "Non-agentic (Evalchemy)",
+    "row": 39,
+    "gid": 776831399,
+    "source_name": "SciEval — biology",
+    "family_id": "scieval",
+    "variant_id": "scieval-biology"
+  },
+  {
+    "sheet": "Non-agentic (Evalchemy)",
+    "row": 40,
+    "gid": 776831399,
+    "source_name": "SciAssess — biology",
+    "family_id": "sciassess",
+    "variant_id": "sciassess-biology"
+  },
+  {
+    "sheet": "Non-agentic (Evalchemy)",
+    "row": 41,
+    "gid": 776831399,
+    "source_name": "SciCUEval — biology / biomedicine",
+    "family_id": "scicueval",
+    "variant_id": "scicueval-biology-biomedicine"
+  },
+  {
+    "sheet": "Non-agentic (Evalchemy)",
+    "row": 42,
+    "gid": 776831399,
+    "source_name": "SciPredict — biology",
+    "family_id": "scipredict",
+    "variant_id": "scipredict-biology"
+  },
+  {
+    "sheet": "Non-agentic (Evalchemy)",
+    "row": 43,
+    "gid": 776831399,
+    "source_name": "ResearchBench — biology / cell biology",
+    "family_id": "researchbench",
+    "variant_id": "researchbench-biology-cell-biology"
+  },
+  {
+    "sheet": "Non-agentic (Evalchemy)",
+    "row": 44,
+    "gid": 776831399,
+    "source_name": "ScienceArena — biology",
+    "family_id": "sciencearena",
+    "variant_id": "sciencearena-biology"
+  },
+  {
+    "sheet": "Non-agentic (Evalchemy)",
+    "row": 45,
+    "gid": 776831399,
+    "source_name": "OlympicArena — biology",
+    "family_id": "olympicarena",
+    "variant_id": "olympicarena-biology"
+  },
+  {
+    "sheet": "Non-agentic (Evalchemy)",
+    "row": 46,
+    "gid": 776831399,
+    "source_name": "MMMU — biology / basic medical science",
+    "family_id": "mmmu",
+    "variant_id": "mmmu-biology-basic-medical-science"
+  },
+  {
+    "sheet": "Non-agentic (Evalchemy)",
+    "row": 47,
+    "gid": 776831399,
+    "source_name": "MMMU-Pro — biology / basic medical science",
+    "family_id": "mmmu",
+    "variant_id": "mmmu-pro-biology-basic-medical-science"
+  },
+  {
+    "sheet": "Non-agentic (Evalchemy)",
+    "row": 48,
+    "gid": 776831399,
+    "source_name": "ScienceQA — biology",
+    "family_id": "scienceqa",
+    "variant_id": "scienceqa-biology"
+  },
+  {
+    "sheet": "Non-agentic (Evalchemy)",
+    "row": 49,
+    "gid": 776831399,
+    "source_name": "WMDP-Bio",
+    "family_id": "wmdp-bio",
+    "variant_id": "wmdp-bio"
+  },
+  {
+    "sheet": "Non-agentic (Evalchemy)",
+    "row": 50,
+    "gid": 776831399,
+    "source_name": "Virology Capabilities Test (VCT)",
+    "family_id": "virology-capabilities-test-vct",
+    "variant_id": "virology-capabilities-test-vct"
+  },
+  {
+    "sheet": "Non-agentic (Evalchemy)",
+    "row": 51,
+    "gid": 776831399,
+    "source_name": "BioTIER",
+    "family_id": "biotier",
+    "variant_id": "biotier"
+  },
+  {
+    "sheet": "Non-agentic (Evalchemy)",
+    "row": 52,
+    "gid": 776831399,
+    "source_name": "SPIKE-Bench",
+    "family_id": "spike-bench",
+    "variant_id": "spike-bench"
+  },
+  {
+    "sheet": "Non-agentic (Evalchemy)",
+    "row": 53,
+    "gid": 776831399,
+    "source_name": "BioEval — repository-stage suite",
+    "family_id": "bioeval",
+    "variant_id": "bioeval-repository-stage-suite"
+  },
+  {
+    "sheet": "Non-agentic (Evalchemy)",
+    "row": 54,
+    "gid": 776831399,
+    "source_name": "BioReasonBench — pilot",
+    "family_id": "bioreasonbench",
+    "variant_id": "bioreasonbench-pilot"
+  },
+  {
+    "sheet": "Non-agentic (Evalchemy)",
+    "row": 55,
+    "gid": 776831399,
+    "source_name": "BioThreat-Eval — proxy suite",
+    "family_id": "biothreat-eval",
+    "variant_id": "biothreat-eval-proxy-suite"
+  },
+  {
+    "sheet": "Non-agentic (Evalchemy)",
+    "row": 56,
+    "gid": 776831399,
+    "source_name": "MicroVQA++ — announced evaluation",
+    "family_id": "microvqa",
+    "variant_id": "microvqa-announced-evaluation"
+  },
+  {
+    "sheet": "Non-agentic (Evalchemy)",
+    "row": 57,
+    "gid": 776831399,
+    "source_name": "ProteinLMBench",
+    "family_id": "proteinlmbench",
+    "variant_id": "proteinlmbench"
+  },
+  {
+    "sheet": "Non-agentic (Evalchemy)",
+    "row": 58,
+    "gid": 776831399,
+    "source_name": "BioProBench — step ordering (ORD)",
+    "family_id": "bioprobench",
+    "variant_id": "bioprobench-step-ordering-ord"
+  },
+  {
+    "sheet": "Non-agentic (Evalchemy)",
+    "row": 59,
+    "gid": 776831399,
+    "source_name": "BioProBench — protocol generation (GEN)",
+    "family_id": "bioprobench",
+    "variant_id": "bioprobench-protocol-generation-gen"
+  },
+  {
+    "sheet": "Non-agentic (Evalchemy)",
+    "row": 60,
+    "gid": 776831399,
+    "source_name": "BioProBench — protocol reasoning (REA)",
+    "family_id": "bioprobench",
+    "variant_id": "bioprobench-protocol-reasoning-rea"
+  },
+  {
+    "sheet": "Non-agentic (Evalchemy)",
+    "row": 61,
+    "gid": 776831399,
+    "source_name": "LAB-Bench — FigQA / TableQA, tool-free",
+    "family_id": "lab-bench",
+    "variant_id": "lab-bench-figqa-tableqa-tool-free"
+  },
+  {
+    "sheet": "Non-agentic (Evalchemy)",
+    "row": 62,
+    "gid": 776831399,
+    "source_name": "BioASQ — supplied-snippet factoid / list",
+    "family_id": "bioasq",
+    "variant_id": "bioasq-supplied-snippet-factoid-list"
+  },
+  {
+    "sheet": "Non-agentic (Evalchemy)",
+    "row": 63,
+    "gid": 776831399,
+    "source_name": "BioASQ — supplied-snippet ideal answers",
+    "family_id": "bioasq",
+    "variant_id": "bioasq-supplied-snippet-ideal-answers"
+  },
+  {
+    "sheet": "Non-agentic (Evalchemy)",
+    "row": 64,
+    "gid": 776831399,
+    "source_name": "GPQA Main / Extended — biology",
+    "family_id": "gpqa",
+    "variant_id": "gpqa-main-extended-biology"
+  },
+  {
+    "sheet": "Non-agentic (Evalchemy)",
+    "row": 65,
+    "gid": 776831399,
+    "source_name": "BioSecBench-Refusal — meta framing",
+    "family_id": "biosecbench",
+    "variant_id": "biosecbench-refusal-meta-framing"
+  },
+  {
+    "sheet": "Non-agentic (Evalchemy)",
+    "row": 66,
+    "gid": 776831399,
+    "source_name": "SciKnowEval v2 — biology open-ended tasks",
+    "family_id": "sciknoweval",
+    "variant_id": "sciknoweval-v2-biology-open-ended-tasks"
+  },
+  {
+    "sheet": "Non-agentic (Evalchemy)",
+    "row": 67,
+    "gid": 776831399,
+    "source_name": "LiveProteinBench — repository-stage suite",
+    "family_id": "liveproteinbench",
+    "variant_id": "liveproteinbench-repository-stage-suite"
+  },
+  {
+    "sheet": "Non-agentic (Evalchemy)",
+    "row": 68,
+    "gid": 776831399,
+    "source_name": "SciQ — biology",
+    "family_id": "sciq",
+    "variant_id": "sciq-biology"
+  },
+  {
+    "sheet": "Non-agentic (Evalchemy)",
+    "row": 69,
+    "gid": 776831399,
+    "source_name": "SuperGPQA — biology",
+    "family_id": "supergpqa",
+    "variant_id": "supergpqa-biology"
+  },
+  {
+    "sheet": "Non-agentic (Evalchemy)",
+    "row": 70,
+    "gid": 776831399,
+    "source_name": "C-Eval — biology",
+    "family_id": "c-eval",
+    "variant_id": "c-eval-biology"
+  },
+  {
+    "sheet": "Non-agentic (Evalchemy)",
+    "row": 71,
+    "gid": 776831399,
+    "source_name": "CMMLU — biology",
+    "family_id": "cmmlu",
+    "variant_id": "cmmlu-biology"
+  },
+  {
+    "sheet": "Non-agentic (Evalchemy)",
+    "row": 72,
+    "gid": 776831399,
+    "source_name": "AGIEval — Gaokao biology",
+    "family_id": "agieval",
+    "variant_id": "agieval-gaokao-biology"
+  },
+  {
+    "sheet": "Non-agentic (Evalchemy)",
+    "row": 73,
+    "gid": 776831399,
+    "source_name": "GAOKAO-Bench — biology",
+    "family_id": "gaokao-bench",
+    "variant_id": "gaokao-bench-biology"
+  }
+]

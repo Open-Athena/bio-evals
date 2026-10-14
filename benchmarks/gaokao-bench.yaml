@@ -1,0 +1,44 @@
+id: gaokao-bench
+name: GAOKAO-Bench
+description: Chinese Gaokao biology objective and subjective questions.
+creators:
+  - Fudan University
+  - East China Normal University
+sources:
+  - label: Benchmark
+    url: https://arxiv.org/abs/2305.12474
+notes: []
+variants:
+  - id: gaokao-bench-biology
+    name: GAOKAO-Bench — biology
+    description: Chinese Gaokao biology objective and subjective questions.
+    creators:
+      - Fudan University
+      - East China Normal University
+    assignment: TBD
+    sources:
+      - label: Benchmark
+        url: https://arxiv.org/abs/2305.12474
+      - label: Scorer / data
+        url: https://github.com/OpenLMLab/GAOKAO-Bench/tree/6dbb24f8d8439041e5431c4c184a582182a6ce9c
+      - label: Evalchemy / integration
+        url: https://github.com/marin-community/evalchemy/tree/ab8e78f12abb8ed0d1659f56c24f2e01f3c85b54/eval/chat_benchmarks
+    implementations:
+      - framework: Evalchemy
+        status: unknown
+        evidence: []
+    work: []
+    notes:
+      - "Access: Public data and objective/subjective evaluation code."
+      - "Grading: Objective-answer scoring plus model/expert grading for subjective questions; keep
+        the two reports separate."
+      - "Limitations: Overlaps exam sources used by AGIEval; whole-exam weighted scores are not a
+        biology accuracy."
+      - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
+        notes are historical."
+    provenance:
+      - sheet: Non-agentic (Evalchemy)
+        gid: 776831399
+        row: 73
+        evidence_date: 9/21/2026
+        imported_at: 2026-10-14

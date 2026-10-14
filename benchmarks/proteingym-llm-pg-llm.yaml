@@ -1,0 +1,44 @@
+id: proteingym-llm-pg-llm
+name: ProteinGym-LLM (PG-LLM)
+description: Rank protein variants by measured fitness from full sequences and assay context.
+creators:
+  - Harvard University
+  - Capable
+sources:
+  - label: Benchmark
+    url: https://doi.org/10.64898/2026.07.27.741045
+notes: []
+variants:
+  - id: proteingym-llm-pg-llm
+    name: ProteinGym-LLM (PG-LLM)
+    description: Rank protein variants by measured fitness from full sequences and assay context.
+    creators:
+      - Harvard University
+      - Capable
+    assignment: TBD
+    sources:
+      - label: Benchmark
+        url: https://doi.org/10.64898/2026.07.27.741045
+      - label: Scorer / data
+        url: https://github.com/rohitarorayyc/proteingym-llm
+      - label: Evalchemy / integration
+        url: https://github.com/marin-community/evalchemy/tree/f42990450edf4e694fe5a22b3d23ed09ab42da1e/eval/chat_benchmarks
+    implementations:
+      - framework: Evalchemy
+        status: unknown
+        evidence: []
+    work: []
+    notes:
+      - "Access: Public code and evaluation data; primary protocol 217 assays × 3 seeds at N=50."
+      - "Grading: Spearman rho within assay; equal-weight aggregation assay → protein → functional
+        category."
+      - "Limitations: Native protein reasoning complement to text QA. Evaluation-only splits
+        prohibit benchmark-specific training/tuning."
+      - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
+        notes are historical."
+    provenance:
+      - sheet: Non-agentic (Evalchemy)
+        gid: 776831399
+        row: 14
+        evidence_date: 9/18/2026
+        imported_at: 2026-10-14

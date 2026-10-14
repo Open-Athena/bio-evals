@@ -1,0 +1,80 @@
+id: genebench
+name: GeneBench
+description: Quantitative genomics, statistical modeling, and biological judgment across original
+  and Pro releases.
+creators:
+  - OpenAI
+sources:
+  - label: Benchmark
+    url: https://huggingface.co/datasets/openai/genebench-pro-public-package
+notes:
+  - Family grouping is for navigation; variants may have different creators, datasets, grading
+    protocols, and internal assignments.
+variants:
+  - id: genebench-pro
+    name: GeneBench-Pro
+    description: judgment-heavy genomics and quantitative biology
+    creators:
+      - OpenAI
+    assignment: OOD
+    sources:
+      - label: Benchmark
+        url: https://huggingface.co/datasets/openai/genebench-pro-public-package
+      - label: Scorer / data
+        url: https://huggingface.co/datasets/openai/genebench-pro-public-package/blob/eb75a3c0996b3cedcc9af685bad02fd166848fa2/reference_grader.py
+      - label: Harbor / integration
+        url: https://github.com/josancamon19/sci-benches/tree/1fc392943dce9c847a62574dcf4e4c6ad943d2ab/src/genebench_pro
+    implementations:
+      - framework: Harbor
+        status: unknown
+        evidence: []
+    work: []
+    notes:
+      - "Access: Ten ungated public cases with references and schemas; full 129-task suite not in
+        release."
+      - "Grading: Python standard-library numeric, integer, exact-match checks; 30 local interface
+        checks passed."
+      - "Limitations: the public package is a ten-case subset of the full 129-task suite; do not
+        equate public-subset coverage with full-suite implementation."
+      - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
+        notes are historical."
+    provenance:
+      - sheet: Agentic (Harbor)
+        gid: 846608904
+        row: 7
+        evidence_date: 9/19/2026
+        imported_at: 2026-10-14
+  - id: genebench-original
+    name: GeneBench — original
+    description: "Multi-stage quantitative genomics: noisy data, QC, statistical models, confounding and
+      downstream inference."
+    creators:
+      - OpenAI
+    assignment: OOD
+    sources:
+      - label: Benchmark
+        url: https://cdn.openai.com/pdf/6dc7175d-d9e7-4b8d-96b8-48fe5798cd5b/oai_genebench_benchmark.pdf
+      - label: Scorer / data
+        url: https://cdn.openai.com/pdf/6dc7175d-d9e7-4b8d-96b8-48fe5798cd5b/oai_genebench_benchmark.pdf
+      - label: Harbor / integration
+        url: https://github.com/marin-community/harbor/tree/b78a0e52af98015fc8416d5bd5ee649a284e5a4c/adapters
+    implementations:
+      - framework: Harbor
+        status: unknown
+        evidence: []
+    work: []
+    notes:
+      - "Access: Paper and worked example available; full original benchmark assets/scorer not
+        verified."
+      - "Grading: Quantitative reference answers with task-specific checks; synthetic construction
+        and ablations constrain valid solutions."
+      - "Limitations: Original OpenAI benchmark, separate from the GeneBench-Pro row. A public
+        worked example is not the complete evaluation."
+      - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
+        notes are historical."
+    provenance:
+      - sheet: Agentic (Harbor)
+        gid: 846608904
+        row: 35
+        evidence_date: 9/21/2026
+        imported_at: 2026-10-14

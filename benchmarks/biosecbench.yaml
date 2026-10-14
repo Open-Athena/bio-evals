@@ -1,0 +1,145 @@
+id: biosecbench
+name: BioSecBench
+description: Defensive biological analysis and refusal assessment, with distinct surveillance,
+  functional-interpretation, and decision protocols.
+creators:
+  - LatchBio
+sources:
+  - label: Benchmark
+    url: https://github.com/latchbio/biosecbench-surveillance
+notes:
+  - Family grouping is for navigation; variants may have different creators, datasets, grading
+    protocols, and internal assignments.
+variants:
+  - id: biosecbench-surveillance
+    name: BioSecBench-Surveillance
+    description: 100 defensive pathogen-surveillance analysis evaluations.
+    creators:
+      - LatchBio
+    assignment: ID
+    sources:
+      - label: Benchmark
+        url: https://github.com/latchbio/biosecbench-surveillance
+      - label: Scorer / data
+        url: https://github.com/latchbio/biosecbench-surveillance/blob/main/METHODS.md
+      - label: Harbor / integration
+        url: https://github.com/marin-community/harbor/tree/9551f376157d90104011107dcbf9ca3621228126/adapters
+    implementations:
+      - framework: Harbor
+        status: unknown
+        evidence: []
+    work: []
+    notes:
+      - "Access: 7 public metadata/prompt examples; input nodes, graders, ground truth and
+        trajectories withheld."
+      - "Grading: Deterministic endpoint pass/fail; timeouts fail; refusals excluded from pass-rate
+        denominator."
+      - "Limitations: Track for completeness; access prevents a reproducible public Harbor
+        implementation."
+      - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
+        notes are historical."
+    provenance:
+      - sheet: Agentic (Harbor)
+        gid: 846608904
+        row: 26
+        evidence_date: 9/18/2026
+        imported_at: 2026-10-14
+  - id: biosecbench-function
+    name: BioSecBench-Function
+    description: 111 defensive functional-interpretation evaluations.
+    creators:
+      - LatchBio
+    assignment: ID
+    sources:
+      - label: Benchmark
+        url: https://github.com/latchbio/biosecbench-function
+      - label: Scorer / data
+        url: https://github.com/latchbio/biosecbench-function/blob/main/METHODS.md
+      - label: Harbor / integration
+        url: https://github.com/marin-community/harbor/tree/9551f376157d90104011107dcbf9ca3621228126/adapters
+    implementations:
+      - framework: Harbor
+        status: unknown
+        evidence: []
+    work: []
+    notes:
+      - "Access: 7 public descriptive examples; data, graders, ground truth and trajectories
+        withheld."
+      - "Grading: Deterministic functional endpoint scoring; refusals reported separately."
+      - "Limitations: Completeness/access-tracking candidate. Official methods explicitly disable
+        internet."
+      - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
+        notes are historical."
+    provenance:
+      - sheet: Agentic (Harbor)
+        gid: 846608904
+        row: 27
+        evidence_date: 9/18/2026
+        imported_at: 2026-10-14
+  - id: biosecbench-refusal-direct-framing
+    name: BioSecBench-Refusal — direct framing
+    description: 107 paired routine/hazard-detection scenarios; direct and meta framings.
+    creators:
+      - LatchBio
+    assignment: ID
+    sources:
+      - label: Benchmark
+        url: https://github.com/latchbio/biosecbench-refusal
+      - label: Scorer / data
+        url: https://github.com/latchbio/biosecbench-refusal/blob/main/METHODS.md
+      - label: Harbor / integration
+        url: https://github.com/marin-community/harbor/tree/9551f376157d90104011107dcbf9ca3621228126/adapters
+    implementations:
+      - framework: Harbor
+        status: unknown
+        evidence: []
+    work: []
+    notes:
+      - "Access: 2 public examples; full107 tasks, hazard rationales and data restricted; no
+        trajectories."
+      - "Grading: Direct: API-block detection plus trajectory refusal judge. Meta: deterministic
+        decision/rationale scoring."
+      - "Limitations: Measures appropriate refusal/hazard recognition, not ordinary biology
+        accuracy. Keep separate from capability aggregate."
+      - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
+        notes are historical."
+    provenance:
+      - sheet: Agentic (Harbor)
+        gid: 846608904
+        row: 28
+        evidence_date: 9/18/2026
+        imported_at: 2026-10-14
+  - id: biosecbench-refusal-meta-framing
+    name: BioSecBench-Refusal — meta framing
+    description: "BioSecBench-Refusal meta framing: judge accept/refuse decisions for 61 routine and 46
+      risk-bearing tasks."
+    creators:
+      - LatchBio
+    assignment: TBD
+    sources:
+      - label: Benchmark
+        url: https://arxiv.org/abs/2607.05462
+      - label: Scorer / data
+        url: https://github.com/latchbio/biosecbench-refusal/tree/79101134f26ea55a30b85c14bd81ccb3ca3cc767
+      - label: Evalchemy / integration
+        url: https://github.com/marin-community/evalchemy/tree/ab8e78f12abb8ed0d1659f56c24f2e01f3c85b54/eval/chat_benchmarks
+    implementations:
+      - framework: Evalchemy
+        status: unknown
+        evidence: []
+    work: []
+    notes:
+      - "Access: Two public examples and methodology; full 107-task set and sensitive reference
+        rationales restricted."
+      - "Grading: Decision/refusal assessment under the official meta framing; report routine versus
+        red-team behavior and API blocks separately."
+      - "Limitations: Same task family as direct-framing row; meta evaluation asks for a decision,
+        not completion of the underlying analysis."
+      - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
+        notes are historical."
+    provenance:
+      - sheet: Non-agentic (Evalchemy)
+        gid: 776831399
+        row: 65
+        evidence_date: 9/21/2026
+        imported_at: 2026-10-14

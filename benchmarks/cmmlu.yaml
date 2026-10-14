@@ -1,0 +1,49 @@
+id: cmmlu
+name: CMMLU
+description: Chinese biology subjects in the 67-subject CMMLU knowledge/reasoning suite.
+creators:
+  - MBZUAI
+  - LibrAI
+  - Shanghai Jiao Tong University
+  - Microsoft Research Asia
+  - University of Melbourne
+sources:
+  - label: Benchmark
+    url: https://arxiv.org/abs/2306.09212
+notes: []
+variants:
+  - id: cmmlu-biology
+    name: CMMLU — biology
+    description: Chinese biology subjects in the 67-subject CMMLU knowledge/reasoning suite.
+    creators:
+      - MBZUAI
+      - LibrAI
+      - Shanghai Jiao Tong University
+      - Microsoft Research Asia
+      - University of Melbourne
+    assignment: TBD
+    sources:
+      - label: Benchmark
+        url: https://arxiv.org/abs/2306.09212
+      - label: Scorer / data
+        url: https://huggingface.co/datasets/lmlmcat/cmmlu
+      - label: Evalchemy / integration
+        url: https://github.com/EleutherAI/lm-evaluation-harness/tree/v0.4.12/lm_eval/tasks/cmmlu
+    implementations:
+      - framework: Evalchemy
+        status: unknown
+        evidence: []
+    work: []
+    notes:
+      - "Access: Public subject-organized development/test data, code and HF release."
+      - "Grading: Four-choice accuracy with official zero-/few-shot prompting."
+      - "Limitations: Separate from C-Eval; report subject-level results and avoid pooling clinical
+        subjects without stating the scope."
+      - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
+        notes are historical."
+    provenance:
+      - sheet: Non-agentic (Evalchemy)
+        gid: 776831399
+        row: 71
+        evidence_date: 9/21/2026
+        imported_at: 2026-10-14

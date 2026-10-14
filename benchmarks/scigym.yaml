@@ -1,0 +1,51 @@
+id: scigym
+name: SciGym
+description: "Systems-biology dry lab: infer hidden reaction mechanisms from interventions on 350 SBML systems."
+creators:
+  - University of Toronto
+  - SickKids
+  - Axiom
+  - Mila
+  - Vector Institute
+sources:
+  - label: Benchmark
+    url: https://arxiv.org/abs/2507.02083
+notes: []
+variants:
+  - id: scigym
+    name: SciGym
+    description: "Systems-biology dry lab: infer hidden reaction mechanisms from interventions on 350
+      SBML systems."
+    creators:
+      - University of Toronto
+      - SickKids
+      - Axiom
+      - Mila
+      - Vector Institute
+    assignment: ID
+    sources:
+      - label: Benchmark
+        url: https://arxiv.org/abs/2507.02083
+      - label: Scorer / data
+        url: https://huggingface.co/datasets/h4duan/scigym-eval
+      - label: Harbor / integration
+        url: https://github.com/marin-community/harbor/tree/b78a0e52af98015fc8416d5bd5ee649a284e5a4c/adapters
+    implementations:
+      - framework: Harbor
+        status: unknown
+        evidence: []
+    work: []
+    notes:
+      - "Access: Public simulator/evaluation code and small/large evaluation datasets."
+      - "Grading: Simulator-grounded recovery of system structure/parameters; use the task’s
+        official metrics."
+      - "Limitations: Controlled simulated experiments, not wet-lab execution; do not pool
+        small/large tracks without reporting them."
+      - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
+        notes are historical."
+    provenance:
+      - sheet: Agentic (Harbor)
+        gid: 846608904
+        row: 38
+        evidence_date: 9/21/2026
+        imported_at: 2026-10-14

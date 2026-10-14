@@ -1,0 +1,42 @@
+id: epibench
+name: EpiBench
+description: epigenomics workflow steps across accessibility, chromatin, and methylation assays
+creators:
+  - LatchBio
+sources:
+  - label: Benchmark
+    url: https://arxiv.org/abs/2606.13602
+notes: []
+variants:
+  - id: epibench
+    name: EpiBench
+    description: epigenomics workflow steps across accessibility, chromatin, and methylation assays
+    creators:
+      - LatchBio
+    assignment: ID
+    sources:
+      - label: Benchmark
+        url: https://arxiv.org/abs/2606.13602
+      - label: Scorer / data
+        url: https://github.com/latchbio/epibench/tree/6bc01f15125f5a01ab78ce1fd2fc2c51c4ca04f3/evals
+      - label: Harbor / integration
+        url: https://github.com/josancamon19/sci-benches/tree/1fc392943dce9c847a62574dcf4e4c6ad943d2ab/src/epibench
+    implementations:
+      - framework: Harbor
+        status: unknown
+        evidence: []
+    work: []
+    notes:
+      - "Access: 7 public examples with Latch pointers; full paper suite has 106 tasks."
+      - "Grading: Official targets missing; community reconstructs deterministic checks for 7 public
+        examples."
+      - "Limitations: Community packaging covers 7 examples; reconstructed grading must be reported
+        as a separate variant."
+      - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
+        notes are historical."
+    provenance:
+      - sheet: Agentic (Harbor)
+        gid: 846608904
+        row: 19
+        evidence_date: 9/19/2026
+        imported_at: 2026-10-14

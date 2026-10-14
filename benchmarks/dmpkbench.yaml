@@ -1,0 +1,43 @@
+id: dmpkbench
+name: DMPKBench
+description: Drug metabolism/pharmacokinetics, ADMET reasoning, interpretation and modeling.
+creators:
+  - Global Health Drug Discovery Institute (GHDDI)
+sources:
+  - label: Benchmark
+    url: https://github.com/GHDDI-AILab/DMPKBench
+notes: []
+variants:
+  - id: dmpkbench
+    name: DMPKBench
+    description: Drug metabolism/pharmacokinetics, ADMET reasoning, interpretation and modeling.
+    creators:
+      - Global Health Drug Discovery Institute (GHDDI)
+    assignment: TBD
+    sources:
+      - label: Benchmark
+        url: https://github.com/GHDDI-AILab/DMPKBench
+      - label: Scorer / data
+        url: https://github.com/GHDDI-AILab/DMPKBench/tree/f2ddaff925b51aad0069b68a823bb6b2c28aac76
+      - label: Evalchemy / integration
+        url: https://github.com/marin-community/evalchemy/tree/ab8e78f12abb8ed0d1659f56c24f2e01f3c85b54/eval/chat_benchmarks
+    implementations:
+      - framework: Evalchemy
+        status: unknown
+        evidence: []
+    work: []
+    notes:
+      - "Access: Public code and several data subsets; ADMET-MPO reference answers withheld under
+        licensing restrictions."
+      - "Grading: Subset-specific choice, numerical and open-response assessment; some open
+        responses need model/expert grading."
+      - "Limitations: Questions being downloadable does not imply self-run scoring. Report subset
+        coverage; large ADMET-MPO pool should not dominate other tasks."
+      - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
+        notes are historical."
+    provenance:
+      - sheet: Non-agentic (Evalchemy)
+        gid: 776831399
+        row: 32
+        evidence_date: 9/21/2026
+        imported_at: 2026-10-14

@@ -1,0 +1,49 @@
+id: scicode
+name: SciCode
+description: Scientific coding; biology among 5 domains and 16 subdomains.
+creators:
+  - UIUC
+  - Argonne National Laboratory
+  - Princeton University
+  - collaborators (see note)
+sources:
+  - label: Benchmark
+    url: https://arxiv.org/abs/2407.13168
+notes: []
+variants:
+  - id: scicode-biology-harbor-variant
+    name: SciCode — biology (Harbor variant)
+    description: Scientific coding; biology among 5 domains and 16 subdomains.
+    creators:
+      - UIUC
+      - Argonne National Laboratory
+      - Princeton University
+      - collaborators (see note)
+    assignment: OOD
+    sources:
+      - label: Benchmark
+        url: https://arxiv.org/abs/2407.13168
+      - label: Scorer / data
+        url: https://github.com/scicode-bench/SciCode
+      - label: Harbor / integration
+        url: https://github.com/marin-community/harbor/tree/9551f376157d90104011107dcbf9ca3621228126/adapters/scicode
+    implementations:
+      - framework: Harbor
+        status: unknown
+        evidence: []
+    work: []
+    notes:
+      - "Access: Existing Harbor adapter; shared≈1GB HDF5 test data staged once. Test solutions not
+        publicly released."
+      - "Grading: Executable scientific test cases; main/subproblem reporting must match chosen
+        protocol."
+      - "Limitations: AAII4.3 OOD component. Harbor's agentic variant changes the execution
+        protocol; do not present it as canonical AAII performance."
+      - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
+        notes are historical."
+    provenance:
+      - sheet: Agentic (Harbor)
+        gid: 846608904
+        row: 30
+        evidence_date: 9/18/2026
+        imported_at: 2026-10-14

@@ -1,0 +1,83 @@
+id: gpqa
+name: GPQA
+description: Graduate-level biology reasoning across overlapping Diamond, Main, and Extended subsets.
+creators:
+  - New York University
+  - Cohere
+  - Anthropic
+sources:
+  - label: Benchmark
+    url: https://arxiv.org/abs/2311.12022
+notes:
+  - Family grouping is for navigation; variants may have different creators, datasets, grading
+    protocols, and internal assignments.
+variants:
+  - id: gpqa-diamond-biology
+    name: GPQA Diamond — biology
+    description: Graduate-level biology reasoning; 4-choice MCQ.
+    creators:
+      - New York University
+      - Cohere
+      - Anthropic
+    assignment: ID
+    sources:
+      - label: Benchmark
+        url: https://arxiv.org/abs/2311.12022
+      - label: Scorer / data
+        url: https://huggingface.co/datasets/Idavidrein/gpqa
+      - label: Evalchemy / integration
+        url: https://github.com/marin-community/evalchemy/tree/f42990450edf4e694fe5a22b3d23ed09ab42da1e/eval/chat_benchmarks/GPQADiamond/eval_instruct.py
+    implementations:
+      - framework: Evalchemy
+        status: unknown
+        evidence: []
+    work: []
+    notes:
+      - "Access: Native GPQADiamond base task; gated dataset access/terms. Full Diamond=198, biology
+        count must be derived from metadata."
+      - "Grading: Native generated-answer accuracy; preserve option shuffle, seeds and 3-sample
+        aggregation."
+      - "Limitations: Existing Marin ID eval. Subset uncertainty will be wider than full Diamond; no
+        reclassification to OOD."
+      - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
+        notes are historical."
+    provenance:
+      - sheet: Non-agentic (Evalchemy)
+        gid: 776831399
+        row: 8
+        evidence_date: 9/18/2026
+        imported_at: 2026-10-14
+  - id: gpqa-main-extended-biology
+    name: GPQA Main / Extended — biology
+    description: Graduate-level biology questions in GPQA Main and Extended, beyond the existing Diamond row.
+    creators:
+      - New York University
+      - Cohere
+      - Anthropic
+    assignment: ID
+    sources:
+      - label: Benchmark
+        url: https://arxiv.org/abs/2311.12022
+      - label: Scorer / data
+        url: https://huggingface.co/datasets/Idavidrein/gpqa
+      - label: Evalchemy / integration
+        url: https://github.com/EleutherAI/lm-evaluation-harness/tree/v0.4.12/lm_eval/tasks/gpqa
+    implementations:
+      - framework: Evalchemy
+        status: unknown
+        evidence: []
+    work: []
+    notes:
+      - "Access: Public password-packaged author release and gated HF dataset; Main/Extended/Diamond
+        overlap."
+      - "Grading: Four-choice accuracy with official option shuffling and prompt settings."
+      - "Limitations: Treat conservatively as ID because of overlap with GPQA Diamond; not a fresh
+        held-out suite."
+      - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
+        notes are historical."
+    provenance:
+      - sheet: Non-agentic (Evalchemy)
+        gid: 776831399
+        row: 64
+        evidence_date: 9/21/2026
+        imported_at: 2026-10-14

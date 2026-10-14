@@ -1,0 +1,45 @@
+id: core-bench
+name: CORE-Bench
+description: Computational reproducibility of biomedical papers within 270 tasks from 90 papers
+  across three fields.
+creators:
+  - Princeton University
+sources:
+  - label: Benchmark
+    url: https://arxiv.org/abs/2409.11363
+notes: []
+variants:
+  - id: core-bench-biomedical-papers
+    name: CORE-Bench — biomedical papers
+    description: Computational reproducibility of biomedical papers within 270 tasks from 90 papers
+      across three fields.
+    creators:
+      - Princeton University
+    assignment: ID
+    sources:
+      - label: Benchmark
+        url: https://arxiv.org/abs/2409.11363
+      - label: Scorer / data
+        url: https://huggingface.co/datasets/siegelz/core-bench
+      - label: Harbor / integration
+        url: https://github.com/marin-community/harbor/tree/b78a0e52af98015fc8416d5bd5ee649a284e5a4c/adapters
+    implementations:
+      - framework: Harbor
+        status: unknown
+        evidence: []
+    work: []
+    notes:
+      - "Access: Public benchmark/harness and linked computational capsules; dependencies and
+        capsule access must be checked."
+      - "Grading: Reference result checks, including numeric tolerances; all task questions must
+        meet the chosen success rule."
+      - "Limitations: Easy/medium/hard reveal different code/environment information. Some capsules
+        require substantial compute."
+      - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
+        notes are historical."
+    provenance:
+      - sheet: Agentic (Harbor)
+        gid: 846608904
+        row: 43
+        evidence_date: 9/21/2026
+        imported_at: 2026-10-14

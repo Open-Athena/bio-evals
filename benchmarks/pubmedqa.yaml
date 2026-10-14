@@ -1,0 +1,46 @@
+id: pubmedqa
+name: PubMedQA
+description: Biomedical question + abstract context; yes/no/maybe.
+creators:
+  - University of Pittsburgh
+  - Carnegie Mellon University
+  - Google AI
+sources:
+  - label: Benchmark
+    url: https://arxiv.org/abs/1909.06146
+notes: []
+variants:
+  - id: pubmedqa-labeled-abstract-qa
+    name: PubMedQA — labeled abstract QA
+    description: Biomedical question + abstract context; yes/no/maybe.
+    creators:
+      - University of Pittsburgh
+      - Carnegie Mellon University
+      - Google AI
+    assignment: TBD
+    sources:
+      - label: Benchmark
+        url: https://arxiv.org/abs/1909.06146
+      - label: Scorer / data
+        url: https://github.com/pubmedqa/pubmedqa
+      - label: Evalchemy / integration
+        url: https://github.com/EleutherAI/lm-evaluation-harness/tree/v0.4.12/lm_eval/tasks/pubmedqa/pubmedqa.yaml
+    implementations:
+      - framework: Evalchemy
+        status: unknown
+        evidence: []
+    work: []
+    notes:
+      - "Access: 1,000 expert-labeled PQA-L examples; native bigbio labeled-fold0
+        train/validation/test config."
+      - "Grading: Native likelihood accuracy over yes/no/maybe; deterministic reference label."
+      - "Limitations: Direct BLURB QA slice and reference from Genome-Bench. Cheap offline
+        biomedical reading baseline; original split matters."
+      - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
+        notes are historical."
+    provenance:
+      - sheet: Non-agentic (Evalchemy)
+        gid: 776831399
+        row: 9
+        evidence_date: 9/18/2026
+        imported_at: 2026-10-14

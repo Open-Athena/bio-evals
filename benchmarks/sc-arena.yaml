@@ -1,0 +1,49 @@
+id: sc-arena
+name: SC-Arena
+description: "Five single-cell language tasks: annotation, captioning, generation, perturbation
+  prediction and QA."
+creators:
+  - Shenzhen University of Advanced Technology
+  - Northeastern University (China)
+  - collaborators (see note)
+sources:
+  - label: Benchmark
+    url: https://arxiv.org/abs/2602.23199
+notes: []
+variants:
+  - id: sc-arena
+    name: SC-Arena
+    description: "Five single-cell language tasks: annotation, captioning, generation, perturbation
+      prediction and QA."
+    creators:
+      - Shenzhen University of Advanced Technology
+      - Northeastern University (China)
+      - collaborators (see note)
+    assignment: TBD
+    sources:
+      - label: Benchmark
+        url: https://arxiv.org/abs/2602.23199
+      - label: Scorer / data
+        url: https://github.com/SUAT-AIRI/SC-Arena/tree/f4480a220fa4872c4c747f52f8fc784401c592fc
+      - label: Evalchemy / integration
+        url: https://github.com/marin-community/evalchemy/tree/ab8e78f12abb8ed0d1659f56c24f2e01f3c85b54/eval/chat_benchmarks
+    implementations:
+      - framework: Evalchemy
+        status: unknown
+        evidence: []
+    work: []
+    notes:
+      - "Access: Public evaluation repository and example data/configurations; complete data
+        coverage needs validation."
+      - "Grading: Knowledge-augmented, task-specific metrics using ontology, marker and literature
+        information."
+      - "Limitations: Language-model evaluation of single-cell reasoning; keep task metrics distinct
+        and verify full versus example release."
+      - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
+        notes are historical."
+    provenance:
+      - sheet: Non-agentic (Evalchemy)
+        gid: 776831399
+        row: 24
+        evidence_date: 9/21/2026
+        imported_at: 2026-10-14

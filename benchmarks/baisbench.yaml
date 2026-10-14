@@ -1,0 +1,46 @@
+id: baisbench
+name: BAISBench
+description: single-cell annotation and data-grounded biological discovery
+creators:
+  - Tsinghua University
+  - Beijing Jiaotong University
+  - Capital Medical University
+sources:
+  - label: Benchmark
+    url: https://arxiv.org/abs/2505.08341
+notes: []
+variants:
+  - id: baisbench
+    name: BAISBench
+    description: single-cell annotation and data-grounded biological discovery
+    creators:
+      - Tsinghua University
+      - Beijing Jiaotong University
+      - Capital Medical University
+    assignment: ID
+    sources:
+      - label: Benchmark
+        url: https://arxiv.org/abs/2505.08341
+      - label: Scorer / data
+        url: https://github.com/EperLuo/BaisBench/tree/cfab1beb09a7cba999c16f01475fdca37fee5cac
+      - label: Harbor / integration
+        url: https://github.com/marin-community/harbor/tree/abdd67137bcd6e5c44d682d0052fbd1190e63556/adapters
+    implementations:
+      - framework: Harbor
+        status: unknown
+        evidence: []
+    work: []
+    notes:
+      - "Access: Public notebooks: 15 annotated datasets; 193 MC questions from 41 studies."
+      - "Grading: Annotation metrics and MC reference answers; validate end-to-end
+        extraction/scoring."
+      - "Limitations: Single-cell annotation and discovery are separate evaluation targets and
+        metrics."
+      - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
+        notes are historical."
+    provenance:
+      - sheet: Agentic (Harbor)
+        gid: 846608904
+        row: 12
+        evidence_date: 9/18/2026
+        imported_at: 2026-10-14

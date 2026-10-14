@@ -1,0 +1,42 @@
+id: bioreasonbench
+name: BioReasonBench
+description: Five figure-based biological reasoning pilot cases.
+creators:
+  - Unverified institutional affiliation — nayala1
+sources:
+  - label: Benchmark
+    url: https://github.com/nayala1/BioReasonBench
+notes: []
+variants:
+  - id: bioreasonbench-pilot
+    name: BioReasonBench — pilot
+    description: Five figure-based biological reasoning pilot cases.
+    creators:
+      - Unverified institutional affiliation — nayala1
+    assignment: TBD
+    sources:
+      - label: Benchmark
+        url: https://github.com/nayala1/BioReasonBench
+      - label: Scorer / data
+        url: https://github.com/nayala1/BioReasonBench/tree/b2e1c01f1670fc12d896d8781399af490dc9909c
+      - label: Evalchemy / integration
+        url: https://github.com/marin-community/evalchemy/tree/ab8e78f12abb8ed0d1659f56c24f2e01f3c85b54/eval/chat_benchmarks
+    implementations:
+      - framework: Evalchemy
+        status: unknown
+        evidence: []
+    work: []
+    notes:
+      - "Access: Public pilot repository with cases and evaluation materials."
+      - "Grading: Concept/lexical proxy plus expert review; not yet a validated general-purpose
+        judge."
+      - "Limitations: Tiny pilot with limited model comparisons; catalogued for coverage, not
+        treated as a mature suite."
+      - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
+        notes are historical."
+    provenance:
+      - sheet: Non-agentic (Evalchemy)
+        gid: 776831399
+        row: 54
+        evidence_date: 9/21/2026
+        imported_at: 2026-10-14

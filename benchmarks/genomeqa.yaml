@@ -1,0 +1,45 @@
+id: genomeqa
+name: GenomeQA
+description: Raw DNA sequence classification across 6 task families; 5,200 examples.
+creators:
+  - HKUST (Guangzhou)
+  - University of Hong Kong
+  - Peking University
+sources:
+  - label: Benchmark
+    url: https://arxiv.org/abs/2604.05774
+notes: []
+variants:
+  - id: genomeqa-sequence-understanding
+    name: GenomeQA — sequence understanding
+    description: Raw DNA sequence classification across 6 task families; 5,200 examples.
+    creators:
+      - HKUST (Guangzhou)
+      - University of Hong Kong
+      - Peking University
+    assignment: TBD
+    sources:
+      - label: Benchmark
+        url: https://arxiv.org/abs/2604.05774
+      - label: Scorer / data
+        url: https://arxiv.org/html/2604.05774v1
+      - label: Evalchemy / integration
+        url: https://github.com/marin-community/evalchemy/tree/f42990450edf4e694fe5a22b3d23ed09ab42da1e/eval/chat_benchmarks
+    implementations:
+      - framework: Evalchemy
+        status: unknown
+        evidence: []
+    work: []
+    notes:
+      - "Access: Paper accessible; no author-linked runnable release located in this audit."
+      - "Grading: Task-label classification metrics; reproduce the paper's task-level protocol."
+      - "Limitations: Native sequence capability complement to Genome-Bench's text knowledge QA.
+        Distinct from ClawBio's same-name agent benchmark."
+      - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
+        notes are historical."
+    provenance:
+      - sheet: Non-agentic (Evalchemy)
+        gid: 776831399
+        row: 13
+        evidence_date: 9/18/2026
+        imported_at: 2026-10-14

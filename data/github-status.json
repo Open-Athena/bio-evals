@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "attempted_at": "2026-10-14T21:05:53.285Z",
+  "last_successful_fetch_at": "2026-10-14T21:05:53.285Z",
+  "complete": true,
+  "items": {
+    "https://github.com/marin-community/harbor/issues/166": {
+      "url": "https://github.com/marin-community/harbor/issues/166",
+      "kind": "issue",
+      "number": 166,
+      "title": "[bixbench] Judge can exhaust its token budget without valid JSON",
+      "state": "closed",
+      "assignees": [],
+      "updated_at": "2026-09-21T15:20:16Z",
+      "fetched_at": "2026-10-14T21:05:53.285Z",
+      "stale": false,
+      "error": null
+    },
+    "https://github.com/marin-community/harbor/issues/177": {
+      "url": "https://github.com/marin-community/harbor/issues/177",
+      "kind": "issue",
+      "number": 177,
+      "title": "[bixbench] Port Phylo's BixBench-Verified-50",
+      "state": "closed",
+      "assignees": [],
+      "updated_at": "2026-09-22T13:57:24Z",
+      "fetched_at": "2026-10-14T21:05:53.285Z",
+      "stale": false,
+      "error": null
+    },
+    "https://github.com/marin-community/harbor/issues/192": {
+      "url": "https://github.com/marin-community/harbor/issues/192",
+      "kind": "issue",
+      "number": 192,
+      "title": "[bixbench-verified-50] Resolve grading, reference and runtime issues",
+      "state": "open",
+      "assignees": [],
+      "updated_at": "2026-09-22T14:05:43Z",
+      "fetched_at": "2026-10-14T21:05:53.285Z",
+      "stale": false,
+      "error": null
+    },
+    "https://github.com/marin-community/harbor/pull/174": {
+      "url": "https://github.com/marin-community/harbor/pull/174",
+      "kind": "pr",
+      "number": 174,
+      "title": "[bixbench] Request the judge JSON schema explicitly",
+      "state": "merged",
+      "assignees": [],
+      "updated_at": "2026-09-21T15:20:16Z",
+      "fetched_at": "2026-10-14T21:05:53.285Z",
+      "stale": false,
+      "error": null
+    },
+    "https://github.com/marin-community/harbor/pull/180": {
+      "url": "https://github.com/marin-community/harbor/pull/180",
+      "kind": "pr",
+      "number": 180,
+      "title": "[bixbench] Add Phylo's BixBench-Verified-50",
+      "state": "merged",
+      "assignees": [],
+      "updated_at": "2026-09-22T13:57:26Z",
+      "fetched_at": "2026-10-14T21:05:53.285Z",
+      "stale": false,
+      "error": null
+    },
+    "https://github.com/marin-community/marin/issues/9258": {
+      "url": "https://github.com/marin-community/marin/issues/9258",
+      "kind": "issue",
+      "number": 9258,
+      "title": "Track biology evals",
+      "state": "open",
+      "assignees": [],
+      "updated_at": "2026-10-09T19:23:45Z",
+      "fetched_at": "2026-10-14T21:05:53.285Z",
+      "stale": false,
+      "error": null
+    }
+  },
+  "usable": true
+}

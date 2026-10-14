@@ -1,0 +1,45 @@
+id: scifact
+name: SciFact
+description: Scientific claim verification with biomedical abstracts and supporting/refuting evidence.
+creators:
+  - Allen Institute for AI
+  - University of Washington
+sources:
+  - label: Benchmark
+    url: https://github.com/allenai/SciRIFF/blob/main/doc/evaluation_tasks.md
+notes: []
+variants:
+  - id: scifact-llm-protocol
+    name: SciFact — LLM protocol
+    description: Scientific claim verification with biomedical abstracts and supporting/refuting evidence.
+    creators:
+      - Allen Institute for AI
+      - University of Washington
+    assignment: TBD
+    sources:
+      - label: Benchmark
+        url: https://github.com/allenai/SciRIFF/blob/main/doc/evaluation_tasks.md
+      - label: Scorer / data
+        url: https://huggingface.co/datasets/allenai/scifact
+      - label: Evalchemy / integration
+        url: https://github.com/marin-community/evalchemy/tree/ab8e78f12abb8ed0d1659f56c24f2e01f3c85b54/eval/chat_benchmarks
+    implementations:
+      - framework: Evalchemy
+        status: unknown
+        evidence: []
+    work: []
+    notes:
+      - "Access: Public SciFact corpus/repository and SciRIFF LLM task specification; confirm labels
+        for chosen split."
+      - "Grading: SciRIFF prompted-LLM protocol: claim-label and evidence scoring; retain original
+        task definitions."
+      - "Limitations: SciFact predates modern LLMs; included here for its documented prompted-LLM
+        protocol. Do not double-count within ScholarQABench."
+      - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
+        notes are historical."
+    provenance:
+      - sheet: Non-agentic (Evalchemy)
+        gid: 776831399
+        row: 36
+        evidence_date: 9/21/2026
+        imported_at: 2026-10-14

@@ -1,0 +1,47 @@
+id: sciencearena
+name: ScienceArena
+description: Recent science Olympiad problems, including a biology competition slice.
+creators:
+  - Qiyuan Tech
+  - Tsinghua University
+  - University of Hong Kong
+  - Peking University
+sources:
+  - label: Benchmark
+    url: https://arxiv.org/abs/2608.30517
+notes: []
+variants:
+  - id: sciencearena-biology
+    name: ScienceArena — biology
+    description: Recent science Olympiad problems, including a biology competition slice.
+    creators:
+      - Qiyuan Tech
+      - Tsinghua University
+      - University of Hong Kong
+      - Peking University
+    assignment: TBD
+    sources:
+      - label: Benchmark
+        url: https://arxiv.org/abs/2608.30517
+      - label: Scorer / data
+        url: https://arxiv.org/abs/2608.30517
+      - label: Evalchemy / integration
+        url: https://github.com/marin-community/evalchemy/tree/ab8e78f12abb8ed0d1659f56c24f2e01f3c85b54/eval/chat_benchmarks
+    implementations:
+      - framework: Evalchemy
+        status: unknown
+        evidence: []
+    work: []
+    notes:
+      - "Access: Paper identified; official runnable data/scorer release not located."
+      - "Grading: Paper-described answer/process-rubric evaluation; released scorer not verified."
+      - "Limitations: Distinct from OlympicArena; public competition questions may overlap other
+        exam benchmarks."
+      - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
+        notes are historical."
+    provenance:
+      - sheet: Non-agentic (Evalchemy)
+        gid: 776831399
+        row: 44
+        evidence_date: 9/21/2026
+        imported_at: 2026-10-14

@@ -1,0 +1,43 @@
+id: biothreat-eval
+name: BioThreat-Eval
+description: Repository-stage biological risk/refusal proxy evaluation.
+creators:
+  - Weill Cornell Medicine (author affiliation)
+sources:
+  - label: Benchmark
+    url: https://github.com/jang1563/biothreat-eval
+notes: []
+variants:
+  - id: biothreat-eval-proxy-suite
+    name: BioThreat-Eval — proxy suite
+    description: Repository-stage biological risk/refusal proxy evaluation.
+    creators:
+      - Weill Cornell Medicine (author affiliation)
+    assignment: TBD
+    sources:
+      - label: Benchmark
+        url: https://github.com/jang1563/biothreat-eval
+      - label: Scorer / data
+        url: https://huggingface.co/datasets/jang1563/biothreat-eval
+      - label: Evalchemy / integration
+        url: https://github.com/marin-community/evalchemy/tree/ab8e78f12abb8ed0d1659f56c24f2e01f3c85b54/eval/chat_benchmarks
+    implementations:
+      - framework: Evalchemy
+        status: unknown
+        evidence: []
+    work: []
+    notes:
+      - "Access: Public framework and HF repository; code ships six benign proxy examples rather
+        than the complete intended bank."
+      - "Grading: Cross-provider model judging and proxy risk summaries; independent validation
+        required."
+      - "Limitations: Proxy risk scores do not establish real biological capabilities; release scope
+        and fallback behavior must be explicit."
+      - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
+        notes are historical."
+    provenance:
+      - sheet: Non-agentic (Evalchemy)
+        gid: 776831399
+        row: 55
+        evidence_date: 9/21/2026
+        imported_at: 2026-10-14

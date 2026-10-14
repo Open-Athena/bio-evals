@@ -1,0 +1,48 @@
+id: bio-benchmark
+name: Bio-benchmark
+description: 30 prompted LLM tasks across bioinformatics/biomedical NLP, proteins, RNA, drugs and
+  clinical records.
+creators:
+  - Chinese University of Hong Kong
+  - University of Hong Kong
+  - Shanghai AI Laboratory
+sources:
+  - label: Benchmark
+    url: https://arxiv.org/abs/2503.04013
+notes: []
+variants:
+  - id: bio-benchmark-biological-tasks
+    name: Bio-benchmark — biological tasks
+    description: 30 prompted LLM tasks across bioinformatics/biomedical NLP, proteins, RNA, drugs and
+      clinical records.
+    creators:
+      - Chinese University of Hong Kong
+      - University of Hong Kong
+      - Shanghai AI Laboratory
+    assignment: TBD
+    sources:
+      - label: Benchmark
+        url: https://arxiv.org/abs/2503.04013
+      - label: Scorer / data
+        url: https://arxiv.org/abs/2503.04013
+      - label: Evalchemy / integration
+        url: https://github.com/marin-community/evalchemy/tree/ab8e78f12abb8ed0d1659f56c24f2e01f3c85b54/eval/chat_benchmarks
+    implementations:
+      - framework: Evalchemy
+        status: unknown
+        evidence: []
+    work: []
+    notes:
+      - "Access: Paper identified; official consolidated data/scorer release not located."
+      - "Grading: Heterogeneous task-specific metrics; full reproducible evaluation implementation
+        not verified."
+      - "Limitations: General biomedical coverage; a biology-only score requires an explicit subset
+        and original metrics."
+      - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
+        notes are historical."
+    provenance:
+      - sheet: Non-agentic (Evalchemy)
+        gid: 776831399
+        row: 31
+        evidence_date: 9/21/2026
+        imported_at: 2026-10-14

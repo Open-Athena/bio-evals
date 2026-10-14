@@ -1,0 +1,47 @@
+id: researchbench
+name: ResearchBench
+description: Biology/cell-biology literature inspiration retrieval, hypothesis generation and ranking.
+creators:
+  - Shanghai AI Laboratory
+  - Fudan University
+  - collaborators (see note)
+sources:
+  - label: Benchmark
+    url: https://aclanthology.org/2026.findings-acl.644/
+notes: []
+variants:
+  - id: researchbench-biology-cell-biology
+    name: ResearchBench — biology / cell biology
+    description: Biology/cell-biology literature inspiration retrieval, hypothesis generation and ranking.
+    creators:
+      - Shanghai AI Laboratory
+      - Fudan University
+      - collaborators (see note)
+    assignment: TBD
+    sources:
+      - label: Benchmark
+        url: https://aclanthology.org/2026.findings-acl.644/
+      - label: Scorer / data
+        url: https://huggingface.co/datasets/ankilok/ResearchBench
+      - label: Evalchemy / integration
+        url: https://github.com/marin-community/evalchemy/tree/ab8e78f12abb8ed0d1659f56c24f2e01f3c85b54/eval/chat_benchmarks
+    implementations:
+      - framework: Evalchemy
+        status: unknown
+        evidence: []
+    work: []
+    notes:
+      - "Access: Paper and auto-gated ankilok/ResearchBench repository metadata public; gated
+        contents not accessed."
+      - "Grading: Track-specific hypothesis/retrieval/ranking evaluation; executable grader
+        configuration needs confirmation."
+      - "Limitations: Multi-discipline benchmark; direct hypothesis/ranking protocol listed here. An
+        autonomous retrieval workflow needs its own protocol."
+      - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
+        notes are historical."
+    provenance:
+      - sheet: Non-agentic (Evalchemy)
+        gid: 776831399
+        row: 43
+        evidence_date: 9/21/2026
+        imported_at: 2026-10-14

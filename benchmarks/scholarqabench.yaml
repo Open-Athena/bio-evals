@@ -1,0 +1,48 @@
+id: scholarqabench
+name: ScholarQABench
+description: Biomedical scientific literature retrieval and long-form synthesis in ScholarQABench/OpenScholar.
+creators:
+  - Allen Institute for AI
+  - University of Washington
+  - collaborators (see note)
+sources:
+  - label: Benchmark
+    url: https://allenai.org/blog/openscilm
+notes: []
+variants:
+  - id: scholarqabench-biomedicine
+    name: ScholarQABench — biomedicine
+    description: Biomedical scientific literature retrieval and long-form synthesis in
+      ScholarQABench/OpenScholar.
+    creators:
+      - Allen Institute for AI
+      - University of Washington
+      - collaborators (see note)
+    assignment: ID
+    sources:
+      - label: Benchmark
+        url: https://allenai.org/blog/openscilm
+      - label: Scorer / data
+        url: https://github.com/AkariAsai/ScholarQABench/tree/95e6fc52b0a8a0ce0a74956029991e3bb00c38b9
+      - label: Harbor / integration
+        url: https://github.com/marin-community/harbor/tree/b78a0e52af98015fc8416d5bd5ee649a284e5a4c/adapters
+    implementations:
+      - framework: Harbor
+        status: unknown
+        evidence: []
+    work: []
+    notes:
+      - "Access: Public ScholarQABench benchmark repository; retrieval corpus/index and evaluator
+        setup required."
+      - "Grading: Answer quality, evidence/citation and task-specific reference grading; some
+        scoring uses model judges."
+      - "Limitations: Suite reuses tasks including SciFact and PubMedQA; mark overlap rather than
+        count all as independent evidence."
+      - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
+        notes are historical."
+    provenance:
+      - sheet: Agentic (Harbor)
+        gid: 846608904
+        row: 42
+        evidence_date: 9/21/2026
+        imported_at: 2026-10-14

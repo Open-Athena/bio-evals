@@ -1,0 +1,141 @@
+id: bioprobench
+name: BioProBench
+description: Biological protocol understanding, error detection, step ordering, generation, and
+  reasoning conditions.
+creators:
+  - Peking University
+sources:
+  - label: Benchmark
+    url: https://arxiv.org/abs/2505.07889
+notes:
+  - Family grouping is for navigation; variants may have different creators, datasets, grading
+    protocols, and internal assignments.
+variants:
+  - id: bioprobench-pqa-err
+    name: BioProBench — PQA / ERR
+    description: Protocol MCQ and context-dependent step-error detection.
+    creators:
+      - Peking University
+    assignment: TBD
+    sources:
+      - label: Benchmark
+        url: https://arxiv.org/abs/2505.07889
+      - label: Scorer / data
+        url: https://github.com/YuyangSunshine/bioprobench/tree/cf00fecd62583b98350cc48e26a29c92d3f21e5d/Data
+      - label: Evalchemy / integration
+        url: https://github.com/marin-community/evalchemy/tree/f42990450edf4e694fe5a22b3d23ed09ab42da1e/eval/chat_benchmarks
+    implementations:
+      - framework: Evalchemy
+        status: unknown
+        evidence: []
+    work: []
+    notes:
+      - "Access: Public JSON tests: 1,200 PQA and 1,200 ERR items at the audited revision; scorer
+        code available."
+      - "Grading: PQA exact choice accuracy + confidence Brier score; ERR
+        accuracy/precision/recall/F1. No LLM judge for these slices."
+      - "Limitations: Procedural reasoning beyond broad biology facts. Current release differs from
+        the older paper; pin dataset, prompts and scorer together."
+      - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
+        notes are historical."
+    provenance:
+      - sheet: Non-agentic (Evalchemy)
+        gid: 776831399
+        row: 4
+        evidence_date: 9/18/2026
+        imported_at: 2026-10-14
+  - id: bioprobench-step-ordering-ord
+    name: BioProBench — step ordering (ORD)
+    description: "BioProBench step ordering (ORD): recover the order of biological protocol steps."
+    creators:
+      - Peking University
+    assignment: TBD
+    sources:
+      - label: Benchmark
+        url: https://arxiv.org/abs/2505.07889
+      - label: Scorer / data
+        url: https://huggingface.co/datasets/BioProBench/BioProBench
+      - label: Evalchemy / integration
+        url: https://github.com/marin-community/evalchemy/tree/ab8e78f12abb8ed0d1659f56c24f2e01f3c85b54/eval/chat_benchmarks
+    implementations:
+      - framework: Evalchemy
+        status: unknown
+        evidence: []
+    work: []
+    notes:
+      - "Access: Public ORD train/test JSON and official metric script."
+      - "Grading: Exact-match order accuracy and Kendall’s tau using Metrics/ORD.py."
+      - "Limitations: Additional task family within BioProBench, not an independent benchmark;
+        shares paper/repository/dataset popularity."
+      - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
+        notes are historical."
+    provenance:
+      - sheet: Non-agentic (Evalchemy)
+        gid: 776831399
+        row: 58
+        evidence_date: 9/21/2026
+        imported_at: 2026-10-14
+  - id: bioprobench-protocol-generation-gen
+    name: BioProBench — protocol generation (GEN)
+    description: BioProBench protocol generation (GEN).
+    creators:
+      - Peking University
+    assignment: TBD
+    sources:
+      - label: Benchmark
+        url: https://arxiv.org/abs/2505.07889
+      - label: Scorer / data
+        url: https://huggingface.co/datasets/BioProBench/BioProBench
+      - label: Evalchemy / integration
+        url: https://github.com/marin-community/evalchemy/tree/ab8e78f12abb8ed0d1659f56c24f2e01f3c85b54/eval/chat_benchmarks
+    implementations:
+      - framework: Evalchemy
+        status: unknown
+        evidence: []
+    work: []
+    notes:
+      - "Access: Public GEN train/test data and official metric script."
+      - "Grading: BLEU, keyword-based metrics and step recall/precision via Metrics/GEN.py."
+      - "Limitations: Protocol-text similarity is a proxy, not evidence of successful physical
+        execution; shares BioProBench corpus."
+      - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
+        notes are historical."
+    provenance:
+      - sheet: Non-agentic (Evalchemy)
+        gid: 776831399
+        row: 59
+        evidence_date: 9/21/2026
+        imported_at: 2026-10-14
+  - id: bioprobench-protocol-reasoning-rea
+    name: BioProBench — protocol reasoning (REA)
+    description: BioProBench reasoning conditions, including REA-ERR and REA-GEN.
+    creators:
+      - Peking University
+    assignment: TBD
+    sources:
+      - label: Benchmark
+        url: https://arxiv.org/abs/2505.07889
+      - label: Scorer / data
+        url: https://huggingface.co/datasets/BioProBench/BioProBench
+      - label: Evalchemy / integration
+        url: https://github.com/marin-community/evalchemy/tree/ab8e78f12abb8ed0d1659f56c24f2e01f3c85b54/eval/chat_benchmarks
+    implementations:
+      - framework: Evalchemy
+        status: unknown
+        evidence: []
+    work: []
+    notes:
+      - "Access: Public task files and reasoning/inference scripts; exact condition-to-split mapping
+        must be pinned."
+      - "Grading: Official REA-ERR accuracy/precision/recall/consistency; verify REA-GEN grading
+        separately."
+      - "Limitations: Reasoning-conditioned variants reuse BioProBench tasks; do not count them as
+        independent question banks."
+      - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
+        notes are historical."
+    provenance:
+      - sheet: Non-agentic (Evalchemy)
+        gid: 776831399
+        row: 60
+        evidence_date: 9/21/2026
+        imported_at: 2026-10-14

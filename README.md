@@ -1,14 +1,20 @@
 # Biology evaluations
 
-A public catalog of agentic biology evaluations: task examples, implementation
-status, owners, blockers, and model results.
+A public catalog of biology evaluations: what they measure, benchmark variants,
+implementation status, and linked GitHub issues and PRs.
 
-The repository currently contains the [implementation handoff](HANDOFF.md).
-The explorer, catalog import, and GitHub Pages deployment are not implemented yet.
+The catalog contains 94 benchmark families and 120 variant/protocol entries,
+imported from both spreadsheet tabs. It uses Observable Framework with a
+searchable overview, family pages, and daily GitHub issue/PR status snapshots.
 
-The intended workflow is to edit structured source records, commit directly to
-`main`, and have GitHub Actions validate the records and deploy the generated
-HTML to GitHub Pages. Larger code changes may use pull requests.
+[Project issues and scope](docs/issues/README.md) ·
+[Contributing](CONTRIBUTING.md) · [Import reconciliation](docs/import.md)
 
-Evaluation adapters remain in Harbor. This repository will hold catalog metadata,
-selected examples, and result summaries with links to their evidence.
+Edit YAML records in `benchmarks/` and commit to main. GitHub Actions validates
+the records, runs focused tests and browser checks, and deploys to GitHub Pages.
+Linked GitHub status refreshes daily and on catalog deployments, with a manual
+refresh option. The workflow is configured; the first live deployment is pending.
+
+Evaluation adapters remain in their framework repositories. Model attempts
+and result displays are deferred; the explorer focuses on understanding
+evaluations and coordinating implementation.

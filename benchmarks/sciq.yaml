@@ -1,0 +1,46 @@
+id: sciq
+name: SciQ
+description: Biology questions within 13,679 crowdsourced science questions.
+creators:
+  - University College London
+  - University of Washington
+  - Allen Institute for AI
+sources:
+  - label: Benchmark
+    url: https://arxiv.org/abs/1707.06209
+notes: []
+variants:
+  - id: sciq-biology
+    name: SciQ — biology
+    description: Biology questions within 13,679 crowdsourced science questions.
+    creators:
+      - University College London
+      - University of Washington
+      - Allen Institute for AI
+    assignment: TBD
+    sources:
+      - label: Benchmark
+        url: https://arxiv.org/abs/1707.06209
+      - label: Scorer / data
+        url: https://huggingface.co/datasets/allenai/sciq
+      - label: Evalchemy / integration
+        url: https://github.com/EleutherAI/lm-evaluation-harness/tree/v0.4.12/lm_eval/tasks/sciq
+    implementations:
+      - framework: Evalchemy
+        status: unknown
+        evidence: []
+    work: []
+    notes:
+      - "Access: Public allenai/sciq dataset; upstream lm-eval task exists, but biology subset
+        mapping needs verification."
+      - "Grading: Four-choice accuracy under an explicit supplied-support or closed-book protocol."
+      - "Limitations: General science bank, not a prepackaged biology benchmark. The support passage
+        changes the evaluation condition."
+      - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
+        notes are historical."
+    provenance:
+      - sheet: Non-agentic (Evalchemy)
+        gid: 776831399
+        row: 68
+        evidence_date: 9/21/2026
+        imported_at: 2026-10-14

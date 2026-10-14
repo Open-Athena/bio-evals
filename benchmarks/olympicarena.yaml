@@ -1,0 +1,45 @@
+id: olympicarena
+name: OlympicArena
+description: Biology subset of 11,163 competition problems across seven disciplines; text and images.
+creators:
+  - Shanghai Jiao Tong University / GAIR
+  - Shanghai AI Laboratory
+  - Soochow University
+sources:
+  - label: Benchmark
+    url: https://github.com/GAIR-NLP/OlympicArena
+notes: []
+variants:
+  - id: olympicarena-biology
+    name: OlympicArena — biology
+    description: Biology subset of 11,163 competition problems across seven disciplines; text and images.
+    creators:
+      - Shanghai Jiao Tong University / GAIR
+      - Shanghai AI Laboratory
+      - Soochow University
+    assignment: TBD
+    sources:
+      - label: Benchmark
+        url: https://github.com/GAIR-NLP/OlympicArena
+      - label: Scorer / data
+        url: https://huggingface.co/datasets/GAIR/OlympicArena
+      - label: Evalchemy / integration
+        url: https://github.com/marin-community/evalchemy/tree/ab8e78f12abb8ed0d1659f56c24f2e01f3c85b54/eval/chat_benchmarks
+    implementations:
+      - framework: Evalchemy
+        status: unknown
+        evidence: []
+    work: []
+    notes:
+      - "Access: Public OlympicArena repository, evaluation code and HF dataset."
+      - "Grading: Official answer extraction/correctness with task-format-specific handling."
+      - "Limitations: Multidisciplinary total is not biology count. Competition sources may overlap
+        ScienceArena or exam collections."
+      - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
+        notes are historical."
+    provenance:
+      - sheet: Non-agentic (Evalchemy)
+        gid: 776831399
+        row: 45
+        evidence_date: 9/21/2026
+        imported_at: 2026-10-14

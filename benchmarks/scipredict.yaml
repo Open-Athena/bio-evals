@@ -1,0 +1,48 @@
+id: scipredict
+name: SciPredict
+description: Biology subset of 405 questions about empirical outcomes across biology, chemistry and physics.
+creators:
+  - Scale AI
+  - UCLA
+  - University of Maryland
+  - Princeton University
+sources:
+  - label: Benchmark
+    url: https://github.com/scaleapi/scipredict
+notes: []
+variants:
+  - id: scipredict-biology
+    name: SciPredict — biology
+    description: Biology subset of 405 questions about empirical outcomes across biology, chemistry and physics.
+    creators:
+      - Scale AI
+      - UCLA
+      - University of Maryland
+      - Princeton University
+    assignment: TBD
+    sources:
+      - label: Benchmark
+        url: https://github.com/scaleapi/scipredict
+      - label: Scorer / data
+        url: https://github.com/scaleapi/scipredict/tree/e7f60301bdb61f09e8ed1c54a9b47c063cb4a379
+      - label: Evalchemy / integration
+        url: https://github.com/marin-community/evalchemy/tree/ab8e78f12abb8ed0d1659f56c24f2e01f3c85b54/eval/chat_benchmarks
+    implementations:
+      - framework: Evalchemy
+        status: unknown
+        evidence: []
+    work: []
+    notes:
+      - "Access: Public SciPredict data and evaluation code."
+      - "Grading: Choice/numerical scoring plus model-based free-response grading, depending on
+        question format."
+      - "Limitations: Predicting published experimental outcomes differs from executing new
+        experiments; preserve temporal/contamination controls."
+      - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
+        notes are historical."
+    provenance:
+      - sheet: Non-agentic (Evalchemy)
+        gid: 776831399
+        row: 42
+        evidence_date: 9/21/2026
+        imported_at: 2026-10-14

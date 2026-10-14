@@ -1,0 +1,44 @@
+id: targetval-popper
+name: TargetVal (Popper)
+description: Drug-target hypothesis validation with Popper’s sequential statistical experiments.
+creators:
+  - Stanford University
+  - Harvard University
+sources:
+  - label: Benchmark
+    url: https://arxiv.org/abs/2502.09858
+notes: []
+variants:
+  - id: targetval-popper
+    name: TargetVal (Popper)
+    description: Drug-target hypothesis validation with Popper’s sequential statistical experiments.
+    creators:
+      - Stanford University
+      - Harvard University
+    assignment: ID
+    sources:
+      - label: Benchmark
+        url: https://arxiv.org/abs/2502.09858
+      - label: Scorer / data
+        url: https://github.com/snap-stanford/POPPER/tree/59611864e09dd15d7528e240ad87c7ddbb4a701c
+      - label: Harbor / integration
+        url: https://github.com/marin-community/harbor/tree/b78a0e52af98015fc8416d5bd5ee649a284e5a4c/adapters
+    implementations:
+      - framework: Harbor
+        status: unknown
+        evidence: []
+    work: []
+    notes:
+      - "Access: Public POPPER code and linked TargetVal evaluation data/setup."
+      - "Grading: Hypothesis decisions supported by sequential falsification/statistical testing;
+        preserve error-control protocol."
+      - "Limitations: TargetVal is the benchmark within the larger Popper project; stars/citations
+        cover the full project/paper."
+      - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
+        notes are historical."
+    provenance:
+      - sheet: Agentic (Harbor)
+        gid: 846608904
+        row: 40
+        evidence_date: 9/21/2026
+        imported_at: 2026-10-14

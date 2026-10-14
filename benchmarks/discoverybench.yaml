@@ -1,0 +1,48 @@
+id: discoverybench
+name: DiscoveryBench
+description: Data-driven scientific discovery; biology slice of 264 real tasks, with a separate
+  synthetic collection.
+creators:
+  - Allen Institute for AI
+  - OpenLocus
+  - University of Massachusetts Amherst
+sources:
+  - label: Benchmark
+    url: https://arxiv.org/abs/2407.01725
+notes: []
+variants:
+  - id: discoverybench-biology
+    name: DiscoveryBench — biology
+    description: Data-driven scientific discovery; biology slice of 264 real tasks, with a separate
+      synthetic collection.
+    creators:
+      - Allen Institute for AI
+      - OpenLocus
+      - University of Massachusetts Amherst
+    assignment: ID
+    sources:
+      - label: Benchmark
+        url: https://arxiv.org/abs/2407.01725
+      - label: Scorer / data
+        url: https://huggingface.co/datasets/allenai/discoverybench
+      - label: Harbor / integration
+        url: https://github.com/marin-community/harbor/tree/b78a0e52af98015fc8416d5bd5ee649a284e5a4c/adapters
+    implementations:
+      - framework: Harbor
+        status: unknown
+        evidence: []
+    work: []
+    notes:
+      - "Access: Public datasets and evaluation code on GitHub/HF."
+      - "Grading: Facet-based hypothesis comparison with model-assisted grading against reference
+        discoveries."
+      - "Limitations: Real and synthetic tasks are separate tracks; the whole benchmark count is not
+        the biology count."
+      - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
+        notes are historical."
+    provenance:
+      - sheet: Agentic (Harbor)
+        gid: 846608904
+        row: 41
+        evidence_date: 9/21/2026
+        imported_at: 2026-10-14

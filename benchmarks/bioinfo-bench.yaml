@@ -1,0 +1,42 @@
+id: bioinfo-bench
+name: Bioinfo-Bench
+description: Bioinformatics knowledge acquisition, analysis and application across 10 domains.
+creators:
+  - Shanghai Jiao Tong University
+sources:
+  - label: Benchmark
+    url: https://doi.org/10.1101/2023.10.18.563023
+notes: []
+variants:
+  - id: bioinfo-bench
+    name: Bioinfo-Bench
+    description: Bioinformatics knowledge acquisition, analysis and application across 10 domains.
+    creators:
+      - Shanghai Jiao Tong University
+    assignment: TBD
+    sources:
+      - label: Benchmark
+        url: https://doi.org/10.1101/2023.10.18.563023
+      - label: Scorer / data
+        url: https://huggingface.co/datasets/Qiyuan04/bioinfo-bench
+      - label: Evalchemy / integration
+        url: https://github.com/marin-community/evalchemy/tree/ab8e78f12abb8ed0d1659f56c24f2e01f3c85b54/eval/chat_benchmarks
+    implementations:
+      - framework: Evalchemy
+        status: unknown
+        evidence: []
+    work: []
+    notes:
+      - "Access: Author repository and public Qiyuan04/bioinfo-bench dataset; schema/scorer need
+        validation."
+      - "Grading: Task-specific QA/analysis evaluation; validate released reference fields and
+        answer normalization."
+      - "Limitations: Distinct from BioinformaticsBench and BioLLMBench despite similar names."
+      - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
+        notes are historical."
+    provenance:
+      - sheet: Non-agentic (Evalchemy)
+        gid: 776831399
+        row: 21
+        evidence_date: 9/21/2026
+        imported_at: 2026-10-14

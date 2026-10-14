@@ -1,0 +1,41 @@
+id: bio-task-bench
+name: Bio-Task Bench
+description: 34 original executable biological tasks across 10 domains in Bio-Task Bench.
+creators:
+  - GPTomics (project team)
+sources:
+  - label: Benchmark
+    url: https://github.com/GPTomics/bioTaskBench
+notes: []
+variants:
+  - id: bio-task-bench-original-tasks
+    name: Bio-Task Bench — original tasks
+    description: 34 original executable biological tasks across 10 domains in Bio-Task Bench.
+    creators:
+      - GPTomics (project team)
+    assignment: ID
+    sources:
+      - label: Benchmark
+        url: https://github.com/GPTomics/bioTaskBench
+      - label: Scorer / data
+        url: https://github.com/GPTomics/bioTaskBench/tree/c9206d570098349143fec3d14d97699928a3bb13
+      - label: Harbor / integration
+        url: https://github.com/marin-community/harbor/tree/b78a0e52af98015fc8416d5bd5ee649a284e5a4c/adapters
+    implementations:
+      - framework: Harbor
+        status: unknown
+        evidence: []
+    work: []
+    notes:
+      - "Access: Public original tasks, runners and tests; external benchmark adapters also present."
+      - "Grading: Task-specific deterministic tests over produced outputs."
+      - "Limitations: Count original tasks separately from adapters to other benchmark families;
+        repository coverage is not all independent data."
+      - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
+        notes are historical."
+    provenance:
+      - sheet: Agentic (Harbor)
+        gid: 846608904
+        row: 46
+        evidence_date: 9/21/2026
+        imported_at: 2026-10-14

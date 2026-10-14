@@ -1,0 +1,75 @@
+id: terminal-bench-science
+name: Terminal-Bench-Science
+description: Executable scientific workflows in life sciences, with a separately listed upcoming lite release.
+creators:
+  - Terminal-Bench-Science Team
+sources:
+  - label: Benchmark
+    url: https://github.com/harbor-framework/terminal-bench-science
+notes:
+  - Family grouping is for navigation; variants may have different creators, datasets, grading
+    protocols, and internal assignments.
+variants:
+  - id: terminal-bench-science-life-sciences
+    name: Terminal-Bench-Science, life sciences
+    description: scientific workflows
+    creators:
+      - Terminal-Bench-Science Team
+    assignment: OOD
+    sources:
+      - label: Benchmark
+        url: https://github.com/harbor-framework/terminal-bench-science
+      - label: Scorer / data
+        url: https://github.com/harbor-framework/terminal-bench-science/tree/ff55a1b0810a5cc2ebac3ebb007cbe6a26aa2e3b/tasks/life-sciences/biology/genomic-model-ranking/tests
+      - label: Harbor / integration
+        url: https://github.com/harbor-framework/terminal-bench-science
+    implementations:
+      - framework: Harbor
+        status: unknown
+        evidence: []
+    work: []
+    notes:
+      - "Access: Task files, fixtures, and oracle available; one Harbor/Daytona oracle passed."
+      - "Grading: Executable task verifier; genomic-model-ranking needs no judge API."
+      - "Limitations: Prepared smoke test, not a suite score. Diagnostic agent limit 15 minutes
+        versus native 8 hours."
+      - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
+        notes are historical."
+    provenance:
+      - sheet: Agentic (Harbor)
+        gid: 846608904
+        row: 4
+        evidence_date: 9/18/2026
+        imported_at: 2026-10-14
+  - id: terminal-bench-science-lite-upcoming
+    name: Terminal-Bench-Science-lite — upcoming
+    description: Upcoming science-lite life-sciences slice; composition pending release.
+    creators:
+      - Unverified — upcoming lite release
+    assignment: OOD
+    sources:
+      - label: Benchmark
+        url: https://docs.google.com/document/d/1UnoAHNlkRAskxC9fAnF1SMpiU4QnFg-A8x9aXoEQ_MI/edit
+      - label: Scorer / data
+        url: https://github.com/harbor-framework/terminal-bench-science
+      - label: Harbor / integration
+        url: https://github.com/marin-community/harbor/tree/9551f376157d90104011107dcbf9ca3621228126/adapters
+    implementations:
+      - framework: Harbor
+        status: unknown
+        evidence: []
+    work: []
+    notes:
+      - "Access: Planning entry only; distinct from existing public Terminal-Bench-Science smoke
+        test."
+      - "Grading: Expected Harbor task verifiers; exact release and task assets not yet available."
+      - "Limitations: Planning document explicitly says Science-lite should be OOD. Do not reuse
+        inspected public tasks as a clean holdout."
+      - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
+        notes are historical."
+    provenance:
+      - sheet: Agentic (Harbor)
+        gid: 846608904
+        row: 29
+        evidence_date: 9/18/2026
+        imported_at: 2026-10-14

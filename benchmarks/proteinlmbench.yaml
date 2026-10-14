@@ -1,0 +1,45 @@
+id: proteinlmbench
+name: ProteinLMBench
+description: "ProteinLMBench: 944 protein-understanding MCQs for general-purpose language models."
+creators:
+  - Toursun Synbio
+  - collaborators (see note)
+sources:
+  - label: Benchmark
+    url: https://arxiv.org/abs/2406.05540
+notes: []
+variants:
+  - id: proteinlmbench
+    name: ProteinLMBench
+    description: "ProteinLMBench: 944 protein-understanding MCQs for general-purpose language models."
+    creators:
+      - Toursun Synbio
+      - collaborators (see note)
+    assignment: TBD
+    sources:
+      - label: Benchmark
+        url: https://arxiv.org/abs/2406.05540
+      - label: Scorer / data
+        url: https://huggingface.co/datasets/tsynbio/ProteinLMBench
+      - label: Evalchemy / integration
+        url: https://github.com/marin-community/evalchemy/tree/ab8e78f12abb8ed0d1659f56c24f2e01f3c85b54/eval/chat_benchmarks
+    implementations:
+      - framework: Evalchemy
+        status: unknown
+        evidence: []
+    work: []
+    notes:
+      - "Access: Public ProteinLMDataset repository and separate ProteinLMBench HF evaluation
+        dataset."
+      - "Grading: Multiple-choice answer accuracy under the official prompting/answer extraction
+        protocol."
+      - "Limitations: An LLM knowledge/understanding benchmark, not ProteinGym or a dedicated
+        protein-language-model fitness test."
+      - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
+        notes are historical."
+    provenance:
+      - sheet: Non-agentic (Evalchemy)
+        gid: 776831399
+        row: 57
+        evidence_date: 9/21/2026
+        imported_at: 2026-10-14

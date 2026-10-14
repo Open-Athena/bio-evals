@@ -1,0 +1,76 @@
+id: spatialbench
+name: SpatialBench
+description: Spatial transcriptomics analysis and study-scale biological inference.
+creators:
+  - LatchBio
+sources:
+  - label: Benchmark
+    url: https://arxiv.org/abs/2512.21907
+notes:
+  - Family grouping is for navigation; variants may have different creators, datasets, grading
+    protocols, and internal assignments.
+variants:
+  - id: spatialbench
+    name: SpatialBench
+    description: spatial transcriptomics analysis
+    creators:
+      - LatchBio
+    assignment: ID
+    sources:
+      - label: Benchmark
+        url: https://arxiv.org/abs/2512.21907
+      - label: Scorer / data
+        url: https://github.com/latchbio/spatialbench/tree/5042c4f3ee597da1590650c7b894d068ae968e26/example_evals
+      - label: Harbor / integration
+        url: https://github.com/marin-community/harbor/tree/abdd67137bcd6e5c44d682d0052fbd1190e63556/adapters
+    implementations:
+      - framework: Harbor
+        status: unknown
+        evidence: []
+    work: []
+    notes:
+      - "Access: 16 public task JSONs; Latch downloads untested. Full 159-task suite withheld."
+      - "Grading: Inspected examples include deterministic configs and targets; shared Latch grader
+        code."
+      - "Limitations: Complementary spatial analysis. Report the exact public subset separately from
+        full-suite results."
+      - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
+        notes are historical."
+    provenance:
+      - sheet: Agentic (Harbor)
+        gid: 846608904
+        row: 8
+        evidence_date: 9/18/2026
+        imported_at: 2026-10-14
+  - id: spatialbench-long
+    name: SpatialBench-Long
+    description: study-scale spatial biological inference
+    creators:
+      - LatchBio
+    assignment: ID
+    sources:
+      - label: Benchmark
+        url: https://arxiv.org/abs/2605.28065
+      - label: Scorer / data
+        url: https://github.com/latchbio/spatialbench-long/tree/7de13d39ebbffee4db42675620fe0d97647e399e/evals
+      - label: Harbor / integration
+        url: https://github.com/marin-community/harbor/tree/abdd67137bcd6e5c44d682d0052fbd1190e63556/adapters
+    implementations:
+      - framework: Harbor
+        status: unknown
+        evidence: []
+    work: []
+    notes:
+      - "Access: 4 public examples include prompts/vocabularies but omit graders and targets; Latch
+        inputs."
+      - "Grading: Deterministic final answers plus separate LLM trajectory rubrics in paper."
+      - "Limitations: Later long-workflow comparison. Public examples do not establish full-suite
+        reproducibility."
+      - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
+        notes are historical."
+    provenance:
+      - sheet: Agentic (Harbor)
+        gid: 846608904
+        row: 20
+        evidence_date: 9/18/2026
+        imported_at: 2026-10-14

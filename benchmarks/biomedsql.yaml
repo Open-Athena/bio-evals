@@ -1,0 +1,47 @@
+id: biomedsql
+name: BiomedSQL
+description: Text-to-SQL scientific queries against a biomedical knowledge base.
+creators:
+  - NIH NIA / CARD
+  - DataTecnica
+  - Johns Hopkins University
+sources:
+  - label: Benchmark
+    url: https://arxiv.org/abs/2505.20321
+notes: []
+variants:
+  - id: biomedsql
+    name: BiomedSQL
+    description: Text-to-SQL scientific queries against a biomedical knowledge base.
+    creators:
+      - NIH NIA / CARD
+      - DataTecnica
+      - Johns Hopkins University
+    assignment: TBD
+    sources:
+      - label: Benchmark
+        url: https://arxiv.org/abs/2505.20321
+      - label: Scorer / data
+        url: https://huggingface.co/datasets/NIH-CARD/BiomedSQL
+      - label: Evalchemy / integration
+        url: https://github.com/marin-community/evalchemy/tree/ab8e78f12abb8ed0d1659f56c24f2e01f3c85b54/eval/chat_benchmarks
+    implementations:
+      - framework: Evalchemy
+        status: unknown
+        evidence: []
+    work: []
+    notes:
+      - "Access: Public code and HF data; original execution workflow uses the CARD knowledge
+        base/BigQuery."
+      - "Grading: SQL execution/result comparison against reference queries; database and comparison
+        settings matter."
+      - "Limitations: Direct SQL generation recorded here; database execution is part of scoring. An
+        iterative SQL agent is a separate protocol."
+      - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
+        notes are historical."
+    provenance:
+      - sheet: Non-agentic (Evalchemy)
+        gid: 776831399
+        row: 27
+        evidence_date: 9/21/2026
+        imported_at: 2026-10-14

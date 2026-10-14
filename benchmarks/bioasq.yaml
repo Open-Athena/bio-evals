@@ -1,0 +1,144 @@
+id: bioasq
+name: BioASQ
+description: Biomedical literature question answering, from retrieval to supplied-evidence answers
+  and synthesis.
+creators:
+  - BioASQ consortium
+sources:
+  - label: Benchmark
+    url: https://www.bioasq.org/
+notes:
+  - Family grouping is for navigation; variants may have different creators, datasets, grading
+    protocols, and internal assignments.
+variants:
+  - id: bioasq-retrieval-end-to-end-qa
+    name: BioASQ — retrieval / end-to-end QA
+    description: BioASQ biomedical document/snippet retrieval and end-to-end question answering.
+    creators:
+      - BioASQ consortium
+    assignment: ID
+    sources:
+      - label: Benchmark
+        url: https://www.bioasq.org/
+      - label: Scorer / data
+        url: https://github.com/BioASQ/Evaluation-Measures/tree/8c8e689068a41c1370fec55260e5fbfe3a6a6016
+      - label: Harbor / integration
+        url: https://github.com/marin-community/harbor/tree/b78a0e52af98015fc8416d5bd5ee649a284e5a4c/adapters
+    implementations:
+      - framework: Harbor
+        status: unknown
+        evidence: []
+    work: []
+    notes:
+      - "Access: Public evaluation tools and annual data; corpus/index and challenge access need
+        staging."
+      - "Grading: Official retrieval ranking metrics plus task-specific exact/ideal answer scores."
+      - "Limitations: Retrieval plus QA is a distinct protocol from supplied-evidence QA; do not
+        combine scores without naming the track."
+      - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
+        notes are historical."
+    provenance:
+      - sheet: Agentic (Harbor)
+        gid: 846608904
+        row: 48
+        evidence_date: 9/21/2026
+        imported_at: 2026-10-14
+  - id: bioasq-supplied-snippet-yes-no
+    name: BioASQ — supplied-snippet yes/no
+    description: Biomedical literature QA with provided supporting snippets.
+    creators:
+      - BioASQ consortium
+      - Microsoft Research (BLURB adaptation)
+    assignment: TBD
+    sources:
+      - label: Benchmark
+        url: https://microsoft.github.io/BLURB/tasks.html
+      - label: Scorer / data
+        url: https://www.bioasq.org/
+      - label: Evalchemy / integration
+        url: https://github.com/marin-community/evalchemy/tree/f42990450edf4e694fe5a22b3d23ed09ab42da1e/eval/chat_benchmarks
+    implementations:
+      - framework: Evalchemy
+        status: unknown
+        evidence: []
+    work: []
+    notes:
+      - "Access: BioASQ task data and BLURB preprocessing; source-specific access/registration may
+        apply."
+      - "Grading: Yes/no accuracy for the BLURB-style QA slice; retain official split/scorer."
+      - "Limitations: Offline reading candidate. Full BioASQ retrieval and ideal-answer tasks are
+        different protocols."
+      - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
+        notes are historical."
+    provenance:
+      - sheet: Non-agentic (Evalchemy)
+        gid: 776831399
+        row: 10
+        evidence_date: 9/18/2026
+        imported_at: 2026-10-14
+  - id: bioasq-supplied-snippet-factoid-list
+    name: BioASQ — supplied-snippet factoid / list
+    description: BioASQ factoid/list biomedical QA with supporting snippets supplied to the model.
+    creators:
+      - BioASQ consortium
+    assignment: TBD
+    sources:
+      - label: Benchmark
+        url: https://www.bioasq.org/
+      - label: Scorer / data
+        url: https://github.com/BioASQ/Evaluation-Measures/tree/8c8e689068a41c1370fec55260e5fbfe3a6a6016
+      - label: Evalchemy / integration
+        url: https://github.com/marin-community/evalchemy/tree/ab8e78f12abb8ed0d1659f56c24f2e01f3c85b54/eval/chat_benchmarks
+    implementations:
+      - framework: Evalchemy
+        status: unknown
+        evidence: []
+    work: []
+    notes:
+      - "Access: Year/batch-specific BioASQ data and public evaluation measures; registration may
+        apply."
+      - "Grading: Official factoid ranking/MRR and list precision/recall/F1; retain accepted
+        synonyms."
+      - "Limitations: Complements yes/no row; supplied-snippet protocol excludes model retrieval.
+        Annual releases can overlap."
+      - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
+        notes are historical."
+    provenance:
+      - sheet: Non-agentic (Evalchemy)
+        gid: 776831399
+        row: 62
+        evidence_date: 9/21/2026
+        imported_at: 2026-10-14
+  - id: bioasq-supplied-snippet-ideal-answers
+    name: BioASQ — supplied-snippet ideal answers
+    description: BioASQ ideal-answer synthesis from supplied biomedical evidence snippets.
+    creators:
+      - BioASQ consortium
+    assignment: TBD
+    sources:
+      - label: Benchmark
+        url: https://www.bioasq.org/
+      - label: Scorer / data
+        url: https://github.com/BioASQ/Evaluation-Measures/tree/8c8e689068a41c1370fec55260e5fbfe3a6a6016
+      - label: Evalchemy / integration
+        url: https://github.com/marin-community/evalchemy/tree/ab8e78f12abb8ed0d1659f56c24f2e01f3c85b54/eval/chat_benchmarks
+    implementations:
+      - framework: Evalchemy
+        status: unknown
+        evidence: []
+    work: []
+    notes:
+      - "Access: Year-specific reference answers and evaluation tools; challenge data may require
+        registration."
+      - "Grading: Official ideal-answer metrics, including ROUGE and expert assessment; automatic
+        metrics are only part of evaluation."
+      - "Limitations: Long-form answer quality is not the same outcome as factoid/list or yes/no
+        accuracy."
+      - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
+        notes are historical."
+    provenance:
+      - sheet: Non-agentic (Evalchemy)
+        gid: 776831399
+        row: 63
+        evidence_date: 9/21/2026
+        imported_at: 2026-10-14

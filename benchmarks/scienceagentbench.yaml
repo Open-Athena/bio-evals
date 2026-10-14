@@ -1,0 +1,44 @@
+id: scienceagentbench
+name: ScienceAgentBench
+description: Python analysis and scientific computing
+creators:
+  - Ohio State University
+  - University of Wisconsin–Madison
+sources:
+  - label: Benchmark
+    url: https://arxiv.org/abs/2410.05080
+notes: []
+variants:
+  - id: scienceagentbench-bioinformatics
+    name: ScienceAgentBench, bioinformatics
+    description: Python analysis and scientific computing
+    creators:
+      - Ohio State University
+      - University of Wisconsin–Madison
+    assignment: ID
+    sources:
+      - label: Benchmark
+        url: https://arxiv.org/abs/2410.05080
+      - label: Scorer / data
+        url: https://github.com/harbor-framework/harbor/blob/96a13544537e54be84c0f316f8c3156769380684/adapters/scienceagentbench/task_manifest.json
+      - label: Harbor / integration
+        url: https://github.com/harbor-framework/harbor/blob/96a13544537e54be84c0f316f8c3156769380684/adapters/scienceagentbench/README.md
+    implementations:
+      - framework: Harbor
+        status: unknown
+        evidence: []
+    work: []
+    notes:
+      - "Access: Separate SharePoint inputs and gold assets; some tasks need GPU or extra RAM."
+      - "Grading: 27 bio tasks: 11 deterministic, 16 visual. Visual grader defaults to GPT-4o;
+        replacement needs validation."
+      - "Limitations: Next existing adapter. Choose tasks by relevance/resources; visual tasks
+        remain eligible."
+      - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
+        notes are historical."
+    provenance:
+      - sheet: Agentic (Harbor)
+        gid: 846608904
+        row: 5
+        evidence_date: 9/18/2026
+        imported_at: 2026-10-14

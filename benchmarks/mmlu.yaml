@@ -1,0 +1,89 @@
+id: mmlu
+name: MMLU
+description: Biology and biomedical multiple-choice knowledge and reasoning, including original and
+  Pro question sets.
+creators:
+  - UC Berkeley
+  - Columbia University
+  - University of Chicago
+  - UIUC
+sources:
+  - label: Benchmark
+    url: https://arxiv.org/abs/2009.03300
+notes:
+  - Family grouping is for navigation; variants may have different creators, datasets, grading
+    protocols, and internal assignments.
+variants:
+  - id: mmlu-biology-biomedical-subjects
+    name: MMLU — biology / biomedical subjects
+    description: School/college biology, medical genetics, anatomy and clinical/medical knowledge; 4-choice MCQ.
+    creators:
+      - UC Berkeley
+      - Columbia University
+      - University of Chicago
+      - UIUC
+    assignment: ID
+    sources:
+      - label: Benchmark
+        url: https://arxiv.org/abs/2009.03300
+      - label: Scorer / data
+        url: https://github.com/EleutherAI/lm-evaluation-harness/tree/v0.4.12/lm_eval/tasks/mmlu/default
+      - label: Evalchemy / integration
+        url: https://github.com/marin-community/marin/blob/a28c29a008a3ddc1a62fb348c52217a4429e5491/experiments/evaluation/glm53_mmlu_biology.py
+    implementations:
+      - framework: Evalchemy
+        status: unknown
+        evidence:
+          - url: https://github.com/marin-community/marin/issues/9258
+            scope: "Evalchemy biology subset: 554 questions executed and graded. This evidence does not
+              establish coverage of every biomedical subject listed in the source row."
+            checked_at: 2026-10-14
+    work: []
+    notes:
+      - "Access: Public data and native YAMLs for seven subjects. Three-subject biology integration
+        validated with GLM-5.3 (554/554); four optional biomedical subjects remain unrun."
+      - "Grading: Native multiple-choice likelihood accuracy; preserve Marin's 5-shot protocol."
+      - "Limitations: Low-effort biology baseline with optional biomedical coverage. Existing ID
+        exposure and possible saturation; keep clinical subjects out of the pooled biology score."
+      - "Gap: end-to-end evidence covers the 554-question biology subset, not all biomedical
+        subjects named in this entry."
+    provenance:
+      - sheet: Non-agentic (Evalchemy)
+        gid: 776831399
+        row: 6
+        evidence_date: 9/18/2026
+        imported_at: 2026-10-14
+  - id: mmlu-pro-biology
+    name: MMLU-Pro — biology
+    description: Harder biology MCQ with up to 10 options.
+    creators:
+      - University of Waterloo
+      - University of Toronto
+      - Carnegie Mellon University
+    assignment: ID
+    sources:
+      - label: Benchmark
+        url: https://arxiv.org/abs/2406.01574
+      - label: Scorer / data
+        url: https://huggingface.co/datasets/TIGER-Lab/MMLU-Pro
+      - label: Evalchemy / integration
+        url: https://github.com/marin-community/evalchemy/tree/f42990450edf4e694fe5a22b3d23ed09ab42da1e/eval/chat_benchmarks/MMLUPro/eval_instruct.py
+    implementations:
+      - framework: Evalchemy
+        status: unknown
+        evidence: []
+    work: []
+    notes:
+      - "Access: Native MMLUPro class; public TIGER-Lab/MMLU-Pro category metadata."
+      - "Grading: Generated-answer extraction and accuracy; implementation already returns category
+        statistics."
+      - "Limitations: Low effort category reporting from an existing Marin ID eval. Keep separate
+        from MMLU."
+      - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
+        notes are historical."
+    provenance:
+      - sheet: Non-agentic (Evalchemy)
+        gid: 776831399
+        row: 7
+        evidence_date: 9/18/2026
+        imported_at: 2026-10-14

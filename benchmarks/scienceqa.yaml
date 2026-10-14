@@ -1,0 +1,45 @@
+id: scienceqa
+name: ScienceQA
+description: School-level science questions including biology, with optional image/text context.
+creators:
+  - UCLA
+  - Allen Institute for AI
+  - Arizona State University
+sources:
+  - label: Benchmark
+    url: https://scienceqa.github.io/
+notes: []
+variants:
+  - id: scienceqa-biology
+    name: ScienceQA — biology
+    description: School-level science questions including biology, with optional image/text context.
+    creators:
+      - UCLA
+      - Allen Institute for AI
+      - Arizona State University
+    assignment: TBD
+    sources:
+      - label: Benchmark
+        url: https://scienceqa.github.io/
+      - label: Scorer / data
+        url: https://huggingface.co/datasets/derek-thomas/ScienceQA
+      - label: Evalchemy / integration
+        url: https://github.com/marin-community/evalchemy/tree/ab8e78f12abb8ed0d1659f56c24f2e01f3c85b54/eval/chat_benchmarks
+    implementations:
+      - framework: Evalchemy
+        status: unknown
+        evidence: []
+    work: []
+    notes:
+      - "Access: Public author repository; repository-linked HF dataset mirror."
+      - "Grading: Multiple-choice accuracy using official split and answer extraction."
+      - "Limitations: Educational QA, not research execution. HF likes refer to the author-linked
+        mirror, not an author-owned repository."
+      - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
+        notes are historical."
+    provenance:
+      - sheet: Non-agentic (Evalchemy)
+        gid: 776831399
+        row: 48
+        evidence_date: 9/21/2026
+        imported_at: 2026-10-14

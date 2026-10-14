@@ -1,0 +1,48 @@
+id: wmdp-bio
+name: WMDP-Bio
+description: "WMDP-Bio: hazardous biological knowledge assessed by multiple-choice questions."
+creators:
+  - Center for AI Safety
+  - Scale AI
+  - SecureBio
+  - multi-institution collaboration
+sources:
+  - label: Benchmark
+    url: https://www.wmdp.ai/
+notes: []
+variants:
+  - id: wmdp-bio
+    name: WMDP-Bio
+    description: "WMDP-Bio: hazardous biological knowledge assessed by multiple-choice questions."
+    creators:
+      - Center for AI Safety
+      - Scale AI
+      - SecureBio
+      - multi-institution collaboration
+    assignment: TBD
+    sources:
+      - label: Benchmark
+        url: https://www.wmdp.ai/
+      - label: Scorer / data
+        url: https://huggingface.co/datasets/cais/wmdp
+      - label: Evalchemy / integration
+        url: https://github.com/EleutherAI/lm-evaluation-harness/tree/v0.4.12/lm_eval/tasks/wmdp
+    implementations:
+      - framework: Evalchemy
+        status: unknown
+        evidence: []
+    work: []
+    notes:
+      - "Access: Public WMDP repository and cais/wmdp biology configuration."
+      - "Grading: Multiple-choice accuracy; preserve choice order and likelihood/generation
+        protocol."
+      - "Limitations: Knowledge/unlearning proxy, not a direct measure of real-world experimental
+        capability."
+      - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
+        notes are historical."
+    provenance:
+      - sheet: Non-agentic (Evalchemy)
+        gid: 776831399
+        row: 49
+        evidence_date: 9/21/2026
+        imported_at: 2026-10-14

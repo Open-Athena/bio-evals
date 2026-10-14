@@ -1,0 +1,44 @@
+id: biocoder
+name: BioCoder
+description: Bioinformatics function generation in Python/Java and related programming tasks.
+creators:
+  - Yale University
+  - Google DeepMind
+sources:
+  - label: Benchmark
+    url: https://github.com/gersteinlab/BioCoder
+notes: []
+variants:
+  - id: biocoder
+    name: BioCoder
+    description: Bioinformatics function generation in Python/Java and related programming tasks.
+    creators:
+      - Yale University
+      - Google DeepMind
+    assignment: TBD
+    sources:
+      - label: Benchmark
+        url: https://github.com/gersteinlab/BioCoder
+      - label: Scorer / data
+        url: https://huggingface.co/datasets/lilbillbiscuit/biocoder_public
+      - label: Evalchemy / integration
+        url: https://github.com/marin-community/evalchemy/tree/ab8e78f12abb8ed0d1659f56c24f2e01f3c85b54/eval/chat_benchmarks
+    implementations:
+      - framework: Evalchemy
+        status: unknown
+        evidence: []
+    work: []
+    notes:
+      - "Access: Public code, testing framework and author-linked HF release."
+      - "Grading: Executable correctness tests, including fuzz testing; pass@k depends on sampling
+        and test configuration."
+      - "Limitations: One-shot code generation is the stated protocol; code execution by the grader
+        does not itself make the model agentic."
+      - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
+        notes are historical."
+    provenance:
+      - sheet: Non-agentic (Evalchemy)
+        gid: 776831399
+        row: 18
+        evidence_date: 9/21/2026
+        imported_at: 2026-10-14

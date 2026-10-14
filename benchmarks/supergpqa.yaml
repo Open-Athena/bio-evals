@@ -1,0 +1,45 @@
+id: supergpqa
+name: SuperGPQA
+description: Graduate-level biology subset within SuperGPQA’s 285 disciplines.
+creators:
+  - M-A-P
+  - ByteDance Seed
+  - 2077.AI
+sources:
+  - label: Benchmark
+    url: https://arxiv.org/abs/2502.14739
+notes: []
+variants:
+  - id: supergpqa-biology
+    name: SuperGPQA — biology
+    description: Graduate-level biology subset within SuperGPQA’s 285 disciplines.
+    creators:
+      - M-A-P
+      - ByteDance Seed
+      - 2077.AI
+    assignment: TBD
+    sources:
+      - label: Benchmark
+        url: https://arxiv.org/abs/2502.14739
+      - label: Scorer / data
+        url: https://huggingface.co/datasets/m-a-p/SuperGPQA
+      - label: Evalchemy / integration
+        url: https://github.com/marin-community/evalchemy/tree/ab8e78f12abb8ed0d1659f56c24f2e01f3c85b54/eval/chat_benchmarks
+    implementations:
+      - framework: Evalchemy
+        status: unknown
+        evidence: []
+    work: []
+    notes:
+      - "Access: Public authors’ repository and m-a-p/SuperGPQA dataset."
+      - "Grading: Official choice extraction/accuracy with sample and taxonomy-level aggregation."
+      - "Limitations: Not GPQA; incorporates some transformed data from existing benchmarks, so
+        inspect overlap before using as a holdout."
+      - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
+        notes are historical."
+    provenance:
+      - sheet: Non-agentic (Evalchemy)
+        gid: 776831399
+        row: 69
+        evidence_date: 9/21/2026
+        imported_at: 2026-10-14

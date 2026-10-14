@@ -1,0 +1,141 @@
+id: lab-bench
+name: LAB-Bench
+description: "Life-science research skills: protocol reasoning, sequences, cloning, literature
+  retrieval, and interpretation of figures and tables."
+creators:
+  - FutureHouse
+sources:
+  - label: Benchmark
+    url: https://arxiv.org/abs/2407.10362
+notes:
+  - Family grouping is for navigation; variants may have different creators, datasets, grading
+    protocols, and internal assignments.
+variants:
+  - id: labbench2
+    name: LABBench2
+    description: broad research skills, including literature, sequences, and cloning
+    creators:
+      - Edison Scientific
+    assignment: ID
+    sources:
+      - label: Benchmark
+        url: https://github.com/EdisonScientific/labbench2
+      - label: Scorer / data
+        url: https://github.com/EdisonScientific/labbench2/blob/c028ecdcf144b55ffcd92b68be45081df5628c20/evals/evaluators.py
+      - label: Harbor / integration
+        url: https://github.com/marin-community/harbor/tree/abdd67137bcd6e5c44d682d0052fbd1190e63556/adapters
+    implementations:
+      - framework: Harbor
+        status: unknown
+        evidence: []
+    work: []
+    notes:
+      - "Access: Gated HF dataset; released evaluators and external reference files."
+      - "Grading: Sequence/cloning executable checks; other categories use LLM judging, defaulting
+        to Anthropic."
+      - "Limitations: Broader research skills. Harbor labbench covers original FigQA, not LABBench2."
+      - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
+        notes are historical."
+    provenance:
+      - sheet: Agentic (Harbor)
+        gid: 846608904
+        row: 14
+        evidence_date: 9/18/2026
+        imported_at: 2026-10-14
+  - id: lab-bench-tool-enabled-literature-database
+    name: LAB-Bench — tool-enabled literature / database
+    description: LAB-Bench literature/database retrieval tasks, including LitQA2, DbQA and SuppQA.
+    creators:
+      - FutureHouse
+    assignment: ID
+    sources:
+      - label: Benchmark
+        url: https://arxiv.org/abs/2407.10362
+      - label: Scorer / data
+        url: https://huggingface.co/datasets/futurehouse/lab-bench
+      - label: Harbor / integration
+        url: https://github.com/marin-community/harbor/tree/b78a0e52af98015fc8416d5bd5ee649a284e5a4c/adapters/labbench
+    implementations:
+      - framework: Harbor
+        status: unknown
+        evidence: []
+    work: []
+    notes:
+      - "Access: Public subset and evaluator; tool/API/corpus access depends on retrieval
+        configuration."
+      - "Grading: Official multiple-choice accuracy, precision and coverage; preserve abstention."
+      - "Limitations: Tool-enabled protocol of LAB-Bench v1, not LABBench2. A FigQA adapter does not
+        implement this retrieval protocol."
+      - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
+        notes are historical."
+    provenance:
+      - sheet: Agentic (Harbor)
+        gid: 846608904
+        row: 47
+        evidence_date: 9/21/2026
+        imported_at: 2026-10-14
+  - id: lab-bench-tool-free-text-mcq
+    name: LAB-Bench — tool-free text MCQ
+    description: Protocol reasoning, sequence manipulation, cloning; text-only subsets.
+    creators:
+      - FutureHouse
+    assignment: TBD
+    sources:
+      - label: Benchmark
+        url: https://arxiv.org/abs/2407.10362
+      - label: Scorer / data
+        url: https://huggingface.co/datasets/futurehouse/lab-bench
+      - label: Evalchemy / integration
+        url: https://github.com/marin-community/evalchemy/tree/f42990450edf4e694fe5a22b3d23ed09ab42da1e/eval/chat_benchmarks
+    implementations:
+      - framework: Evalchemy
+        status: unknown
+        evidence: []
+    work: []
+    notes:
+      - "Access: Public slices: ProtocolQA108, SeqQA600, CloningScenarios33; evaluator released.
+        Private holdout excluded."
+      - "Grading: Official generation protocol: accuracy, precision and coverage with abstention.
+        Likelihood scoring is a separately labelled variant."
+      - "Limitations: Direct research-skill complement to MMLU. FigQA/TableQA require images;
+        literature/database slices test a different retrieval burden."
+      - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
+        notes are historical."
+    provenance:
+      - sheet: Non-agentic (Evalchemy)
+        gid: 776831399
+        row: 2
+        evidence_date: 9/18/2026
+        imported_at: 2026-10-14
+  - id: lab-bench-figqa-tableqa-tool-free
+    name: LAB-Bench — FigQA / TableQA, tool-free
+    description: LAB-Bench FigQA and TableQA scientific figure/table interpretation.
+    creators:
+      - FutureHouse
+    assignment: TBD
+    sources:
+      - label: Benchmark
+        url: https://arxiv.org/abs/2407.10362
+      - label: Scorer / data
+        url: https://huggingface.co/datasets/futurehouse/lab-bench
+      - label: Evalchemy / integration
+        url: https://github.com/marin-community/evalchemy/tree/ab8e78f12abb8ed0d1659f56c24f2e01f3c85b54/eval/chat_benchmarks
+    implementations:
+      - framework: Evalchemy
+        status: unknown
+        evidence: []
+    work: []
+    notes:
+      - "Access: Public LAB-Bench release includes roughly 80% of full suite; private holdout
+        excluded."
+      - "Grading: Official accuracy, precision and coverage with abstention."
+      - "Limitations: Complements existing text-only LAB-Bench row. Harbor FigQA is a different
+        harness/protocol."
+      - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
+        notes are historical."
+    provenance:
+      - sheet: Non-agentic (Evalchemy)
+        gid: 776831399
+        row: 61
+        evidence_date: 9/21/2026
+        imported_at: 2026-10-14

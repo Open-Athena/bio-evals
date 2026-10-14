@@ -1,0 +1,45 @@
+id: biology-instructions
+name: Biology-Instructions
+description: Multi-omics sequence understanding across 21 classification/regression task types.
+creators:
+  - Shanghai AI Laboratory
+  - collaborators (see note)
+sources:
+  - label: Benchmark
+    url: https://github.com/hhnqqq/Biology-Instructions
+notes: []
+variants:
+  - id: biology-instructions-evaluation-splits
+    name: Biology-Instructions — evaluation splits
+    description: Multi-omics sequence understanding across 21 classification/regression task types.
+    creators:
+      - Shanghai AI Laboratory
+      - collaborators (see note)
+    assignment: TBD
+    sources:
+      - label: Benchmark
+        url: https://github.com/hhnqqq/Biology-Instructions
+      - label: Scorer / data
+        url: https://github.com/hhnqqq/Biology-Instructions/tree/600acaa08c0302e8f5ce86de0fe041f21c13b53e
+      - label: Evalchemy / integration
+        url: https://github.com/marin-community/evalchemy/tree/ab8e78f12abb8ed0d1659f56c24f2e01f3c85b54/eval/chat_benchmarks
+    implementations:
+      - framework: Evalchemy
+        status: unknown
+        evidence: []
+    work: []
+    notes:
+      - "Access: Stage3.xlsx released in the repository; training/inference code linked in
+        MyTransformers."
+      - "Grading: Task-specific classification/regression metrics; pin held-out split and prompting
+        setup."
+      - "Limitations: Actual instruction-following LLM evaluation; training corpus size is not
+        benchmark size. Keep fine-tuning and evaluation protocols distinct."
+      - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
+        notes are historical."
+    provenance:
+      - sheet: Non-agentic (Evalchemy)
+        gid: 776831399
+        row: 30
+        evidence_date: 9/21/2026
+        imported_at: 2026-10-14

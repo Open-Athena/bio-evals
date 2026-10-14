@@ -1,0 +1,48 @@
+id: bioplanner-bioprot
+name: BioPlanner / BioProt
+description: Biological protocol planning and next-step prediction using the BioProt protocol corpus.
+creators:
+  - Align to Innovate
+  - Francis Crick Institute
+  - University of Oxford
+  - FutureHouse
+sources:
+  - label: Benchmark
+    url: https://aclanthology.org/2023.emnlp-main.162/
+notes: []
+variants:
+  - id: bioplanner-bioprot
+    name: BioPlanner / BioProt
+    description: Biological protocol planning and next-step prediction using the BioProt protocol corpus.
+    creators:
+      - Align to Innovate
+      - Francis Crick Institute
+      - University of Oxford
+      - FutureHouse
+    assignment: TBD
+    sources:
+      - label: Benchmark
+        url: https://aclanthology.org/2023.emnlp-main.162/
+      - label: Scorer / data
+        url: https://github.com/bioplanner/bioplanner/tree/80b69543f6d4c3abbeb5fcc9cb1bacef76bf974a
+      - label: Evalchemy / integration
+        url: https://github.com/marin-community/evalchemy/tree/ab8e78f12abb8ed0d1659f56c24f2e01f3c85b54/eval/chat_benchmarks
+    implementations:
+      - framework: Evalchemy
+        status: unknown
+        evidence: []
+    work: []
+    notes:
+      - "Access: Public BioProt data, prompts and evaluation code in the authors’ repository."
+      - "Grading: Automatic protocol/action-sequence evaluation; reproduce task-specific reference
+        matching and planning metrics."
+      - "Limitations: Planning text/pseudocode is not physical protocol execution. Keep next-step
+        and full-plan results separate."
+      - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
+        notes are historical."
+    provenance:
+      - sheet: Non-agentic (Evalchemy)
+        gid: 776831399
+        row: 17
+        evidence_date: 9/21/2026
+        imported_at: 2026-10-14

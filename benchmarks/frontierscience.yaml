@@ -1,0 +1,43 @@
+id: frontierscience
+name: FrontierScience
+description: Expert biology problems from FrontierScience’s Olympiad and Research tracks.
+creators:
+  - OpenAI
+sources:
+  - label: Benchmark
+    url: https://openai.com/index/frontierscience/
+notes: []
+variants:
+  - id: frontierscience-biology
+    name: FrontierScience — biology
+    description: Expert biology problems from FrontierScience’s Olympiad and Research tracks.
+    creators:
+      - OpenAI
+    assignment: TBD
+    sources:
+      - label: Benchmark
+        url: https://openai.com/index/frontierscience/
+      - label: Scorer / data
+        url: https://huggingface.co/datasets/openai/frontierscience
+      - label: Evalchemy / integration
+        url: https://github.com/marin-community/evalchemy/tree/ab8e78f12abb8ed0d1659f56c24f2e01f3c85b54/eval/chat_benchmarks
+    implementations:
+      - framework: Evalchemy
+        status: unknown
+        evidence: []
+    work: []
+    notes:
+      - "Access: Public openai/frontierscience release is a subset of the full benchmark; biology
+        count/filter must be derived."
+      - "Grading: Reference-answer/rubric grading; keep Olympiad and Research scoring protocols
+        separate."
+      - "Limitations: General-science benchmark with a biology slice; published full-suite results
+        are not public-subset results."
+      - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
+        notes are historical."
+    provenance:
+      - sheet: Non-agentic (Evalchemy)
+        gid: 776831399
+        row: 38
+        evidence_date: 9/21/2026
+        imported_at: 2026-10-14

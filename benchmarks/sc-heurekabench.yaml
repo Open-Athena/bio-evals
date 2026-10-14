@@ -1,0 +1,45 @@
+id: sc-heurekabench
+name: sc-HeurekaBench
+description: open-ended single-cell scientific reasoning
+creators:
+  - EPFL
+  - ETH Zurich
+sources:
+  - label: Benchmark
+    url: https://arxiv.org/abs/2601.01678
+notes: []
+variants:
+  - id: sc-heurekabench
+    name: sc-HeurekaBench
+    description: open-ended single-cell scientific reasoning
+    creators:
+      - EPFL
+      - ETH Zurich
+    assignment: ID
+    sources:
+      - label: Benchmark
+        url: https://arxiv.org/abs/2601.01678
+      - label: Scorer / data
+        url: https://github.com/mlbio-epfl/HeurekaBench/tree/c2a2b2fcdc5244220ff60f65483bc084c72a8cf1/scheurekabench
+      - label: Harbor / integration
+        url: https://github.com/marin-community/harbor/tree/abdd67137bcd6e5c44d682d0052fbd1190e63556/adapters
+    implementations:
+      - framework: Harbor
+        status: unknown
+        evidence: []
+    work: []
+    notes:
+      - "Access: Released evaluator; 50 open-ended and 50 multiple-choice questions. Data access
+        untested."
+      - "Grading: Open answers: LLM judge (default GPT-4o). MCQ: exact option-set accuracy plus
+        precision/recall/F1."
+      - "Limitations: Single-cell scientific reasoning; report open-answer and MC results
+        separately."
+      - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
+        notes are historical."
+    provenance:
+      - sheet: Agentic (Harbor)
+        gid: 846608904
+        row: 10
+        evidence_date: 9/18/2026
+        imported_at: 2026-10-14

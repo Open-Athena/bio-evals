@@ -1,0 +1,44 @@
+id: cardbiomedbench
+name: CARDBiomedBench
+description: Biomedical research QA with a focus on neurodegenerative disease and scientific evidence.
+creators:
+  - NIH CARD
+  - DataTecnica
+sources:
+  - label: Benchmark
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC12974222/
+notes: []
+variants:
+  - id: cardbiomedbench
+    name: CARDBiomedBench
+    description: Biomedical research QA with a focus on neurodegenerative disease and scientific evidence.
+    creators:
+      - NIH CARD
+      - DataTecnica
+    assignment: TBD
+    sources:
+      - label: Benchmark
+        url: https://pmc.ncbi.nlm.nih.gov/articles/PMC12974222/
+      - label: Scorer / data
+        url: https://huggingface.co/datasets/NIH-CARD/CARDBiomedBench
+      - label: Evalchemy / integration
+        url: https://github.com/marin-community/evalchemy/tree/ab8e78f12abb8ed0d1659f56c24f2e01f3c85b54/eval/chat_benchmarks
+    implementations:
+      - framework: Evalchemy
+        status: unknown
+        evidence: []
+    work: []
+    notes:
+      - "Access: Public CARDBiomedBench code and HF release."
+      - "Grading: BioScore rubric/model-assisted response evaluation; grader identity and prompts
+        must be pinned."
+      - "Limitations: Free-response research QA; rubric scores are not directly comparable to MCQ
+        accuracy."
+      - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
+        notes are historical."
+    provenance:
+      - sheet: Non-agentic (Evalchemy)
+        gid: 776831399
+        row: 26
+        evidence_date: 9/21/2026
+        imported_at: 2026-10-14

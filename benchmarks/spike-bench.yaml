@@ -1,0 +1,42 @@
+id: spike-bench
+name: SPIKE-Bench
+description: Biosecurity evaluation of model refusal and computationally assessed biological outputs.
+creators:
+  - Peking University (PKU-Alignment)
+sources:
+  - label: Benchmark
+    url: https://github.com/PKU-Alignment/SPIKE-Bench
+notes: []
+variants:
+  - id: spike-bench
+    name: SPIKE-Bench
+    description: Biosecurity evaluation of model refusal and computationally assessed biological outputs.
+    creators:
+      - Peking University (PKU-Alignment)
+    assignment: TBD
+    sources:
+      - label: Benchmark
+        url: https://github.com/PKU-Alignment/SPIKE-Bench
+      - label: Scorer / data
+        url: https://huggingface.co/datasets/quanshu01/SPIKE-Bench
+      - label: Evalchemy / integration
+        url: https://github.com/marin-community/evalchemy/tree/ab8e78f12abb8ed0d1659f56c24f2e01f3c85b54/eval/chat_benchmarks
+    implementations:
+      - framework: Evalchemy
+        status: unknown
+        evidence: []
+    work: []
+    notes:
+      - "Access: Public pipeline repository; 631-prompt HF dataset is auto-gated."
+      - "Grading: Refusal, plausibility and computational proxy metrics; verify each evaluator and
+        model dependency."
+      - "Limitations: Computational proxy scores are not experimental validation of biological
+        activity."
+      - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
+        notes are historical."
+    provenance:
+      - sheet: Non-agentic (Evalchemy)
+        gid: 776831399
+        row: 52
+        evidence_date: 9/21/2026
+        imported_at: 2026-10-14

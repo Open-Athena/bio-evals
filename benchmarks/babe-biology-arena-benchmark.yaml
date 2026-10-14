@@ -1,0 +1,46 @@
+id: babe-biology-arena-benchmark
+name: BABE (Biology Arena Benchmark)
+description: Multimodal biology reasoning across 12 fields, with correlated and multi-hop causal
+  question groups.
+creators:
+  - ByteDance Seed
+  - Peking University
+sources:
+  - label: Benchmark
+    url: https://arxiv.org/abs/2602.05857
+notes: []
+variants:
+  - id: babe-biology-arena-benchmark
+    name: BABE (Biology Arena Benchmark)
+    description: Multimodal biology reasoning across 12 fields, with correlated and multi-hop causal
+      question groups.
+    creators:
+      - ByteDance Seed
+      - Peking University
+    assignment: TBD
+    sources:
+      - label: Benchmark
+        url: https://arxiv.org/abs/2602.05857
+      - label: Scorer / data
+        url: https://arxiv.org/abs/2602.05857
+      - label: Evalchemy / integration
+        url: https://github.com/marin-community/evalchemy/tree/ab8e78f12abb8ed0d1659f56c24f2e01f3c85b54/eval/chat_benchmarks
+    implementations:
+      - framework: Evalchemy
+        status: unknown
+        evidence: []
+    work: []
+    notes:
+      - "Access: Paper found; authoritative full data/scorer release not located."
+      - "Grading: Paper-described question-group evaluation; executable scorer and exact judge
+        configuration unverified."
+      - "Limitations: Keep linked question triplets together when defining splits; this is currently
+        a paper-level inventory entry."
+      - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
+        notes are historical."
+    provenance:
+      - sheet: Non-agentic (Evalchemy)
+        gid: 776831399
+        row: 28
+        evidence_date: 9/21/2026
+        imported_at: 2026-10-14

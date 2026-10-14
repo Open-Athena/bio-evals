@@ -1,0 +1,46 @@
+id: biokgbench
+name: BioKGBench
+description: Biomedical knowledge-graph verification and question answering with scientific evidence.
+creators:
+  - Westlake University
+  - Zhejiang University
+  - Samsung AI Center Cambridge
+sources:
+  - label: Benchmark
+    url: https://arxiv.org/abs/2407.00466
+notes: []
+variants:
+  - id: biokgbench
+    name: BioKGBench
+    description: Biomedical knowledge-graph verification and question answering with scientific evidence.
+    creators:
+      - Westlake University
+      - Zhejiang University
+      - Samsung AI Center Cambridge
+    assignment: ID
+    sources:
+      - label: Benchmark
+        url: https://arxiv.org/abs/2407.00466
+      - label: Scorer / data
+        url: https://huggingface.co/datasets/AutoLab-Westlake/BioKGBench-Dataset
+      - label: Harbor / integration
+        url: https://github.com/marin-community/harbor/tree/b78a0e52af98015fc8416d5bd5ee649a284e5a4c/adapters
+    implementations:
+      - framework: Harbor
+        status: unknown
+        evidence: []
+    work: []
+    notes:
+      - "Access: Public BioKGBench code and author-linked dataset."
+      - "Grading: Task-specific knowledge/claim verification and QA scoring; reproduce official
+        evidence and answer checks."
+      - "Limitations: Graph verification and question answering test different abilities; report
+        both. Live sources can change reproducibility."
+      - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
+        notes are historical."
+    provenance:
+      - sheet: Agentic (Harbor)
+        gid: 846608904
+        row: 39
+        evidence_date: 9/21/2026
+        imported_at: 2026-10-14

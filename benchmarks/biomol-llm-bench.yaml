@@ -1,0 +1,46 @@
+id: biomol-llm-bench
+name: BioMol-LLM-Bench
+description: 26 biomolecular LLM tasks across four levels, including classification, regression and generation.
+creators:
+  - Southern University of Science and Technology
+  - Pengcheng Laboratory
+  - Institute of Mechanics, CAS
+sources:
+  - label: Benchmark
+    url: https://arxiv.org/abs/2604.03361
+notes: []
+variants:
+  - id: biomol-llm-bench
+    name: BioMol-LLM-Bench
+    description: 26 biomolecular LLM tasks across four levels, including classification, regression and
+      generation.
+    creators:
+      - Southern University of Science and Technology
+      - Pengcheng Laboratory
+      - Institute of Mechanics, CAS
+    assignment: TBD
+    sources:
+      - label: Benchmark
+        url: https://arxiv.org/abs/2604.03361
+      - label: Scorer / data
+        url: https://github.com/AI-HPC-Research-Team/BioMol-LLM-Bench/tree/9355caae207e17ea4b55440fe9350cc4290ebb23
+      - label: Evalchemy / integration
+        url: https://github.com/marin-community/evalchemy/tree/ab8e78f12abb8ed0d1659f56c24f2e01f3c85b54/eval/chat_benchmarks
+    implementations:
+      - framework: Evalchemy
+        status: unknown
+        evidence: []
+    work: []
+    notes:
+      - "Access: Public BioMol-LLM-Bench repository with datasets and evaluation scripts."
+      - "Grading: Official task-specific metrics and output parsers in the evaluation code."
+      - "Limitations: LLM protocol over biological representations. Tool-augmented conditions must
+        be reported separately."
+      - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
+        notes are historical."
+    provenance:
+      - sheet: Non-agentic (Evalchemy)
+        gid: 776831399
+        row: 33
+        evidence_date: 9/21/2026
+        imported_at: 2026-10-14

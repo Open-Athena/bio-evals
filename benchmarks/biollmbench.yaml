@@ -1,0 +1,49 @@
+id: biollmbench
+name: BioLLMBench
+description: 24 tasks in 6 bioinformatics skill areas, including knowledge, mathematics, coding,
+  plots and summarization.
+creators:
+  - UCLA
+  - Technical University of Moldova
+  - University of Southern California
+sources:
+  - label: Benchmark
+    url: https://doi.org/10.1101/2023.12.19.572483
+notes: []
+variants:
+  - id: biollmbench
+    name: BioLLMBench
+    description: 24 tasks in 6 bioinformatics skill areas, including knowledge, mathematics, coding,
+      plots and summarization.
+    creators:
+      - UCLA
+      - Technical University of Moldova
+      - University of Southern California
+    assignment: TBD
+    sources:
+      - label: Benchmark
+        url: https://doi.org/10.1101/2023.12.19.572483
+      - label: Scorer / data
+        url: https://doi.org/10.1101/2023.12.19.572483
+      - label: Evalchemy / integration
+        url: https://github.com/marin-community/evalchemy/tree/ab8e78f12abb8ed0d1659f56c24f2e01f3c85b54/eval/chat_benchmarks
+    implementations:
+      - framework: Evalchemy
+        status: unknown
+        evidence: []
+    work: []
+    notes:
+      - "Access: Paper identified; no authoritative complete runnable dataset/scorer release located
+        in this audit."
+      - "Grading: Task-specific assessment, including expert review and code/output evaluation;
+        executable scoring contract unverified."
+      - "Limitations: Paper-reported evaluation suite. Mixed task formats cannot be reduced to one
+        MCQ accuracy."
+      - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
+        notes are historical."
+    provenance:
+      - sheet: Non-agentic (Evalchemy)
+        gid: 776831399
+        row: 20
+        evidence_date: 9/21/2026
+        imported_at: 2026-10-14

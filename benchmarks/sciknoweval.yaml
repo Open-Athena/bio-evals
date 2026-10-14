@@ -1,0 +1,79 @@
+id: sciknoweval
+name: SciKnowEval
+description: Biology knowledge and reasoning across closed-choice and open-ended task families.
+creators:
+  - Zhejiang University
+sources:
+  - label: Benchmark
+    url: https://arxiv.org/abs/2406.09098
+notes:
+  - Family grouping is for navigation; variants may have different creators, datasets, grading
+    protocols, and internal assignments.
+variants:
+  - id: sciknoweval-v2-biology-closed-choice
+    name: SciKnowEval v2 — biology closed-choice
+    description: Scientific biology knowledge/reasoning across difficulty levels.
+    creators:
+      - Zhejiang University
+    assignment: TBD
+    sources:
+      - label: Benchmark
+        url: https://arxiv.org/abs/2406.09098
+      - label: Scorer / data
+        url: https://huggingface.co/datasets/hicai-zju/SciKnowEval
+      - label: Evalchemy / integration
+        url: https://github.com/marin-community/evalchemy/tree/f42990450edf4e694fe5a22b3d23ed09ab42da1e/eval/chat_benchmarks
+    implementations:
+      - framework: Evalchemy
+        status: unknown
+        evidence: []
+    work: []
+    notes:
+      - "Access: Public v2 release: 28,392 examples / 58 tasks across 4 domains; biology-slice count
+        needs metadata aggregation."
+      - "Grading: Closed-choice accuracy only for this slice; other tasks can require GPT judging or
+        embedding models."
+      - "Limitations: Adds biological breadth beyond exam questions. Do not silently omit
+        judge-requiring tasks from a claimed full-suite score."
+      - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
+        notes are historical."
+    provenance:
+      - sheet: Non-agentic (Evalchemy)
+        gid: 776831399
+        row: 12
+        evidence_date: 9/18/2026
+        imported_at: 2026-10-14
+  - id: sciknoweval-v2-biology-open-ended-tasks
+    name: SciKnowEval v2 — biology open-ended tasks
+    description: Open-ended biology task families in SciKnowEval v2, including relation extraction and
+      generation.
+    creators:
+      - Zhejiang University
+    assignment: TBD
+    sources:
+      - label: Benchmark
+        url: https://arxiv.org/abs/2406.09098
+      - label: Scorer / data
+        url: https://huggingface.co/datasets/hicai-zju/SciKnowEval
+      - label: Evalchemy / integration
+        url: https://github.com/marin-community/evalchemy/tree/ab8e78f12abb8ed0d1659f56c24f2e01f3c85b54/eval/chat_benchmarks
+    implementations:
+      - framework: Evalchemy
+        status: unknown
+        evidence: []
+    work: []
+    notes:
+      - "Access: Public v2 dataset, prompts and evaluator; judge API and embedding assets required
+        for affected tasks."
+      - "Grading: Task-specific scoring using GPT judging and/or word-vector similarity; official
+        default judge gpt-4o."
+      - "Limitations: Official code skips GPT-scored tasks if its API key is absent. Complements the
+        existing closed-choice row."
+      - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
+        notes are historical."
+    provenance:
+      - sheet: Non-agentic (Evalchemy)
+        gid: 776831399
+        row: 66
+        evidence_date: 9/21/2026
+        imported_at: 2026-10-14

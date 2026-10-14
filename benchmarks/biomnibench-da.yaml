@@ -1,0 +1,51 @@
+id: biomnibench-da
+name: BiomniBench-DA
+description: "Paper: 100 biomedical data-analysis tasks across 17 types, 5 disease areas, and general biology."
+creators:
+  - Phylo
+  - xbench
+  - Humanlaya Data Lab
+sources:
+  - label: Benchmark
+    url: https://www.biorxiv.org/content/10.64898/2026.05.12.724604v2
+notes: []
+variants:
+  - id: biomnibench-da
+    name: BiomniBench-DA
+    description: "Paper: 100 biomedical data-analysis tasks across 17 types, 5 disease areas, and
+      general biology."
+    creators:
+      - Phylo
+      - xbench
+      - Humanlaya Data Lab
+    assignment: ID
+    sources:
+      - label: Benchmark
+        url: https://www.biorxiv.org/content/10.64898/2026.05.12.724604v2
+      - label: Scorer / data
+        url: https://huggingface.co/datasets/phylobio/BiomniBench-DA
+      - label: Harbor / integration
+        url: https://huggingface.co/datasets/phylobio/BiomniBench-DA/tree/e1c8ca5e11a620087bc48d97888eb69176a1f235
+    implementations:
+      - framework: Harbor
+        status: unknown
+        evidence: []
+    work: []
+    notes:
+      - "Access: HF metadata lists 50 Harbor-style task directories with instructions, Dockerfiles,
+        and tests at e1c8ca5e11a620087bc48d97888eb69176a1f235. Auto-gated; unauthenticated content
+        fetch returned 401."
+      - "Grading: Process-level scoring against expert task-specific rubrics; llm_judge.py and
+        rubric.txt listed for all 50 released tasks. Judge provider and scoring contract
+        unverified."
+      - "Limitations: Harbor-style packaging is listed but execution is unvalidated. Adds process
+        diagnostics beyond final-answer checks. Distinguish the 50-task release from the paper's 100
+        tasks."
+      - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
+        notes are historical."
+    provenance:
+      - sheet: Agentic (Harbor)
+        gid: 846608904
+        row: 31
+        evidence_date: 9/19/2026
+        imported_at: 2026-10-14

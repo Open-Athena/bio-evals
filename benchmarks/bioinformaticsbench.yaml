@@ -1,0 +1,43 @@
+id: bioinformaticsbench
+name: BioinformaticsBench
+description: 602 human-annotated questions across 9 bioinformatics domains; MCQ, true/false and open questions.
+creators:
+  - Unverified institutional attribution
+sources:
+  - label: Benchmark
+    url: https://openreview.net/pdf?id=eKw7delVSM
+notes: []
+variants:
+  - id: bioinformaticsbench
+    name: BioinformaticsBench
+    description: 602 human-annotated questions across 9 bioinformatics domains; MCQ, true/false and open
+      questions.
+    creators:
+      - Unverified institutional attribution
+    assignment: TBD
+    sources:
+      - label: Benchmark
+        url: https://openreview.net/pdf?id=eKw7delVSM
+      - label: Scorer / data
+        url: https://openreview.net/pdf?id=eKw7delVSM
+      - label: Evalchemy / integration
+        url: https://github.com/marin-community/evalchemy/tree/ab8e78f12abb8ed0d1659f56c24f2e01f3c85b54/eval/chat_benchmarks
+    implementations:
+      - framework: Evalchemy
+        status: unknown
+        evidence: []
+    work: []
+    notes:
+      - "Access: OpenReview paper available; complete author-linked data/scorer not located."
+      - "Grading: Question-type-specific correctness; open-response judge and reproducible scorer
+        need verification."
+      - "Limitations: Catalogued separately from Bioinfo-Bench; reported task count does not
+        establish a runnable public release."
+      - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
+        notes are historical."
+    provenance:
+      - sheet: Non-agentic (Evalchemy)
+        gid: 776831399
+        row: 22
+        evidence_date: 9/21/2026
+        imported_at: 2026-10-14
