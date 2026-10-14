@@ -49,7 +49,7 @@ test('duplicates, malformed work URLs, unmapped rows, and script URLs fail valid
 
 test('only the selected version supplies tracking state and work',()=>{
   const tracked=trackedCatalog(catalog);
-  assert.equal(tracked.length,94);
+  assert.equal(tracked.length,95);
   assert.ok(tracked.every(b=>b.variants.length===1));
   const bix=catalog.find(b=>b.id==='bixbench');
   assert.equal(selectedVersion(bix).id,'bixbench-v1-5-harbor-cli');

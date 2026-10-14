@@ -1,0 +1,49 @@
+id: naturebench
+name: NatureBench
+description: Scientific machine-learning coding tasks from Nature-family papers, measuring whether agents match or surpass published results; includes biology within a cross-domain suite.
+creators:
+  - FrontisAI
+sources:
+  - label: Author repository
+    url: https://github.com/FrontisAI/NatureBench
+  - label: Paper
+    url: https://arxiv.org/abs/2606.24530
+notes:
+  - "Other variants: NatureBench-25 is a lower-cost, 25-task track covering all six domains. The authors also support domain tracks. These are not additional tracked versions."
+variants:
+  - id: naturebench-full
+    name: NatureBench — Full (90 tasks)
+    description: Agents develop scientific ML solutions in isolated containers using task data and a hidden evaluator; results are compared with the source paper's reported performance and checked by a validity judge.
+    creators:
+      - FrontisAI
+    assignment: ID
+    sources:
+      - label: Pinned release documentation
+        url: https://github.com/FrontisAI/NatureBench/blob/0f80a67d47a56fcd08ab3f1f586159d264616e2f/README.md
+      - label: Author Harbor integration
+        url: https://github.com/FrontisAI/NatureBench/blob/0f80a67d47a56fcd08ab3f1f586159d264616e2f/harbor/README.md
+      - label: Converted Harbor tasks
+        url: https://huggingface.co/datasets/FrontisAI/NatureBench-Harbor
+      - label: Author leaderboard and metric definitions
+        url: https://frontisai.github.io/NatureBench/
+    implementations:
+      - framework: Harbor
+        status: no
+        evidence: []
+        assessment:
+          checked_at: 2026-10-14
+          reason: Author-provided Harbor task packages and runtime extensions are public. Validate this existing integration and establish a scoped end-to-end graded run in our setup; source availability and the native leaderboard alone do not establish that evidence. No NatureBench issue or PR was found in the Marin Harbor or Evalchemy forks during this check.
+          sources:
+            - label: Public Harbor adapter, extensions and execution guide
+              url: https://github.com/FrontisAI/NatureBench/blob/0f80a67d47a56fcd08ab3f1f586159d264616e2f/harbor/README.md
+    work: []
+    notes:
+      - "Scope: Track the original Full 90-task release. It spans six scientific domains, not 90 biology tasks. A biology-only selection and its task count remain to be established."
+      - "Access: Public source and converted Harbor packages; task data were not downloaded or executed for this catalog entry."
+      - "Grading: Hidden task-specific evaluators produce paper-relative scores; a separate validity judge checks the run. Preserve the published solve-time and scoring protocol."
+      - "Resources: CPU and GPU groups differ. The Harbor guide specifies Docker, runtime extensions, evaluation sidecars, and GPU-model checks; GPU tasks require the prescribed hardware."
+      - "Licensing: MIT covers original NatureBench contributions; third-party task data retain their per-task license notices."
+      - "Internal assignment: ID is the catalog default for this newly added candidate, not a statement about training-data exposure."
+    provenance:
+      - url: https://github.com/FrontisAI/NatureBench
+        imported_at: 2026-10-14
