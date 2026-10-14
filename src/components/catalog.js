@@ -20,8 +20,7 @@ function node(tag,text,className) {
 function link(label,href){const a=node('a',label);a.href=href;return a;}
 export function familyLink(f){return link(f.name,`./benchmarks/${f.id}`);}
 export function catalogTable(families, snapshot) {
-  const card=node('div',undefined,'card catalog-card');
-  const container=node('div',undefined,'catalog-table');
+  const container=node('div',undefined,'catalog-table card');
   const table=node('table');
   table.setAttribute('aria-label','Evaluation catalog');
   const columns=['Benchmark family','What it measures','Creator organization(s)','Variants','ID/OOD','Implementation','Linked work'];
@@ -57,8 +56,7 @@ export function catalogTable(families, snapshot) {
     table.append(body);
   }
   container.append(table);
-  card.append(container);
-  return card;
+  return container;
 }
 export function workCell(f,snapshot) {
   const urls=[...new Set(f.variants.flatMap(v=>v.work))];
