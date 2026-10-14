@@ -1,3 +1,4 @@
+import {loadExamples} from './task-examples.mjs';
 import {selectedVersion,implementationLabel} from '../src/components/catalog.js';
 import {mkdir, readFile, writeFile, rm} from 'node:fs/promises';
 import {loadCatalog, root, validateCatalog} from './catalog.mjs';
@@ -10,6 +11,8 @@ const list=items=>`<ul>${items.map(i=>`<li>${i}</li>`).join('')}</ul>`;
 const families=await loadCatalog();
 const errors=validateCatalog(families);
 if(errors.length)throw new Error(errors.join('\n'));
+const examples=await loadExamples(families);
+for(const b of families)b.example_count=examples.get(b.id)?.examples.length || 0;
 const snapshot=JSON.parse(await readFile(new URL('data/github-status.json',root)));
 const directory=new URL('src/benchmarks/',root);
 // Only generated pages live here; source records are in benchmarks/.
@@ -32,6 +35,18 @@ for(const family of families){
   page+=`<h1>${h(family.name)}</h1>\n\n<p>${h(family.description)}</p>\n\n`;
   page+=`<div class="family-meta"><span>${h(family.creators.join('; ') || 'Creator not recorded')}</span>${anchor('Edit this entry ↗',edit)}</div>\n\n`;
   page+=`<p>${family.sources.map(s=>anchor(s.label,s.url)).join(' · ')}</p>\n\n`;
+  if(examples.has(family.id)) {
+    await writeFile(new URL(`src/data/examples-${family.id}.json`,root),JSON.stringify(examples.get(family.id)));
+    page+=`
+
+\`\`\`js
+import {taskExamples} from '../components/task-examples.js';
+const examples = await FileAttachment('../data/examples-${family.id}.json').json();
+display(taskExamples(examples, Inputs));
+\`\`\`
+
+`;
+  }
   if(family.notes.length)page+=`<div class="muted">${list(family.notes.map(h))}</div>\n\n`;
   for(const variant of [selectedVersion(family)]){
     page+=`<section class="variant-detail" id="${h(variant.id)}">\n<h2>${h(variant.name)}</h2>\n<p>${h(variant.description)}</p>\n`;

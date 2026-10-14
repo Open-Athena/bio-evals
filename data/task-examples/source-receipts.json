@@ -1,0 +1,75 @@
+{
+  "checked_at": "2026-10-14",
+  "sources": [
+    {
+      "url": "https://huggingface.co/datasets/cais/mmlu/resolve/c30699e8356da336a370243923dbaf21066bb9fe/college_biology/test-00000-of-00001.parquet",
+      "sha256": "5b6920ddbbb40ee6efd1e6c8814be9fd03d24c9e1e1dbd4b02325e2d454a6a82",
+      "bytes": 31845
+    },
+    {
+      "url": "https://huggingface.co/datasets/cais/mmlu/resolve/c30699e8356da336a370243923dbaf21066bb9fe/high_school_biology/test-00000-of-00001.parquet",
+      "sha256": "73600cc5c8032ffd20115887ec4f2c868d75c403c70ac1d115295e72cb8d80e3",
+      "bytes": 62704
+    },
+    {
+      "url": "https://huggingface.co/datasets/cais/mmlu/resolve/c30699e8356da336a370243923dbaf21066bb9fe/medical_genetics/test-00000-of-00001.parquet",
+      "sha256": "f5535475f3afc3479697355679f2b615603fe90a58e8e5b6a98e50ccf07171b9",
+      "bytes": 16379
+    },
+    {
+      "url": "https://huggingface.co/datasets/SciCode1/SciCode/resolve/4510f6a6aa27c43fad7b43da2c59602a86e88480/problems_test.jsonl",
+      "sha256": "38797fef78f434720be6d053b4f3a86839d6f8ea5fb9115450677cd3a6edf81d",
+      "bytes": 933500
+    },
+    {
+      "url": "https://raw.githubusercontent.com/harbor-framework/harbor-datasets/711ff277ae6b9e3950d19b40bc3e5aeb96e62b73/datasets/bixbench-cli/bix-1-q1/instruction.md",
+      "sha256": "35f140b6d2475d72934dd0e6fdf42cd2fb5520e702833944b74de5e6a057c7b3",
+      "bytes": 1168
+    },
+    {
+      "url": "https://raw.githubusercontent.com/harbor-framework/harbor-datasets/711ff277ae6b9e3950d19b40bc3e5aeb96e62b73/datasets/bixbench-cli/bix-1-q1/tests/ground_truth.json",
+      "sha256": "1cb1dcd1a6e35c066d3ddaea151ad3985a0a1cf0eb1cc51ddd8a5980373d7878",
+      "bytes": 468
+    },
+    {
+      "url": "https://raw.githubusercontent.com/harbor-framework/harbor-datasets/711ff277ae6b9e3950d19b40bc3e5aeb96e62b73/datasets/bixbench-cli/bix-2-q1/instruction.md",
+      "sha256": "abcd4c40e364ce3c58261edb91a996ab9c7f9fd9d466700240356321ca88324e",
+      "bytes": 984
+    },
+    {
+      "url": "https://raw.githubusercontent.com/harbor-framework/harbor-datasets/711ff277ae6b9e3950d19b40bc3e5aeb96e62b73/datasets/bixbench-cli/bix-2-q1/tests/ground_truth.json",
+      "sha256": "059814e35581e08e2cfaafe413b759e7bcbd5f0976d417ce465038a8e8c8aa1b",
+      "bytes": 307
+    },
+    {
+      "url": "https://raw.githubusercontent.com/harbor-framework/harbor-datasets/711ff277ae6b9e3950d19b40bc3e5aeb96e62b73/datasets/bixbench-cli/bix-20-q1/instruction.md",
+      "sha256": "c5d11c5991dbde65f10b0839b7515622337083c6dbb12859bf4588f6c2af4f15",
+      "bytes": 1114
+    },
+    {
+      "url": "https://raw.githubusercontent.com/harbor-framework/harbor-datasets/711ff277ae6b9e3950d19b40bc3e5aeb96e62b73/datasets/bixbench-cli/bix-20-q1/tests/ground_truth.json",
+      "sha256": "5e997800ddb9fca57c8b7cc4d0f76562a49f06289a84d82ae8379c25c589c488",
+      "bytes": 436
+    },
+    {
+      "url": "https://huggingface.co/datasets/osunlp/ScienceAgentBench/resolve/9c6e96c9e74572e979b0930ee735041cef528cb7/ScienceAgentBench.csv",
+      "sha256": "7f490f17f721a9c7e9415d3608a1a37d1a5315a26862cf556e3096ac4062face",
+      "bytes": 278626
+    },
+    {
+      "url": "https://huggingface.co/datasets/openai/genebench-pro-public-package/resolve/eb75a3c0996b3cedcc9af685bad02fd166848fa2/problems/wf_selection/eval_config.json",
+      "sha256": "3fb196137abf41946978c19f5555a729a76ac6988463f345e7b7132a2234cb04",
+      "bytes": 1767
+    },
+    {
+      "url": "https://huggingface.co/datasets/openai/genebench-pro-public-package/resolve/eb75a3c0996b3cedcc9af685bad02fd166848fa2/problems/hic_sv_masked_loop_strength/eval_config.json",
+      "sha256": "8a079991c1a788912141089802f109f4bce47b27b4d3c74d7cee26fbd78aa714",
+      "bytes": 1836
+    },
+    {
+      "url": "https://huggingface.co/datasets/openai/genebench-pro-public-package/resolve/eb75a3c0996b3cedcc9af685bad02fd166848fa2/problems/crispri_casrx_transcript_vs_locus/eval_config.json",
+      "sha256": "8b1e141ab84ba981e09884babbcb7593ccf8091dbfb3b3994cd251a43502ddd3",
+      "bytes": 2656
+    }
+  ]
+}

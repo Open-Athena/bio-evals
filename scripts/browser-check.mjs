@@ -23,9 +23,10 @@ let browser;
 let page;
 const errors=[], failed=[];
 try {
-  browser=await chromium.launchPersistentContext('',{executablePath:process.env.CHROMIUM_PATH || '/home/exedev/.local/bin/chromium',headless:true,
+  const launchBrowser=()=>chromium.launchPersistentContext('',{executablePath:process.env.CHROMIUM_PATH || '/home/exedev/.local/bin/chromium',headless:true,
     viewport:{width:1440,height:1000},
     args:process.env.GITHUB_ACTIONS?[]:['--disable-gpu','--disable-software-rasterizer','--use-gl=disabled','--no-zygote','--single-process','--renderer-process-limit=1','--js-flags=--max-old-space-size=96']});
+  browser=await launchBrowser();
   page=browser.pages()[0] || await browser.newPage();
   page.setDefaultTimeout(20000);
   page.on('pageerror',error=>errors.push(error.message));
@@ -77,6 +78,13 @@ try {
   await page.getByLabel('Implementation',{exact:true}).selectOption({label:'All states'});
   await search.fill('');
   await page.waitForFunction(()=>document.querySelectorAll('.catalog-table tbody tr').length>4);
+  for(let attempt=0;attempt<5 && await page.locator('.catalog-table tbody tr').count()<95;attempt++) {
+    const before=await page.locator('.catalog-table tbody tr').count();
+    await page.locator('.catalog-table form').evaluate(form=>{form.scrollTop=form.scrollHeight;});
+    await page.waitForFunction(n=>document.querySelectorAll('.catalog-table tbody tr').length>n,before);
+  }
+  assert.equal(await page.locator('.catalog-table tbody tr').count(),95,'All catalog benchmarks are reachable by scrolling');
+  await page.locator('.catalog-table form').evaluate(form=>{form.scrollTop=0;});
   await search.focus();await page.keyboard.press('Tab');
   assert.ok(await page.evaluate(()=>document.activeElement?.tagName==='SELECT'));
   await page.screenshot({path:artifacts+'/catalog-desktop.png',fullPage:true});
@@ -95,6 +103,38 @@ try {
   await page.setViewportSize({width:390,height:844});
   await page.screenshot({path:artifacts+'/catalog-mobile.png',fullPage:true});
   assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth+2),'Page should not overflow horizontally; table has its own scroll container');
+  // Visit every collection and switch through all imported examples.
+  for(const benchmark of ['mmlu','bixbench','scicode','scienceagentbench','genebench']) {
+    await browser.close();
+    browser=await launchBrowser();page=browser.pages()[0] || await browser.newPage();
+    page.setDefaultTimeout(20000);
+    page.on('pageerror',error=>errors.push(error.message));
+    page.on('response',response=>{if(response.status()>=400 && response.url().startsWith(base))failed.push(`${response.status()} ${response.url()}`);});
+    await page.setViewportSize({width:390,height:844});
+    await page.goto(`${base}benchmarks/${benchmark}`);
+    await page.waitForSelector('.task-example h3');
+    const picker=page.getByLabel('Example task');
+    const options=await picker.locator('option').evaluateAll(xs=>xs.map(x=>x.value));
+    assert.equal(options.length,3);
+    for(const value of options) {
+      await picker.selectOption(value);
+      assert.ok((await page.locator('.task-prompt').innerText()).length>60);
+      assert.ok(await page.locator('.task-source a').count()>0);
+    }
+    assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth+2),`${benchmark} mobile overflow`);
+    if(benchmark==='mmlu') {
+      assert.equal(await page.locator('.task-choices li').count(),4);
+      const answer=page.locator('.task-example details').filter({has:page.getByText('Reveal reference answer',{exact:true})});
+      assert.equal(await answer.getAttribute('open'),null);
+      await answer.locator('summary').click();assert.notEqual(await answer.getAttribute('open'),null);
+    }
+    if(benchmark==='genebench')assert.ok(await page.locator('.task-example .hljs-attr').count()>0);
+    if(benchmark==='scicode')assert.ok(await page.locator('.task-example .hljs-keyword').count()>0);
+  }
+  await page.screenshot({path:artifacts+'/example-mobile.png',fullPage:true});
+  await page.setViewportSize({width:1440,height:1000});
+  await page.goto(`${base}benchmarks/scicode`);await page.waitForSelector('.task-example h3');
+  await page.screenshot({path:artifacts+'/example-desktop.png',fullPage:true});
   assert.deepEqual(errors,[]);assert.deepEqual(failed,[]);
   console.log('Browser checks passed: search, combined filters, work state, keyboard focus, family links, notes, mobile layout; screenshots in artifacts/browser.');
 } catch(error) {

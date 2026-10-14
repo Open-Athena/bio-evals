@@ -1,0 +1,67 @@
+{
+  "benchmark": "mmlu",
+  "version": "mmlu-biology-biomedical-subjects",
+  "attribution": "Dan Hendrycks and MMLU collaborators; cais/mmlu public distribution.",
+  "license": "MIT",
+  "selection": "Curated: the first test question from each of the three tracked biology subjects; not a random or representative performance sample.",
+  "checked_at": "2026-10-14",
+  "examples": [
+    {
+      "id": "college_biology:test:0",
+      "title": "College Biology",
+      "kind": "Multiple choice",
+      "prompt": "Based on the characteristic population curves that result from plotting population growth of a species, the most effective means of controlling the mosquito population is to",
+      "choices": [
+        "maintain the population at a point corresponding to the midpoint of its logistic curve",
+        "opt for zero population control once the K value of the curve has been reached",
+        "reduce the carrying capacity cif the environment to lower the K value",
+        "increase the mortality rate"
+      ],
+      "inputs": [],
+      "output": "Choose one answer: A, B, C, or D.",
+      "grading": "The tracked five-shot Evalchemy configuration scores answer-choice likelihood and compares the selected choice with the reference letter. This preview shows one question, without the five-shot context.",
+      "reference": "C. reduce the carrying capacity cif the environment to lower the K value",
+      "source": "https://huggingface.co/datasets/cais/mmlu/resolve/c30699e8356da336a370243923dbaf21066bb9fe/college_biology/test-00000-of-00001.parquet",
+      "source_label": "MMLU college_biology, test row 0",
+      "revision": "c30699e8356da336a370243923dbaf21066bb9fe"
+    },
+    {
+      "id": "high_school_biology:test:0",
+      "title": "High School Biology",
+      "kind": "Multiple choice",
+      "prompt": "In a population of giraffes, an environmental change occurs that favors individuals that are tallest. As a result, more of the taller individuals are able to obtain nutrients and survive to pass along their genetic information. This is an example of",
+      "choices": [
+        "directional selection.",
+        "stabilizing selection.",
+        "sexual selection.",
+        "disruptive selection."
+      ],
+      "inputs": [],
+      "output": "Choose one answer: A, B, C, or D.",
+      "grading": "The tracked five-shot Evalchemy configuration scores answer-choice likelihood and compares the selected choice with the reference letter. This preview shows one question, without the five-shot context.",
+      "reference": "A. directional selection.",
+      "source": "https://huggingface.co/datasets/cais/mmlu/resolve/c30699e8356da336a370243923dbaf21066bb9fe/high_school_biology/test-00000-of-00001.parquet",
+      "source_label": "MMLU high_school_biology, test row 0",
+      "revision": "c30699e8356da336a370243923dbaf21066bb9fe"
+    },
+    {
+      "id": "medical_genetics:test:0",
+      "title": "Medical Genetics",
+      "kind": "Multiple choice",
+      "prompt": "In a Robertsonian translocation fusion occurs at the:",
+      "choices": [
+        "telomeres.",
+        "centromeres.",
+        "histones.",
+        "ends of the long arms."
+      ],
+      "inputs": [],
+      "output": "Choose one answer: A, B, C, or D.",
+      "grading": "The tracked five-shot Evalchemy configuration scores answer-choice likelihood and compares the selected choice with the reference letter. This preview shows one question, without the five-shot context.",
+      "reference": "B. centromeres.",
+      "source": "https://huggingface.co/datasets/cais/mmlu/resolve/c30699e8356da336a370243923dbaf21066bb9fe/medical_genetics/test-00000-of-00001.parquet",
+      "source_label": "MMLU medical_genetics, test row 0",
+      "revision": "c30699e8356da336a370243923dbaf21066bb9fe"
+    }
+  ]
+}
