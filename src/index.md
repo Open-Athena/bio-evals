@@ -36,8 +36,6 @@ const implementation = view(Inputs.select(new Map([['All states','All states'],[
 const filtered = filterCatalog(catalog, query || '', framework, implementation);
 ```
 
-<p class="muted">Families: ${filtered.length} · Variants: ${filtered.reduce((n,f) => n + f.variants.length, 0)}. ID/OOD is our editable internal assignment. Inclusion is not a commitment to implement.</p>
-
 ```js
 display(catalogTable(filtered, snapshot, Inputs));
 ```
