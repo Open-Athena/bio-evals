@@ -2,7 +2,7 @@ export default {
   title: 'Biology evaluations',
   root: 'src',
   output: 'dist',
-  theme: ['air', 'near-midnight', 'wide'],
+  theme: ['air', 'near-midnight', 'alt', 'wide'],
   style: 'style.css',
   sidebar: false,
   pager: false,

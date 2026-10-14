@@ -1,22 +1,24 @@
 @import url('observablehq:default.css');
 @import url('observablehq:theme-air.css');
 @import url('observablehq:theme-near-midnight.css') (prefers-color-scheme: dark);
+@import url('observablehq:theme-alt.css');
 @import url('observablehq:theme-wide.css');
 
-#observablehq-main { max-width: 1440px; }
+
 #observablehq-header { font-size: 13px; }
 .muted, .provenance { color: var(--theme-foreground-muted); font-size: 13px; }
 .badge { display:inline-block; border:1px solid var(--theme-foreground-faint); border-radius:4px; padding:1px 6px; font-size:12px; white-space:nowrap; }
 .badge.yes, .badge.merged { color:var(--theme-green); }
 .badge.open { color:var(--theme-blue); }
-.variant-cell { margin: 0 0 10px; }
-.variant-cell:last-child { margin-bottom: 0; }
-.variant-cell small { display:block; margin-top:3px; }
+.implementation-entry + .implementation-entry { margin-top:8px; }
+.implementation-entry small { display:block; margin-bottom:3px; }
 .work-list { padding-left: 18px; margin: 0; }
 .work-list li { margin-bottom: 6px; }
-.catalog-table { overflow-x:auto; }
-.catalog-table table { table-layout:fixed; width:100%; min-width:950px; }
+.catalog-table { overflow:auto; max-height:1100px; padding:0; }
+.catalog-table table { table-layout:fixed; width:100%; min-width:1350px; margin:0; max-width:none; }
 .catalog-table th, .catalog-table td { white-space:normal !important; vertical-align:top; overflow-wrap:anywhere; padding:12px 10px; }
+.catalog-table thead { position:sticky; top:0; z-index:1; background:var(--theme-background-alt); }
+.catalog-table tbody + tbody { border-top:2px solid var(--theme-foreground-faintest); }
 .catalog-table td a { text-decoration:none; }
 .summary { display:flex; flex-wrap:wrap; gap:12px; margin:24px 0; }
 .summary .card { flex:1; min-width:150px; margin:0; }

@@ -7,7 +7,7 @@ title: Biology evaluations
 What the evaluations measure, and where implementation stands. Explore benchmark families, compare variants, and follow the work across repositories.
 
 ```js
-import {filterCatalog, familyLink, variantCell, workCell} from './components/catalog.js';
+import {filterCatalog, catalogTable} from './components/catalog.js';
 const catalog = await FileAttachment('./data/catalog.json').json();
 const snapshot = await FileAttachment('./data/github-status.json').json();
 const variants = catalog.flatMap(f => f.variants);
@@ -39,22 +39,7 @@ const filtered = filterCatalog(catalog, query || '', framework, implementation);
 <p class="muted">Families: ${filtered.length} · Variants: ${filtered.reduce((n,f) => n + f.variants.length, 0)}. ID/OOD is our editable internal assignment. Inclusion is not a commitment to implement.</p>
 
 ```js
-const table = Inputs.table(filtered.map(f => ({...f, work:f})), {
-  columns: ['name','description','creators','variants','work'],
-  header: {name:'Benchmark family',description:'What it measures',creators:'Creator organization(s)',variants:'Variants · ID/OOD · implementation',work:'Linked work'},
-  format: {
-    name: (_,i) => familyLink(filtered[i]),
-    creators: creators => creators.join('; '),
-    variants: (_,i) => variantCell(filtered[i]),
-    work: (_,i) => workCell(filtered[i],snapshot)
-  },
-  width: {name:160,description:280,creators:170,variants:350,work:230},
-  rows:15, maxHeight:1100, select:false, sort:'name'
-});
-const container = document.createElement('div');
-container.className = 'catalog-table';
-container.append(table);
-display(container);
+display(catalogTable(filtered, snapshot));
 ```
 
 <p class="muted">GitHub last successfully fetched: ${snapshot.last_successful_fetch_at ? new Date(snapshot.last_successful_fetch_at).toLocaleString() : 'not yet fetched'}. ${snapshot.complete ? '' : 'Some statuses are unavailable or stale; follow the links for current work.'} Refreshes daily and on catalog updates.</p>
