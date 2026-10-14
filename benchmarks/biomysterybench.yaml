@@ -23,9 +23,25 @@ variants:
         url: https://github.com/josancamon19/sci-benches/tree/1fc392943dce9c847a62574dcf4e4c6ad943d2ab/src/biomistery_bench
     implementations:
       - framework: Harbor
-        status: unknown
-        evidence: []
-    work: []
+        status: in_progress
+        evidence:
+          - url: https://github.com/marin-community/harbor/issues/161#issuecomment-5804899659
+            scope: Ten-task development pilot with uniform v6 saved-answer grading. This demonstrates the
+              adapter path, not full 90-task coverage or native-score parity.
+            checked_at: 2026-10-14
+        assessment:
+          checked_at: 2026-10-14
+          reason: "Draft evaluation-only port #162 has a graded ten-task pilot. Full-suite resource
+            feasibility and review remain unfinished; gated access was obtained, so this is active
+            work rather than an unverified access blocker."
+          sources:
+            - label: Audited framework revision
+              url: https://github.com/marin-community/harbor/tree/1d29d200414b6488a87192f50f617b1b5bd4b6f4/adapters
+            - label: Open implementation PR
+              url: https://github.com/marin-community/harbor/pull/162
+    work:
+      - https://github.com/marin-community/harbor/pull/162
+      - https://github.com/marin-community/harbor/issues/161
     notes:
       - "Access: 90 gated, eval-only tasks; 5 previews. Community importer skips >1 GB archives by
         default."
@@ -33,8 +49,6 @@ variants:
         official equivalence unvalidated."
       - "Limitations: Packaging and a community judge exist; access, judge fidelity and
         source-lookup compliance remain blockers."
-      - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
-        notes are historical."
     provenance:
       - sheet: Agentic (Harbor)
         gid: 846608904

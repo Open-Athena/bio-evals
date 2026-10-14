@@ -29,8 +29,20 @@ variants:
         url: https://github.com/marin-community/evalchemy/tree/ab8e78f12abb8ed0d1659f56c24f2e01f3c85b54/eval/chat_benchmarks
     implementations:
       - framework: Evalchemy
-        status: unknown
+        status: no
         evidence: []
+        assessment:
+          checked_at: 2026-10-14
+          reason: The paper describes the task collection, but the audited Evalchemy registries contain no
+            integration for this benchmark. Resolve the consolidated task/scorer release and
+            implement the selected scope.
+          sources:
+            - label: Audited framework revision
+              url: https://github.com/marin-community/evalchemy/tree/3bb8278078e7ad4b5a6b1f81e8a08db3dd206ae6/eval
+            - label: Pinned lm-eval dependency
+              url: https://github.com/EleutherAI/lm-evaluation-harness/tree/6d642546f4688648fced259eb3302efd36ece5af/lm_eval/tasks
+            - label: Reviewed implementation/release
+              url: https://arxiv.org/html/2503.04013v1
     work: []
     notes:
       - "Access: Paper identified; official consolidated data/scorer release not located."
@@ -38,8 +50,6 @@ variants:
         not verified."
       - "Limitations: General biomedical coverage; a biology-only score requires an explicit subset
         and original metrics."
-      - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
-        notes are historical."
     provenance:
       - sheet: Non-agentic (Evalchemy)
         gid: 776831399

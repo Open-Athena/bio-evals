@@ -15,7 +15,7 @@ const variants = catalog.flatMap(f => f.variants);
 
 <div class="summary">
   <div class="card"><strong>${catalog.length}</strong>benchmarks</div>
-  <div class="card"><strong>${variants.filter(v => v.implementations.some(i => i.status === 'yes')).length}</strong>with end-to-end evidence</div>
+  <div class="card"><strong>${variants.filter(v => v.implementations.some(i => i.status === 'yes')).length}</strong>implemented</div>
   <div class="card"><strong>${new Set(variants.flatMap(v => v.work)).size}</strong>linked issues & PRs</div>
 </div>
 
@@ -23,7 +23,7 @@ const variants = catalog.flatMap(f => f.variants);
 const filters = view(Inputs.form({
   query: Inputs.text({label: 'Search evaluations', placeholder: 'Name, what it measures, organization…', width: 320}),
   framework: Inputs.select(['All frameworks', ...new Set(variants.flatMap(v => v.implementations.map(i => i.framework)))], {label: 'Framework', width: 220}),
-  implementation: Inputs.select(new Map([['All states','All states'],['Implemented','yes'],['Not implemented','no'],['Unknown','unknown']]), {label: 'Implementation', width: 220})
+  implementation: Inputs.select(new Map([['All states','All states'],['Implemented','yes'],['In progress','in_progress'],['To do','no'],['Blocked','blocked']]), {label: 'Implementation', width: 220})
 }, {template: inputs => html`<div class="filters">${Object.values(inputs)}</div>`}));
 ```
 
@@ -37,6 +37,6 @@ display(catalogTable(filtered, snapshot, Inputs));
 
 <p class="muted">GitHub last successfully fetched: ${snapshot.last_successful_fetch_at ? new Date(snapshot.last_successful_fetch_at).toLocaleString() : 'not yet fetched'}. ${snapshot.complete ? '' : 'Some statuses are unavailable or stale; follow the links for current work.'} Refreshes daily and on catalog updates.</p>
 
-**Implemented** means end-to-end execution including grading has been demonstrated for the stated scope. Unknown means we have not verified it here; it does not mean an adapter is absent. Open a benchmark for evidence, caveats, and source dates.
+**Implemented** means end-to-end execution including grading has been demonstrated for the stated scope. **In progress** has active implementation work. **To do** means porting or validation remains. **Blocked** has a documented prerequisite. Open a benchmark for evidence, caveats, and source dates.
 
 [About this catalog](./about) · [Edit or add an evaluation](https://github.com/Open-Athena/bio-evals/tree/main/benchmarks) · [Project issues](https://github.com/Open-Athena/bio-evals/issues)

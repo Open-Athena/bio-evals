@@ -29,16 +29,26 @@ variants:
         url: https://github.com/marin-community/evalchemy/tree/ab8e78f12abb8ed0d1659f56c24f2e01f3c85b54/eval/chat_benchmarks
     implementations:
       - framework: Evalchemy
-        status: unknown
+        status: no
         evidence: []
+        assessment:
+          checked_at: 2026-10-14
+          reason: The inspected paper does not establish an author-linked runnable release, and the audited
+            Evalchemy registries contain no integration. Locate the release and implement the
+            biology selection and grading.
+          sources:
+            - label: Audited framework revision
+              url: https://github.com/marin-community/evalchemy/tree/3bb8278078e7ad4b5a6b1f81e8a08db3dd206ae6/eval
+            - label: Pinned lm-eval dependency
+              url: https://github.com/EleutherAI/lm-evaluation-harness/tree/6d642546f4688648fced259eb3302efd36ece5af/lm_eval/tasks
+            - label: Reviewed implementation/release
+              url: https://arxiv.org/html/2608.30517v1
     work: []
     notes:
       - "Access: Paper identified; official runnable data/scorer release not located."
       - "Grading: Paper-described answer/process-rubric evaluation; released scorer not verified."
       - "Limitations: Distinct from OlympicArena; public competition questions may overlap other
         exam benchmarks."
-      - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
-        notes are historical."
     provenance:
       - sheet: Non-agentic (Evalchemy)
         gid: 776831399

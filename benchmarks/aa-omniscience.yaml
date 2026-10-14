@@ -23,8 +23,19 @@ variants:
         url: https://github.com/marin-community/evalchemy/tree/f42990450edf4e694fe5a22b3d23ed09ab42da1e/eval/chat_benchmarks
     implementations:
       - framework: Evalchemy
-        status: unknown
+        status: blocked
         evidence: []
+        assessment:
+          checked_at: 2026-10-14
+          reason: The canonical dataset is private; the public preview does not supply the full biology/health
+            scope. Obtain access or explicitly select a public-preview scope.
+          sources:
+            - label: Audited framework revision
+              url: https://github.com/marin-community/evalchemy/tree/3bb8278078e7ad4b5a6b1f81e8a08db3dd206ae6/eval
+            - label: Pinned lm-eval dependency
+              url: https://github.com/EleutherAI/lm-evaluation-harness/tree/6d642546f4688648fced259eb3302efd36ece5af/lm_eval/tasks
+            - label: Access or release blocker
+              url: https://artificialanalysis.ai/evaluations/omniscience
     work: []
     notes:
       - "Access: Full benchmark 6,000 questions / 42 topics / 6 domains; public preview is not the
@@ -33,8 +44,6 @@ variants:
         Omniscience Index."
       - "Limitations: AAII 4.3 OOD component. Health includes clinical knowledge; confirm topic
         mapping before calling it a biology score."
-      - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
-        notes are historical."
     provenance:
       - sheet: Non-agentic (Evalchemy)
         gid: 776831399

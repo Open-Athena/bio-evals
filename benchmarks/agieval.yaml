@@ -23,8 +23,20 @@ variants:
         url: https://github.com/EleutherAI/lm-evaluation-harness/tree/v0.4.12/lm_eval/tasks/agieval
     implementations:
       - framework: Evalchemy
-        status: unknown
+        status: no
         evidence: []
+        assessment:
+          checked_at: 2026-10-14
+          reason: The pinned lm-eval dependency includes AGIEval. Select the intended biology questions and
+            validate the selected protocol through Evalchemy; no biology-slice graded run was
+            established in this audit.
+          sources:
+            - label: Audited framework revision
+              url: https://github.com/marin-community/evalchemy/tree/3bb8278078e7ad4b5a6b1f81e8a08db3dd206ae6/eval
+            - label: Pinned lm-eval dependency
+              url: https://github.com/EleutherAI/lm-evaluation-harness/tree/6d642546f4688648fced259eb3302efd36ece5af/lm_eval/tasks
+            - label: Existing task configuration
+              url: https://github.com/EleutherAI/lm-evaluation-harness/tree/6d642546f4688648fced259eb3302efd36ece5af/lm_eval/tasks/agieval
     work: []
     notes:
       - "Access: Public repository contains v1.1 data and scoring code; biology updated with 2023
@@ -32,8 +44,6 @@ variants:
       - "Grading: Official answer extraction and accuracy; pin dataset version and prompt mode."
       - "Limitations: Likely source overlap with other Gaokao collections; do not assume independent
         test questions."
-      - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
-        notes are historical."
     provenance:
       - sheet: Non-agentic (Evalchemy)
         gid: 776831399

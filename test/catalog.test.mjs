@@ -59,3 +59,15 @@ test('only the selected version supplies tracking state and work',()=>{
   invalid.find(b=>b.id==='bixbench').selected_variant='missing';
   assert.ok(validateCatalog(invalid).some(e=>e.includes('selected_variant')));
 });
+
+test('tracked statuses require sourced reasons and active work links',()=>{
+  const copy=structuredClone(catalog), v=selectedVersion(copy[0]);
+  v.implementations[0].status='unknown';
+  assert.ok(validateCatalog(copy).some(e=>e.includes('actionable status')));
+  v.implementations[0].status='blocked';
+  delete v.implementations[0].assessment;
+  assert.ok(validateCatalog(copy).some(e=>e.includes('sourced assessment')));
+  const progress=structuredClone(catalog), active=selectedVersion(progress.find(b=>b.id==='genebench'));
+  active.work=[];
+  assert.ok(validateCatalog(progress).some(e=>e.includes('in-progress work')));
+});

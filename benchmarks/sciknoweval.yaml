@@ -7,7 +7,9 @@ sources:
   - label: Benchmark
     url: https://arxiv.org/abs/2406.09098
 notes:
-  - "Version selection needs review: SciKnowEval v2 — biology closed-choice is the provisional tracked scope; the source lists multiple task types or protocols without a single unambiguous default."
+  - "Version selection needs review: SciKnowEval v2 — biology closed-choice is the provisional
+    tracked scope; the source lists multiple task types or protocols without a single unambiguous
+    default."
 selected_variant: sciknoweval-v2-biology-closed-choice
 variants:
   - id: sciknoweval-v2-biology-closed-choice
@@ -25,8 +27,19 @@ variants:
         url: https://github.com/marin-community/evalchemy/tree/f42990450edf4e694fe5a22b3d23ed09ab42da1e/eval/chat_benchmarks
     implementations:
       - framework: Evalchemy
-        status: unknown
+        status: no
         evidence: []
+        assessment:
+          checked_at: 2026-10-14
+          reason: No matching SciKnowEval integration was found in the audited Evalchemy registry or its
+            pinned lm-eval task inventory. Port the selected SciKnowEval v2 — biology closed-choice
+            scope and establish an end-to-end graded run. This finding is limited to the checked
+            framework revisions, not all external implementations.
+          sources:
+            - label: Audited framework revision
+              url: https://github.com/marin-community/evalchemy/tree/3bb8278078e7ad4b5a6b1f81e8a08db3dd206ae6/eval
+            - label: Pinned lm-eval dependency
+              url: https://github.com/EleutherAI/lm-evaluation-harness/tree/6d642546f4688648fced259eb3302efd36ece5af/lm_eval/tasks
     work: []
     notes:
       - "Access: Public v2 release: 28,392 examples / 58 tasks across 4 domains; biology-slice count
@@ -35,8 +48,6 @@ variants:
         embedding models."
       - "Limitations: Adds biological breadth beyond exam questions. Do not silently omit
         judge-requiring tasks from a claimed full-suite score."
-      - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
-        notes are historical."
     provenance:
       - sheet: Non-agentic (Evalchemy)
         gid: 776831399

@@ -24,8 +24,17 @@ variants:
         url: https://github.com/marin-community/harbor/tree/abdd67137bcd6e5c44d682d0052fbd1190e63556/adapters
     implementations:
       - framework: Harbor
-        status: unknown
+        status: blocked
         evidence: []
+        assessment:
+          checked_at: 2026-10-14
+          reason: The full 159-task suite is withheld. Public examples do not establish full-suite access;
+            obtain the full release or explicitly select the example scope.
+          sources:
+            - label: Audited framework revision
+              url: https://github.com/marin-community/harbor/tree/1d29d200414b6488a87192f50f617b1b5bd4b6f4/adapters
+            - label: Access or release blocker
+              url: https://github.com/latchbio/spatialbench
     work: []
     notes:
       - "Access: 16 public task JSONs; Latch downloads untested. Full 159-task suite withheld."
@@ -33,8 +42,6 @@ variants:
         code."
       - "Limitations: Complementary spatial analysis. Report the exact public subset separately from
         full-suite results."
-      - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
-        notes are historical."
     provenance:
       - sheet: Agentic (Harbor)
         gid: 846608904

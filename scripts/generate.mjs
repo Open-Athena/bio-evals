@@ -1,4 +1,4 @@
-import {selectedVersion} from '../src/components/catalog.js';
+import {selectedVersion,implementationLabel} from '../src/components/catalog.js';
 import {mkdir, readFile, writeFile, rm} from 'node:fs/promises';
 import {loadCatalog, root, validateCatalog} from './catalog.mjs';
 
@@ -37,8 +37,9 @@ for(const family of families){
     page+=`<section class="variant-detail" id="${h(variant.id)}">\n<h2>${h(variant.name)}</h2>\n<p>${h(variant.description)}</p>\n`;
     page+=`<p><strong>Creator / curator:</strong> ${h(variant.creators.join('; ') || 'Not recorded')}<br><strong>Internal ID/OOD:</strong> ${h(variant.assignment || 'Unassigned')}</p>\n`;
     for(const impl of variant.implementations){
-      const label={yes:'Implemented',no:'Not implemented',unknown:'Unknown'}[impl.status];
+      const label=implementationLabel(impl.status);
       page+=`<p><strong>${h(impl.framework)}:</strong> <span class="badge ${h(impl.status)}">${label}</span></p>\n`;
+      if(impl.assessment)page+=`<p>${h(impl.assessment.reason)}</p><p class="muted">Checked ${h(impl.assessment.checked_at)} · ${impl.assessment.sources.map(s=>anchor(s.label,s.url)).join(' · ')}</p>\n`;
       if(impl.evidence.length)page+=list(impl.evidence.map(e=>`${anchor('Execution and grading evidence',e.url)} — ${h(e.scope)} <span class="muted">Checked ${h(e.checked_at)}.</span>`))+'\n';
     }
     page+=`<h3>Linked work</h3>\n${variant.work.length?list(variant.work.map(workHtml)):'<p class="muted">No linked work. Catalog inclusion does not imply an implementation commitment.</p>'}\n`;

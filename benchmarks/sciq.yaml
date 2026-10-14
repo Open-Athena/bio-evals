@@ -27,8 +27,19 @@ variants:
         url: https://github.com/EleutherAI/lm-evaluation-harness/tree/v0.4.12/lm_eval/tasks/sciq
     implementations:
       - framework: Evalchemy
-        status: unknown
+        status: no
         evidence: []
+        assessment:
+          checked_at: 2026-10-14
+          reason: The pinned lm-eval dependency contains SciQ. The biology-only selection and a graded
+            Evalchemy run remain to be established.
+          sources:
+            - label: Audited framework revision
+              url: https://github.com/marin-community/evalchemy/tree/3bb8278078e7ad4b5a6b1f81e8a08db3dd206ae6/eval
+            - label: Pinned lm-eval dependency
+              url: https://github.com/EleutherAI/lm-evaluation-harness/tree/6d642546f4688648fced259eb3302efd36ece5af/lm_eval/tasks
+            - label: Existing task configuration
+              url: https://github.com/EleutherAI/lm-evaluation-harness/tree/6d642546f4688648fced259eb3302efd36ece5af/lm_eval/tasks/sciq
     work: []
     notes:
       - "Access: Public allenai/sciq dataset; upstream lm-eval task exists, but biology subset
@@ -36,8 +47,6 @@ variants:
       - "Grading: Four-choice accuracy under an explicit supplied-support or closed-book protocol."
       - "Limitations: General science bank, not a prepackaged biology benchmark. The support passage
         changes the evaluation condition."
-      - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
-        notes are historical."
     provenance:
       - sheet: Non-agentic (Evalchemy)
         gid: 776831399

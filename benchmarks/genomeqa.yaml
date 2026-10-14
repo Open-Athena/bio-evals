@@ -27,16 +27,26 @@ variants:
         url: https://github.com/marin-community/evalchemy/tree/f42990450edf4e694fe5a22b3d23ed09ab42da1e/eval/chat_benchmarks
     implementations:
       - framework: Evalchemy
-        status: unknown
+        status: no
         evidence: []
+        assessment:
+          checked_at: 2026-10-14
+          reason: No author-linked runnable release was located in the inspected paper, and no corresponding
+            Evalchemy task appears in the audited registries. Locate the release and implement its
+            scorer.
+          sources:
+            - label: Audited framework revision
+              url: https://github.com/marin-community/evalchemy/tree/3bb8278078e7ad4b5a6b1f81e8a08db3dd206ae6/eval
+            - label: Pinned lm-eval dependency
+              url: https://github.com/EleutherAI/lm-evaluation-harness/tree/6d642546f4688648fced259eb3302efd36ece5af/lm_eval/tasks
+            - label: Reviewed implementation/release
+              url: https://arxiv.org/html/2604.05774v1
     work: []
     notes:
       - "Access: Paper accessible; no author-linked runnable release located in this audit."
       - "Grading: Task-label classification metrics; reproduce the paper's task-level protocol."
       - "Limitations: Native sequence capability complement to Genome-Bench's text knowledge QA.
         Distinct from ClawBio's same-name agent benchmark."
-      - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
-        notes are historical."
     provenance:
       - sheet: Non-agentic (Evalchemy)
         gid: 776831399

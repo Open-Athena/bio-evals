@@ -28,9 +28,26 @@ variants:
         url: https://huggingface.co/datasets/phylobio/BiomniBench-DA/tree/e1c8ca5e11a620087bc48d97888eb69176a1f235
     implementations:
       - framework: Harbor
-        status: unknown
-        evidence: []
-    work: []
+        status: in_progress
+        evidence:
+          - url: https://github.com/marin-community/harbor/pull/184#issuecomment-5815786883
+            scope: "Native released 50-question subset: execution and continuous rubric grading archived,
+              including recoveries and two solver retries. Modified judge protocol; not the full
+              100-task paper suite."
+            checked_at: 2026-10-14
+        assessment:
+          checked_at: 2026-10-14
+          reason: "Open staging/grading PR #184 has archived native-input execution and grading evidence.
+            Integration review and current-runtime compatibility remain unfinished; access has
+            already succeeded."
+          sources:
+            - label: Audited framework revision
+              url: https://github.com/marin-community/harbor/tree/1d29d200414b6488a87192f50f617b1b5bd4b6f4/adapters
+            - label: Open implementation PR
+              url: https://github.com/marin-community/harbor/pull/184
+    work:
+      - https://github.com/marin-community/harbor/pull/184
+      - https://github.com/marin-community/harbor/issues/181
     notes:
       - "Access: HF metadata lists 50 Harbor-style task directories with instructions, Dockerfiles,
         and tests at e1c8ca5e11a620087bc48d97888eb69176a1f235. Auto-gated; unauthenticated content
@@ -41,8 +58,6 @@ variants:
       - "Limitations: Harbor-style packaging is listed but execution is unvalidated. Adds process
         diagnostics beyond final-answer checks. Distinguish the 50-task release from the paper's 100
         tasks."
-      - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
-        notes are historical."
     provenance:
       - sheet: Agentic (Harbor)
         gid: 846608904

@@ -45,9 +45,15 @@ export function validateCatalog(families, inventory) {
         const {framework, status, evidence} = implementation;
         check(string(framework) && !frameworks.has(framework), `${key}: invalid or duplicate framework`);
         frameworks.add(framework);
-        check(['yes', 'no', 'unknown'].includes(status), `${key}: invalid implementation status`);
+        check(['yes', 'no', 'in_progress', 'blocked', 'unknown'].includes(status), `${key}: invalid implementation status`);
         check(Array.isArray(evidence) && evidence.every(e => url(e.url) && string(e.scope) && /^\d{4}-\d{2}-\d{2}$/.test(e.checked_at)), `${key}: invalid evidence`);
         check(status !== 'yes' || evidence?.length > 0, `${key}: implemented=yes requires evidence and scope`);
+        if (selectedVersion(f)?.id === v.id) {
+          check(status !== 'unknown', `${key}: tracked implementation requires an actionable status`);
+          const assessment = implementation.assessment;
+          check(assessment && string(assessment.reason) && /^\d{4}-\d{2}-\d{2}$/.test(assessment.checked_at) && sources(assessment.sources) && assessment.sources.length > 0, `${key}: tracked status requires a dated, sourced assessment`);
+          check(status !== 'in_progress' || v.work?.length > 0, `${key}: in-progress work requires an issue or PR link`);
+        }
       }
       check(Array.isArray(v.provenance) && v.provenance.length, `${key}: provenance required`);
       for (const p of v.provenance || []) {

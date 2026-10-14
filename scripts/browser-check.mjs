@@ -33,13 +33,21 @@ try {
   assert.equal((await page.goto(base)).status(),200);
   await page.waitForSelector('.catalog-table tbody tr',{timeout:20000});
   assert.equal(await page.locator('.observablehq--error').count(),0,await page.locator('body').innerText());
-  assert.match(await page.locator('.catalog-table tbody tr').first().innerText(),/BixBench/);
+  for(let index=0;index<4;index++)assert.equal(await page.locator('.catalog-table tbody tr').nth(index).locator('.badge.yes').count(),1,'Implemented benchmarks sort first');
+  assert.ok(!(await page.getByLabel('Implementation',{exact:true}).innerText()).includes('Unknown'));
+  await page.getByLabel('Implementation',{exact:true}).selectOption({label:'Blocked'});
+  await page.waitForFunction(()=>document.querySelector('.catalog-table tbody tr')?.textContent.includes('Blocked'));
+  assert.equal(await page.locator('.catalog-table .badge.yes').count(),0);
+  await page.getByLabel('Implementation',{exact:true}).selectOption({label:'In progress'});
+  await page.waitForFunction(()=>document.querySelectorAll('.catalog-table tbody tr').length===3);
+  assert.equal(await page.locator('.catalog-table .badge.in_progress').count(),3);
+  await page.getByLabel('Implementation',{exact:true}).selectOption({label:'All states'});
   const filterPositions=await page.locator('.filters > form').evaluateAll(forms=>forms.map(f=>f.getBoundingClientRect().top));
   assert.equal(filterPositions.length,3);
   assert.ok(Math.max(...filterPositions)-Math.min(...filterPositions)<2,'Desktop filters share one row');
   const search=page.getByLabel('Search evaluations');
   await search.fill('BixBench');
-  await page.waitForFunction(()=>document.querySelector('.catalog-table tbody')?.textContent.includes('BixBench v1.5'));
+  await page.waitForFunction(()=>document.querySelectorAll('.catalog-table tbody tr').length===1 && document.querySelector('.catalog-table tbody')?.textContent.includes('BixBench v1.5'));
   assert.equal(await page.locator('.catalog-table tbody').count(),1);
   assert.equal(await page.locator('.catalog-table tbody tr').count(),1);
   for(const title of ['Benchmark','What it measures','Creator organization(s)','Version','ID/OOD','Implementation','Linked work']) {

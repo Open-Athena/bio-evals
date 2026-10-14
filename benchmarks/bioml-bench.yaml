@@ -23,16 +23,22 @@ variants:
         url: https://github.com/marin-community/harbor/tree/abdd67137bcd6e5c44d682d0052fbd1190e63556/adapters
     implementations:
       - framework: Harbor
-        status: unknown
+        status: no
         evidence: []
+        assessment:
+          checked_at: 2026-10-14
+          reason: No matching BioML-bench integration was found in the audited Harbor registry. Port the
+            selected BioML-bench scope and establish an end-to-end graded run. This finding is
+            limited to the checked framework revisions, not all external implementations.
+          sources:
+            - label: Audited framework revision
+              url: https://github.com/marin-community/harbor/tree/1d29d200414b6488a87192f50f617b1b5bd4b6f4/adapters
     work: []
     notes:
       - "Access: Alpha release; dataset permissions/reference labels vary by source."
       - "Grading: Released numerical scorers; inspected examples use F1 and Pearson correlation."
       - "Limitations: Complementary biomedical ML engineering; budget model fitting separately from
         agent inference."
-      - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
-        notes are historical."
     provenance:
       - sheet: Agentic (Harbor)
         gid: 846608904

@@ -33,10 +33,21 @@ variants:
             scope: "Harbor CLI v1.5: end-to-end execution and grading demonstrated in the 205-question run.
               Partial grading coverage and modified judge protocol remain caveats."
             checked_at: 2026-10-14
+        assessment:
+          checked_at: 2026-10-14
+          reason: Selected Harbor CLI v1.5 has archived end-to-end execution and grading. Reference-correction
+            work remains open but does not erase the existing implementation; preserve its protocol
+            caveats.
+          sources:
+            - label: Audited framework revision
+              url: https://github.com/marin-community/harbor/tree/1d29d200414b6488a87192f50f617b1b5bd4b6f4/adapters
+            - label: Execution evidence
+              url: https://github.com/marin-community/marin/issues/9258#issuecomment-5744365667
     work:
       - https://github.com/marin-community/marin/issues/9258
       - https://github.com/marin-community/harbor/pull/174
       - https://github.com/marin-community/harbor/issues/166
+      - https://github.com/marin-community/harbor/issues/167
     notes:
       - "Access: Public reference answers and adapter; validate inputs and environment."
       - "Grading: Together openai/gpt-oss-120b; original comparison prompt, explicit JSON schema,

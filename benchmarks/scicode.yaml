@@ -29,9 +29,25 @@ variants:
         url: https://github.com/marin-community/harbor/tree/9551f376157d90104011107dcbf9ca3621228126/adapters/scicode
     implementations:
       - framework: Harbor
-        status: unknown
-        evidence: []
-    work: []
+        status: yes
+        evidence:
+          - url: https://github.com/marin-community/harbor/blob/1d29d200414b6488a87192f50f617b1b5bd4b6f4/adapters/scicode/parity_experiment.json
+            scope: The merged Harbor adapter publishes three graded 80-problem parity runs, covering the source
+              benchmark that includes biology. This establishes execution/grading support, not a
+              separately reported biology-only score.
+            checked_at: 2026-10-14
+        assessment:
+          checked_at: 2026-10-14
+          reason: The merged Harbor adapter publishes three graded 80-problem parity runs, covering the source
+            benchmark that includes biology. This establishes execution/grading support, not a
+            separately reported biology-only score.
+          sources:
+            - label: Audited framework revision
+              url: https://github.com/marin-community/harbor/tree/1d29d200414b6488a87192f50f617b1b5bd4b6f4/adapters
+            - label: Graded parity runs
+              url: https://github.com/marin-community/harbor/blob/1d29d200414b6488a87192f50f617b1b5bd4b6f4/adapters/scicode/parity_experiment.json
+    work:
+      - https://github.com/harbor-framework/harbor/pull/404
     notes:
       - "Access: Existing Harbor adapter; shared≈1GB HDF5 test data staged once. Test solutions not
         publicly released."
@@ -39,8 +55,6 @@ variants:
         protocol."
       - "Limitations: AAII4.3 OOD component. Harbor's agentic variant changes the execution
         protocol; do not present it as canonical AAII performance."
-      - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
-        notes are historical."
     provenance:
       - sheet: Agentic (Harbor)
         gid: 846608904

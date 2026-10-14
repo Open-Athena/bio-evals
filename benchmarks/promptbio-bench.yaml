@@ -23,8 +23,16 @@ variants:
         url: https://github.com/PromptBio/promptbio-bench/tree/e2a1947894eac530900247f00c0b726363b540ed
     implementations:
       - framework: Harbor
-        status: unknown
+        status: no
         evidence: []
+        assessment:
+          checked_at: 2026-10-14
+          reason: No matching PromptBio-Bench integration was found in the audited Harbor registry. Port the
+            selected PromptBio-Bench scope and establish an end-to-end graded run. This finding is
+            limited to the checked framework revisions, not all external implementations.
+          sources:
+            - label: Audited framework revision
+              url: https://github.com/marin-community/harbor/tree/1d29d200414b6488a87192f50f617b1b5bd4b6f4/adapters
     work: []
     notes:
       - "Access: 244 public task/eval JSON pairs and reference-script directories; input/reference
@@ -33,8 +41,6 @@ variants:
         file similarity (0–1)."
       - "Limitations: Useful MVP candidate with reference scripts for sibling validation. Some tasks
         are elementary; choose a teacher/student gap. Score is not a binary pass rate."
-      - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
-        notes are historical."
     provenance:
       - sheet: Agentic (Harbor)
         gid: 846608904

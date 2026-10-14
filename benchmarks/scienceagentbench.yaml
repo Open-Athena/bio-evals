@@ -25,17 +25,31 @@ variants:
         url: https://github.com/harbor-framework/harbor/blob/96a13544537e54be84c0f316f8c3156769380684/adapters/scienceagentbench/README.md
     implementations:
       - framework: Harbor
-        status: unknown
-        evidence: []
-    work: []
+        status: yes
+        evidence:
+          - url: https://github.com/marin-community/harbor/blob/1d29d200414b6488a87192f50f617b1b5bd4b6f4/adapters/scienceagentbench/parity_experiment.json
+            scope: The merged Harbor adapter publishes five graded 102-task parity runs, including its 27
+              bioinformatics tasks. CPU/GPU limits and judge-protocol differences remain documented
+              caveats.
+            checked_at: 2026-10-14
+        assessment:
+          checked_at: 2026-10-14
+          reason: The merged Harbor adapter publishes five graded 102-task parity runs, including its 27
+            bioinformatics tasks. CPU/GPU limits and judge-protocol differences remain documented
+            caveats.
+          sources:
+            - label: Audited framework revision
+              url: https://github.com/marin-community/harbor/tree/1d29d200414b6488a87192f50f617b1b5bd4b6f4/adapters
+            - label: Graded parity runs
+              url: https://github.com/marin-community/harbor/blob/1d29d200414b6488a87192f50f617b1b5bd4b6f4/adapters/scienceagentbench/parity_experiment.json
+    work:
+      - https://github.com/harbor-framework/harbor/pull/630
     notes:
       - "Access: Separate SharePoint inputs and gold assets; some tasks need GPU or extra RAM."
       - "Grading: 27 bio tasks: 11 deterministic, 16 visual. Visual grader defaults to GPT-4o;
         replacement needs validation."
       - "Limitations: Next existing adapter. Choose tasks by relevance/resources; visual tasks
         remain eligible."
-      - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
-        notes are historical."
     provenance:
       - sheet: Agentic (Harbor)
         gid: 846608904

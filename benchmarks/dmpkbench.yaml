@@ -23,8 +23,20 @@ variants:
         url: https://github.com/marin-community/evalchemy/tree/ab8e78f12abb8ed0d1659f56c24f2e01f3c85b54/eval/chat_benchmarks
     implementations:
       - framework: Evalchemy
-        status: unknown
+        status: blocked
         evidence: []
+        assessment:
+          checked_at: 2026-10-14
+          reason: ADMET MPO reference answers are withheld for licensing reasons. The full selected scope
+            needs authorized answers or hosted scoring; publicly labeled subsets remain possible
+            separate scopes.
+          sources:
+            - label: Audited framework revision
+              url: https://github.com/marin-community/evalchemy/tree/3bb8278078e7ad4b5a6b1f81e8a08db3dd206ae6/eval
+            - label: Pinned lm-eval dependency
+              url: https://github.com/EleutherAI/lm-evaluation-harness/tree/6d642546f4688648fced259eb3302efd36ece5af/lm_eval/tasks
+            - label: Access or release blocker
+              url: https://github.com/GHDDI-AILab/DMPKBench
     work: []
     notes:
       - "Access: Public code and several data subsets; ADMET-MPO reference answers withheld under
@@ -33,8 +45,6 @@ variants:
         responses need model/expert grading."
       - "Limitations: Questions being downloadable does not imply self-run scoring. Report subset
         coverage; large ADMET-MPO pool should not dominate other tasks."
-      - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
-        notes are historical."
     provenance:
       - sheet: Non-agentic (Evalchemy)
         gid: 776831399

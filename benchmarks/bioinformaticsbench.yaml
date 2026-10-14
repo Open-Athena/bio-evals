@@ -24,8 +24,19 @@ variants:
         url: https://github.com/marin-community/evalchemy/tree/ab8e78f12abb8ed0d1659f56c24f2e01f3c85b54/eval/chat_benchmarks
     implementations:
       - framework: Evalchemy
-        status: unknown
+        status: no
         evidence: []
+        assessment:
+          checked_at: 2026-10-14
+          reason: No matching BioinformaticsBench integration was found in the audited Evalchemy registry or
+            its pinned lm-eval task inventory. Port the selected BioinformaticsBench scope and
+            establish an end-to-end graded run. This finding is limited to the checked framework
+            revisions, not all external implementations.
+          sources:
+            - label: Audited framework revision
+              url: https://github.com/marin-community/evalchemy/tree/3bb8278078e7ad4b5a6b1f81e8a08db3dd206ae6/eval
+            - label: Pinned lm-eval dependency
+              url: https://github.com/EleutherAI/lm-evaluation-harness/tree/6d642546f4688648fced259eb3302efd36ece5af/lm_eval/tasks
     work: []
     notes:
       - "Access: OpenReview paper available; complete author-linked data/scorer not located."
@@ -33,8 +44,6 @@ variants:
         need verification."
       - "Limitations: Catalogued separately from Bioinfo-Bench; reported task count does not
         establish a runnable public release."
-      - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
-        notes are historical."
     provenance:
       - sheet: Non-agentic (Evalchemy)
         gid: 776831399

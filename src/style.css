@@ -9,7 +9,7 @@
 .muted, .provenance { color: var(--theme-foreground-muted); font-size: 13px; }
 .badge { display:inline-block; border:1px solid var(--theme-foreground-faint); border-radius:4px; padding:1px 6px; font-size:12px; white-space:nowrap; }
 .badge.yes, .badge.merged { color:var(--theme-green); }
-.badge.open { color:var(--theme-blue); }
+.badge.in_progress, .badge.open { color:var(--theme-blue); }
 .implementation-entry + .implementation-entry { margin-top:8px; }
 .implementation-entry small { display:block; margin-bottom:3px; }
 .work-list { padding-left: 18px; margin: 0; }
@@ -32,3 +32,7 @@
 .variant-detail summary { cursor:pointer; font-weight:500; }
 a:focus-visible, summary:focus-visible { outline:2px solid var(--theme-foreground-focus); outline-offset:3px; }
 @media (max-width:640px) { .summary .card { min-width:100px; } .summary strong { font-size:23px; } }
+
+.badge.blocked { color:var(--theme-red); }
+.status-reason { margin-top:5px; font-size:12px; }
+.status-reason summary { cursor:pointer; color:var(--theme-foreground-muted); }

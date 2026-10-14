@@ -26,13 +26,14 @@ function node(tag,text,className) {
 }
 function link(label,href){const a=node('a',label);a.href=href;return a;}
 export function familyLink(f){return link(f.name,`./benchmarks/${f.id}`);}
-const implementationLabel = status => status==='yes'?'Implemented':status==='no'?'Not implemented':'Unknown';
+export const implementationLabel = status => ({yes:'Implemented',in_progress:'In progress',no:'To do',blocked:'Blocked'})[status];
+const implementationRank = status => ({yes:0,in_progress:1,no:2,blocked:3})[status];
 export function catalogTable(families, snapshot, Inputs) {
   // Primitive column values let native Inputs.table sort the displayed content.
   const rows=families.flatMap(f=>f.variants.map(v=>({
     name:f.name, description:f.description, creators:f.creators.join('; '),
     variant:v.name, assignment:v.assignment || 'Unassigned',
-    implementation:v.implementations.map(i=>`${implementationLabel(i.status)} (${i.framework})`).join('; '),
+    implementation:v.implementations.map(i=>`${implementationRank(i.status)} ${implementationLabel(i.status)} (${i.framework})`).sort().join('; '),
     work:v.work.map(url=>snapshot.items[url]?.title || url).join('; ') || 'No linked work',
     family:f, detail:v
   })));
@@ -52,6 +53,13 @@ export function catalogTable(families, snapshot, Inputs) {
         for(const i of rows[index].detail.implementations) {
           const line=node('div',undefined,'implementation-entry');
           line.append(node('small',i.framework),node('span',implementationLabel(i.status),`badge ${i.status}`));
+          if(i.assessment) {
+            const details=node('details',undefined,'status-reason');
+            details.append(node('summary','Status details'),node('p',i.assessment.reason));
+            for(const source of i.assessment.sources)details.append(link(source.label,source.url),node('br'));
+            details.append(node('small',`Checked ${i.assessment.checked_at}`));
+            line.append(details);
+          }
           container.append(line);
         }
         return container;

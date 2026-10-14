@@ -25,8 +25,17 @@ variants:
         url: https://github.com/scaleapi/DrugDiscoveryBench/tree/d58c703841abbad0ba1cc439488e15fbbeae3bd2/benchmark/tasks
     implementations:
       - framework: Harbor
-        status: unknown
+        status: blocked
         evidence: []
+        assessment:
+          checked_at: 2026-10-14
+          reason: The task release is public, but reference answers and rubrics require gated access. Confirm
+            authorized retrieval of grading assets before validating the Harbor tasks.
+          sources:
+            - label: Audited framework revision
+              url: https://github.com/marin-community/harbor/tree/1d29d200414b6488a87192f50f617b1b5bd4b6f4/adapters
+            - label: Access or release blocker
+              url: https://huggingface.co/datasets/ScaleAI/DrugDiscoveryBench
     work: []
     notes:
       - "Access: Public Harbor tasks; reference answers/rubrics require gated
@@ -35,8 +44,6 @@ variants:
         reported separately."
       - "Limitations: Official Harbor release; promising comparison candidate. Community Daytona
         importer has a syntax error at the audited pin."
-      - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
-        notes are historical."
     provenance:
       - sheet: Agentic (Harbor)
         gid: 846608904

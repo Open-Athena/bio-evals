@@ -29,8 +29,20 @@ variants:
         url: https://github.com/EleutherAI/lm-evaluation-harness/tree/v0.4.12/lm_eval/tasks/ceval
     implementations:
       - framework: Evalchemy
-        status: unknown
+        status: no
         evidence: []
+        assessment:
+          checked_at: 2026-10-14
+          reason: The pinned lm-eval dependency includes C-Eval. Choose a labeled evaluation split and biology
+            subjects, then validate through Evalchemy; the official held-out test uses hosted
+            scoring.
+          sources:
+            - label: Audited framework revision
+              url: https://github.com/marin-community/evalchemy/tree/3bb8278078e7ad4b5a6b1f81e8a08db3dd206ae6/eval
+            - label: Pinned lm-eval dependency
+              url: https://github.com/EleutherAI/lm-evaluation-harness/tree/6d642546f4688648fced259eb3302efd36ece5af/lm_eval/tasks
+            - label: Existing task configuration
+              url: https://github.com/EleutherAI/lm-evaluation-harness/tree/6d642546f4688648fced259eb3302efd36ece5af/lm_eval/tasks/ceval
     work: []
     notes:
       - "Access: Public dataset/evaluator; test labels withheld and submissions scored by the
@@ -39,8 +51,6 @@ variants:
         labels."
       - "Limitations: Language and exam level affect comparison. Public validation performance is
         not canonical test performance."
-      - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
-        notes are historical."
     provenance:
       - sheet: Non-agentic (Evalchemy)
         gid: 776831399

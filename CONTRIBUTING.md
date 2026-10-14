@@ -17,10 +17,18 @@ changes may use a PR. GitHub Actions validates and deploys changes.
   context, rendered in the notes without separate implementation tracking.
 - Variant: stable `id`, `name`, `description`, `creators`, internal `assignment`,
   `sources`, `notes`, `work`, `implementations`, and `provenance`.
-- Each implementation pairs a `framework` with `status`: quoted `yes`, `no`, or
-  `unknown`. `evidence` is a list of URL, tested `scope`, and `checked_at` date.
+- Each implementation pairs a `framework` with `status`: `yes` (Implemented), `no` (To do),
+  `in_progress`, or `blocked`. `evidence` is a list of URL, tested `scope`, and `checked_at` date.
   A yes requires end-to-end execution including grading. An adapter or merged
   PR is insufficient. Keep incomplete/modified protocol coverage explicit.
+  Active records require `assessment` with `checked_at`, `reason`, and `sources`.
+  In-progress records require an issue/PR in `work`; blocked records explain the
+  concrete prerequisite and how to unblock it. To do includes validation of
+  existing code, not only writing a new adapter. Historical unselected records
+  may retain `unknown`, but it is not a permitted tracked status.
+  Open port PRs remain in progress until the remaining integration work is done;
+  pilot execution evidence can coexist with that stage. Maintenance issues do
+  not erase a benchmark's established implementation.
 - ID/OOD is the editable `assignment`. Use ID or OOD, or null when unknown. Existing TBD assignments were changed to ID on October 14, 2026.
   It is our internal assignment, not a contamination claim. Updating it does
   not require rewriting the historical import snapshot.

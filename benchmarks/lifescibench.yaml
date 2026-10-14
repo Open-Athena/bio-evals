@@ -26,8 +26,19 @@ variants:
         url: https://github.com/marin-community/harbor/tree/b78a0e52af98015fc8416d5bd5ee649a284e5a4c/adapters
     implementations:
       - framework: Harbor
-        status: unknown
+        status: no
         evidence: []
+        assessment:
+          checked_at: 2026-10-14
+          reason: The author page describes the evaluation and links its paper, but no runnable
+            task/artifact/rubric package was located there. Locate or request that release, then
+            implement and validate the Harbor path. This is a release-discovery gap, not a verified
+            claim that the dataset is private.
+          sources:
+            - label: Audited framework revision
+              url: https://github.com/marin-community/harbor/tree/1d29d200414b6488a87192f50f617b1b5bd4b6f4/adapters
+            - label: Reviewed implementation/release
+              url: https://openai.com/index/introducing-life-sci-bench/
     work: []
     notes:
       - "Access: Paper and examples public; full tasks, artifacts, rubrics and runnable scorer not
@@ -36,8 +47,6 @@ variants:
         threshold; automated/model-assisted grading."
       - "Limitations: Single user request permits unrestricted browsing; not a tool-free protocol.
         Broad applied research, not a measure of live discovery impact."
-      - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
-        notes are historical."
     provenance:
       - sheet: Agentic (Harbor)
         gid: 846608904

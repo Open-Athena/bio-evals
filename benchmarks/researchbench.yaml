@@ -27,8 +27,19 @@ variants:
         url: https://github.com/marin-community/evalchemy/tree/ab8e78f12abb8ed0d1659f56c24f2e01f3c85b54/eval/chat_benchmarks
     implementations:
       - framework: Evalchemy
-        status: unknown
+        status: blocked
         evidence: []
+        assessment:
+          checked_at: 2026-10-14
+          reason: The dataset requires approval of access terms. Authorized retrieval for the intended use is
+            not recorded here; establish that prerequisite before the Evalchemy port.
+          sources:
+            - label: Audited framework revision
+              url: https://github.com/marin-community/evalchemy/tree/3bb8278078e7ad4b5a6b1f81e8a08db3dd206ae6/eval
+            - label: Pinned lm-eval dependency
+              url: https://github.com/EleutherAI/lm-evaluation-harness/tree/6d642546f4688648fced259eb3302efd36ece5af/lm_eval/tasks
+            - label: Access or release blocker
+              url: https://huggingface.co/datasets/ankilok/ResearchBench
     work: []
     notes:
       - "Access: Paper and auto-gated ankilok/ResearchBench repository metadata public; gated
@@ -37,8 +48,6 @@ variants:
         configuration needs confirmation."
       - "Limitations: Multi-discipline benchmark; direct hypothesis/ranking protocol listed here. An
         autonomous retrieval workflow needs its own protocol."
-      - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
-        notes are historical."
     provenance:
       - sheet: Non-agentic (Evalchemy)
         gid: 776831399

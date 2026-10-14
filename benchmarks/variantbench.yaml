@@ -23,8 +23,17 @@ variants:
         url: https://github.com/marin-community/harbor/tree/9551f376157d90104011107dcbf9ca3621228126/adapters
     implementations:
       - framework: Harbor
-        status: unknown
+        status: blocked
         evidence: []
+        assessment:
+          checked_at: 2026-10-14
+          reason: The public repository contains eight examples, including two outside the main 118-task
+            benchmark. Full-suite access is the prerequisite for the selected scope.
+          sources:
+            - label: Audited framework revision
+              url: https://github.com/marin-community/harbor/tree/1d29d200414b6488a87192f50f617b1b5bd4b6f4/adapters
+            - label: Access or release blocker
+              url: https://github.com/latchbio/variantbench
     work: []
     notes:
       - "Access: 8 public eval JSONs with graders/targets and Latch pointers; 28 example
@@ -32,8 +41,6 @@ variants:
       - "Grading: Deterministic typed endpoint checks; composite tasks require all fields to pass."
       - "Limitations: Adds variant interpretation absent from existing Latch rows. Full-suite access
         and data downloads still need validation."
-      - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
-        notes are historical."
     provenance:
       - sheet: Agentic (Harbor)
         gid: 846608904

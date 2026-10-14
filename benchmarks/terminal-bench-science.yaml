@@ -24,16 +24,24 @@ variants:
         url: https://github.com/harbor-framework/terminal-bench-science
     implementations:
       - framework: Harbor
-        status: unknown
+        status: no
         evidence: []
+        assessment:
+          checked_at: 2026-10-14
+          reason: Native Harbor task definitions and verifiers exist. The imported single-task oracle note
+            lacks a durable run-evidence link; establish reproducible execution/grading evidence for
+            the selected life-sciences scope.
+          sources:
+            - label: Audited framework revision
+              url: https://github.com/marin-community/harbor/tree/1d29d200414b6488a87192f50f617b1b5bd4b6f4/adapters
+            - label: Reviewed implementation/release
+              url: https://github.com/harbor-framework/terminal-bench-science/tree/ff55a1b0810a5cc2ebac3ebb007cbe6a26aa2e3b/tasks/life-sciences
     work: []
     notes:
       - "Access: Task files, fixtures, and oracle available; one Harbor/Daytona oracle passed."
       - "Grading: Executable task verifier; genomic-model-ranking needs no judge API."
       - "Limitations: Prepared smoke test, not a suite score. Diagnostic agent limit 15 minutes
         versus native 8 hours."
-      - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
-        notes are historical."
     provenance:
       - sheet: Agentic (Harbor)
         gid: 846608904

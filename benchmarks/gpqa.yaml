@@ -9,7 +9,11 @@ sources:
   - label: Benchmark
     url: https://arxiv.org/abs/2311.12022
 notes:
-  - "Version selection needs review: GPQA Main / Extended — biology is the provisional tracked scope; the source lists multiple task types or protocols without a single unambiguous default."
+  - "Version selection needs review: GPQA Main / Extended — biology is the provisional tracked
+    scope; the source lists multiple task types or protocols without a single unambiguous default."
+  - "Other-version work: Evalchemy GPQADiamond has an open bounded-run grading failure
+    (https://github.com/marin-community/evalchemy/issues/201). It does not establish a failure of
+    the selected Main/Extended lm-eval path."
 selected_variant: gpqa-main-extended-biology
 variants:
   - id: gpqa-diamond-biology
@@ -64,8 +68,20 @@ variants:
         url: https://github.com/EleutherAI/lm-evaluation-harness/tree/v0.4.12/lm_eval/tasks/gpqa
     implementations:
       - framework: Evalchemy
-        status: unknown
+        status: no
         evidence: []
+        assessment:
+          checked_at: 2026-10-14
+          reason: "The pinned lm-eval dependency includes GPQA Main/Extended. Configure the biology subset and
+            validate grading. Evalchemy issue #201 concerns the separate GPQADiamond custom path,
+            not this selected version."
+          sources:
+            - label: Audited framework revision
+              url: https://github.com/marin-community/evalchemy/tree/3bb8278078e7ad4b5a6b1f81e8a08db3dd206ae6/eval
+            - label: Pinned lm-eval dependency
+              url: https://github.com/EleutherAI/lm-evaluation-harness/tree/6d642546f4688648fced259eb3302efd36ece5af/lm_eval/tasks
+            - label: Existing task configuration
+              url: https://github.com/EleutherAI/lm-evaluation-harness/tree/6d642546f4688648fced259eb3302efd36ece5af/lm_eval/tasks/gpqa
     work: []
     notes:
       - "Access: Public password-packaged author release and gated HF dataset; Main/Extended/Diamond
@@ -73,8 +89,6 @@ variants:
       - "Grading: Four-choice accuracy with official option shuffling and prompt settings."
       - "Limitations: Treat conservatively as ID because of overlap with GPQA Diamond; not a fresh
         held-out suite."
-      - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
-        notes are historical."
     provenance:
       - sheet: Non-agentic (Evalchemy)
         gid: 776831399

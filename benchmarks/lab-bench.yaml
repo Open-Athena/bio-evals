@@ -8,7 +8,8 @@ sources:
   - label: Benchmark
     url: https://arxiv.org/abs/2407.10362
 notes:
-  - "Version selection needs review: LAB-Bench — tool-free text MCQ is the provisional tracked scope; the source lists multiple task types or protocols without a single unambiguous default."
+  - "Version selection needs review: LAB-Bench — tool-free text MCQ is the provisional tracked
+    scope; the source lists multiple task types or protocols without a single unambiguous default."
 selected_variant: lab-bench-tool-free-text-mcq
 variants:
   - id: labbench2
@@ -89,8 +90,20 @@ variants:
         url: https://github.com/marin-community/evalchemy/tree/f42990450edf4e694fe5a22b3d23ed09ab42da1e/eval/chat_benchmarks
     implementations:
       - framework: Evalchemy
-        status: unknown
+        status: no
         evidence: []
+        assessment:
+          checked_at: 2026-10-14
+          reason: The selected tool-free text scope has an author evaluator, but no native LAB-Bench Evalchemy
+            integration appears in the audited registries. Harbor has a different tool-enabled
+            adapter and open shared-verification work; do not transfer that status to this scope.
+          sources:
+            - label: Audited framework revision
+              url: https://github.com/marin-community/evalchemy/tree/3bb8278078e7ad4b5a6b1f81e8a08db3dd206ae6/eval
+            - label: Pinned lm-eval dependency
+              url: https://github.com/EleutherAI/lm-evaluation-harness/tree/6d642546f4688648fced259eb3302efd36ece5af/lm_eval/tasks
+            - label: Reviewed implementation/release
+              url: https://github.com/marin-community/evalchemy/tree/3bb8278078e7ad4b5a6b1f81e8a08db3dd206ae6/eval
     work: []
     notes:
       - "Access: Public slices: ProtocolQA108, SeqQA600, CloningScenarios33; evaluator released.
@@ -99,8 +112,6 @@ variants:
         Likelihood scoring is a separately labelled variant."
       - "Limitations: Direct research-skill complement to MMLU. FigQA/TableQA require images;
         literature/database slices test a different retrieval burden."
-      - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
-        notes are historical."
     provenance:
       - sheet: Non-agentic (Evalchemy)
         gid: 776831399

@@ -23,8 +23,17 @@ variants:
         url: https://github.com/marin-community/harbor/tree/b78a0e52af98015fc8416d5bd5ee649a284e5a4c/adapters
     implementations:
       - framework: Harbor
-        status: unknown
+        status: blocked
         evidence: []
+        assessment:
+          checked_at: 2026-10-14
+          reason: The authors redact the scoring mechanism and task details. A complete authorized evaluation
+            package is needed for a faithful port.
+          sources:
+            - label: Audited framework revision
+              url: https://github.com/marin-community/harbor/tree/1d29d200414b6488a87192f50f617b1b5bd4b6f4/adapters
+            - label: Access or release blocker
+              url: https://arxiv.org/html/2609.05818v1
     work: []
     notes:
       - "Access: Paper/methodology public; complete evaluation assets/access not verified."
@@ -32,8 +41,6 @@ variants:
         reported."
       - "Limitations: Evaluates LLM use of biological tools; it is not a standalone protein
         sequence-model benchmark."
-      - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
-        notes are historical."
     provenance:
       - sheet: Agentic (Harbor)
         gid: 846608904

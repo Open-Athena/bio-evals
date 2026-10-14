@@ -8,7 +8,9 @@ sources:
   - label: Benchmark
     url: https://latch.bio/txbench-pp
 notes:
-  - "Version selection needs review: TxBench-PP — preclinical pharmacology is the provisional tracked scope; the source lists multiple task types or protocols without a single unambiguous default."
+  - "Version selection needs review: TxBench-PP — preclinical pharmacology is the provisional
+    tracked scope; the source lists multiple task types or protocols without a single unambiguous
+    default."
 selected_variant: txbench-pp-preclinical-pharmacology
 variants:
   - id: txbench-pp-preclinical-pharmacology
@@ -26,8 +28,17 @@ variants:
         url: https://github.com/josancamon19/sci-benches/tree/1fc392943dce9c847a62574dcf4e4c6ad943d2ab/src/txbench_pp
     implementations:
       - framework: Harbor
-        status: unknown
+        status: blocked
         evidence: []
+        assessment:
+          checked_at: 2026-10-14
+          reason: The repository releases example evaluations, not the selected 100-task suite. Obtain the
+            full task package or explicitly select a public-example scope before porting.
+          sources:
+            - label: Audited framework revision
+              url: https://github.com/marin-community/harbor/tree/1d29d200414b6488a87192f50f617b1b5bd4b6f4/adapters
+            - label: Access or release blocker
+              url: https://github.com/latchbio/txbench-pp
     work: []
     notes:
       - "Access: 12 public eval JSONs in audited tree, all with graders and data pointers; README
@@ -36,8 +47,6 @@ variants:
         composite checks."
       - "Limitations: Drug-discovery reasoning coverage. Some tasks need image inspection; filter
         explicitly for text-only served models."
-      - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
-        notes are historical."
     provenance:
       - sheet: Agentic (Harbor)
         gid: 846608904

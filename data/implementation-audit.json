@@ -1,0 +1,2226 @@
+{
+  "checked_at": "2026-10-14",
+  "method": "Public framework inventories, pinned dependency, open fork issues/PRs, execution reports and author release/access statements. No evaluation was run. A missing integration is a scoped inventory finding, not proof of worldwide absence. To do includes release discovery and validation of existing integrations.",
+  "inventories": [
+    {
+      "name": "Harbor",
+      "tree": "1d29d200414b6488a87192f50f617b1b5bd4b6f4",
+      "url": "https://github.com/marin-community/harbor/tree/1d29d200414b6488a87192f50f617b1b5bd4b6f4/adapters",
+      "truncated": false,
+      "entry_count": 3699,
+      "task_paths": [
+        "adapters/aa-lcr",
+        "adapters/abc-bench",
+        "adapters/ace-bench",
+        "adapters/adebench",
+        "adapters/aider_polyglot",
+        "adapters/aime",
+        "adapters/algotune",
+        "adapters/arc_agi_2",
+        "adapters/autocodebench",
+        "adapters/bfcl",
+        "adapters/bigcodebench_hard",
+        "adapters/bird_bench",
+        "adapters/bixbench-verified-50",
+        "adapters/bixbench",
+        "adapters/clbench",
+        "adapters/codepde",
+        "adapters/compilebench",
+        "adapters/cooperbench",
+        "adapters/crmarena",
+        "adapters/crustbench",
+        "adapters/cybergym",
+        "adapters/dabstep",
+        "adapters/dacode",
+        "adapters/deepswe_litecontainer",
+        "adapters/deepsynth",
+        "adapters/deveval",
+        "adapters/devopsgym",
+        "adapters/dolci",
+        "adapters/ds1000",
+        "adapters/evoeval",
+        "adapters/featbench",
+        "adapters/featurebench",
+        "adapters/financeagent",
+        "adapters/frontier-cs-algorithm",
+        "adapters/gaia",
+        "adapters/gaia2",
+        "adapters/gdb",
+        "adapters/gpqa-diamond",
+        "adapters/gso",
+        "adapters/hle",
+        "adapters/humanevalfix",
+        "adapters/ineqmath",
+        "adapters/kramabench",
+        "adapters/kumo",
+        "adapters/labbench",
+        "adapters/lawbench",
+        "adapters/livecodebench",
+        "adapters/llmsr_bench",
+        "adapters/medagentbench",
+        "adapters/ml_dev_bench",
+        "adapters/mlgym-bench",
+        "adapters/mmau",
+        "adapters/mmmlu",
+        "adapters/multi-swe-bench",
+        "adapters/omnimath",
+        "adapters/pixiu",
+        "adapters/qcircuitbench",
+        "adapters/quixbugs",
+        "adapters/reasoning-gym",
+        "adapters/refav",
+        "adapters/replicationbench",
+        "adapters/research-code-bench",
+        "adapters/rexbench",
+        "adapters/satbench",
+        "adapters/scicode",
+        "adapters/scienceagentbench",
+        "adapters/seal0",
+        "adapters/simpleqa",
+        "adapters/sldbench",
+        "adapters/sotopia",
+        "adapters/spider2-dbt",
+        "adapters/spreadsheetbench-verified",
+        "adapters/strongreject",
+        "adapters/swebench",
+        "adapters/swebench_multilingual",
+        "adapters/swebenchpro",
+        "adapters/swegym",
+        "adapters/swelancer",
+        "adapters/swesmith",
+        "adapters/swtbench",
+        "adapters/tau2-bench",
+        "adapters/tau3-bench",
+        "adapters/textarena",
+        "adapters/theagentcompany",
+        "adapters/usaco",
+        "adapters/webgen_bench",
+        "adapters/widesearch"
+      ]
+    },
+    {
+      "name": "Evalchemy",
+      "tree": "3bb8278078e7ad4b5a6b1f81e8a08db3dd206ae6",
+      "url": "https://github.com/marin-community/evalchemy/tree/3bb8278078e7ad4b5a6b1f81e8a08db3dd206ae6/eval",
+      "truncated": false,
+      "entry_count": 2380,
+      "task_paths": [
+        "eval/chat_benchmarks",
+        "eval/contracts",
+        "eval/distributed",
+        "eval/examples",
+        "eval/graders",
+        "eval/lm_eval_tasks",
+        "eval/regression",
+        "eval/resume",
+        "eval/serve_eval"
+      ]
+    },
+    {
+      "name": "lm-eval",
+      "tree": "6d642546f4688648fced259eb3302efd36ece5af",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/6d642546f4688648fced259eb3302efd36ece5af/lm_eval/tasks",
+      "truncated": false,
+      "entry_count": 16755,
+      "task_paths": [
+        "lm_eval/tasks/aclue",
+        "lm_eval/tasks/acpbench",
+        "lm_eval/tasks/aexams",
+        "lm_eval/tasks/afrimgsm",
+        "lm_eval/tasks/afrimmlu",
+        "lm_eval/tasks/afrixnli",
+        "lm_eval/tasks/afrobench",
+        "lm_eval/tasks/agieval",
+        "lm_eval/tasks/aime",
+        "lm_eval/tasks/alghafa",
+        "lm_eval/tasks/anli",
+        "lm_eval/tasks/arab_culture",
+        "lm_eval/tasks/arab_culture_completion",
+        "lm_eval/tasks/arabic_leaderboard_complete",
+        "lm_eval/tasks/arabic_leaderboard_light",
+        "lm_eval/tasks/arabicmmlu",
+        "lm_eval/tasks/aradice",
+        "lm_eval/tasks/arc",
+        "lm_eval/tasks/arc_mt",
+        "lm_eval/tasks/arithmetic",
+        "lm_eval/tasks/asdiv",
+        "lm_eval/tasks/babi",
+        "lm_eval/tasks/babilong",
+        "lm_eval/tasks/bangla",
+        "lm_eval/tasks/basque_bench",
+        "lm_eval/tasks/basqueglue",
+        "lm_eval/tasks/bbh",
+        "lm_eval/tasks/bbq",
+        "lm_eval/tasks/bear",
+        "lm_eval/tasks/belebele",
+        "lm_eval/tasks/benchmarks",
+        "lm_eval/tasks/bertaqa",
+        "lm_eval/tasks/bhs",
+        "lm_eval/tasks/bigbench",
+        "lm_eval/tasks/blimp",
+        "lm_eval/tasks/blimp_nl",
+        "lm_eval/tasks/c4",
+        "lm_eval/tasks/cabbq",
+        "lm_eval/tasks/careqa",
+        "lm_eval/tasks/catalan_bench",
+        "lm_eval/tasks/ceval",
+        "lm_eval/tasks/chartqa",
+        "lm_eval/tasks/click",
+        "lm_eval/tasks/cmmlu",
+        "lm_eval/tasks/cnn_dailymail",
+        "lm_eval/tasks/code_x_glue",
+        "lm_eval/tasks/common_voice",
+        "lm_eval/tasks/commonsense_qa",
+        "lm_eval/tasks/copal_id",
+        "lm_eval/tasks/coqa",
+        "lm_eval/tasks/crows_pairs",
+        "lm_eval/tasks/cruxeval",
+        "lm_eval/tasks/csatqa",
+        "lm_eval/tasks/darija_bench",
+        "lm_eval/tasks/darijahellaswag",
+        "lm_eval/tasks/darijammlu",
+        "lm_eval/tasks/discrim_eval",
+        "lm_eval/tasks/drop",
+        "lm_eval/tasks/e2lmc",
+        "lm_eval/tasks/egyhellaswag",
+        "lm_eval/tasks/egymmlu",
+        "lm_eval/tasks/eq_bench",
+        "lm_eval/tasks/esbbq",
+        "lm_eval/tasks/eus_exams",
+        "lm_eval/tasks/eus_proficiency",
+        "lm_eval/tasks/eus_reading",
+        "lm_eval/tasks/eus_trivia",
+        "lm_eval/tasks/evalita_llm",
+        "lm_eval/tasks/fda",
+        "lm_eval/tasks/fld",
+        "lm_eval/tasks/french_bench",
+        "lm_eval/tasks/galician_bench",
+        "lm_eval/tasks/glianorex",
+        "lm_eval/tasks/global_mmlu",
+        "lm_eval/tasks/global_piqa",
+        "lm_eval/tasks/glue",
+        "lm_eval/tasks/gpqa",
+        "lm_eval/tasks/graphwalks",
+        "lm_eval/tasks/groundcocoa",
+        "lm_eval/tasks/gsm8k",
+        "lm_eval/tasks/gsm8k_platinum",
+        "lm_eval/tasks/gsm_plus",
+        "lm_eval/tasks/haerae",
+        "lm_eval/tasks/headqa",
+        "lm_eval/tasks/hellaswag",
+        "lm_eval/tasks/hendrycks_ethics",
+        "lm_eval/tasks/hendrycks_math",
+        "lm_eval/tasks/histoires_morales",
+        "lm_eval/tasks/hrm8k",
+        "lm_eval/tasks/humaneval",
+        "lm_eval/tasks/humaneval_infilling",
+        "lm_eval/tasks/icelandic_winogrande",
+        "lm_eval/tasks/ifeval",
+        "lm_eval/tasks/include",
+        "lm_eval/tasks/infinitebench",
+        "lm_eval/tasks/inverse_scaling",
+        "lm_eval/tasks/japanese_leaderboard",
+        "lm_eval/tasks/jfinqa",
+        "lm_eval/tasks/jsonschema_bench",
+        "lm_eval/tasks/kbl",
+        "lm_eval/tasks/kmmlu",
+        "lm_eval/tasks/kobest",
+        "lm_eval/tasks/kormedmcqa",
+        "lm_eval/tasks/lambada",
+        "lm_eval/tasks/lambada_cloze",
+        "lm_eval/tasks/lambada_multilingual",
+        "lm_eval/tasks/lambada_multilingual_stablelm",
+        "lm_eval/tasks/leaderboard",
+        "lm_eval/tasks/libra",
+        "lm_eval/tasks/lingoly",
+        "lm_eval/tasks/llama3",
+        "lm_eval/tasks/lm_syneval",
+        "lm_eval/tasks/logiqa",
+        "lm_eval/tasks/logiqa2",
+        "lm_eval/tasks/longbench",
+        "lm_eval/tasks/longbench2",
+        "lm_eval/tasks/mastermind",
+        "lm_eval/tasks/mathqa",
+        "lm_eval/tasks/mbpp",
+        "lm_eval/tasks/mc_taco",
+        "lm_eval/tasks/med_concepts_qa",
+        "lm_eval/tasks/med_prescriptions",
+        "lm_eval/tasks/med_text_classification",
+        "lm_eval/tasks/meddialog",
+        "lm_eval/tasks/mediqa_qa2019",
+        "lm_eval/tasks/medmcqa",
+        "lm_eval/tasks/medqa",
+        "lm_eval/tasks/medtext",
+        "lm_eval/tasks/mela",
+        "lm_eval/tasks/meqsum",
+        "lm_eval/tasks/metabench",
+        "lm_eval/tasks/mgsm",
+        "lm_eval/tasks/mimic_repsum",
+        "lm_eval/tasks/minerva_math",
+        "lm_eval/tasks/mlqa",
+        "lm_eval/tasks/mmlu-pro-plus",
+        "lm_eval/tasks/mmlu-redux-spanish",
+        "lm_eval/tasks/mmlu-redux",
+        "lm_eval/tasks/mmlu",
+        "lm_eval/tasks/mmlu_pro",
+        "lm_eval/tasks/mmlu_prox",
+        "lm_eval/tasks/mmlusr",
+        "lm_eval/tasks/mmmu",
+        "lm_eval/tasks/model_written_evals",
+        "lm_eval/tasks/moral_stories",
+        "lm_eval/tasks/mts_dialog",
+        "lm_eval/tasks/multiblimp",
+        "lm_eval/tasks/mutual",
+        "lm_eval/tasks/nerel-bench",
+        "lm_eval/tasks/noreval",
+        "lm_eval/tasks/noticia",
+        "lm_eval/tasks/nq_open",
+        "lm_eval/tasks/okapi",
+        "lm_eval/tasks/olaph",
+        "lm_eval/tasks/openai-mmmlu",
+        "lm_eval/tasks/openbookqa",
+        "lm_eval/tasks/paloma",
+        "lm_eval/tasks/paws-x",
+        "lm_eval/tasks/pile",
+        "lm_eval/tasks/pile_10k",
+        "lm_eval/tasks/piqa",
+        "lm_eval/tasks/pisa",
+        "lm_eval/tasks/polemo2",
+        "lm_eval/tasks/portuguese_bench",
+        "lm_eval/tasks/prost",
+        "lm_eval/tasks/pubmedqa",
+        "lm_eval/tasks/qa4mre",
+        "lm_eval/tasks/qasper",
+        "lm_eval/tasks/race",
+        "lm_eval/tasks/realtoxicityprompts",
+        "lm_eval/tasks/ruler",
+        "lm_eval/tasks/sciq",
+        "lm_eval/tasks/score",
+        "lm_eval/tasks/scrolls",
+        "lm_eval/tasks/simple_cooccurrence_bias",
+        "lm_eval/tasks/siqa",
+        "lm_eval/tasks/slr_bench",
+        "lm_eval/tasks/spanish_bench",
+        "lm_eval/tasks/squad_completion",
+        "lm_eval/tasks/squadv2",
+        "lm_eval/tasks/storycloze",
+        "lm_eval/tasks/super_glue",
+        "lm_eval/tasks/swag",
+        "lm_eval/tasks/swde",
+        "lm_eval/tasks/tinyBenchmarks",
+        "lm_eval/tasks/tmlu",
+        "lm_eval/tasks/tmmluplus",
+        "lm_eval/tasks/toksuite",
+        "lm_eval/tasks/toxigen",
+        "lm_eval/tasks/translation",
+        "lm_eval/tasks/triviaqa",
+        "lm_eval/tasks/truthfulqa-multi",
+        "lm_eval/tasks/truthfulqa",
+        "lm_eval/tasks/turblimp",
+        "lm_eval/tasks/turkishmmlu",
+        "lm_eval/tasks/ulqa",
+        "lm_eval/tasks/unitxt",
+        "lm_eval/tasks/unscramble",
+        "lm_eval/tasks/webqs",
+        "lm_eval/tasks/wikitext",
+        "lm_eval/tasks/winogender",
+        "lm_eval/tasks/winogrande",
+        "lm_eval/tasks/wmdp",
+        "lm_eval/tasks/wmt2016",
+        "lm_eval/tasks/wsc273",
+        "lm_eval/tasks/xcopa",
+        "lm_eval/tasks/xnli",
+        "lm_eval/tasks/xnli_eu",
+        "lm_eval/tasks/xquad",
+        "lm_eval/tasks/xstorycloze",
+        "lm_eval/tasks/xwinograd",
+        "lm_eval/tasks/zhoblimp"
+      ]
+    }
+  ],
+  "work_scan": {
+    "harbor_issues": [
+      {
+        "number": 259,
+        "title": "Judge endpoint changes prevent resume",
+        "url": "https://github.com/marin-community/harbor/issues/259"
+      },
+      {
+        "number": 246,
+        "title": "[archive] Await pending trajectories concurrently with a bounded timeout",
+        "url": "https://github.com/marin-community/harbor/issues/246"
+      },
+      {
+        "number": 245,
+        "title": "[storage] Keep awaited artifact writes from stalling behind lane traffic",
+        "url": "https://github.com/marin-community/harbor/issues/245"
+      },
+      {
+        "number": 244,
+        "title": "[storage] Take cloud uploads off the trajectory archive critical path",
+        "url": "https://github.com/marin-community/harbor/issues/244"
+      },
+      {
+        "number": 242,
+        "title": "[nightly-e2e] scheduled run failing",
+        "url": "https://github.com/marin-community/harbor/issues/242"
+      },
+      {
+        "number": 229,
+        "title": "[literal] Persist session and role headers in RecordProxy entries",
+        "url": "https://github.com/marin-community/harbor/issues/229"
+      },
+      {
+        "number": 202,
+        "title": "[config] Explicit retry lists lose to conflicting defaults",
+        "url": "https://github.com/marin-community/harbor/issues/202"
+      },
+      {
+        "number": 192,
+        "title": "[bixbench-verified-50] Resolve grading, reference and runtime issues",
+        "url": "https://github.com/marin-community/harbor/issues/192"
+      },
+      {
+        "number": 181,
+        "title": "Validate BiomniBench-DA and add a reproducible Harbor pilot",
+        "url": "https://github.com/marin-community/harbor/issues/181"
+      },
+      {
+        "number": 167,
+        "title": "[bixbench] Review reference defects and define benchmark corrections",
+        "url": "https://github.com/marin-community/harbor/issues/167"
+      },
+      {
+        "number": 163,
+        "title": "Add GeneBench-Pro public-10 adapter and validate with GLM-5.3",
+        "url": "https://github.com/marin-community/harbor/issues/163"
+      },
+      {
+        "number": 161,
+        "title": "[adapters] Port BioMysteryBench for evaluation with a Daytona pilot",
+        "url": "https://github.com/marin-community/harbor/issues/161"
+      },
+      {
+        "number": 156,
+        "title": "OT-TBLite verifiers repeatedly exceed the 15-minute timeout",
+        "url": "https://github.com/marin-community/harbor/issues/156"
+      },
+      {
+        "number": 74,
+        "title": "[storage] Replace per-trial files with a compressed store",
+        "url": "https://github.com/marin-community/harbor/issues/74"
+      },
+      {
+        "number": 27,
+        "title": "Classify verifier failures caused by an agent deleting the task workspace",
+        "url": "https://github.com/marin-community/harbor/issues/27"
+      }
+    ],
+    "harbor_prs": [
+      {
+        "number": 249,
+        "title": "Capture Pi tool-call continuations for exact RL provenance",
+        "url": "https://github.com/marin-community/harbor/pull/249"
+      },
+      {
+        "number": 243,
+        "title": "Add Shellbox Daytona environment for BFCL Pi trials",
+        "url": "https://github.com/marin-community/harbor/pull/243"
+      },
+      {
+        "number": 228,
+        "title": "Add opt-in shared verification to Harbor adapters",
+        "url": "https://github.com/marin-community/harbor/pull/228"
+      },
+      {
+        "number": 210,
+        "title": "Wait for queued trial trajectories before archiving samples",
+        "url": "https://github.com/marin-community/harbor/pull/210"
+      },
+      {
+        "number": 184,
+        "title": "Add pinned BiomniBench-DA staging and rubric scoring",
+        "url": "https://github.com/marin-community/harbor/pull/184"
+      },
+      {
+        "number": 164,
+        "title": "Add a GeneBench-Pro public-10 adapter",
+        "url": "https://github.com/marin-community/harbor/pull/164"
+      },
+      {
+        "number": 162,
+        "title": "[adapters] Add an evaluation-only BioMysteryBench port",
+        "url": "https://github.com/marin-community/harbor/pull/162"
+      }
+    ],
+    "evalchemy_issues": [
+      {
+        "number": 210,
+        "title": "[Evalchemy] OOM after inference discards completed samples",
+        "url": "https://github.com/marin-community/evalchemy/issues/210"
+      },
+      {
+        "number": 204,
+        "title": "MATH500 returns empty results with --limit (KeyError 'model_answer' in grading)",
+        "url": "https://github.com/marin-community/evalchemy/issues/204"
+      },
+      {
+        "number": 202,
+        "title": "[nightly-e2e] scheduled run failing",
+        "url": "https://github.com/marin-community/evalchemy/issues/202"
+      },
+      {
+        "number": 201,
+        "title": "[GPQADiamond] --limit fails with KeyError: model_answers",
+        "url": "https://github.com/marin-community/evalchemy/issues/201"
+      },
+      {
+        "number": 197,
+        "title": "Define opt-in shared grading contracts for Evalchemy",
+        "url": "https://github.com/marin-community/evalchemy/issues/197"
+      },
+      {
+        "number": 190,
+        "title": "Decide whether NUPA should score response formatting strictly",
+        "url": "https://github.com/marin-community/evalchemy/issues/190"
+      },
+      {
+        "number": 82,
+        "title": "[eval] Exclude unresolved endpoint failures from benchmark scores",
+        "url": "https://github.com/marin-community/evalchemy/issues/82"
+      },
+      {
+        "number": 35,
+        "title": "Distributed multi-seed / multi-eval: served path runs serially on ONE endpoint; no seed-sharding fan-out",
+        "url": "https://github.com/marin-community/evalchemy/issues/35"
+      }
+    ],
+    "evalchemy_prs": [
+      {
+        "number": 211,
+        "title": "[output] Commit FineStore samples in durable bounded batches",
+        "url": "https://github.com/marin-community/evalchemy/pull/211"
+      },
+      {
+        "number": 199,
+        "title": "Add GraphWalks to the shared benchmark lifecycle",
+        "url": "https://github.com/marin-community/evalchemy/pull/199"
+      },
+      {
+        "number": 198,
+        "title": "Add opt-in shared grading for Evalchemy benchmarks",
+        "url": "https://github.com/marin-community/evalchemy/pull/198"
+      }
+    ]
+  },
+  "records": [
+    {
+      "benchmark": "aa-omniscience",
+      "version": "aa-omniscience-biology-health-slice",
+      "framework": "Evalchemy",
+      "status": "blocked",
+      "checked_at": "2026-10-14",
+      "reason": "The canonical dataset is private; the public preview does not supply the full biology/health scope. Obtain access or explicitly select a public-preview scope.",
+      "sources": [
+        {
+          "label": "Audited framework revision",
+          "url": "https://github.com/marin-community/evalchemy/tree/3bb8278078e7ad4b5a6b1f81e8a08db3dd206ae6/eval"
+        },
+        {
+          "label": "Pinned lm-eval dependency",
+          "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/6d642546f4688648fced259eb3302efd36ece5af/lm_eval/tasks"
+        },
+        {
+          "label": "Access or release blocker",
+          "url": "https://artificialanalysis.ai/evaluations/omniscience"
+        }
+      ]
+    },
+    {
+      "benchmark": "abc-bench-securebio",
+      "version": "abc-bench-securebio",
+      "framework": "Harbor",
+      "status": "blocked",
+      "checked_at": "2026-10-14",
+      "reason": "The paper omits one task prompt and does not provide a complete runnable release. Obtain the complete authorized task and scoring package before porting the full scope.",
+      "sources": [
+        {
+          "label": "Audited framework revision",
+          "url": "https://github.com/marin-community/harbor/tree/1d29d200414b6488a87192f50f617b1b5bd4b6f4/adapters"
+        },
+        {
+          "label": "Access or release blocker",
+          "url": "https://arxiv.org/html/2606.11150v1"
+        }
+      ]
+    },
+    {
+      "benchmark": "able",
+      "version": "able-agentic-biological-ai-tool-use",
+      "framework": "Harbor",
+      "status": "blocked",
+      "checked_at": "2026-10-14",
+      "reason": "The authors redact the scoring mechanism and task details. A complete authorized evaluation package is needed for a faithful port.",
+      "sources": [
+        {
+          "label": "Audited framework revision",
+          "url": "https://github.com/marin-community/harbor/tree/1d29d200414b6488a87192f50f617b1b5bd4b6f4/adapters"
+        },
+        {
+          "label": "Access or release blocker",
+          "url": "https://arxiv.org/html/2609.05818v1"
+        }
+      ]
+    },
+    {
+      "benchmark": "agieval",
+      "version": "agieval-gaokao-biology",
+      "framework": "Evalchemy",
+      "status": "no",
+      "checked_at": "2026-10-14",
+      "reason": "The pinned lm-eval dependency includes AGIEval. Select the intended biology questions and validate the selected protocol through Evalchemy; no biology-slice graded run was established in this audit.",
+      "sources": [
+        {
+          "label": "Audited framework revision",
+          "url": "https://github.com/marin-community/evalchemy/tree/3bb8278078e7ad4b5a6b1f81e8a08db3dd206ae6/eval"
+        },
+        {
+          "label": "Pinned lm-eval dependency",
+          "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/6d642546f4688648fced259eb3302efd36ece5af/lm_eval/tasks"
+        },
+        {
+          "label": "Existing task configuration",
+          "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/6d642546f4688648fced259eb3302efd36ece5af/lm_eval/tasks/agieval"
+        }
+      ]
+    },
+    {
+      "benchmark": "babe-biology-arena-benchmark",
+      "version": "babe-biology-arena-benchmark",
+      "framework": "Evalchemy",
+      "status": "no",
+      "checked_at": "2026-10-14",
+      "reason": "The author paper describes the benchmark without an author-linked runnable release located in this audit. Locate the task/scorer package and port the selected protocol; no native Evalchemy integration appears in the audited registries.",
+      "sources": [
+        {
+          "label": "Audited framework revision",
+          "url": "https://github.com/marin-community/evalchemy/tree/3bb8278078e7ad4b5a6b1f81e8a08db3dd206ae6/eval"
+        },
+        {
+          "label": "Pinned lm-eval dependency",
+          "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/6d642546f4688648fced259eb3302efd36ece5af/lm_eval/tasks"
+        },
+        {
+          "label": "Reviewed implementation/release",
+          "url": "https://arxiv.org/html/2602.05857v1"
+        }
+      ]
+    },
+    {
+      "benchmark": "baisbench",
+      "version": "baisbench",
+      "framework": "Harbor",
+      "status": "no",
+      "checked_at": "2026-10-14",
+      "reason": "No matching BAISBench integration was found in the audited Harbor registry. Port the selected BAISBench scope and establish an end-to-end graded run. This finding is limited to the checked framework revisions, not all external implementations.",
+      "sources": [
+        {
+          "label": "Audited framework revision",
+          "url": "https://github.com/marin-community/harbor/tree/1d29d200414b6488a87192f50f617b1b5bd4b6f4/adapters"
+        }
+      ]
+    },
+    {
+      "benchmark": "bio-benchmark",
+      "version": "bio-benchmark-biological-tasks",
+      "framework": "Evalchemy",
+      "status": "no",
+      "checked_at": "2026-10-14",
+      "reason": "The paper describes the task collection, but the audited Evalchemy registries contain no integration for this benchmark. Resolve the consolidated task/scorer release and implement the selected scope.",
+      "sources": [
+        {
+          "label": "Audited framework revision",
+          "url": "https://github.com/marin-community/evalchemy/tree/3bb8278078e7ad4b5a6b1f81e8a08db3dd206ae6/eval"
+        },
+        {
+          "label": "Pinned lm-eval dependency",
+          "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/6d642546f4688648fced259eb3302efd36ece5af/lm_eval/tasks"
+        },
+        {
+          "label": "Reviewed implementation/release",
+          "url": "https://arxiv.org/html/2503.04013v1"
+        }
+      ]
+    },
+    {
+      "benchmark": "bio-task-bench",
+      "version": "bio-task-bench-original-tasks",
+      "framework": "Harbor",
+      "status": "no",
+      "checked_at": "2026-10-14",
+      "reason": "No matching Bio-Task Bench integration was found in the audited Harbor registry. Port the selected Bio-Task Bench — original tasks scope and establish an end-to-end graded run. This finding is limited to the checked framework revisions, not all external implementations.",
+      "sources": [
+        {
+          "label": "Audited framework revision",
+          "url": "https://github.com/marin-community/harbor/tree/1d29d200414b6488a87192f50f617b1b5bd4b6f4/adapters"
+        }
+      ]
+    },
+    {
+      "benchmark": "bioagent-bench",
+      "version": "bioagent-bench",
+      "framework": "Harbor",
+      "status": "no",
+      "checked_at": "2026-10-14",
+      "reason": "No matching BioAgent Bench integration was found in the audited Harbor registry. Port the selected BioAgent Bench scope and establish an end-to-end graded run. This finding is limited to the checked framework revisions, not all external implementations.",
+      "sources": [
+        {
+          "label": "Audited framework revision",
+          "url": "https://github.com/marin-community/harbor/tree/1d29d200414b6488a87192f50f617b1b5bd4b6f4/adapters"
+        }
+      ]
+    },
+    {
+      "benchmark": "bioasq",
+      "version": "bioasq-retrieval-end-to-end-qa",
+      "framework": "Harbor",
+      "status": "no",
+      "checked_at": "2026-10-14",
+      "reason": "No matching BioASQ integration was found in the audited Harbor registry. Port the selected BioASQ — retrieval / end-to-end QA scope and establish an end-to-end graded run. This finding is limited to the checked framework revisions, not all external implementations.",
+      "sources": [
+        {
+          "label": "Audited framework revision",
+          "url": "https://github.com/marin-community/harbor/tree/1d29d200414b6488a87192f50f617b1b5bd4b6f4/adapters"
+        }
+      ]
+    },
+    {
+      "benchmark": "biocoder",
+      "version": "biocoder",
+      "framework": "Evalchemy",
+      "status": "no",
+      "checked_at": "2026-10-14",
+      "reason": "No matching BioCoder integration was found in the audited Evalchemy registry or its pinned lm-eval task inventory. Port the selected BioCoder scope and establish an end-to-end graded run. This finding is limited to the checked framework revisions, not all external implementations.",
+      "sources": [
+        {
+          "label": "Audited framework revision",
+          "url": "https://github.com/marin-community/evalchemy/tree/3bb8278078e7ad4b5a6b1f81e8a08db3dd206ae6/eval"
+        },
+        {
+          "label": "Pinned lm-eval dependency",
+          "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/6d642546f4688648fced259eb3302efd36ece5af/lm_eval/tasks"
+        }
+      ]
+    },
+    {
+      "benchmark": "bioeval",
+      "version": "bioeval-repository-stage-suite",
+      "framework": "Evalchemy",
+      "status": "no",
+      "checked_at": "2026-10-14",
+      "reason": "No matching BioEval integration was found in the audited Evalchemy registry or its pinned lm-eval task inventory. Port the selected BioEval — repository-stage suite scope and establish an end-to-end graded run. This finding is limited to the checked framework revisions, not all external implementations.",
+      "sources": [
+        {
+          "label": "Audited framework revision",
+          "url": "https://github.com/marin-community/evalchemy/tree/3bb8278078e7ad4b5a6b1f81e8a08db3dd206ae6/eval"
+        },
+        {
+          "label": "Pinned lm-eval dependency",
+          "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/6d642546f4688648fced259eb3302efd36ece5af/lm_eval/tasks"
+        }
+      ]
+    },
+    {
+      "benchmark": "bioinfo-bench",
+      "version": "bioinfo-bench",
+      "framework": "Evalchemy",
+      "status": "no",
+      "checked_at": "2026-10-14",
+      "reason": "No matching Bioinfo-Bench integration was found in the audited Evalchemy registry or its pinned lm-eval task inventory. Port the selected Bioinfo-Bench scope and establish an end-to-end graded run. This finding is limited to the checked framework revisions, not all external implementations.",
+      "sources": [
+        {
+          "label": "Audited framework revision",
+          "url": "https://github.com/marin-community/evalchemy/tree/3bb8278078e7ad4b5a6b1f81e8a08db3dd206ae6/eval"
+        },
+        {
+          "label": "Pinned lm-eval dependency",
+          "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/6d642546f4688648fced259eb3302efd36ece5af/lm_eval/tasks"
+        }
+      ]
+    },
+    {
+      "benchmark": "bioinformaticsbench",
+      "version": "bioinformaticsbench",
+      "framework": "Evalchemy",
+      "status": "no",
+      "checked_at": "2026-10-14",
+      "reason": "No matching BioinformaticsBench integration was found in the audited Evalchemy registry or its pinned lm-eval task inventory. Port the selected BioinformaticsBench scope and establish an end-to-end graded run. This finding is limited to the checked framework revisions, not all external implementations.",
+      "sources": [
+        {
+          "label": "Audited framework revision",
+          "url": "https://github.com/marin-community/evalchemy/tree/3bb8278078e7ad4b5a6b1f81e8a08db3dd206ae6/eval"
+        },
+        {
+          "label": "Pinned lm-eval dependency",
+          "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/6d642546f4688648fced259eb3302efd36ece5af/lm_eval/tasks"
+        }
+      ]
+    },
+    {
+      "benchmark": "biokgbench",
+      "version": "biokgbench",
+      "framework": "Harbor",
+      "status": "no",
+      "checked_at": "2026-10-14",
+      "reason": "No matching BioKGBench integration was found in the audited Harbor registry. Port the selected BioKGBench scope and establish an end-to-end graded run. This finding is limited to the checked framework revisions, not all external implementations.",
+      "sources": [
+        {
+          "label": "Audited framework revision",
+          "url": "https://github.com/marin-community/harbor/tree/1d29d200414b6488a87192f50f617b1b5bd4b6f4/adapters"
+        }
+      ]
+    },
+    {
+      "benchmark": "biollmbench",
+      "version": "biollmbench",
+      "framework": "Evalchemy",
+      "status": "no",
+      "checked_at": "2026-10-14",
+      "reason": "No matching BioLLMBench integration was found in the audited Evalchemy registry or its pinned lm-eval task inventory. Port the selected BioLLMBench scope and establish an end-to-end graded run. This finding is limited to the checked framework revisions, not all external implementations.",
+      "sources": [
+        {
+          "label": "Audited framework revision",
+          "url": "https://github.com/marin-community/evalchemy/tree/3bb8278078e7ad4b5a6b1f81e8a08db3dd206ae6/eval"
+        },
+        {
+          "label": "Pinned lm-eval dependency",
+          "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/6d642546f4688648fced259eb3302efd36ece5af/lm_eval/tasks"
+        }
+      ]
+    },
+    {
+      "benchmark": "biology-instructions",
+      "version": "biology-instructions-evaluation-splits",
+      "framework": "Evalchemy",
+      "status": "no",
+      "checked_at": "2026-10-14",
+      "reason": "No matching Biology-Instructions integration was found in the audited Evalchemy registry or its pinned lm-eval task inventory. Port the selected Biology-Instructions — evaluation splits scope and establish an end-to-end graded run. This finding is limited to the checked framework revisions, not all external implementations.",
+      "sources": [
+        {
+          "label": "Audited framework revision",
+          "url": "https://github.com/marin-community/evalchemy/tree/3bb8278078e7ad4b5a6b1f81e8a08db3dd206ae6/eval"
+        },
+        {
+          "label": "Pinned lm-eval dependency",
+          "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/6d642546f4688648fced259eb3302efd36ece5af/lm_eval/tasks"
+        }
+      ]
+    },
+    {
+      "benchmark": "biolp-bench",
+      "version": "biolp-bench",
+      "framework": "Evalchemy",
+      "status": "no",
+      "checked_at": "2026-10-14",
+      "reason": "No matching BioLP-bench integration was found in the audited Evalchemy registry or its pinned lm-eval task inventory. Port the selected BioLP-bench scope and establish an end-to-end graded run. This finding is limited to the checked framework revisions, not all external implementations.",
+      "sources": [
+        {
+          "label": "Audited framework revision",
+          "url": "https://github.com/marin-community/evalchemy/tree/3bb8278078e7ad4b5a6b1f81e8a08db3dd206ae6/eval"
+        },
+        {
+          "label": "Pinned lm-eval dependency",
+          "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/6d642546f4688648fced259eb3302efd36ece5af/lm_eval/tasks"
+        }
+      ]
+    },
+    {
+      "benchmark": "biomaze",
+      "version": "biomaze-tool-free-reasoning",
+      "framework": "Evalchemy",
+      "status": "no",
+      "checked_at": "2026-10-14",
+      "reason": "No matching BioMaze integration was found in the audited Evalchemy registry or its pinned lm-eval task inventory. Port the selected BioMaze — tool-free reasoning scope and establish an end-to-end graded run. This finding is limited to the checked framework revisions, not all external implementations.",
+      "sources": [
+        {
+          "label": "Audited framework revision",
+          "url": "https://github.com/marin-community/evalchemy/tree/3bb8278078e7ad4b5a6b1f81e8a08db3dd206ae6/eval"
+        },
+        {
+          "label": "Pinned lm-eval dependency",
+          "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/6d642546f4688648fced259eb3302efd36ece5af/lm_eval/tasks"
+        }
+      ]
+    },
+    {
+      "benchmark": "biomedsql",
+      "version": "biomedsql",
+      "framework": "Evalchemy",
+      "status": "no",
+      "checked_at": "2026-10-14",
+      "reason": "No matching BiomedSQL integration was found in the audited Evalchemy registry or its pinned lm-eval task inventory. Port the selected BiomedSQL scope and establish an end-to-end graded run. This finding is limited to the checked framework revisions, not all external implementations.",
+      "sources": [
+        {
+          "label": "Audited framework revision",
+          "url": "https://github.com/marin-community/evalchemy/tree/3bb8278078e7ad4b5a6b1f81e8a08db3dd206ae6/eval"
+        },
+        {
+          "label": "Pinned lm-eval dependency",
+          "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/6d642546f4688648fced259eb3302efd36ece5af/lm_eval/tasks"
+        }
+      ]
+    },
+    {
+      "benchmark": "bioml-bench",
+      "version": "bioml-bench",
+      "framework": "Harbor",
+      "status": "no",
+      "checked_at": "2026-10-14",
+      "reason": "No matching BioML-bench integration was found in the audited Harbor registry. Port the selected BioML-bench scope and establish an end-to-end graded run. This finding is limited to the checked framework revisions, not all external implementations.",
+      "sources": [
+        {
+          "label": "Audited framework revision",
+          "url": "https://github.com/marin-community/harbor/tree/1d29d200414b6488a87192f50f617b1b5bd4b6f4/adapters"
+        }
+      ]
+    },
+    {
+      "benchmark": "biomni-eval1",
+      "version": "biomni-eval1-tool-enabled",
+      "framework": "Harbor",
+      "status": "no",
+      "checked_at": "2026-10-14",
+      "reason": "No matching Biomni-Eval1 integration was found in the audited Harbor registry. Port the selected Biomni-Eval1 — tool-enabled scope and establish an end-to-end graded run. This finding is limited to the checked framework revisions, not all external implementations.",
+      "sources": [
+        {
+          "label": "Audited framework revision",
+          "url": "https://github.com/marin-community/harbor/tree/1d29d200414b6488a87192f50f617b1b5bd4b6f4/adapters"
+        }
+      ]
+    },
+    {
+      "benchmark": "biomnibench-da",
+      "version": "biomnibench-da",
+      "framework": "Harbor",
+      "status": "in_progress",
+      "checked_at": "2026-10-14",
+      "reason": "Open staging/grading PR #184 has archived native-input execution and grading evidence. Integration review and current-runtime compatibility remain unfinished; access has already succeeded.",
+      "sources": [
+        {
+          "label": "Audited framework revision",
+          "url": "https://github.com/marin-community/harbor/tree/1d29d200414b6488a87192f50f617b1b5bd4b6f4/adapters"
+        },
+        {
+          "label": "Open implementation PR",
+          "url": "https://github.com/marin-community/harbor/pull/184"
+        }
+      ]
+    },
+    {
+      "benchmark": "biomol-llm-bench",
+      "version": "biomol-llm-bench",
+      "framework": "Evalchemy",
+      "status": "no",
+      "checked_at": "2026-10-14",
+      "reason": "No matching BioMol-LLM-Bench integration was found in the audited Evalchemy registry or its pinned lm-eval task inventory. Port the selected BioMol-LLM-Bench scope and establish an end-to-end graded run. This finding is limited to the checked framework revisions, not all external implementations.",
+      "sources": [
+        {
+          "label": "Audited framework revision",
+          "url": "https://github.com/marin-community/evalchemy/tree/3bb8278078e7ad4b5a6b1f81e8a08db3dd206ae6/eval"
+        },
+        {
+          "label": "Pinned lm-eval dependency",
+          "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/6d642546f4688648fced259eb3302efd36ece5af/lm_eval/tasks"
+        }
+      ]
+    },
+    {
+      "benchmark": "biomysterybench",
+      "version": "biomysterybench",
+      "framework": "Harbor",
+      "status": "in_progress",
+      "checked_at": "2026-10-14",
+      "reason": "Draft evaluation-only port #162 has a graded ten-task pilot. Full-suite resource feasibility and review remain unfinished; gated access was obtained, so this is active work rather than an unverified access blocker.",
+      "sources": [
+        {
+          "label": "Audited framework revision",
+          "url": "https://github.com/marin-community/harbor/tree/1d29d200414b6488a87192f50f617b1b5bd4b6f4/adapters"
+        },
+        {
+          "label": "Open implementation PR",
+          "url": "https://github.com/marin-community/harbor/pull/162"
+        }
+      ]
+    },
+    {
+      "benchmark": "bionli",
+      "version": "bionli-llm-inference-protocol",
+      "framework": "Evalchemy",
+      "status": "blocked",
+      "checked_at": "2026-10-14",
+      "reason": "The test set requires contacting the authors. Confirm authorized test-set access before implementing the held-out evaluation; public train/dev data are not the test set.",
+      "sources": [
+        {
+          "label": "Audited framework revision",
+          "url": "https://github.com/marin-community/evalchemy/tree/3bb8278078e7ad4b5a6b1f81e8a08db3dd206ae6/eval"
+        },
+        {
+          "label": "Pinned lm-eval dependency",
+          "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/6d642546f4688648fced259eb3302efd36ece5af/lm_eval/tasks"
+        },
+        {
+          "label": "Access or release blocker",
+          "url": "https://github.com/StonyBrookNLP/BioNLI"
+        }
+      ]
+    },
+    {
+      "benchmark": "bioplanner-bioprot",
+      "version": "bioplanner-bioprot",
+      "framework": "Evalchemy",
+      "status": "no",
+      "checked_at": "2026-10-14",
+      "reason": "No matching BioPlanner / BioProt integration was found in the audited Evalchemy registry or its pinned lm-eval task inventory. Port the selected BioPlanner / BioProt scope and establish an end-to-end graded run. This finding is limited to the checked framework revisions, not all external implementations.",
+      "sources": [
+        {
+          "label": "Audited framework revision",
+          "url": "https://github.com/marin-community/evalchemy/tree/3bb8278078e7ad4b5a6b1f81e8a08db3dd206ae6/eval"
+        },
+        {
+          "label": "Pinned lm-eval dependency",
+          "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/6d642546f4688648fced259eb3302efd36ece5af/lm_eval/tasks"
+        }
+      ]
+    },
+    {
+      "benchmark": "bioprobench",
+      "version": "bioprobench-pqa-err",
+      "framework": "Evalchemy",
+      "status": "no",
+      "checked_at": "2026-10-14",
+      "reason": "No matching BioProBench integration was found in the audited Evalchemy registry or its pinned lm-eval task inventory. Port the selected BioProBench — PQA / ERR scope and establish an end-to-end graded run. This finding is limited to the checked framework revisions, not all external implementations.",
+      "sources": [
+        {
+          "label": "Audited framework revision",
+          "url": "https://github.com/marin-community/evalchemy/tree/3bb8278078e7ad4b5a6b1f81e8a08db3dd206ae6/eval"
+        },
+        {
+          "label": "Pinned lm-eval dependency",
+          "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/6d642546f4688648fced259eb3302efd36ece5af/lm_eval/tasks"
+        }
+      ]
+    },
+    {
+      "benchmark": "bioreasonbench",
+      "version": "bioreasonbench-pilot",
+      "framework": "Evalchemy",
+      "status": "no",
+      "checked_at": "2026-10-14",
+      "reason": "No matching BioReasonBench integration was found in the audited Evalchemy registry or its pinned lm-eval task inventory. Port the selected BioReasonBench — pilot scope and establish an end-to-end graded run. This finding is limited to the checked framework revisions, not all external implementations.",
+      "sources": [
+        {
+          "label": "Audited framework revision",
+          "url": "https://github.com/marin-community/evalchemy/tree/3bb8278078e7ad4b5a6b1f81e8a08db3dd206ae6/eval"
+        },
+        {
+          "label": "Pinned lm-eval dependency",
+          "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/6d642546f4688648fced259eb3302efd36ece5af/lm_eval/tasks"
+        }
+      ]
+    },
+    {
+      "benchmark": "biosecbench",
+      "version": "biosecbench-surveillance",
+      "framework": "Harbor",
+      "status": "blocked",
+      "checked_at": "2026-10-14",
+      "reason": "The released examples omit input data, graders and ground truth; the full suite is restricted. Obtain authorized assets before implementation.",
+      "sources": [
+        {
+          "label": "Audited framework revision",
+          "url": "https://github.com/marin-community/harbor/tree/1d29d200414b6488a87192f50f617b1b5bd4b6f4/adapters"
+        },
+        {
+          "label": "Access or release blocker",
+          "url": "https://github.com/latchbio/biosecbench-surveillance"
+        }
+      ]
+    },
+    {
+      "benchmark": "biothreat-eval",
+      "version": "biothreat-eval-proxy-suite",
+      "framework": "Evalchemy",
+      "status": "no",
+      "checked_at": "2026-10-14",
+      "reason": "No matching BioThreat-Eval integration was found in the audited Evalchemy registry or its pinned lm-eval task inventory. Port the selected BioThreat-Eval — proxy suite scope and establish an end-to-end graded run. This finding is limited to the checked framework revisions, not all external implementations.",
+      "sources": [
+        {
+          "label": "Audited framework revision",
+          "url": "https://github.com/marin-community/evalchemy/tree/3bb8278078e7ad4b5a6b1f81e8a08db3dd206ae6/eval"
+        },
+        {
+          "label": "Pinned lm-eval dependency",
+          "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/6d642546f4688648fced259eb3302efd36ece5af/lm_eval/tasks"
+        }
+      ]
+    },
+    {
+      "benchmark": "biotier",
+      "version": "biotier",
+      "framework": "Evalchemy",
+      "status": "blocked",
+      "checked_at": "2026-10-14",
+      "reason": "The authors provide evaluation data only on request to qualified organizations. Access to the full selected prompt set must be confirmed before integration.",
+      "sources": [
+        {
+          "label": "Audited framework revision",
+          "url": "https://github.com/marin-community/evalchemy/tree/3bb8278078e7ad4b5a6b1f81e8a08db3dd206ae6/eval"
+        },
+        {
+          "label": "Pinned lm-eval dependency",
+          "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/6d642546f4688648fced259eb3302efd36ece5af/lm_eval/tasks"
+        },
+        {
+          "label": "Access or release blocker",
+          "url": "https://arxiv.org/html/2607.14479v1"
+        }
+      ]
+    },
+    {
+      "benchmark": "bioxarena",
+      "version": "bioxarena",
+      "framework": "Harbor",
+      "status": "no",
+      "checked_at": "2026-10-14",
+      "reason": "No matching BioXArena integration was found in the audited Harbor registry. Port the selected BioXArena scope and establish an end-to-end graded run. This finding is limited to the checked framework revisions, not all external implementations.",
+      "sources": [
+        {
+          "label": "Audited framework revision",
+          "url": "https://github.com/marin-community/harbor/tree/1d29d200414b6488a87192f50f617b1b5bd4b6f4/adapters"
+        }
+      ]
+    },
+    {
+      "benchmark": "bixbench",
+      "version": "bixbench-v1-5-harbor-cli",
+      "framework": "Harbor",
+      "status": "yes",
+      "checked_at": "2026-10-14",
+      "reason": "Selected Harbor CLI v1.5 has archived end-to-end execution and grading. Reference-correction work remains open but does not erase the existing implementation; preserve its protocol caveats.",
+      "sources": [
+        {
+          "label": "Audited framework revision",
+          "url": "https://github.com/marin-community/harbor/tree/1d29d200414b6488a87192f50f617b1b5bd4b6f4/adapters"
+        },
+        {
+          "label": "Execution evidence",
+          "url": "https://github.com/marin-community/marin/issues/9258#issuecomment-5744365667"
+        }
+      ]
+    },
+    {
+      "benchmark": "blurb",
+      "version": "blurb-non-qa-task-families",
+      "framework": "Evalchemy",
+      "status": "no",
+      "checked_at": "2026-10-14",
+      "reason": "No matching BLURB integration was found in the audited Evalchemy registry or its pinned lm-eval task inventory. Port the selected BLURB — non-QA task families scope and establish an end-to-end graded run. This finding is limited to the checked framework revisions, not all external implementations.",
+      "sources": [
+        {
+          "label": "Audited framework revision",
+          "url": "https://github.com/marin-community/evalchemy/tree/3bb8278078e7ad4b5a6b1f81e8a08db3dd206ae6/eval"
+        },
+        {
+          "label": "Pinned lm-eval dependency",
+          "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/6d642546f4688648fced259eb3302efd36ece5af/lm_eval/tasks"
+        }
+      ]
+    },
+    {
+      "benchmark": "c-eval",
+      "version": "c-eval-biology",
+      "framework": "Evalchemy",
+      "status": "no",
+      "checked_at": "2026-10-14",
+      "reason": "The pinned lm-eval dependency includes C-Eval. Choose a labeled evaluation split and biology subjects, then validate through Evalchemy; the official held-out test uses hosted scoring.",
+      "sources": [
+        {
+          "label": "Audited framework revision",
+          "url": "https://github.com/marin-community/evalchemy/tree/3bb8278078e7ad4b5a6b1f81e8a08db3dd206ae6/eval"
+        },
+        {
+          "label": "Pinned lm-eval dependency",
+          "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/6d642546f4688648fced259eb3302efd36ece5af/lm_eval/tasks"
+        },
+        {
+          "label": "Existing task configuration",
+          "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/6d642546f4688648fced259eb3302efd36ece5af/lm_eval/tasks/ceval"
+        }
+      ]
+    },
+    {
+      "benchmark": "cardbiomedbench",
+      "version": "cardbiomedbench",
+      "framework": "Evalchemy",
+      "status": "no",
+      "checked_at": "2026-10-14",
+      "reason": "No matching CARDBiomedBench integration was found in the audited Evalchemy registry or its pinned lm-eval task inventory. Port the selected CARDBiomedBench scope and establish an end-to-end graded run. This finding is limited to the checked framework revisions, not all external implementations.",
+      "sources": [
+        {
+          "label": "Audited framework revision",
+          "url": "https://github.com/marin-community/evalchemy/tree/3bb8278078e7ad4b5a6b1f81e8a08db3dd206ae6/eval"
+        },
+        {
+          "label": "Pinned lm-eval dependency",
+          "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/6d642546f4688648fced259eb3302efd36ece5af/lm_eval/tasks"
+        }
+      ]
+    },
+    {
+      "benchmark": "cellbench-cellvoyager",
+      "version": "cellbench-cellvoyager",
+      "framework": "Harbor",
+      "status": "no",
+      "checked_at": "2026-10-14",
+      "reason": "No matching CellBench (CellVoyager) integration was found in the audited Harbor registry. Port the selected CellBench (CellVoyager) scope and establish an end-to-end graded run. This finding is limited to the checked framework revisions, not all external implementations.",
+      "sources": [
+        {
+          "label": "Audited framework revision",
+          "url": "https://github.com/marin-community/harbor/tree/1d29d200414b6488a87192f50f617b1b5bd4b6f4/adapters"
+        }
+      ]
+    },
+    {
+      "benchmark": "cmmlu",
+      "version": "cmmlu-biology",
+      "framework": "Evalchemy",
+      "status": "no",
+      "checked_at": "2026-10-14",
+      "reason": "The pinned lm-eval dependency includes CMMLU. Configure the biology subject selection and establish an end-to-end graded Evalchemy run.",
+      "sources": [
+        {
+          "label": "Audited framework revision",
+          "url": "https://github.com/marin-community/evalchemy/tree/3bb8278078e7ad4b5a6b1f81e8a08db3dd206ae6/eval"
+        },
+        {
+          "label": "Pinned lm-eval dependency",
+          "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/6d642546f4688648fced259eb3302efd36ece5af/lm_eval/tasks"
+        },
+        {
+          "label": "Existing task configuration",
+          "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/6d642546f4688648fced259eb3302efd36ece5af/lm_eval/tasks/cmmlu"
+        }
+      ]
+    },
+    {
+      "benchmark": "compbiobench",
+      "version": "compbiobench",
+      "framework": "Harbor",
+      "status": "no",
+      "checked_at": "2026-10-14",
+      "reason": "No matching CompBioBench integration was found in the audited Harbor registry. Port the selected CompBioBench scope and establish an end-to-end graded run. This finding is limited to the checked framework revisions, not all external implementations.",
+      "sources": [
+        {
+          "label": "Audited framework revision",
+          "url": "https://github.com/marin-community/harbor/tree/1d29d200414b6488a87192f50f617b1b5bd4b6f4/adapters"
+        }
+      ]
+    },
+    {
+      "benchmark": "core-bench",
+      "version": "core-bench-biomedical-papers",
+      "framework": "Harbor",
+      "status": "no",
+      "checked_at": "2026-10-14",
+      "reason": "No matching CORE-Bench integration was found in the audited Harbor registry. Port the selected CORE-Bench — biomedical papers scope and establish an end-to-end graded run. This finding is limited to the checked framework revisions, not all external implementations.",
+      "sources": [
+        {
+          "label": "Audited framework revision",
+          "url": "https://github.com/marin-community/harbor/tree/1d29d200414b6488a87192f50f617b1b5bd4b6f4/adapters"
+        }
+      ]
+    },
+    {
+      "benchmark": "dbench-bio",
+      "version": "dbench-bio",
+      "framework": "Evalchemy",
+      "status": "no",
+      "checked_at": "2026-10-14",
+      "reason": "No matching DBench-Bio integration was found in the audited Evalchemy registry or its pinned lm-eval task inventory. Port the selected DBench-Bio scope and establish an end-to-end graded run. This finding is limited to the checked framework revisions, not all external implementations.",
+      "sources": [
+        {
+          "label": "Audited framework revision",
+          "url": "https://github.com/marin-community/evalchemy/tree/3bb8278078e7ad4b5a6b1f81e8a08db3dd206ae6/eval"
+        },
+        {
+          "label": "Pinned lm-eval dependency",
+          "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/6d642546f4688648fced259eb3302efd36ece5af/lm_eval/tasks"
+        }
+      ]
+    },
+    {
+      "benchmark": "discoverybench",
+      "version": "discoverybench-biology",
+      "framework": "Harbor",
+      "status": "no",
+      "checked_at": "2026-10-14",
+      "reason": "No matching DiscoveryBench integration was found in the audited Harbor registry. Port the selected DiscoveryBench — biology scope and establish an end-to-end graded run. This finding is limited to the checked framework revisions, not all external implementations.",
+      "sources": [
+        {
+          "label": "Audited framework revision",
+          "url": "https://github.com/marin-community/harbor/tree/1d29d200414b6488a87192f50f617b1b5bd4b6f4/adapters"
+        }
+      ]
+    },
+    {
+      "benchmark": "dmpkbench",
+      "version": "dmpkbench",
+      "framework": "Evalchemy",
+      "status": "blocked",
+      "checked_at": "2026-10-14",
+      "reason": "ADMET MPO reference answers are withheld for licensing reasons. The full selected scope needs authorized answers or hosted scoring; publicly labeled subsets remain possible separate scopes.",
+      "sources": [
+        {
+          "label": "Audited framework revision",
+          "url": "https://github.com/marin-community/evalchemy/tree/3bb8278078e7ad4b5a6b1f81e8a08db3dd206ae6/eval"
+        },
+        {
+          "label": "Pinned lm-eval dependency",
+          "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/6d642546f4688648fced259eb3302efd36ece5af/lm_eval/tasks"
+        },
+        {
+          "label": "Access or release blocker",
+          "url": "https://github.com/GHDDI-AILab/DMPKBench"
+        }
+      ]
+    },
+    {
+      "benchmark": "drugdiscoverybench",
+      "version": "drugdiscoverybench",
+      "framework": "Harbor",
+      "status": "blocked",
+      "checked_at": "2026-10-14",
+      "reason": "The task release is public, but reference answers and rubrics require gated access. Confirm authorized retrieval of grading assets before validating the Harbor tasks.",
+      "sources": [
+        {
+          "label": "Audited framework revision",
+          "url": "https://github.com/marin-community/harbor/tree/1d29d200414b6488a87192f50f617b1b5bd4b6f4/adapters"
+        },
+        {
+          "label": "Access or release blocker",
+          "url": "https://huggingface.co/datasets/ScaleAI/DrugDiscoveryBench"
+        }
+      ]
+    },
+    {
+      "benchmark": "epibench",
+      "version": "epibench",
+      "framework": "Harbor",
+      "status": "blocked",
+      "checked_at": "2026-10-14",
+      "reason": "The current release supplies seven examples, not the 106-task paper suite. Obtain the full tasks and grading assets or explicitly narrow the selected scope before porting.",
+      "sources": [
+        {
+          "label": "Audited framework revision",
+          "url": "https://github.com/marin-community/harbor/tree/1d29d200414b6488a87192f50f617b1b5bd4b6f4/adapters"
+        },
+        {
+          "label": "Access or release blocker",
+          "url": "https://github.com/latchbio/epibench"
+        }
+      ]
+    },
+    {
+      "benchmark": "frontierscience",
+      "version": "frontierscience-biology",
+      "framework": "Evalchemy",
+      "status": "no",
+      "checked_at": "2026-10-14",
+      "reason": "No matching FrontierScience integration was found in the audited Evalchemy registry or its pinned lm-eval task inventory. Port the selected FrontierScience — biology scope and establish an end-to-end graded run. This finding is limited to the checked framework revisions, not all external implementations.",
+      "sources": [
+        {
+          "label": "Audited framework revision",
+          "url": "https://github.com/marin-community/evalchemy/tree/3bb8278078e7ad4b5a6b1f81e8a08db3dd206ae6/eval"
+        },
+        {
+          "label": "Pinned lm-eval dependency",
+          "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/6d642546f4688648fced259eb3302efd36ece5af/lm_eval/tasks"
+        }
+      ]
+    },
+    {
+      "benchmark": "gaokao-bench",
+      "version": "gaokao-bench-biology",
+      "framework": "Evalchemy",
+      "status": "no",
+      "checked_at": "2026-10-14",
+      "reason": "No matching GAOKAO-Bench integration was found in the audited Evalchemy registry or its pinned lm-eval task inventory. Port the selected GAOKAO-Bench — biology scope and establish an end-to-end graded run. This finding is limited to the checked framework revisions, not all external implementations.",
+      "sources": [
+        {
+          "label": "Audited framework revision",
+          "url": "https://github.com/marin-community/evalchemy/tree/3bb8278078e7ad4b5a6b1f81e8a08db3dd206ae6/eval"
+        },
+        {
+          "label": "Pinned lm-eval dependency",
+          "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/6d642546f4688648fced259eb3302efd36ece5af/lm_eval/tasks"
+        }
+      ]
+    },
+    {
+      "benchmark": "genebench",
+      "version": "genebench-pro",
+      "framework": "Harbor",
+      "status": "in_progress",
+      "checked_at": "2026-10-14",
+      "reason": "Open public-10 adapter PR #164 reports execution and deterministic grading. Integration is still under review; this selected public subset is distinct from the original private GeneBench.",
+      "sources": [
+        {
+          "label": "Audited framework revision",
+          "url": "https://github.com/marin-community/harbor/tree/1d29d200414b6488a87192f50f617b1b5bd4b6f4/adapters"
+        },
+        {
+          "label": "Open implementation PR",
+          "url": "https://github.com/marin-community/harbor/pull/164"
+        }
+      ]
+    },
+    {
+      "benchmark": "geneturing",
+      "version": "geneturing",
+      "framework": "Evalchemy",
+      "status": "no",
+      "checked_at": "2026-10-14",
+      "reason": "No matching GeneTuring integration was found in the audited Evalchemy registry or its pinned lm-eval task inventory. Port the selected GeneTuring scope and establish an end-to-end graded run. This finding is limited to the checked framework revisions, not all external implementations.",
+      "sources": [
+        {
+          "label": "Audited framework revision",
+          "url": "https://github.com/marin-community/evalchemy/tree/3bb8278078e7ad4b5a6b1f81e8a08db3dd206ae6/eval"
+        },
+        {
+          "label": "Pinned lm-eval dependency",
+          "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/6d642546f4688648fced259eb3302efd36ece5af/lm_eval/tasks"
+        }
+      ]
+    },
+    {
+      "benchmark": "genome-bench",
+      "version": "genome-bench",
+      "framework": "Evalchemy",
+      "status": "no",
+      "checked_at": "2026-10-14",
+      "reason": "No matching Genome-Bench integration was found in the audited Evalchemy registry or its pinned lm-eval task inventory. Port the selected Genome-Bench scope and establish an end-to-end graded run. This finding is limited to the checked framework revisions, not all external implementations.",
+      "sources": [
+        {
+          "label": "Audited framework revision",
+          "url": "https://github.com/marin-community/evalchemy/tree/3bb8278078e7ad4b5a6b1f81e8a08db3dd206ae6/eval"
+        },
+        {
+          "label": "Pinned lm-eval dependency",
+          "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/6d642546f4688648fced259eb3302efd36ece5af/lm_eval/tasks"
+        }
+      ]
+    },
+    {
+      "benchmark": "genomeqa",
+      "version": "genomeqa-sequence-understanding",
+      "framework": "Evalchemy",
+      "status": "no",
+      "checked_at": "2026-10-14",
+      "reason": "No author-linked runnable release was located in the inspected paper, and no corresponding Evalchemy task appears in the audited registries. Locate the release and implement its scorer.",
+      "sources": [
+        {
+          "label": "Audited framework revision",
+          "url": "https://github.com/marin-community/evalchemy/tree/3bb8278078e7ad4b5a6b1f81e8a08db3dd206ae6/eval"
+        },
+        {
+          "label": "Pinned lm-eval dependency",
+          "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/6d642546f4688648fced259eb3302efd36ece5af/lm_eval/tasks"
+        },
+        {
+          "label": "Reviewed implementation/release",
+          "url": "https://arxiv.org/html/2604.05774v1"
+        }
+      ]
+    },
+    {
+      "benchmark": "gpqa",
+      "version": "gpqa-main-extended-biology",
+      "framework": "Evalchemy",
+      "status": "no",
+      "checked_at": "2026-10-14",
+      "reason": "The pinned lm-eval dependency includes GPQA Main/Extended. Configure the biology subset and validate grading. Evalchemy issue #201 concerns the separate GPQADiamond custom path, not this selected version.",
+      "sources": [
+        {
+          "label": "Audited framework revision",
+          "url": "https://github.com/marin-community/evalchemy/tree/3bb8278078e7ad4b5a6b1f81e8a08db3dd206ae6/eval"
+        },
+        {
+          "label": "Pinned lm-eval dependency",
+          "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/6d642546f4688648fced259eb3302efd36ece5af/lm_eval/tasks"
+        },
+        {
+          "label": "Existing task configuration",
+          "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/6d642546f4688648fced259eb3302efd36ece5af/lm_eval/tasks/gpqa"
+        }
+      ]
+    },
+    {
+      "benchmark": "humaneval-bioimage-human-eval-bia",
+      "version": "humaneval-bioimage-human-eval-bia",
+      "framework": "Evalchemy",
+      "status": "no",
+      "checked_at": "2026-10-14",
+      "reason": "No matching HumanEval-BioImage (human-eval-bia) integration was found in the audited Evalchemy registry or its pinned lm-eval task inventory. Port the selected HumanEval-BioImage (human-eval-bia) scope and establish an end-to-end graded run. This finding is limited to the checked framework revisions, not all external implementations.",
+      "sources": [
+        {
+          "label": "Audited framework revision",
+          "url": "https://github.com/marin-community/evalchemy/tree/3bb8278078e7ad4b5a6b1f81e8a08db3dd206ae6/eval"
+        },
+        {
+          "label": "Pinned lm-eval dependency",
+          "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/6d642546f4688648fced259eb3302efd36ece5af/lm_eval/tasks"
+        }
+      ]
+    },
+    {
+      "benchmark": "humanitys-last-exam",
+      "version": "humanitys-last-exam-biology-medicine",
+      "framework": "Evalchemy",
+      "status": "no",
+      "checked_at": "2026-10-14",
+      "reason": "Evalchemy has a native HLE implementation and grader. Define the biology slice and verify an end-to-end run with the required judge; existence of the class alone is insufficient.",
+      "sources": [
+        {
+          "label": "Audited framework revision",
+          "url": "https://github.com/marin-community/evalchemy/tree/3bb8278078e7ad4b5a6b1f81e8a08db3dd206ae6/eval"
+        },
+        {
+          "label": "Pinned lm-eval dependency",
+          "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/6d642546f4688648fced259eb3302efd36ece5af/lm_eval/tasks"
+        },
+        {
+          "label": "Reviewed implementation/release",
+          "url": "https://github.com/marin-community/evalchemy/tree/3bb8278078e7ad4b5a6b1f81e8a08db3dd206ae6/eval/chat_benchmarks/HLE"
+        }
+      ]
+    },
+    {
+      "benchmark": "lab-bench",
+      "version": "lab-bench-tool-free-text-mcq",
+      "framework": "Evalchemy",
+      "status": "no",
+      "checked_at": "2026-10-14",
+      "reason": "The selected tool-free text scope has an author evaluator, but no native LAB-Bench Evalchemy integration appears in the audited registries. Harbor has a different tool-enabled adapter and open shared-verification work; do not transfer that status to this scope.",
+      "sources": [
+        {
+          "label": "Audited framework revision",
+          "url": "https://github.com/marin-community/evalchemy/tree/3bb8278078e7ad4b5a6b1f81e8a08db3dd206ae6/eval"
+        },
+        {
+          "label": "Pinned lm-eval dependency",
+          "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/6d642546f4688648fced259eb3302efd36ece5af/lm_eval/tasks"
+        },
+        {
+          "label": "Reviewed implementation/release",
+          "url": "https://github.com/marin-community/evalchemy/tree/3bb8278078e7ad4b5a6b1f81e8a08db3dd206ae6/eval"
+        }
+      ]
+    },
+    {
+      "benchmark": "lifescibench",
+      "version": "lifescibench",
+      "framework": "Harbor",
+      "status": "no",
+      "checked_at": "2026-10-14",
+      "reason": "The author page describes the evaluation and links its paper, but no runnable task/artifact/rubric package was located there. Locate or request that release, then implement and validate the Harbor path. This is a release-discovery gap, not a verified claim that the dataset is private.",
+      "sources": [
+        {
+          "label": "Audited framework revision",
+          "url": "https://github.com/marin-community/harbor/tree/1d29d200414b6488a87192f50f617b1b5bd4b6f4/adapters"
+        },
+        {
+          "label": "Reviewed implementation/release",
+          "url": "https://openai.com/index/introducing-life-sci-bench/"
+        }
+      ]
+    },
+    {
+      "benchmark": "liu-et-al-single-cell-agent-benchmark",
+      "version": "liu-et-al-single-cell-agent-benchmark",
+      "framework": "Harbor",
+      "status": "no",
+      "checked_at": "2026-10-14",
+      "reason": "No matching Liu et al. single-cell agent benchmark integration was found in the audited Harbor registry. Port the selected Liu et al., single-cell agent benchmark scope and establish an end-to-end graded run. This finding is limited to the checked framework revisions, not all external implementations.",
+      "sources": [
+        {
+          "label": "Audited framework revision",
+          "url": "https://github.com/marin-community/harbor/tree/1d29d200414b6488a87192f50f617b1b5bd4b6f4/adapters"
+        }
+      ]
+    },
+    {
+      "benchmark": "liveproteinbench",
+      "version": "liveproteinbench-repository-stage-suite",
+      "framework": "Evalchemy",
+      "status": "no",
+      "checked_at": "2026-10-14",
+      "reason": "No matching LiveProteinBench integration was found in the audited Evalchemy registry or its pinned lm-eval task inventory. Port the selected LiveProteinBench — repository-stage suite scope and establish an end-to-end graded run. This finding is limited to the checked framework revisions, not all external implementations.",
+      "sources": [
+        {
+          "label": "Audited framework revision",
+          "url": "https://github.com/marin-community/evalchemy/tree/3bb8278078e7ad4b5a6b1f81e8a08db3dd206ae6/eval"
+        },
+        {
+          "label": "Pinned lm-eval dependency",
+          "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/6d642546f4688648fced259eb3302efd36ece5af/lm_eval/tasks"
+        }
+      ]
+    },
+    {
+      "benchmark": "microvqa",
+      "version": "microvqa",
+      "framework": "Evalchemy",
+      "status": "no",
+      "checked_at": "2026-10-14",
+      "reason": "No matching MicroVQA integration was found in the audited Evalchemy registry or its pinned lm-eval task inventory. Port the selected MicroVQA scope and establish an end-to-end graded run. This finding is limited to the checked framework revisions, not all external implementations.",
+      "sources": [
+        {
+          "label": "Audited framework revision",
+          "url": "https://github.com/marin-community/evalchemy/tree/3bb8278078e7ad4b5a6b1f81e8a08db3dd206ae6/eval"
+        },
+        {
+          "label": "Pinned lm-eval dependency",
+          "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/6d642546f4688648fced259eb3302efd36ece5af/lm_eval/tasks"
+        }
+      ]
+    },
+    {
+      "benchmark": "mmlu",
+      "version": "mmlu-biology-biomedical-subjects",
+      "framework": "Evalchemy",
+      "status": "yes",
+      "checked_at": "2026-10-14",
+      "reason": "The tracked scope is the three-subject biology configuration: 554 questions executed and graded through Evalchemy. The four optional biomedical subjects remain outside this implemented scope.",
+      "sources": [
+        {
+          "label": "Audited framework revision",
+          "url": "https://github.com/marin-community/evalchemy/tree/3bb8278078e7ad4b5a6b1f81e8a08db3dd206ae6/eval"
+        },
+        {
+          "label": "Pinned lm-eval dependency",
+          "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/6d642546f4688648fced259eb3302efd36ece5af/lm_eval/tasks"
+        },
+        {
+          "label": "Completed biology run",
+          "url": "https://github.com/marin-community/marin/issues/9258"
+        }
+      ]
+    },
+    {
+      "benchmark": "mmmu",
+      "version": "mmmu-biology-basic-medical-science",
+      "framework": "Evalchemy",
+      "status": "no",
+      "checked_at": "2026-10-14",
+      "reason": "The pinned lm-eval dependency includes MMMU. Select labeled biology/medical examples and a supported multimodal backend, then validate through Evalchemy.",
+      "sources": [
+        {
+          "label": "Audited framework revision",
+          "url": "https://github.com/marin-community/evalchemy/tree/3bb8278078e7ad4b5a6b1f81e8a08db3dd206ae6/eval"
+        },
+        {
+          "label": "Pinned lm-eval dependency",
+          "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/6d642546f4688648fced259eb3302efd36ece5af/lm_eval/tasks"
+        },
+        {
+          "label": "Existing task configuration",
+          "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/6d642546f4688648fced259eb3302efd36ece5af/lm_eval/tasks/mmmu"
+        }
+      ]
+    },
+    {
+      "benchmark": "olympicarena",
+      "version": "olympicarena-biology",
+      "framework": "Evalchemy",
+      "status": "no",
+      "checked_at": "2026-10-14",
+      "reason": "No matching OlympicArena integration was found in the audited Evalchemy registry or its pinned lm-eval task inventory. Port the selected OlympicArena — biology scope and establish an end-to-end graded run. This finding is limited to the checked framework revisions, not all external implementations.",
+      "sources": [
+        {
+          "label": "Audited framework revision",
+          "url": "https://github.com/marin-community/evalchemy/tree/3bb8278078e7ad4b5a6b1f81e8a08db3dd206ae6/eval"
+        },
+        {
+          "label": "Pinned lm-eval dependency",
+          "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/6d642546f4688648fced259eb3302efd36ece5af/lm_eval/tasks"
+        }
+      ]
+    },
+    {
+      "benchmark": "promptbio-bench",
+      "version": "promptbio-bench",
+      "framework": "Harbor",
+      "status": "no",
+      "checked_at": "2026-10-14",
+      "reason": "No matching PromptBio-Bench integration was found in the audited Harbor registry. Port the selected PromptBio-Bench scope and establish an end-to-end graded run. This finding is limited to the checked framework revisions, not all external implementations.",
+      "sources": [
+        {
+          "label": "Audited framework revision",
+          "url": "https://github.com/marin-community/harbor/tree/1d29d200414b6488a87192f50f617b1b5bd4b6f4/adapters"
+        }
+      ]
+    },
+    {
+      "benchmark": "proteingym-llm-pg-llm",
+      "version": "proteingym-llm-pg-llm",
+      "framework": "Evalchemy",
+      "status": "no",
+      "checked_at": "2026-10-14",
+      "reason": "No matching ProteinGym-LLM (PG-LLM) integration was found in the audited Evalchemy registry or its pinned lm-eval task inventory. Port the selected ProteinGym-LLM (PG-LLM) scope and establish an end-to-end graded run. This finding is limited to the checked framework revisions, not all external implementations.",
+      "sources": [
+        {
+          "label": "Audited framework revision",
+          "url": "https://github.com/marin-community/evalchemy/tree/3bb8278078e7ad4b5a6b1f81e8a08db3dd206ae6/eval"
+        },
+        {
+          "label": "Pinned lm-eval dependency",
+          "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/6d642546f4688648fced259eb3302efd36ece5af/lm_eval/tasks"
+        }
+      ]
+    },
+    {
+      "benchmark": "proteinlmbench",
+      "version": "proteinlmbench",
+      "framework": "Evalchemy",
+      "status": "no",
+      "checked_at": "2026-10-14",
+      "reason": "No matching ProteinLMBench integration was found in the audited Evalchemy registry or its pinned lm-eval task inventory. Port the selected ProteinLMBench scope and establish an end-to-end graded run. This finding is limited to the checked framework revisions, not all external implementations.",
+      "sources": [
+        {
+          "label": "Audited framework revision",
+          "url": "https://github.com/marin-community/evalchemy/tree/3bb8278078e7ad4b5a6b1f81e8a08db3dd206ae6/eval"
+        },
+        {
+          "label": "Pinned lm-eval dependency",
+          "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/6d642546f4688648fced259eb3302efd36ece5af/lm_eval/tasks"
+        }
+      ]
+    },
+    {
+      "benchmark": "pubmedqa",
+      "version": "pubmedqa-labeled-abstract-qa",
+      "framework": "Evalchemy",
+      "status": "no",
+      "checked_at": "2026-10-14",
+      "reason": "The pinned lm-eval dependency contains a PubMedQA task. Confirm the intended labeled split and establish end-to-end execution and grading through Evalchemy.",
+      "sources": [
+        {
+          "label": "Audited framework revision",
+          "url": "https://github.com/marin-community/evalchemy/tree/3bb8278078e7ad4b5a6b1f81e8a08db3dd206ae6/eval"
+        },
+        {
+          "label": "Pinned lm-eval dependency",
+          "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/6d642546f4688648fced259eb3302efd36ece5af/lm_eval/tasks"
+        },
+        {
+          "label": "Existing task configuration",
+          "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/6d642546f4688648fced259eb3302efd36ece5af/lm_eval/tasks/pubmedqa"
+        }
+      ]
+    },
+    {
+      "benchmark": "researchbench",
+      "version": "researchbench-biology-cell-biology",
+      "framework": "Evalchemy",
+      "status": "blocked",
+      "checked_at": "2026-10-14",
+      "reason": "The dataset requires approval of access terms. Authorized retrieval for the intended use is not recorded here; establish that prerequisite before the Evalchemy port.",
+      "sources": [
+        {
+          "label": "Audited framework revision",
+          "url": "https://github.com/marin-community/evalchemy/tree/3bb8278078e7ad4b5a6b1f81e8a08db3dd206ae6/eval"
+        },
+        {
+          "label": "Pinned lm-eval dependency",
+          "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/6d642546f4688648fced259eb3302efd36ece5af/lm_eval/tasks"
+        },
+        {
+          "label": "Access or release blocker",
+          "url": "https://huggingface.co/datasets/ankilok/ResearchBench"
+        }
+      ]
+    },
+    {
+      "benchmark": "sc-arena",
+      "version": "sc-arena",
+      "framework": "Evalchemy",
+      "status": "no",
+      "checked_at": "2026-10-14",
+      "reason": "No matching SC-Arena integration was found in the audited Evalchemy registry or its pinned lm-eval task inventory. Port the selected SC-Arena scope and establish an end-to-end graded run. This finding is limited to the checked framework revisions, not all external implementations.",
+      "sources": [
+        {
+          "label": "Audited framework revision",
+          "url": "https://github.com/marin-community/evalchemy/tree/3bb8278078e7ad4b5a6b1f81e8a08db3dd206ae6/eval"
+        },
+        {
+          "label": "Pinned lm-eval dependency",
+          "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/6d642546f4688648fced259eb3302efd36ece5af/lm_eval/tasks"
+        }
+      ]
+    },
+    {
+      "benchmark": "sc-heurekabench",
+      "version": "sc-heurekabench",
+      "framework": "Harbor",
+      "status": "no",
+      "checked_at": "2026-10-14",
+      "reason": "No matching sc-HeurekaBench integration was found in the audited Harbor registry. Port the selected sc-HeurekaBench scope and establish an end-to-end graded run. This finding is limited to the checked framework revisions, not all external implementations.",
+      "sources": [
+        {
+          "label": "Audited framework revision",
+          "url": "https://github.com/marin-community/harbor/tree/1d29d200414b6488a87192f50f617b1b5bd4b6f4/adapters"
+        }
+      ]
+    },
+    {
+      "benchmark": "scbench",
+      "version": "scbench",
+      "framework": "Harbor",
+      "status": "blocked",
+      "checked_at": "2026-10-14",
+      "reason": "The authors withhold the full 195-task suite; six examples are public. Full-suite implementation needs access, or an explicitly selected public-example scope.",
+      "sources": [
+        {
+          "label": "Audited framework revision",
+          "url": "https://github.com/marin-community/harbor/tree/1d29d200414b6488a87192f50f617b1b5bd4b6f4/adapters"
+        },
+        {
+          "label": "Access or release blocker",
+          "url": "https://github.com/latchbio/scbench"
+        }
+      ]
+    },
+    {
+      "benchmark": "scholarqabench",
+      "version": "scholarqabench-biomedicine",
+      "framework": "Harbor",
+      "status": "no",
+      "checked_at": "2026-10-14",
+      "reason": "No matching ScholarQABench integration was found in the audited Harbor registry. Port the selected ScholarQABench — biomedicine scope and establish an end-to-end graded run. This finding is limited to the checked framework revisions, not all external implementations.",
+      "sources": [
+        {
+          "label": "Audited framework revision",
+          "url": "https://github.com/marin-community/harbor/tree/1d29d200414b6488a87192f50f617b1b5bd4b6f4/adapters"
+        }
+      ]
+    },
+    {
+      "benchmark": "sciassess",
+      "version": "sciassess-biology",
+      "framework": "Evalchemy",
+      "status": "no",
+      "checked_at": "2026-10-14",
+      "reason": "No matching SciAssess integration was found in the audited Evalchemy registry or its pinned lm-eval task inventory. Port the selected SciAssess — biology scope and establish an end-to-end graded run. This finding is limited to the checked framework revisions, not all external implementations.",
+      "sources": [
+        {
+          "label": "Audited framework revision",
+          "url": "https://github.com/marin-community/evalchemy/tree/3bb8278078e7ad4b5a6b1f81e8a08db3dd206ae6/eval"
+        },
+        {
+          "label": "Pinned lm-eval dependency",
+          "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/6d642546f4688648fced259eb3302efd36ece5af/lm_eval/tasks"
+        }
+      ]
+    },
+    {
+      "benchmark": "scicode",
+      "version": "scicode-biology-harbor-variant",
+      "framework": "Harbor",
+      "status": "yes",
+      "checked_at": "2026-10-14",
+      "reason": "The merged Harbor adapter publishes three graded 80-problem parity runs, covering the source benchmark that includes biology. This establishes execution/grading support, not a separately reported biology-only score.",
+      "sources": [
+        {
+          "label": "Audited framework revision",
+          "url": "https://github.com/marin-community/harbor/tree/1d29d200414b6488a87192f50f617b1b5bd4b6f4/adapters"
+        },
+        {
+          "label": "Graded parity runs",
+          "url": "https://github.com/marin-community/harbor/blob/1d29d200414b6488a87192f50f617b1b5bd4b6f4/adapters/scicode/parity_experiment.json"
+        }
+      ]
+    },
+    {
+      "benchmark": "scicueval",
+      "version": "scicueval-biology-biomedicine",
+      "framework": "Evalchemy",
+      "status": "no",
+      "checked_at": "2026-10-14",
+      "reason": "No matching SciCUEval integration was found in the audited Evalchemy registry or its pinned lm-eval task inventory. Port the selected SciCUEval — biology / biomedicine scope and establish an end-to-end graded run. This finding is limited to the checked framework revisions, not all external implementations.",
+      "sources": [
+        {
+          "label": "Audited framework revision",
+          "url": "https://github.com/marin-community/evalchemy/tree/3bb8278078e7ad4b5a6b1f81e8a08db3dd206ae6/eval"
+        },
+        {
+          "label": "Pinned lm-eval dependency",
+          "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/6d642546f4688648fced259eb3302efd36ece5af/lm_eval/tasks"
+        }
+      ]
+    },
+    {
+      "benchmark": "scienceagentbench",
+      "version": "scienceagentbench-bioinformatics",
+      "framework": "Harbor",
+      "status": "yes",
+      "checked_at": "2026-10-14",
+      "reason": "The merged Harbor adapter publishes five graded 102-task parity runs, including its 27 bioinformatics tasks. CPU/GPU limits and judge-protocol differences remain documented caveats.",
+      "sources": [
+        {
+          "label": "Audited framework revision",
+          "url": "https://github.com/marin-community/harbor/tree/1d29d200414b6488a87192f50f617b1b5bd4b6f4/adapters"
+        },
+        {
+          "label": "Graded parity runs",
+          "url": "https://github.com/marin-community/harbor/blob/1d29d200414b6488a87192f50f617b1b5bd4b6f4/adapters/scienceagentbench/parity_experiment.json"
+        }
+      ]
+    },
+    {
+      "benchmark": "sciencearena",
+      "version": "sciencearena-biology",
+      "framework": "Evalchemy",
+      "status": "no",
+      "checked_at": "2026-10-14",
+      "reason": "The inspected paper does not establish an author-linked runnable release, and the audited Evalchemy registries contain no integration. Locate the release and implement the biology selection and grading.",
+      "sources": [
+        {
+          "label": "Audited framework revision",
+          "url": "https://github.com/marin-community/evalchemy/tree/3bb8278078e7ad4b5a6b1f81e8a08db3dd206ae6/eval"
+        },
+        {
+          "label": "Pinned lm-eval dependency",
+          "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/6d642546f4688648fced259eb3302efd36ece5af/lm_eval/tasks"
+        },
+        {
+          "label": "Reviewed implementation/release",
+          "url": "https://arxiv.org/html/2608.30517v1"
+        }
+      ]
+    },
+    {
+      "benchmark": "scienceqa",
+      "version": "scienceqa-biology",
+      "framework": "Evalchemy",
+      "status": "no",
+      "checked_at": "2026-10-14",
+      "reason": "No matching ScienceQA integration was found in the audited Evalchemy registry or its pinned lm-eval task inventory. Port the selected ScienceQA — biology scope and establish an end-to-end graded run. This finding is limited to the checked framework revisions, not all external implementations.",
+      "sources": [
+        {
+          "label": "Audited framework revision",
+          "url": "https://github.com/marin-community/evalchemy/tree/3bb8278078e7ad4b5a6b1f81e8a08db3dd206ae6/eval"
+        },
+        {
+          "label": "Pinned lm-eval dependency",
+          "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/6d642546f4688648fced259eb3302efd36ece5af/lm_eval/tasks"
+        }
+      ]
+    },
+    {
+      "benchmark": "scieval",
+      "version": "scieval-biology",
+      "framework": "Evalchemy",
+      "status": "no",
+      "checked_at": "2026-10-14",
+      "reason": "No matching SciEval integration was found in the audited Evalchemy registry or its pinned lm-eval task inventory. Port the selected SciEval — biology scope and establish an end-to-end graded run. This finding is limited to the checked framework revisions, not all external implementations.",
+      "sources": [
+        {
+          "label": "Audited framework revision",
+          "url": "https://github.com/marin-community/evalchemy/tree/3bb8278078e7ad4b5a6b1f81e8a08db3dd206ae6/eval"
+        },
+        {
+          "label": "Pinned lm-eval dependency",
+          "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/6d642546f4688648fced259eb3302efd36ece5af/lm_eval/tasks"
+        }
+      ]
+    },
+    {
+      "benchmark": "scifact",
+      "version": "scifact-llm-protocol",
+      "framework": "Evalchemy",
+      "status": "no",
+      "checked_at": "2026-10-14",
+      "reason": "No matching SciFact integration was found in the audited Evalchemy registry or its pinned lm-eval task inventory. Port the selected SciFact — LLM protocol scope and establish an end-to-end graded run. This finding is limited to the checked framework revisions, not all external implementations.",
+      "sources": [
+        {
+          "label": "Audited framework revision",
+          "url": "https://github.com/marin-community/evalchemy/tree/3bb8278078e7ad4b5a6b1f81e8a08db3dd206ae6/eval"
+        },
+        {
+          "label": "Pinned lm-eval dependency",
+          "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/6d642546f4688648fced259eb3302efd36ece5af/lm_eval/tasks"
+        }
+      ]
+    },
+    {
+      "benchmark": "scigym",
+      "version": "scigym",
+      "framework": "Harbor",
+      "status": "no",
+      "checked_at": "2026-10-14",
+      "reason": "No matching SciGym integration was found in the audited Harbor registry. Port the selected SciGym scope and establish an end-to-end graded run. This finding is limited to the checked framework revisions, not all external implementations.",
+      "sources": [
+        {
+          "label": "Audited framework revision",
+          "url": "https://github.com/marin-community/harbor/tree/1d29d200414b6488a87192f50f617b1b5bd4b6f4/adapters"
+        }
+      ]
+    },
+    {
+      "benchmark": "sciknoweval",
+      "version": "sciknoweval-v2-biology-closed-choice",
+      "framework": "Evalchemy",
+      "status": "no",
+      "checked_at": "2026-10-14",
+      "reason": "No matching SciKnowEval integration was found in the audited Evalchemy registry or its pinned lm-eval task inventory. Port the selected SciKnowEval v2 — biology closed-choice scope and establish an end-to-end graded run. This finding is limited to the checked framework revisions, not all external implementations.",
+      "sources": [
+        {
+          "label": "Audited framework revision",
+          "url": "https://github.com/marin-community/evalchemy/tree/3bb8278078e7ad4b5a6b1f81e8a08db3dd206ae6/eval"
+        },
+        {
+          "label": "Pinned lm-eval dependency",
+          "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/6d642546f4688648fced259eb3302efd36ece5af/lm_eval/tasks"
+        }
+      ]
+    },
+    {
+      "benchmark": "scipredict",
+      "version": "scipredict-biology",
+      "framework": "Evalchemy",
+      "status": "no",
+      "checked_at": "2026-10-14",
+      "reason": "No matching SciPredict integration was found in the audited Evalchemy registry or its pinned lm-eval task inventory. Port the selected SciPredict — biology scope and establish an end-to-end graded run. This finding is limited to the checked framework revisions, not all external implementations.",
+      "sources": [
+        {
+          "label": "Audited framework revision",
+          "url": "https://github.com/marin-community/evalchemy/tree/3bb8278078e7ad4b5a6b1f81e8a08db3dd206ae6/eval"
+        },
+        {
+          "label": "Pinned lm-eval dependency",
+          "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/6d642546f4688648fced259eb3302efd36ece5af/lm_eval/tasks"
+        }
+      ]
+    },
+    {
+      "benchmark": "sciq",
+      "version": "sciq-biology",
+      "framework": "Evalchemy",
+      "status": "no",
+      "checked_at": "2026-10-14",
+      "reason": "The pinned lm-eval dependency contains SciQ. The biology-only selection and a graded Evalchemy run remain to be established.",
+      "sources": [
+        {
+          "label": "Audited framework revision",
+          "url": "https://github.com/marin-community/evalchemy/tree/3bb8278078e7ad4b5a6b1f81e8a08db3dd206ae6/eval"
+        },
+        {
+          "label": "Pinned lm-eval dependency",
+          "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/6d642546f4688648fced259eb3302efd36ece5af/lm_eval/tasks"
+        },
+        {
+          "label": "Existing task configuration",
+          "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/6d642546f4688648fced259eb3302efd36ece5af/lm_eval/tasks/sciq"
+        }
+      ]
+    },
+    {
+      "benchmark": "scir",
+      "version": "scir",
+      "framework": "Evalchemy",
+      "status": "no",
+      "checked_at": "2026-10-14",
+      "reason": "No matching SciR integration was found in the audited Evalchemy registry or its pinned lm-eval task inventory. Port the selected SciR scope and establish an end-to-end graded run. This finding is limited to the checked framework revisions, not all external implementations.",
+      "sources": [
+        {
+          "label": "Audited framework revision",
+          "url": "https://github.com/marin-community/evalchemy/tree/3bb8278078e7ad4b5a6b1f81e8a08db3dd206ae6/eval"
+        },
+        {
+          "label": "Pinned lm-eval dependency",
+          "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/6d642546f4688648fced259eb3302efd36ece5af/lm_eval/tasks"
+        }
+      ]
+    },
+    {
+      "benchmark": "spatialbench",
+      "version": "spatialbench",
+      "framework": "Harbor",
+      "status": "blocked",
+      "checked_at": "2026-10-14",
+      "reason": "The full 159-task suite is withheld. Public examples do not establish full-suite access; obtain the full release or explicitly select the example scope.",
+      "sources": [
+        {
+          "label": "Audited framework revision",
+          "url": "https://github.com/marin-community/harbor/tree/1d29d200414b6488a87192f50f617b1b5bd4b6f4/adapters"
+        },
+        {
+          "label": "Access or release blocker",
+          "url": "https://github.com/latchbio/spatialbench"
+        }
+      ]
+    },
+    {
+      "benchmark": "spike-bench",
+      "version": "spike-bench",
+      "framework": "Evalchemy",
+      "status": "blocked",
+      "checked_at": "2026-10-14",
+      "reason": "Dataset files require acceptance of access conditions. Confirm authorized retrieval for the intended evaluation before building the integration.",
+      "sources": [
+        {
+          "label": "Audited framework revision",
+          "url": "https://github.com/marin-community/evalchemy/tree/3bb8278078e7ad4b5a6b1f81e8a08db3dd206ae6/eval"
+        },
+        {
+          "label": "Pinned lm-eval dependency",
+          "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/6d642546f4688648fced259eb3302efd36ece5af/lm_eval/tasks"
+        },
+        {
+          "label": "Access or release blocker",
+          "url": "https://huggingface.co/datasets/quanshu01/SPIKE-Bench"
+        }
+      ]
+    },
+    {
+      "benchmark": "supergpqa",
+      "version": "supergpqa-biology",
+      "framework": "Evalchemy",
+      "status": "no",
+      "checked_at": "2026-10-14",
+      "reason": "No matching SuperGPQA integration was found in the audited Evalchemy registry or its pinned lm-eval task inventory. Port the selected SuperGPQA — biology scope and establish an end-to-end graded run. This finding is limited to the checked framework revisions, not all external implementations.",
+      "sources": [
+        {
+          "label": "Audited framework revision",
+          "url": "https://github.com/marin-community/evalchemy/tree/3bb8278078e7ad4b5a6b1f81e8a08db3dd206ae6/eval"
+        },
+        {
+          "label": "Pinned lm-eval dependency",
+          "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/6d642546f4688648fced259eb3302efd36ece5af/lm_eval/tasks"
+        }
+      ]
+    },
+    {
+      "benchmark": "targetval-popper",
+      "version": "targetval-popper",
+      "framework": "Harbor",
+      "status": "no",
+      "checked_at": "2026-10-14",
+      "reason": "No matching TargetVal (Popper) integration was found in the audited Harbor registry. Port the selected TargetVal (Popper) scope and establish an end-to-end graded run. This finding is limited to the checked framework revisions, not all external implementations.",
+      "sources": [
+        {
+          "label": "Audited framework revision",
+          "url": "https://github.com/marin-community/harbor/tree/1d29d200414b6488a87192f50f617b1b5bd4b6f4/adapters"
+        }
+      ]
+    },
+    {
+      "benchmark": "terminal-bench-science",
+      "version": "terminal-bench-science-life-sciences",
+      "framework": "Harbor",
+      "status": "no",
+      "checked_at": "2026-10-14",
+      "reason": "Native Harbor task definitions and verifiers exist. The imported single-task oracle note lacks a durable run-evidence link; establish reproducible execution/grading evidence for the selected life-sciences scope.",
+      "sources": [
+        {
+          "label": "Audited framework revision",
+          "url": "https://github.com/marin-community/harbor/tree/1d29d200414b6488a87192f50f617b1b5bd4b6f4/adapters"
+        },
+        {
+          "label": "Reviewed implementation/release",
+          "url": "https://github.com/harbor-framework/terminal-bench-science/tree/ff55a1b0810a5cc2ebac3ebb007cbe6a26aa2e3b/tasks/life-sciences"
+        }
+      ]
+    },
+    {
+      "benchmark": "txbench",
+      "version": "txbench-pp-preclinical-pharmacology",
+      "framework": "Harbor",
+      "status": "blocked",
+      "checked_at": "2026-10-14",
+      "reason": "The repository releases example evaluations, not the selected 100-task suite. Obtain the full task package or explicitly select a public-example scope before porting.",
+      "sources": [
+        {
+          "label": "Audited framework revision",
+          "url": "https://github.com/marin-community/harbor/tree/1d29d200414b6488a87192f50f617b1b5bd4b6f4/adapters"
+        },
+        {
+          "label": "Access or release blocker",
+          "url": "https://github.com/latchbio/txbench-pp"
+        }
+      ]
+    },
+    {
+      "benchmark": "variantbench",
+      "version": "variantbench",
+      "framework": "Harbor",
+      "status": "blocked",
+      "checked_at": "2026-10-14",
+      "reason": "The public repository contains eight examples, including two outside the main 118-task benchmark. Full-suite access is the prerequisite for the selected scope.",
+      "sources": [
+        {
+          "label": "Audited framework revision",
+          "url": "https://github.com/marin-community/harbor/tree/1d29d200414b6488a87192f50f617b1b5bd4b6f4/adapters"
+        },
+        {
+          "label": "Access or release blocker",
+          "url": "https://github.com/latchbio/variantbench"
+        }
+      ]
+    },
+    {
+      "benchmark": "virology-capabilities-test-vct",
+      "version": "virology-capabilities-test-vct",
+      "framework": "Evalchemy",
+      "status": "blocked",
+      "checked_at": "2026-10-14",
+      "reason": "The benchmark is not publicly available and is shared on request with qualified researchers. Confirm authorized data access before implementing the selected version.",
+      "sources": [
+        {
+          "label": "Audited framework revision",
+          "url": "https://github.com/marin-community/evalchemy/tree/3bb8278078e7ad4b5a6b1f81e8a08db3dd206ae6/eval"
+        },
+        {
+          "label": "Pinned lm-eval dependency",
+          "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/6d642546f4688648fced259eb3302efd36ece5af/lm_eval/tasks"
+        },
+        {
+          "label": "Access or release blocker",
+          "url": "https://securebio.org/benchmarks/details/"
+        }
+      ]
+    },
+    {
+      "benchmark": "wmdp-bio",
+      "version": "wmdp-bio",
+      "framework": "Evalchemy",
+      "status": "no",
+      "checked_at": "2026-10-14",
+      "reason": "The pinned lm-eval dependency includes WMDP-Bio. Validate the selected biology task through Evalchemy with the intended protocol; the audit did not establish a retained graded run.",
+      "sources": [
+        {
+          "label": "Audited framework revision",
+          "url": "https://github.com/marin-community/evalchemy/tree/3bb8278078e7ad4b5a6b1f81e8a08db3dd206ae6/eval"
+        },
+        {
+          "label": "Pinned lm-eval dependency",
+          "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/6d642546f4688648fced259eb3302efd36ece5af/lm_eval/tasks"
+        },
+        {
+          "label": "Existing task configuration",
+          "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/6d642546f4688648fced259eb3302efd36ece5af/lm_eval/tasks/wmdp"
+        }
+      ]
+    }
+  ]
+}

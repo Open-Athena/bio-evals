@@ -8,7 +8,7 @@ sources:
   - label: Benchmark
     url: https://huggingface.co/datasets/openai/genebench-pro-public-package
 notes: []
-selected_variant: genebench-original
+selected_variant: genebench-pro
 variants:
   - id: genebench-pro
     name: GeneBench-Pro
@@ -25,9 +25,25 @@ variants:
         url: https://github.com/josancamon19/sci-benches/tree/1fc392943dce9c847a62574dcf4e4c6ad943d2ab/src/genebench_pro
     implementations:
       - framework: Harbor
-        status: unknown
-        evidence: []
-    work: []
+        status: in_progress
+        evidence:
+          - url: https://github.com/marin-community/harbor/pull/164
+            scope: "GeneBench-Pro public-10: reported solver trials and official deterministic grading; public
+              answers, missing submissions and timeouts constrain interpretation."
+            checked_at: 2026-10-14
+        assessment:
+          checked_at: 2026-10-14
+          reason: "Open public-10 adapter PR #164 reports execution and deterministic grading. Integration is
+            still under review; this selected public subset is distinct from the original private
+            GeneBench."
+          sources:
+            - label: Audited framework revision
+              url: https://github.com/marin-community/harbor/tree/1d29d200414b6488a87192f50f617b1b5bd4b6f4/adapters
+            - label: Open implementation PR
+              url: https://github.com/marin-community/harbor/pull/164
+    work:
+      - https://github.com/marin-community/harbor/pull/164
+      - https://github.com/marin-community/harbor/issues/163
     notes:
       - "Access: Ten ungated public cases with references and schemas; full 129-task suite not in
         release."
@@ -35,8 +51,6 @@ variants:
         checks passed."
       - "Limitations: the public package is a ten-case subset of the full 129-task suite; do not
         equate public-subset coverage with full-suite implementation."
-      - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
-        notes are historical."
     provenance:
       - sheet: Agentic (Harbor)
         gid: 846608904

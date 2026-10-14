@@ -30,8 +30,19 @@ variants:
         url: https://github.com/marin-community/evalchemy/tree/ab8e78f12abb8ed0d1659f56c24f2e01f3c85b54/eval/chat_benchmarks
     implementations:
       - framework: Evalchemy
-        status: unknown
+        status: blocked
         evidence: []
+        assessment:
+          checked_at: 2026-10-14
+          reason: The benchmark is not publicly available and is shared on request with qualified researchers.
+            Confirm authorized data access before implementing the selected version.
+          sources:
+            - label: Audited framework revision
+              url: https://github.com/marin-community/evalchemy/tree/3bb8278078e7ad4b5a6b1f81e8a08db3dd206ae6/eval
+            - label: Pinned lm-eval dependency
+              url: https://github.com/EleutherAI/lm-evaluation-harness/tree/6d642546f4688648fced259eb3302efd36ece5af/lm_eval/tasks
+            - label: Access or release blocker
+              url: https://securebio.org/benchmarks/details/
     work: []
     notes:
       - "Access: Public SecureBio description; full benchmark access is restricted/request-based."
@@ -39,8 +50,6 @@ variants:
         confirmation with the provider."
       - "Limitations: Record as an access-limited benchmark; do not substitute public examples for a
         full result."
-      - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
-        notes are historical."
     provenance:
       - sheet: Non-agentic (Evalchemy)
         gid: 776831399
