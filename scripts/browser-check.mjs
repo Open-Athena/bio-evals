@@ -3,6 +3,13 @@ import {readFile,stat,mkdir} from 'node:fs/promises';
 import {resolve,extname} from 'node:path';
 import assert from 'node:assert/strict';
 import {chromium} from 'playwright-core';
+import {loadCatalog} from './catalog.mjs';
+import {selectedVersion} from '../src/components/catalog.js';
+
+const catalog=await loadCatalog();
+const entriesWithStatus=status=>catalog.filter(b=>selectedVersion(b).implementations.some(i=>i.status===status));
+const implementedCount=entriesWithStatus('yes').length;
+const inProgress=entriesWithStatus('in_progress');
 
 const directory=resolve('dist'), artifacts=resolve('artifacts/browser');
 await mkdir(artifacts,{recursive:true});
@@ -57,20 +64,21 @@ try {
   await page.emulateMedia({colorScheme:'light'});
   await page.goto(base);
   await page.waitForSelector('.catalog-table tbody tr');
-  for(let index=0;index<4;index++)assert.equal(await page.locator('.catalog-table tbody tr').nth(index).locator('.badge.yes').count(),1,'Implemented benchmarks sort first');
+  for(let index=0;index<implementedCount;index++)assert.ok(await page.locator('.catalog-table tbody tr').nth(index).locator('.badge.yes').count()>0,'Implemented benchmarks sort first');
   assert.ok(!(await page.getByLabel('Implementation',{exact:true}).innerText()).includes('Unknown'));
   await page.getByLabel('Implementation',{exact:true}).selectOption({label:'Blocked'});
   await page.waitForFunction(()=>document.querySelector('.catalog-table tbody tr')?.textContent.includes('Blocked'));
   assert.equal(await page.locator('.catalog-table .badge.yes').count(),0);
   await page.getByLabel('Implementation',{exact:true}).selectOption({label:'In progress'});
-  await page.waitForFunction(()=>document.querySelectorAll('.catalog-table tbody tr').length===3);
-  assert.equal(await page.locator('.catalog-table .badge.in_progress').count(),3);
+  await page.waitForFunction(count=>document.querySelectorAll('.catalog-table tbody tr').length===count,inProgress.length);
+  assert.deepEqual((await page.locator('.catalog-table tbody tr').evaluateAll(rows=>rows.map(row=>row.querySelector('a')?.textContent))).sort(),inProgress.map(b=>b.name).sort());
+  assert.equal(await page.locator('.catalog-table .badge.yes').count(),0);
   await page.getByLabel('Implementation',{exact:true}).selectOption({label:'All states'});
   const filterPositions=await page.locator('.filters > form').evaluateAll(forms=>forms.map(f=>f.getBoundingClientRect().top));
   assert.equal(filterPositions.length,3);
   assert.ok(Math.max(...filterPositions)-Math.min(...filterPositions)<2,'Desktop filters share one row');
-  await page.waitForFunction(()=>document.querySelector('.status-chart svg')?.getAttribute('aria-label')?.includes('Implemented 4'));
-  assert.match(await page.locator('.status-chart svg').getAttribute('aria-label'), /Implemented 4/);
+  await page.waitForFunction(count=>document.querySelector('.status-chart svg')?.getAttribute('aria-label')?.split(': ')[1]?.split(', ').includes(`Implemented ${count}`),implementedCount);
+  assert.ok((await page.locator('.status-chart svg').getAttribute('aria-label')).split(': ')[1].split(', ').includes(`Implemented ${implementedCount}`));
   const search=page.getByLabel('Search evaluations');
   await search.fill('BixBench');
   await page.waitForFunction(()=>document.querySelectorAll('.catalog-table tbody tr').length===1 && document.querySelector('.catalog-table tbody')?.textContent.includes('BixBench v1.5'));
@@ -101,12 +109,12 @@ try {
   await page.getByLabel('Implementation',{exact:true}).selectOption({label:'All states'});
   await search.fill('');
   await page.waitForFunction(()=>document.querySelectorAll('.catalog-table tbody tr').length>4);
-  for(let attempt=0;attempt<5 && await page.locator('.catalog-table tbody tr').count()<95;attempt++) {
+  for(let attempt=0;attempt<catalog.length && await page.locator('.catalog-table tbody tr').count()<catalog.length;attempt++) {
     const before=await page.locator('.catalog-table tbody tr').count();
     await page.locator('.catalog-table form').evaluate(form=>{form.scrollTop=form.scrollHeight;});
     await page.waitForFunction(n=>document.querySelectorAll('.catalog-table tbody tr').length>n,before);
   }
-  assert.equal(await page.locator('.catalog-table tbody tr').count(),95,'All catalog benchmarks are reachable by scrolling');
+  assert.equal(await page.locator('.catalog-table tbody tr').count(),catalog.length,'All catalog benchmarks are reachable by scrolling');
   await page.locator('.catalog-table form').evaluate(form=>{form.scrollTop=0;});
   await search.focus();await page.keyboard.press('Tab');
   assert.ok(await page.evaluate(()=>document.activeElement?.tagName==='SELECT'));
