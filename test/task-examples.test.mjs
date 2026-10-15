@@ -16,6 +16,11 @@ test('every benchmark has sourced examples or an explicit availability gap',asyn
     assert.ok(c.examples.every(e=>e.html.includes('Source revision:')));
   }
   for(const b of ['mmlu','bixbench','scicode','scienceagentbench'])assert.ok(examples.get(b).examples.length);
+  const gated=structuredClone(catalog);
+  gated.find(b=>b.id==='biomnibench-da').variants[0].implementations[0].status='yes';
+  const gaps=await loadExamples(gated);
+  assert.equal(gaps.get('biomnibench-da').examples.length,0);
+  assert.equal(gaps.get('biomnibench-da').availability.status,'unavailable');
   const changed=structuredClone(catalog);changed.find(b=>b.id==='scicode').variants[0].id='changed';
   await assert.rejects(loadExamples(changed),/tracked version/);
 });

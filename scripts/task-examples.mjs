@@ -52,7 +52,8 @@ export async function loadExamples(catalog) {
     for(const path of assets)await readFile(new URL(`../src/${path.slice(3)}`,import.meta.url));
     collections.set(c.benchmark,{...c,assets,examples:rendered});
   }
-  for(const b of catalog)if(selectedVersion(b).implementations.some(i=>i.status==='yes')&&!collections.get(b.id)?.examples.length)throw new Error(`Implemented benchmark needs examples: ${b.id}`);
+  // Execution evidence and permission to republish task text are independent.
+  // Implemented benchmarks may use the validated availability-gap path above.
   for(const b of catalog)if(!collections.has(b.id))throw new Error(`Benchmark needs an example or a documented gap: ${b.id}`);
   return collections;
 }

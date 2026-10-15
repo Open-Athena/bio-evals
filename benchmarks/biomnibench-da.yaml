@@ -25,39 +25,61 @@ variants:
       - label: Scorer / data
         url: https://huggingface.co/datasets/phylobio/BiomniBench-DA
       - label: Harbor / integration
-        url: https://huggingface.co/datasets/phylobio/BiomniBench-DA/tree/e1c8ca5e11a620087bc48d97888eb69176a1f235
+        url: https://github.com/marin-community/harbor/tree/95a4b88b54cae602ade6e79d9536a2c766657301/adapters/biomnibench-da
     implementations:
       - framework: Harbor
-        status: in_progress
+        status: "yes"
         evidence:
           - url: https://github.com/marin-community/harbor/pull/184#issuecomment-5815786883
             scope: "Native released 50-question subset: execution and continuous rubric grading archived,
               including recoveries and two solver retries. Modified judge protocol; not the full
               100-task paper suite."
             checked_at: 2026-10-14
+          - url: https://github.com/marin-community/harbor/pull/184#issuecomment-6178384862
+            scope: "Three-task Pi pilot completed with grades on a pinned historical Harbor runtime:
+              one native-input task and two disclosed reduced-input tasks. Together GPT-OSS-120B
+              judge variant; integration evidence, not a reproduction of the published benchmark."
+            checked_at: 2026-10-15
+          - url: https://github.com/marin-community/harbor/pull/184#issuecomment-6194924627
+            scope: "Pi attempted all 50 released tasks, with native inputs for 45 and reduced inputs
+              for five: 44 graded and six ungraded verifier timeouts. Submission timing is uncertain
+              for two graded agent timeouts; this is incomplete evaluation evidence."
+            checked_at: 2026-10-15
         assessment:
-          checked_at: 2026-10-14
-          reason: "Open staging/grading PR #184 has archived native-input execution and grading evidence.
-            Integration review and current-runtime compatibility remain unfinished; access has
-            already succeeded."
+          checked_at: 2026-10-15
+          reason: "Implemented: PR #184 is merged and integration issue #181 is closed, with end-to-end
+            execution and grading evidence for the released subset. Pi validation used a pinned
+            historical Harbor runtime. Current-endpoint compatibility and timeout/capture handling
+            remain unresolved in separate service and harness issues."
           sources:
-            - label: Audited framework revision
-              url: https://github.com/marin-community/harbor/tree/1d29d200414b6488a87192f50f617b1b5bd4b6f4/adapters
-            - label: Open implementation PR
+            - label: Merged implementation PR
               url: https://github.com/marin-community/harbor/pull/184
+            - label: Accepted integration scope and related limitations
+              url: https://github.com/marin-community/harbor/issues/181
     work:
       - https://github.com/marin-community/harbor/pull/184
       - https://github.com/marin-community/harbor/issues/181
+      - https://github.com/marin-community/harbor/issues/165
+      - https://github.com/Open-Athena/ortet-inference/issues/2
+      - https://github.com/marin-community/harbor/issues/261
     notes:
-      - "Access: HF metadata lists 50 Harbor-style task directories with instructions, Dockerfiles,
-        and tests at e1c8ca5e11a620087bc48d97888eb69176a1f235. Auto-gated; unauthenticated content
-        fetch returned 401."
-      - "Grading: Process-level scoring against expert task-specific rubrics; llm_judge.py and
-        rubric.txt listed for all 50 released tasks. Judge provider and scoring contract
-        unverified."
-      - "Limitations: Harbor-style packaging is listed but execution is unvalidated. Adds process
-        diagnostics beyond final-answer checks. Distinguish the 50-task release from the paper's 100
-        tasks."
+      - "Access: Authenticated access and task execution succeeded for the gated 50-task release,
+        pinned to e1c8ca5e11a620087bc48d97888eb69176a1f235. Distinguish this release from the
+        paper's 100-task suite."
+      - "Grading: The adapter preserves task rubrics and grading prompts but uses a configurable
+        Together judge, validated with GPT-OSS-120B, and applies signed source-reliability penalties
+        dropped by the released parser. Development controls exercised good, wrong, and empty
+        submissions; these do not establish general agreement with human scientific review."
+      - "Inputs: Native inputs remain the default. The Pi evaluation used disclosed reductions for
+        five tasks: omit the unused CRC expression matrix for two tasks and retain all cells, raw
+        counts, and metadata while removing the separate normalized lupus matrix for three tasks."
+      - "Runtime limitations: Ortet-inference #2 remains open for tokenization compatibility with
+        the GLM endpoint; successful Pi validation used a historical Harbor runtime. Harbor #261
+        remains open for Pi timeout cleanup and report capture. Six Pi tasks remain ungraded, and
+        two graded timeout submissions have uncertain timing."
+      - "Historical runtime issue: Harbor #165 is closed; compaction failures and incomplete usage
+        accounting affected earlier Terminus runs. Closure does not retroactively validate or
+        change those grades. These service and harness issues are separate from adapter acceptance."
     provenance:
       - sheet: Agentic (Harbor)
         gid: 846608904
