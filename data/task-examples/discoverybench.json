@@ -1,0 +1,44 @@
+{
+  "benchmark": "discoverybench",
+  "version": "discoverybench-biology",
+  "attribution": "Allen Institute for AI; OpenLocus; University of Massachusetts Amherst; source: allenai/discoverybench",
+  "license": "odc-by",
+  "checked_at": "2026-10-15",
+  "selection": "One curated public example. Biology question from the public test split. External datasets and evaluation environments are not bundled.",
+  "examples": [
+    {
+      "id": "test-row-223-query-0",
+      "title": "DiscoveryBench — biology example",
+      "kind": "Scientific data analysis",
+      "prompt": "Over which time period has gardening surpassed agriculture as the main contributor to the non-native flora?",
+      "scope": "Biology question from the public test split",
+      "inputs": [
+        {
+          "name": "temporal_trends_contingency_table.csv",
+          "description": "Dataset contains temporal trends in the introduction pathways of non-native flora (plants) in the region of Catalonia."
+        },
+        {
+          "name": "invaded_niche_pathways.csv",
+          "description": "The dataset contains information about the different pathways in the invaded niche."
+        }
+      ],
+      "output": "Follow the output format in the task.",
+      "grading": "Facet-based hypothesis comparison with model-assisted grading against reference discoveries.",
+      "source": "https://huggingface.co/datasets/allenai/discoverybench/tree/e54ec033049d3a0fd95d3c746919cc8c01c25781",
+      "source_label": "Public source example",
+      "revision": "e54ec033049d3a0fd95d3c746919cc8c01c25781",
+      "reference_note": "No reference answer is included in this preview.",
+      "extra_sources": [
+        {
+          "label": "Source viewer query (may change)",
+          "url": "https://datasets-server.huggingface.co/rows?dataset=allenai%2Fdiscoverybench&config=default&split=test&offset=130&length=100"
+        }
+      ]
+    }
+  ],
+  "retrieval": {
+    "url": "https://datasets-server.huggingface.co/rows?dataset=allenai%2Fdiscoverybench&config=default&split=test&offset=130&length=100",
+    "revision_pinned": false,
+    "note": "Public viewer snapshot; dataset revision was checked separately. The rendered task is frozen in this JSON file."
+  }
+}

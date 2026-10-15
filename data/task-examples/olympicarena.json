@@ -1,0 +1,35 @@
+{
+  "benchmark": "olympicarena",
+  "version": "olympicarena-biology",
+  "attribution": "Shanghai Jiao Tong University / GAIR; Shanghai AI Laboratory; Soochow University; source: GAIR/OlympicArena",
+  "license": "cc-by-nc-sa-4.0",
+  "checked_at": "2026-10-15",
+  "selection": "One curated public source example; not a random or representative performance sample. Source split: val. External datasets and evaluation environments are not bundled.",
+  "examples": [
+    {
+      "id": "Biology_576",
+      "title": "OlympicArena — biology example",
+      "kind": "Source task",
+      "prompt": "你正在参加一个国际生物竞赛，并需要解决以下问题。\n这是一个单选题（只有一个正确答案）。\n\n问题:\n已知某雌雄同株植物的宽叶/窄叶由等位基因 $\\mathrm{A} / \\mathrm{a}$ 控制, 高茎/矮茎由等位基因 $\\mathrm{B} / \\mathrm{b}$控制。研究人员利用射线处理该植物, 从中选择出甲、乙、丙、丁四株个体分别进行相关实验, 结果如下表所示。下列说法正确的是 ( )\n\n| $\\mathrm{P}$ | $\\mathrm{F}_{1}$ |\n| :--- | :--- |\n\n\n| 甲: 宽叶矮茎 | 宽叶矮茎: 窄叶矮茎=2:1 |\n| :--- | :--- |\n| 乙: 窄叶高茎 | 窄叶高茎: 窄叶矮茎=2: 1 |\n| 丙: 宽叶矮茎 $\\times$ 丁: 窄叶高茎 | 宽叶矮茎: 宽叶高茎: 窄叶高茎: 窄叶矮茎=1: 1: $1:$ |\n\nA: 上述两对基因位于非同源染色体上, 遵循自由组合定律\nB: 通过自交结果可推断, A 或 B 基因存在纯合致死现象\nC: 将 $\\mathrm{F}_{1}$ 中宽叶高茎的个体自交, 后代植株中宽叶高茎所占比例为 $4 / 9$\nD: 亲代宽叶矮茎和窄叶高茎的基因型分别是 $A a b b$ 和 $a a B b$\n\n你可以一步一步来解决这个问题，并输出详细的解答过程。\n你需要在输出的最后用以下格式总结答案：“最终答案是$\\boxed{ANSWER}$”，其中ANSWER应为以下选项之一：[A, B, C, D]",
+      "inputs": [],
+      "output": "Follow the requested answer or artifact format in the task.",
+      "grading": "Official answer extraction/correctness with task-format-specific handling.",
+      "source": "https://huggingface.co/datasets/GAIR/OlympicArena/tree/001189f4e78bbdbe436770a2763a4283c6224709",
+      "source_label": "Biology / val / row 0",
+      "revision": "001189f4e78bbdbe436770a2763a4283c6224709",
+      "reference": "[\n  \"D\"\n]",
+      "extra_sources": [
+        {
+          "label": "Source viewer query (may change)",
+          "url": "https://datasets-server.huggingface.co/rows?dataset=GAIR%2FOlympicArena&config=Biology&split=val&offset=0&length=30"
+        }
+      ]
+    }
+  ],
+  "source_record_sha256": "b1829ba68e87a743bbd1bb82f80fb6114a7d6aff9ffe3b11b897c29d5b9a52e2",
+  "retrieval": {
+    "url": "https://datasets-server.huggingface.co/rows?dataset=GAIR%2FOlympicArena&config=Biology&split=val&offset=0&length=30",
+    "revision_pinned": false,
+    "note": "Public viewer snapshot; dataset revision was checked separately. The rendered task is frozen in this JSON file."
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "benchmark": "spike-bench",
+  "version": "spike-bench",
+  "attribution": "Peking University (PKU-Alignment)",
+  "license": "See linked source terms",
+  "checked_at": "2026-10-15",
+  "selection": "No inline example available yet.",
+  "availability": {
+    "status": "unavailable",
+    "reason": "The official dataset requires accepting its access terms. The unauthenticated task endpoint returned HTTP 401; no gated task text is republished here.",
+    "sources": [
+      {
+        "label": "Benchmark",
+        "url": "https://github.com/PKU-Alignment/SPIKE-Bench"
+      },
+      {
+        "label": "Scorer / data",
+        "url": "https://huggingface.co/datasets/quanshu01/SPIKE-Bench"
+      }
+    ]
+  },
+  "examples": []
+}

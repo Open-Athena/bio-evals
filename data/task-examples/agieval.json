@@ -1,0 +1,30 @@
+{
+  "benchmark": "agieval",
+  "version": "agieval-gaokao-biology",
+  "attribution": "Microsoft; source: ruixiangcui/AGIEval",
+  "license": "See source terms",
+  "checked_at": "2026-10-15",
+  "selection": "One curated public source example; not a random or representative performance sample. External datasets and evaluation environments are not bundled.",
+  "examples": [
+    {
+      "id": "0",
+      "title": "AGIEval — Gaokao biology example",
+      "kind": "Multiple choice",
+      "prompt": "已知(1)酶、(2)抗体、(3)激素、(4)糖原、(5)脂肪、(6)核酸都是人体内有重要作用的物质。下列说法正确的 是 ",
+      "inputs": [],
+      "output": "Choose an answer from the options.",
+      "grading": "Official answer extraction and accuracy; pin dataset version and prompt mode.",
+      "source": "https://raw.githubusercontent.com/ruixiangcui/AGIEval/84ab72d94318290aad2e4ec820d535a95a1f7552/data/v1/gaokao-biology.jsonl",
+      "source_label": "data/v1/gaokao-biology.jsonl",
+      "revision": "84ab72d94318290aad2e4ec820d535a95a1f7552",
+      "choices": [
+        "(A)(1)(2)(3)都是由氨基酸通过肽键连接而成的",
+        "(B)(3)(4)(5)都是生物大分子, 都以碳链为骨架",
+        "(C)(1)(2)(6)都是由含氮的单体连接成的多聚体",
+        "(D)(4)(5)(6)都是人体细胞内的主要能源物质"
+      ],
+      "reference": "C"
+    }
+  ],
+  "source_record_sha256": "8947b8b45c1f7edb266624998c8bbb61455dda049c926df013bdb9d9831fde38"
+}

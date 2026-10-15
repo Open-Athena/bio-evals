@@ -1,0 +1,30 @@
+{
+  "benchmark": "dmpkbench",
+  "version": "dmpkbench",
+  "attribution": "Global Health Drug Discovery Institute (GHDDI); source: GHDDI-AILab/DMPKBench",
+  "license": "See source terms",
+  "checked_at": "2026-10-15",
+  "selection": "One curated public source example; not a random or representative performance sample. External datasets and evaluation environments are not bundled.",
+  "examples": [
+    {
+      "id": "1",
+      "title": "DMPKBench example",
+      "kind": "Multiple choice",
+      "prompt": "A drug is administered IV as a 4‑hour infusion of 600 mg every 12 hours. It follows one‑compartment kinetics with clearance (CL) = 15 L/h and volume of distribution (V) = 75 L. What is the steady‑state peak concentration (C_ss,peak)?",
+      "inputs": [],
+      "output": "Choose an answer from the options.",
+      "grading": "Subset-specific choice, numerical and open-response assessment; some open responses need model/expert grading.",
+      "source": "https://raw.githubusercontent.com/GHDDI-AILab/DMPKBench/f2ddaff925b51aad0069b68a823bb6b2c28aac76/public%20subset/PK_Modeling.json",
+      "source_label": "public subset/PK_Modeling.json",
+      "revision": "f2ddaff925b51aad0069b68a823bb6b2c28aac76",
+      "choices": [
+        "A) 6.0 mg/L",
+        "B) 8.0 mg/L",
+        "C) 10.0 mg/L",
+        "D) 12.0 mg/L"
+      ],
+      "reference": "A"
+    }
+  ],
+  "source_record_sha256": "192f3ace2f7ac4404cf975ff3b16ea93b085f164ef9f91132407bef275281573"
+}

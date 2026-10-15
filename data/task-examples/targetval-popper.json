@@ -1,0 +1,29 @@
+{
+  "benchmark": "targetval-popper",
+  "version": "targetval-popper",
+  "attribution": "Stanford University; Harvard University; source: snap-stanford/POPPER",
+  "license": "See linked source terms",
+  "checked_at": "2026-10-15",
+  "selection": "One curated public example. Example returned by the biological hypothesis loader in the author README. External datasets and evaluation environments are not bundled.",
+  "examples": [
+    {
+      "id": "IL2-VAV1",
+      "title": "TargetVal (Popper) example",
+      "kind": "Hypothesis validation",
+      "prompt": "Gene VAV1 regulates the production of Interleukin-2 (IL-2).",
+      "scope": "Example returned by the biological hypothesis loader in the author README",
+      "inputs": [
+        {
+          "name": "POPPER biological database",
+          "description": "External data registered with the biological data loader; not bundled."
+        }
+      ],
+      "output": "Test whether the hypothesis is supported using the registered biological data.",
+      "grading": "Hypothesis decisions supported by sequential falsification/statistical testing; preserve error-control protocol.",
+      "source": "https://raw.githubusercontent.com/snap-stanford/POPPER/59611864e09dd15d7528e240ad87c7ddbb4a701c/README.md",
+      "source_label": "README.md",
+      "revision": "59611864e09dd15d7528e240ad87c7ddbb4a701c",
+      "reference": "answer: 2.916\nbinary_answer: True"
+    }
+  ]
+}

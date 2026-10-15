@@ -1,0 +1,23 @@
+{
+  "benchmark": "biomnibench-da",
+  "version": "biomnibench-da",
+  "attribution": "Phylo; xbench; Humanlaya Data Lab",
+  "license": "See linked source terms",
+  "checked_at": "2026-10-15",
+  "selection": "No inline example available yet.",
+  "availability": {
+    "status": "unavailable",
+    "reason": "The official task dataset requires approved access. No gated task text or input files are republished here.",
+    "sources": [
+      {
+        "label": "Benchmark",
+        "url": "https://www.biorxiv.org/content/10.64898/2026.05.12.724604v2"
+      },
+      {
+        "label": "Scorer / data",
+        "url": "https://huggingface.co/datasets/phylobio/BiomniBench-DA"
+      }
+    ]
+  },
+  "examples": []
+}

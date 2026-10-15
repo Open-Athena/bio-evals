@@ -1,0 +1,25 @@
+{
+  "benchmark": "baisbench",
+  "version": "baisbench",
+  "attribution": "Tsinghua University; Beijing Jiaotong University; Capital Medical University; source: EperLuo/BaisBench",
+  "license": "See source terms",
+  "checked_at": "2026-10-15",
+  "selection": "Published Pantheon runner prompt, including source-specific paths and commands. One curated public source example; not a random or representative performance sample. External datasets and evaluation environments are not bundled.",
+  "examples": [
+    {
+      "id": "0",
+      "title": "BAISBench example",
+      "kind": "Source task",
+      "prompt": "/model gpt-4.1 \n\n Given this scRNA-seq dataset from a human Adipose sample: /data/lep/BaisBench/Task1_data/Adipose_raw.h5ad, Perform basic analysis on cell data and annotate cell types. Annotations must be based on knowledge and cannot utilize external tools such as CellTypist. Return the annotated cell data in h5ad format. Save the annotated file in /data/lep/BaisBench/model_zoo/Pantheon/output_task1/Adipose.h5ad\n\nexit\n\n",
+      "inputs": [],
+      "output": "Follow the requested answer or artifact format in the task.",
+      "grading": "Annotation metrics and MC reference answers; validate end-to-end extraction/scoring.",
+      "source": "https://raw.githubusercontent.com/EperLuo/BaisBench/cfab1beb09a7cba999c16f01475fdca37fee5cac/model_zoo/Pantheon/prompt_task1/prompt_Adipose.txt",
+      "source_label": "model_zoo/Pantheon/prompt_task1/prompt_Adipose.txt",
+      "revision": "cfab1beb09a7cba999c16f01475fdca37fee5cac",
+      "reference_note": "No reference answer is included in this public preview.",
+      "scope": "Published Pantheon runner prompt, including source-specific paths and commands."
+    }
+  ],
+  "source_record_sha256": "73f2b71ac9f8b3d1d7c2d454afac0b87603439485e7993c9aaaae4d516330e9d"
+}

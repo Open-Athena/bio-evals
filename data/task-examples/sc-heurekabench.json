@@ -1,0 +1,33 @@
+{
+  "benchmark": "sc-heurekabench",
+  "version": "sc-heurekabench",
+  "attribution": "EPFL; ETH Zurich; source: mlbio-epfl/HeurekaBench",
+  "license": "See linked source terms",
+  "checked_at": "2026-10-15",
+  "selection": "One curated public example. One question from the published multiple-choice evaluation. External datasets and evaluation environments are not bundled.",
+  "examples": [
+    {
+      "id": "paper1-insight2-question1",
+      "title": "sc-HeurekaBench example",
+      "kind": "Data analysis / multiple choice",
+      "prompt": "**Question1:** Which macrophage subset is observed to reduce after therapy according to the dataset?\nA) IL18+ macrophages\nB) THY1⁺ macrophages\nC) Proliferating macrophages\nD) VCAN⁺ macrophages\n\n",
+      "scope": "One question from the published multiple-choice evaluation",
+      "inputs": [
+        {
+          "name": "benchmark/scdata/paper1/data/dataset1.h5ad",
+          "description": "snRNA-seq of all cells in high-risk Neuroblastoma before and after chemotherapy"
+        },
+        {
+          "name": "benchmark/scdata/paper1/data/dataset3.h5ad",
+          "description": "snRNA-seq of Macrophages in high-risk Neuroblastoma before and after chemotherapy"
+        }
+      ],
+      "output": "Follow the output format in the task.",
+      "grading": "Open answers: LLM judge (default GPT-4o). MCQ: exact option-set accuracy plus precision/recall/F1.",
+      "source": "https://raw.githubusercontent.com/mlbio-epfl/HeurekaBench/c2a2b2fcdc5244220ff60f65483bc084c72a8cf1/scheurekabench/benchmark/mcq.json",
+      "source_label": "scheurekabench/benchmark/mcq.json",
+      "revision": "c2a2b2fcdc5244220ff60f65483bc084c72a8cf1",
+      "reference": "A"
+    }
+  ]
+}

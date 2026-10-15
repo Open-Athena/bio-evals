@@ -1,0 +1,19 @@
+{
+  "benchmark": "bio-benchmark",
+  "version": "bio-benchmark-biological-tasks",
+  "attribution": "Chinese University of Hong Kong; University of Hong Kong; Shanghai AI Laboratory",
+  "license": "See linked source terms",
+  "checked_at": "2026-10-15",
+  "selection": "Published example available at the source.",
+  "availability": {
+    "status": "external",
+    "reason": "Appendix D publishes inference prompt templates. These describe the task formats; an instantiated source task has not been imported.",
+    "sources": [
+      {
+        "label": "View inference prompt templates (Appendix D)",
+        "url": "https://arxiv.org/html/2503.04013v1#A4"
+      }
+    ]
+  },
+  "examples": []
+}

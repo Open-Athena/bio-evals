@@ -1,0 +1,36 @@
+{
+  "benchmark": "biokgbench",
+  "version": "biokgbench",
+  "attribution": "Westlake University; Zhejiang University; Samsung AI Center Cambridge; source: AutoLab-Westlake/BioKGBench-Dataset",
+  "license": "mit",
+  "checked_at": "2026-10-15",
+  "selection": "One curated public source example; not a random or representative performance sample. Source split: test. External datasets and evaluation environments are not bundled.",
+  "examples": [
+    {
+      "id": "0",
+      "title": "BioKGBench example",
+      "kind": "Source task",
+      "prompt": "Please check if the 'name' attribute of the node with type Protein and id Q4G0T1 in the knowledge graph is correct. If it's correct, please respond with 'support'; if not, respond with 'refute'.",
+      "inputs": [],
+      "output": "Follow the requested answer or artifact format in the task.",
+      "grading": "Task-specific knowledge/claim verification and QA scoring; reproduce official evidence and answer checks.",
+      "source": "https://huggingface.co/datasets/AutoLab-Westlake/BioKGBench-Dataset/tree/4d992e7e735d81cb84d02f86f6489c82479c290e",
+      "source_label": "kgcheck / test / row 0",
+      "revision": "4d992e7e735d81cb84d02f86f6489c82479c290e",
+      "reference": "support",
+      "extra_sources": [
+        {
+          "label": "Source viewer query (may change)",
+          "url": "https://datasets-server.huggingface.co/rows?dataset=AutoLab-Westlake%2FBioKGBench-Dataset&config=kgcheck&split=test&offset=0&length=30"
+        }
+      ],
+      "context": "```json\n{\n  \"accession\": \"SRCRM_HUMAN\",\n  \"id\": \"Q4G0T1\",\n  \"name\": \"SCART1\",\n  \"p\": null,\n  \"relationship\": null,\n  \"source node\": null,\n  \"synonyms\": [\n    \"SRCRM_HUMAN\"\n  ],\n  \"target node\": null,\n  \"taxid\": \"9606\"\n}\n```"
+    }
+  ],
+  "source_record_sha256": "2fbdd40ccca34f78cbfb5003876ed96bfc20ddc0827709590176dfcdc8be92c3",
+  "retrieval": {
+    "url": "https://datasets-server.huggingface.co/rows?dataset=AutoLab-Westlake%2FBioKGBench-Dataset&config=kgcheck&split=test&offset=0&length=30",
+    "revision_pinned": false,
+    "note": "Public viewer snapshot; dataset revision was checked separately. The rendered task is frozen in this JSON file."
+  }
+}

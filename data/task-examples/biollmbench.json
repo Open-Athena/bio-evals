@@ -1,0 +1,24 @@
+{
+  "benchmark": "biollmbench",
+  "version": "biollmbench",
+  "attribution": "UCLA; Technical University of Moldova; University of Southern California; source: Mangul-Lab-USC/BioLLMBench",
+  "license": "See linked source terms",
+  "checked_at": "2026-10-15",
+  "selection": "One curated public example. Task description extracted from the author document; model responses omitted. External datasets and evaluation environments are not bundled.",
+  "examples": [
+    {
+      "id": "simple-task-1",
+      "title": "BioLLMBench example",
+      "kind": "Open-ended question",
+      "prompt": "Define 'genome annotation' and explain its importance.",
+      "scope": "Task description extracted from the author document; model responses omitted",
+      "inputs": [],
+      "output": "Follow the output format in the task.",
+      "grading": "Task-specific assessment, including expert review and code/output evaluation; executable scoring contract unverified.",
+      "source": "https://raw.githubusercontent.com/Mangul-Lab-USC/BioLLMBench/6b7e685c7bb88919ba5c1686f6b4f72977c74892/data/Gemini%20Pro%20questions.docx",
+      "source_label": "data/Gemini Pro questions.docx",
+      "revision": "6b7e685c7bb88919ba5c1686f6b4f72977c74892",
+      "reference_note": "No reference answer is included in this preview."
+    }
+  ]
+}

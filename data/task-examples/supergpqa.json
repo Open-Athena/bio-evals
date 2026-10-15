@@ -1,0 +1,36 @@
+{
+  "benchmark": "supergpqa",
+  "version": "supergpqa-biology",
+  "attribution": "M-A-P; ByteDance Seed; 2077.AI; source: m-a-p/SuperGPQA",
+  "license": "See source terms",
+  "checked_at": "2026-10-15",
+  "selection": "One curated public source example; not a random or representative performance sample. External datasets and evaluation environments are not bundled.",
+  "examples": [
+    {
+      "id": "8736b21a75c3487aaa4fb4148c234fea",
+      "title": "SuperGPQA — biology example",
+      "kind": "Multiple choice",
+      "prompt": "The turning point of the alternation of generations in the life cycle of angiosperms is",
+      "inputs": [],
+      "output": "Choose an answer from the options.",
+      "grading": "Official choice extraction/accuracy with sample and taxonomy-level aggregation.",
+      "source": "https://huggingface.co/datasets/m-a-p/SuperGPQA/resolve/4430d4458112c7d4497fdcf94d7cc223313d6acf/SuperGPQA-all.jsonl",
+      "source_label": "SuperGPQA-all.jsonl",
+      "revision": "4430d4458112c7d4497fdcf94d7cc223313d6acf",
+      "choices": [
+        "formation of the gametes",
+        "fertilization of the egg",
+        "mitosis",
+        "maturation of pollen and embryo sac",
+        "fertilization",
+        "formation of the zygote",
+        "fertilization of the zygote",
+        "meiosis",
+        "formation of the embryo",
+        "germination of the seed"
+      ],
+      "reference": "meiosis"
+    }
+  ],
+  "source_record_sha256": "480113a14586a29eeaf699eca911cb9bfef92218d56541ae057b26f9c1af35e4"
+}

@@ -1,0 +1,23 @@
+{
+  "benchmark": "gpqa",
+  "version": "gpqa-main-extended-biology",
+  "attribution": "New York University; Cohere; Anthropic",
+  "license": "See linked source terms",
+  "checked_at": "2026-10-15",
+  "selection": "No inline example available yet.",
+  "availability": {
+    "status": "unavailable",
+    "reason": "The official dataset requires accepting its access terms. The unauthenticated task endpoint returned HTTP 401; no gated task text is republished here.",
+    "sources": [
+      {
+        "label": "Benchmark",
+        "url": "https://arxiv.org/abs/2311.12022"
+      },
+      {
+        "label": "Scorer / data",
+        "url": "https://huggingface.co/datasets/Idavidrein/gpqa"
+      }
+    ]
+  },
+  "examples": []
+}

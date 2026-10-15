@@ -1,0 +1,23 @@
+{
+  "benchmark": "biotier",
+  "version": "biotier",
+  "attribution": "SecureBio; Federal University of ABC (UFABC)",
+  "license": "See linked source terms",
+  "checked_at": "2026-10-15",
+  "selection": "No inline example available yet.",
+  "availability": {
+    "status": "unavailable",
+    "reason": "A standalone public task record was not located in the linked publication. A released example or author-provided preview is needed.",
+    "sources": [
+      {
+        "label": "Benchmark",
+        "url": "https://arxiv.org/abs/2607.14479"
+      },
+      {
+        "label": "Scorer / data",
+        "url": "https://arxiv.org/abs/2607.14479"
+      }
+    ]
+  },
+  "examples": []
+}

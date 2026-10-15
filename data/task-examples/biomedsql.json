@@ -1,0 +1,36 @@
+{
+  "benchmark": "biomedsql",
+  "version": "biomedsql",
+  "attribution": "NIH NIA / CARD; DataTecnica; Johns Hopkins University; source: NIH-CARD/BiomedSQL",
+  "license": "openrail++",
+  "checked_at": "2026-10-15",
+  "selection": "One curated public source example; not a random or representative performance sample. Source split: validation. External datasets and evaluation environments are not bundled.",
+  "examples": [
+    {
+      "id": "Q25.2",
+      "title": "BiomedSQL example",
+      "kind": "Source task",
+      "prompt": "What is the effect size of rs3092095 in Parkinson's disease?",
+      "inputs": [],
+      "output": "Follow the requested answer or artifact format in the task.",
+      "grading": "SQL execution/result comparison against reference queries; database and comparison settings matter.",
+      "source": "https://huggingface.co/datasets/NIH-CARD/BiomedSQL/tree/a017d4efce2a24f1296fba730524e86115872780",
+      "source_label": "default / validation / row 0",
+      "revision": "a017d4efce2a24f1296fba730524e86115872780",
+      "reference": "SELECT UUID, SNP, b\n FROM `{project_id}.{dataset_name}.ParkinsonDisease_CompleteGeneData_No23andMe` \n WHERE SNP = \"rs3092095\"\n LIMIT 100",
+      "reference_language": "sql",
+      "extra_sources": [
+        {
+          "label": "Source viewer query (may change)",
+          "url": "https://datasets-server.huggingface.co/rows?dataset=NIH-CARD%2FBiomedSQL&config=default&split=validation&offset=0&length=30"
+        }
+      ]
+    }
+  ],
+  "source_record_sha256": "996a1bbe466758f3fa0e208a82528905ab91f37595e6f5799e6794c15d4f3dac",
+  "retrieval": {
+    "url": "https://datasets-server.huggingface.co/rows?dataset=NIH-CARD%2FBiomedSQL&config=default&split=validation&offset=0&length=30",
+    "revision_pinned": false,
+    "note": "Public viewer snapshot; dataset revision was checked separately. The rendered task is frozen in this JSON file."
+  }
+}

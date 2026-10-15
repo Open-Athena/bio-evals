@@ -1,0 +1,24 @@
+{
+  "benchmark": "biology-instructions",
+  "version": "biology-instructions-evaluation-splits",
+  "attribution": "Shanghai AI Laboratory; collaborators (see note); source: hhnqqq/Biology-Instructions",
+  "license": "See linked source terms",
+  "checked_at": "2026-10-15",
+  "selection": "One curated public example. First stage3 spreadsheet record; generated explanation omitted. External datasets and evaluation environments are not bundled.",
+  "examples": [
+    {
+      "id": "stage3-row-0",
+      "title": "Biology-Instructions — evaluation splits example",
+      "kind": "Sequence regression",
+      "prompt": "<rna>a dC c a dA c dG a a g g dA g Cf u c c c u g a g u<rna> <dna>CACGATGGCGCTCACCAGCCGGCCCACCCGCGCCCCGTGCCGCCCGGAGCCCCAGCGGGCGCCCCGCAGCCGTGCCAGCGTCACGCTGTAGCAGCCGAGCATCAGCCCGAAAGGAAGCACGAAAGCGGTCAGAGTCTCCAGGCTCAGGTGGGCGGCGGCGTGGACCGGCGACGGGTGGCACAGCTGGCATACGCGGTCCCTCCACAGGTGGCGGTAGACGGCGGCCGGGACGGCGAGCAACAGGGCGGCCAGCCAGACCGCCAGCAGCAGGCGGCGGGCCAGGGCCGGGCTGCGCAGCCGAGGCGCCAGGAAGGGGCGGGTGACTGCGAGGCAGCGCTGCAGGCTGAGCAGGCCGGTGAGCAGCACGCTGGCGTACATGCTGAGCGCGCACACGTAGTACACCGCCTTGCAGCCCGCCTGGCCCAGCGGCCAGGCCTGCCGGGTCAGGAAGGCCACAAAGAGCGGCGTGAGCAGCAGCACCGCGCCGTCGGCCAGCGCCAGGTGCAGCACAAGCGTGGCCGCCAGCGGTCGCCCCCGTGCAGGCCGCCAGCCCGCCAAGCTCCACACCACGAAGCCGTTGCCAGGCAGCCCCAGCAGCGCCGCCAGCAGCAGGAAGGCTGTGCCTGTGGCCCGCGAAGTCTTCCAGCTCAGCAGTGTCTCGTTCCCTGGGGGACGGTAGCAGACCGACATCCTTCTGGGCCTACAGCCTGCCTCTTTTCTGCCTGGGAGTCCTGACTTCCACGAGGACCCAGACCCCACCTCAAACACAACTCCTTCTTGGAACCCAGATCCCCTGCTCC<dna> How much mRNA remains after siRNA treatment of the target RNA?",
+      "scope": "First stage3 spreadsheet record; generated explanation omitted",
+      "inputs": [],
+      "output": "Predict the amount of mRNA remaining after siRNA treatment.",
+      "grading": "Task-specific classification/regression metrics; pin held-out split and prompting setup.",
+      "source": "https://raw.githubusercontent.com/hhnqqq/Biology-Instructions/600acaa08c0302e8f5ce86de0fe041f21c13b53e/stage3.xlsx",
+      "source_label": "stage3.xlsx",
+      "revision": "600acaa08c0302e8f5ce86de0fe041f21c13b53e",
+      "reference": "80.59999999999999"
+    }
+  ]
+}

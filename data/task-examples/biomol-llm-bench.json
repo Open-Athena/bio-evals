@@ -1,0 +1,30 @@
+{
+  "benchmark": "biomol-llm-bench",
+  "version": "biomol-llm-bench",
+  "attribution": "Southern University of Science and Technology; Pengcheng Laboratory; Institute of Mechanics, CAS; source: AI-HPC-Research-Team/BioMol-LLM-Bench",
+  "license": "See linked source terms",
+  "checked_at": "2026-10-15",
+  "selection": "One curated public example. Author prompt template populated with the first published PPI record. External datasets and evaluation environments are not bundled.",
+  "examples": [
+    {
+      "id": "0",
+      "title": "BioMol-LLM-Bench example",
+      "kind": "Sequence classification",
+      "prompt": "Instruction: Protein-protein interaction (PPI) binary classification is the task of predicting whether two proteins interact or not.\nContext: Given the sequences of [Protein1] and [Protein2], your task is to predict the interaction. 1 represents that two proteins interact, otherwise 0.\n\n[Protein1]: MDFVVDYQTYAMADTATPELPEPEPRLNLTSDAQSQPTGKLDLQFKLPDLQRYSNNNATLPVDNDGAGSKDLHKKMTHYAMSSIDKIQLSNPSKQLGQNSQDEKLSQQESQNFTNYEPKNLDLSKLVSPSSGSNKNTTNLVLSNKLSKILNNYTLINYQATVQLRKSLKVLEENKERLSLDEQKLMNPEYVGTLARRALRTDLESQLLKEHITVLEEFKPIIRRIKRLSSSVEKIQRTSEKLLSNETNEVPTNNVVLQEIDQYRLKAEQLKLKKKILLSIRDRFTLNQVEDDVITNGTIDNIFFEVVKKVINIKDESSFLLTLPNLNAGNALIMGVNEILEKTNKKIFNYLIDFLYSFESSSNLLNDHGTTEQESLNIFRKSLVFLSSDLELFNELLKRVTTLRSKSILDEFLSQFDMNSTTSKPIILSAHDPIRYIGDVLASVHSIIANEADFVKSLFDFQDEDLKDTPISILQQNKTFLKGIDNKLLNDIIQSLSNSCRIRIEQIVRFEENPIINFEIVRLLKLYRVMFERKGIQDDSSIINNLKSLEDISKNRIIGYYEDYMKQTVMAETKNSSDDLLPPEWLSEYMNKLVELFEIYEKTHAAEDEESEDNKLLSSKNLQTIVEQPIKDVLLKQLQTSFPLAKKNEKEKASLLTIEINCFDLIKSRLQPFEGLFAQDDDSRKITIWVCDKLKEYTKQMLTLQIKFLFENTGLDLYSNLVNMIFPVDSVKDELDYDMYLALRDNSLMELDMVRKNVHDKLNYYLPQALTDVQGNLLFKLTSPMIADEICDECFKKLSLFYNIFRKLLIHLYPNKKDQVFEILNFSTDEFDMLIGIDH\n[Protein2]: MSDSEGGLASEVEHEKRSRSTSNRPNYAIDTEDLDIDENDENEDDDYREEEANEGVNEEEISDEEEQINKSGRNKRRHVDEEEDLSEDKGVTRSRNRSKFKKPVFPGIDDAEENLNPLKVVNEEYVLPDDPEGETKITADGDLLGGREFLVRTFTLTEKGNRKFMLATEPARIVGFRDSYLFFQTHPNLYKFILNQTQKNDLIDRGVLPYSYRNRQIALVTARGVFKEFGAKIIRGGKHITDDYYASELRTKGNVIEGKLAGDPIDKSARALETMMYPASENGINPAKNQVEFFEHRPHGHMSNSNIIASGSKLSSTNWLYQHSAACSRFNSDLFYDRVKVLLVDQQGLRDAYTNILHIPESTQSTTVLGWRRSKNDSPSDTSIVYETVIHDNDLNKPKTGLSEIPKEIYEDVVDEDVLRAITEQQNFEKCNEYI\n\nYour response should be in the following format:\n\nExplanation: {your explanation for your answer, this is optional.}\nAnswer: {your answer, representing with an integer between 0 and 1.}\nConfidence: {your confidence score between 0% and 100% for your answer.}\n",
+      "scope": "Author prompt template populated with the first published PPI record",
+      "inputs": [],
+      "output": "Follow the output format in the task.",
+      "grading": "Official task-specific metrics and output parsers in the evaluation code.",
+      "source": "https://raw.githubusercontent.com/AI-HPC-Research-Team/BioMol-LLM-Bench/9355caae207e17ea4b55440fe9350cc4290ebb23/dataset/prediction/complex_interaction/PPI/binary_classification.json",
+      "source_label": "dataset/prediction/complex_interaction/PPI/binary_classification.json",
+      "revision": "9355caae207e17ea4b55440fe9350cc4290ebb23",
+      "reference": "1",
+      "extra_sources": [
+        {
+          "label": "Native prompt template",
+          "url": "https://raw.githubusercontent.com/AI-HPC-Research-Team/BioMol-LLM-Bench/9355caae207e17ea4b55440fe9350cc4290ebb23/dataset/all_prompts.json"
+        }
+      ]
+    }
+  ]
+}

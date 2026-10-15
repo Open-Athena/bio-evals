@@ -1,0 +1,49 @@
+{
+  "benchmark": "mmmu",
+  "version": "mmmu-biology-basic-medical-science",
+  "attribution": "MMMU Team — IN.AI Research; Waterloo; Ohio State; collaborators (see note); source: MMMU/MMMU",
+  "license": "apache-2.0",
+  "checked_at": "2026-10-15",
+  "selection": "One curated public source example; not a random or representative performance sample. Source split: validation. External datasets and evaluation environments are not bundled.",
+  "examples": [
+    {
+      "id": "validation_Biology_1",
+      "title": "MMMU — biology / basic medical science example",
+      "kind": "Multiple choice",
+      "prompt": "In the Section of left leg, identify the 170 structure. <image 1>",
+      "inputs": [],
+      "output": "Choose an answer from the options.",
+      "grading": "Official multiple-choice/open-answer parsing and accuracy.",
+      "source": "https://huggingface.co/datasets/MMMU/MMMU/tree/876ce5cb130f7f7e290ce4d9984357737d4db5cf",
+      "source_label": "Biology / validation / row 0",
+      "revision": "876ce5cb130f7f7e290ce4d9984357737d4db5cf",
+      "choices": [
+        "Tibialis anterior",
+        "Tibialis posterior",
+        "Flexor hallucis longus",
+        "Peroneus longus"
+      ],
+      "reference": "D",
+      "images": [
+        {
+          "url": "../assets/task-examples/mmmu-1.jpg",
+          "caption": "Source task image 1",
+          "source": "https://datasets-server.huggingface.co/cached-assets/MMMU/MMMU/--/37b40a56ad7dcfb6bafd2d59bd606a3744cc232d/--/Biology/validation/0/image_1/image.jpg",
+          "sha256": "8caee93da9cffc15bec2cb82a0ff1c32a1d08066ff3503b66e8f0f683c63dbd1"
+        }
+      ],
+      "extra_sources": [
+        {
+          "label": "Source viewer query (may change)",
+          "url": "https://datasets-server.huggingface.co/rows?dataset=MMMU%2FMMMU&config=Biology&split=validation&offset=0&length=30"
+        }
+      ]
+    }
+  ],
+  "source_record_sha256": "a8bd44f9522c85e68e4c15dac8fba8e405fc88c9acabab76e12bf43724d1a747",
+  "retrieval": {
+    "url": "https://datasets-server.huggingface.co/rows?dataset=MMMU%2FMMMU&config=Biology&split=validation&offset=0&length=30",
+    "revision_pinned": false,
+    "note": "Public viewer snapshot; dataset revision was checked separately. The rendered task is frozen in this JSON file."
+  }
+}

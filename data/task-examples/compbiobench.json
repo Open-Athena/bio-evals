@@ -1,0 +1,24 @@
+{
+  "benchmark": "compbiobench",
+  "version": "compbiobench",
+  "attribution": "Genentech; source: Genentech/compbiobench-runner",
+  "license": "See source terms",
+  "checked_at": "2026-10-15",
+  "selection": "One curated public source example; not a random or representative performance sample. External datasets and evaluation environments are not bundled.",
+  "examples": [
+    {
+      "id": "annotate-variant-gene-impact-q2072",
+      "title": "CompBioBench example",
+      "kind": "Source task",
+      "prompt": "What is the clinical significance reported in the ClinVar database for the SPI1 variant represented by the HGVS notation NM_003120.3(SPI1):c.143-2A>C? Respond with only the correct cateogry. Answer in all lowercase.",
+      "inputs": [],
+      "output": "Follow the requested answer or artifact format in the task.",
+      "grading": "Hosted exact-match scoring. Community verifier only collects answers; its fixed reward=0 is not correctness.",
+      "source": "https://raw.githubusercontent.com/Genentech/compbiobench-runner/dc350ed37ccd7d7ce96347d139f06dc4bf283f26/test_benchmark.csv",
+      "source_label": "test_benchmark.csv",
+      "revision": "dc350ed37ccd7d7ce96347d139f06dc4bf283f26",
+      "reference_note": "No reference answer is included in this public preview."
+    }
+  ],
+  "source_record_sha256": "c5e72bd25f14694a2b9bf9fb435d6cc0fc39580c179ae910e657d99b385dd5d6"
+}

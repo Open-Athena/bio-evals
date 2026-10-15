@@ -1,0 +1,61 @@
+{
+  "benchmark": "liveproteinbench",
+  "version": "liveproteinbench-repository-stage-suite",
+  "attribution": "Unverified institutional affiliation — Rongdingyi; source: Rongdingyi/LiveProteinBench",
+  "license": "See linked source terms",
+  "checked_at": "2026-10-15",
+  "selection": "One curated public example. Published task description and sequence record; structure images not bundled. External datasets and evaluation environments are not bundled.",
+  "examples": [
+    {
+      "id": "cofactor-0",
+      "title": "LiveProteinBench — repository-stage suite example",
+      "kind": "Protein multiple choice",
+      "prompt": "The task is to identify the specific cofactor required for a given protein's catalytic activity. A cofactor is a non-protein chemical compound or metallic ion that is essential for an enzyme's function. Based on the provided protein sequence, you will need to determine which of the multiple-choice options is the correct cofactor.\n\n**Protein sequence**\n\n```text\nMKYAHVGLNVTNLEKSIEFYSKLFGAEPVKVKPDYAKFLLESPGLNFTLNLRDEVNGNQVGHFGIQVESTEEVVAHKNRLAENGILSQYDEINTTCCYALQDKFWIHDPDGNEWEFFYTKTTVEENSTHPPTCCVNEPNVEKAECCSPTASSNKDTSNCCS\n```",
+      "scope": "Published task description and sequence record; structure images not bundled",
+      "inputs": [
+        {
+          "name": "pictures/A0A059WI14/A0A059WI14_back.png",
+          "description": "Structure view listed by the source; not bundled in this preview."
+        },
+        {
+          "name": "pictures/A0A059WI14/A0A059WI14_front.png",
+          "description": "Structure view listed by the source; not bundled in this preview."
+        },
+        {
+          "name": "pictures/A0A059WI14/A0A059WI14_bottom.png",
+          "description": "Structure view listed by the source; not bundled in this preview."
+        },
+        {
+          "name": "pictures/A0A059WI14/A0A059WI14_top.png",
+          "description": "Structure view listed by the source; not bundled in this preview."
+        },
+        {
+          "name": "pictures/A0A059WI14/A0A059WI14_left.png",
+          "description": "Structure view listed by the source; not bundled in this preview."
+        },
+        {
+          "name": "pictures/A0A059WI14/A0A059WI14_right.png",
+          "description": "Structure view listed by the source; not bundled in this preview."
+        }
+      ],
+      "output": "Follow the output format in the task.",
+      "grading": "Runner saves model answers; complete task-specific scoring contract not verified from release documentation.",
+      "source": "https://raw.githubusercontent.com/Rongdingyi/LiveProteinBench/8b9710932511f816651fc1a7e8a1bc85c3c77767/dataset/QA/cofactor.json",
+      "source_label": "dataset/QA/cofactor.json",
+      "revision": "8b9710932511f816651fc1a7e8a1bc85c3c77767",
+      "choices": [
+        "pyridoxal 5'-phosphate",
+        "[4Fe-4S] cluster",
+        "Fe(2+)",
+        "FAD"
+      ],
+      "reference": "C: Fe(2+)",
+      "extra_sources": [
+        {
+          "label": "Native task description",
+          "url": "https://raw.githubusercontent.com/Rongdingyi/LiveProteinBench/8b9710932511f816651fc1a7e8a1bc85c3c77767/prompt.json"
+        }
+      ]
+    }
+  ]
+}

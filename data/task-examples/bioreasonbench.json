@@ -1,0 +1,38 @@
+{
+  "benchmark": "bioreasonbench",
+  "version": "bioreasonbench-pilot",
+  "attribution": "Unverified institutional affiliation — nayala1; source: nayala1/BioReasonBench",
+  "license": "Figure: CC-BY-4.0; benchmark text: see linked source terms",
+  "checked_at": "2026-10-15",
+  "selection": "One curated public source example; not a random or representative performance sample. External datasets and evaluation environments are not bundled.",
+  "examples": [
+    {
+      "id": "BFB-001",
+      "title": "What does label-free holotomography establish?",
+      "kind": "Source task",
+      "prompt": "The study evaluates holo-tomographic microscopy (HTM), a label-free method that reconstructs cellular refractive-index maps, and compares it with fluorescence-assisted identification of subcellular structures.\n\nPanel A diagrams the HTM setup coupled to epifluorescence. Panel B shows 2D and 3D HTM images of flat, unlabeled, unperturbed HeLa cells and motivates a quantitative strategy for interpreting the image content.\n\nIdentify the workflow and describe what the figure directly demonstrates. Explain what control or orthogonal information would be required to assign a particular refractive-index structure to a named organelle. State the strongest supported conclusion, one overinterpretation, and one high-value follow-up.",
+      "inputs": [],
+      "output": "Follow the requested answer or artifact format in the task.",
+      "grading": "Concept/lexical proxy plus expert review; not yet a validated general-purpose judge.",
+      "source": "https://raw.githubusercontent.com/nayala1/BioReasonBench/15eb6fb17ea202e81c60766c98af9cd3d63fff4a/data/benchmark.jsonl",
+      "source_label": "data/benchmark.jsonl",
+      "revision": "15eb6fb17ea202e81c60766c98af9cd3d63fff4a",
+      "reference": "{\n  \"experiment\": \"A coupled holotomographic and epifluorescence microscopy workflow is used to acquire label-free 2D and 3D refractive-index images of living HeLa cells.\",\n  \"observations\": [\n    \"HTM produces high-contrast 2D and 3D representations in which cellular boundaries and multiple internal structures are visible without fluorescent labeling.\",\n    \"The figure demonstrates image acquisition and structural visibility, but it does not by itself establish the molecular identity of each internal structure.\"\n  ],\n  \"controls_and_statistics\": [\n    \"Organelle assignment requires an orthogonal marker, such as a validated fluorescent organelle marker imaged in the same cell, rather than visual resemblance alone.\",\n    \"No statistical comparison or quantitative organelle-identification performance is displayed in this figure.\"\n  ],\n  \"supported_conclusion\": \"HTM can generate information-rich label-free images of living cells that are suitable for subsequent quantitative analysis, while organelle identities require independent validation.\",\n  \"unsupported_claim\": \"The figure proves that every high-refractive-index structure is a mitochondrion or lipid droplet and that HTM is superior to all fluorescence microscopy methods.\",\n  \"follow_up\": \"Co-register HTM with validated fluorescent markers for several organelles across multiple cells, quantify classification sensitivity and specificity, and test robustness under perturbations that alter organelle morphology.\"\n}",
+      "images": [
+        {
+          "url": "../assets/task-examples/bioreasonbench-1.png",
+          "caption": "Figure 1 from Sandoz et al. (2019), PLOS Biology, CC BY.",
+          "source": "https://journals.plos.org/plosbiology/article/figure/image",
+          "sha256": "e29ea2d989ad45029407ca33aa187c5612cc4f463c5c10e390bc38a7c4decb4a"
+        }
+      ],
+      "extra_sources": [
+        {
+          "label": "Sandoz PA, Tremblay C, van der Goot FG, Frechin M. PLOS Biology. 2019;17:e3000553.",
+          "url": "https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.3000553"
+        }
+      ]
+    }
+  ],
+  "source_record_sha256": "ea03f9aa078bb4d1f0f71d05d15521efd16a27574c7f9684ffb539a994a6e939"
+}

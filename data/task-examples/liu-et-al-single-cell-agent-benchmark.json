@@ -1,0 +1,24 @@
+{
+  "benchmark": "liu-et-al-single-cell-agent-benchmark",
+  "version": "liu-et-al-single-cell-agent-benchmark",
+  "attribution": "Guangzhou National Laboratory; Guangzhou Medical University; collaborators (see note); source: lyyang01/bioagent-benchmark",
+  "license": "See linked source terms",
+  "checked_at": "2026-10-15",
+  "selection": "One curated public example. Published basic prompt; conda environment scvitool. External datasets and evaluation environments are not bundled.",
+  "examples": [
+    {
+      "id": "paga-basic",
+      "title": "Liu et al., single-cell agent benchmark example",
+      "kind": "Single-cell analysis",
+      "prompt": "Use PAGA (Partition-based Graph Abstraction) for trajectory analysis of single-cell RNA sequencing data.\n\nDataset location:\n- Input data: please use 'scanpy.datasets.paul15()' to load the input data and then use 'scanpy.pp.recipe_zheng17(adata)' to preprocess the data.\n\nMust-save Results:\n- Generate abstracted graph representation in adata.uns['paga']['connectivities'] showing connectivity strength between different cell clusters\n- Save the connectivity matrix from adata.uns['paga']['connectivities'] as 'paga.csv'",
+      "scope": "Published basic prompt; conda environment scvitool",
+      "inputs": [],
+      "output": "Save the PAGA connectivity matrix to paga.csv.",
+      "grading": "LLM evaluation plus output consistency, code, execution, and knowledge-use metrics.",
+      "source": "https://raw.githubusercontent.com/lyyang01/bioagent-benchmark/1605e6e38bd69307e2f7b68a4367de21043c89b6/prompt/prompt_data1.json",
+      "source_label": "prompt/prompt_data1.json",
+      "revision": "1605e6e38bd69307e2f7b68a4367de21043c89b6",
+      "reference_note": "No reference answer is included in this preview."
+    }
+  ]
+}

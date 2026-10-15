@@ -1,0 +1,24 @@
+{
+  "benchmark": "scir",
+  "version": "scir",
+  "attribution": "Idiap Research Institute; EPFL; University of Sheffield; University of Manchester; CRUK Manchester Institute; source: sci-reason/scir",
+  "license": "See source terms",
+  "checked_at": "2026-10-15",
+  "selection": "One curated public source example; not a random or representative performance sample. External datasets and evaluation environments are not bundled.",
+  "examples": [
+    {
+      "id": "1",
+      "title": "SciR example",
+      "kind": "Source task",
+      "prompt": "Deduction task. Decide whether the hypothesis follows from the premises.\n\nEvery member of commitment regeneration signal is either a member of osteoblast commitment or a member of fibroblast commitment, or both.\nEvery member of fibroblast commitment is either a member of fibroblast marker vimentin or a member of fibroblast marker fibronectin, or both.\nWhatever is a member of MMP signaling, is not a member of ossified fin matrix.\nWhatever is a member of osteoblast commitment, is not a member of differentiated fin cells.\nWhatever is a member of dedifferentiated osteoblasts, is not a member of differentiated fin cells.\nEvery member of FGF signaling is either a member of MMP signaling or a member of Wnt signaling, or both.\nWhatever is a member of Wnt signaling, is not a member of ossified fin matrix.\nSomething is a member of blastema cells and not both a member of osterix marker and a member of collagen1 marker.\nWhatever is a member of fibroblast marker vimentin, is not a member of differentiated fin cells.\nWhatever is a member of retinoic acid signaling, is not a member of ossified fin matrix.\nEvery member of preosteoblast state is a member of collagen1 marker.\nWhatever is a member of dedifferentiated fibroblasts, is not a member of differentiated fin cells.\nEvery member of activated regeneration cells is either a member of early regeneration progenitors or a member of commitment regeneration signal, or both.\nWhatever is not a member of ossified fin matrix, is a member of preosteoblast state.\nWhatever is a member of early regeneration progenitors, is not a member of differentiated fin cells.\nEvery member of preosteoblast state is a member of osterix marker.\nWhatever is a member of fibroblast marker fibronectin, is not a member of differentiated fin cells.\nEvery member of dedifferentiated fin progenitors is either a member of dedifferentiated osteoblasts or a member of dedifferentiated fibroblasts, or both.\nEvery member of blastema cells is either a member of dedifferentiated fin progenitors or a member of activated regeneration cells, or both.\n\nHypothesis: Whatever is a member of blastema cells, is not a member of differentiated fin cells.\n\nLabel the hypothesis as one of: valid, invalid, unknown.",
+      "inputs": [],
+      "output": "Follow the requested answer or artifact format in the task.",
+      "grading": "Verifiable task labels/rules/graph structure; evaluate each reasoning track with its official scorer.",
+      "source": "https://huggingface.co/datasets/sci-reason/scir/resolve/b8ad4795c8aedc01520f6bad9ba3849e7dce6fc2/deduction/tasks/main/tasks_e4d1_transformed_n200.json",
+      "source_label": "deduction/tasks/main/tasks_e4d1_transformed_n200.json",
+      "revision": "b8ad4795c8aedc01520f6bad9ba3849e7dce6fc2",
+      "reference": "valid"
+    }
+  ],
+  "source_record_sha256": "24178f6144ea58ea3e218ac1c1e737370c402c724f821b0d973221345af080c8"
+}

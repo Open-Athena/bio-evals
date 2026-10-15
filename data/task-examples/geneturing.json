@@ -1,0 +1,24 @@
+{
+  "benchmark": "geneturing",
+  "version": "geneturing",
+  "attribution": "Columbia University; Duke University; source: Winnie09/GeneTuring",
+  "license": "See source terms",
+  "checked_at": "2026-10-15",
+  "selection": "One curated public source example; not a random or representative performance sample. External datasets and evaluation environments are not bundled.",
+  "examples": [
+    {
+      "id": "0",
+      "title": "GeneTuring example",
+      "kind": "Source task",
+      "prompt": "Nucleic acid sequence of a human gene: atgaccagcatgactcagtctctgcgggaggtgataaaggccatgaccaaggctcgcaattttgagagagttttgggaaagattactcttgtctctgctgctcctgggaaagtgatttgtgaaatgaaagtagaagaagagcataccaatgcaataggcactctccacggcggtttgacagccacgttagtagataacatatcaacaatggctctgctatgcacggaaaggggagcacccggagtcagtgtcgatatgaacataacgtacatgtcacctgcaaaattaggagaagatatagtgattacagcacatgttctgaagcaaggaaaaacacttgcatttacctctgtggatctgaccaacaaggccacaggaaaattaatagcacaaggaagacacacaaaacacctgggaaac. Translate the above nucleic acid sequences to the corresponding amino acid sequences.",
+      "inputs": [],
+      "output": "Follow the requested answer or artifact format in the task.",
+      "grading": "Reference-based QA correctness; pin module definitions and answer normalization.",
+      "source": "https://raw.githubusercontent.com/Winnie09/GeneTuring/4bc94391321991125bddfe0a726f35b87495fd6f/GeneGPT/Q%26A_dataset.csv",
+      "source_label": "GeneGPT/Q&A_dataset.csv",
+      "revision": "4bc94391321991125bddfe0a726f35b87495fd6f",
+      "reference": "MTSMTQSLREVIKAMTKARNFERVLGKITLVSAAPGKVICEMKVEEEHTNAIGTLHGGLTATLVDNISTMALLCTERGAPGVSVDMNITYMSPAKLGEDIVITAHVLKQGKTLAFTSVDLTNKATGKLIAQGRHTKHLGN"
+    }
+  ],
+  "source_record_sha256": "ba081602b2e47a506fb3473c8dd2debc09854e35474fe8a301d5623f50598514"
+}

@@ -1,0 +1,31 @@
+{
+  "benchmark": "core-bench",
+  "version": "core-bench-biomedical-papers",
+  "attribution": "Princeton University; source: siegelz/core-bench",
+  "license": "See source terms",
+  "checked_at": "2026-10-15",
+  "selection": "One curated public source example; not a random or representative performance sample. External datasets and evaluation environments are not bundled.",
+  "examples": [
+    {
+      "id": "capsule-9168639",
+      "title": "CORE-Bench — biomedical papers example",
+      "kind": "Source task",
+      "prompt": "Run the analysis.Rmd file using Rscript and output the results in the 'results' directory.\n\nfig Report Institutions Sampled for US in Table 1.\nfig Report Institutions Sampled for UK in Table 1.",
+      "inputs": [
+        {
+          "name": "capsule-9168639",
+          "description": "Research Ethics Committees as an intervention point to promote a priori sample size calculations; external Code Ocean capsule is required.",
+          "url": "https://doi.org/10.24433/CO.0124369.v1"
+        }
+      ],
+      "output": "Follow the requested answer or artifact format in the task.",
+      "grading": "Reference result checks, including numeric tolerances; all task questions must meet the chosen success rule.",
+      "source": "https://huggingface.co/datasets/siegelz/core-bench/resolve/18ac8edf2532d9edb9d13ae71f715410de6ee5a0/core_train.json",
+      "source_label": "core_train.json",
+      "revision": "18ac8edf2532d9edb9d13ae71f715410de6ee5a0",
+      "reference": "[\n  {\n    \"fig Report Institutions Sampled for US in Table 1.\": 19,\n    \"fig Report Institutions Sampled for UK in Table 1.\": 14\n  },\n  {\n    \"fig Report Institutions Sampled for US in Table 1.\": 19,\n    \"fig Report Institutions Sampled for UK in Table 1.\": 14\n  },\n  {\n    \"fig Report Institutions Sampled for US in Table 1.\": 19,\n    \"fig Report Institutions Sampled for UK in Table 1.\": 14\n  }\n]",
+      "scope": "Biomedicine capsule from core_train.json; all requested report fields are shown."
+    }
+  ],
+  "source_record_sha256": "6372ccb7140d982b5608c27c1a87d9c884c29e112be12fd00fd37e148311186d"
+}

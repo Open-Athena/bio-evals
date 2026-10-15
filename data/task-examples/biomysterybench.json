@@ -1,0 +1,24 @@
+{
+  "benchmark": "biomysterybench",
+  "version": "biomysterybench",
+  "attribution": "Anthropic; source: Anthropic/BioMysteryBench-full",
+  "license": "See linked source terms",
+  "checked_at": "2026-10-15",
+  "selection": "One curated public example. Public dataset-card excerpt; full instructions and input data require approved access. External datasets and evaluation environments are not bundled.",
+  "examples": [
+    {
+      "id": "hb001",
+      "title": "BioMysteryBench example",
+      "kind": "Public prompt excerpt",
+      "prompt": "| hb001 | yes | Which organ is this cell type single-cell RNA-seq dataset derived from?… |",
+      "scope": "Public dataset-card excerpt; full instructions and input data require approved access",
+      "inputs": [],
+      "output": "Follow the output format in the task.",
+      "grading": "Community LLM judge uses answer rubric + trajectory/source-lookup compliance; official equivalence unvalidated.",
+      "source": "https://huggingface.co/datasets/Anthropic/BioMysteryBench-full/resolve/b5a889c4757214ec9a6ade876b734f920a7799db/README.md",
+      "source_label": "README.md",
+      "revision": "b5a889c4757214ec9a6ade876b734f920a7799db",
+      "reference_note": "No reference answer is included in this preview."
+    }
+  ]
+}

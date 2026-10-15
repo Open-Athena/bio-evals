@@ -1,0 +1,23 @@
+{
+  "benchmark": "bioxarena",
+  "version": "bioxarena",
+  "attribution": "MBZUAI; University of Chinese Academy of Sciences; Carnegie Mellon University",
+  "license": "See linked source terms",
+  "checked_at": "2026-10-15",
+  "selection": "No inline example available yet.",
+  "availability": {
+    "status": "unavailable",
+    "reason": "The authors release the task data as an external package. A standalone task prompt has not yet been extracted for this preview.",
+    "sources": [
+      {
+        "label": "Benchmark",
+        "url": "https://arxiv.org/abs/2605.15766"
+      },
+      {
+        "label": "Scorer / data",
+        "url": "https://github.com/mbzuai-ai4bio/BioXArena/blob/29f88d4d573001405abf0694aee72d91c3f47e6c/README.md"
+      }
+    ]
+  },
+  "examples": []
+}

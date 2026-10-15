@@ -1,0 +1,19 @@
+{
+  "benchmark": "bionli",
+  "version": "bionli-llm-inference-protocol",
+  "attribution": "Stony Brook University; University of Arizona",
+  "license": "See linked source terms",
+  "checked_at": "2026-10-15",
+  "selection": "Published example available at the source.",
+  "availability": {
+    "status": "external",
+    "reason": "The authors publish a diagram of a premise and its consistent and inconsistent hypotheses. The diagram is linked in its original PDF format.",
+    "sources": [
+      {
+        "label": "View the published example diagram (PDF)",
+        "url": "https://github.com/StonyBrookNLP/BioNLI/blob/1aa25c4abfa4b5d05a3102c85f4949cdaf97277a/assets/pdf/example_diagram_v3.pdf"
+      }
+    ]
+  },
+  "examples": []
+}

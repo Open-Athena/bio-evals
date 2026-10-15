@@ -1,0 +1,23 @@
+{
+  "benchmark": "abc-bench-securebio",
+  "version": "abc-bench-securebio",
+  "attribution": "SecureBio; Active Site",
+  "license": "See linked source terms",
+  "checked_at": "2026-10-15",
+  "selection": "No inline example available yet.",
+  "availability": {
+    "status": "unavailable",
+    "reason": "The public benchmark description does not release the operational task set. No public task preview has been imported.",
+    "sources": [
+      {
+        "label": "Benchmark",
+        "url": "https://arxiv.org/abs/2606.11150"
+      },
+      {
+        "label": "Scorer / data",
+        "url": "https://arxiv.org/abs/2606.11150"
+      }
+    ]
+  },
+  "examples": []
+}

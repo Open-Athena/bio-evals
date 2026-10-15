@@ -1,0 +1,26 @@
+{
+  "benchmark": "bioplanner-bioprot",
+  "version": "bioplanner-bioprot",
+  "attribution": "Align to Innovate; Francis Crick Institute; University of Oxford; FutureHouse; source: bioplanner/bioplanner",
+  "license": "See linked source terms",
+  "checked_at": "2026-10-15",
+  "selection": "One curated public example. Published BioProt task description; runner instructions omitted. External datasets and evaluation environments are not bundled.",
+  "examples": [
+    {
+      "id": "10051",
+      "title": "BioPlanner / BioProt example",
+      "kind": "Protocol planning",
+      "prompt": "The objective of this molecular biology protocol is to amplify the hypervariable region of the mitochondrial DNA 12S rRNA gene in eukaryotes for metabarcoding environmental DNA (eDNA) from fishes using the Illumina MiSeq NGS PCR technique. The primers (MiFish-U-F & MiFish-U-R) used in this protocol were developed by Miya et al., 2015, and aim to detect more than 230 subtropical marine species.",
+      "scope": "Published BioProt task description; runner instructions omitted",
+      "inputs": [],
+      "output": "Follow the output format in the task.",
+      "grading": "Automatic protocol/action-sequence evaluation; reproduce task-specific reference matching and planning metrics.",
+      "source": "https://raw.githubusercontent.com/bioplanner/bioplanner/80b69543f6d4c3abbeb5fcc9cb1bacef76bf974a/bioprot/10051.json",
+      "source_label": "bioprot/10051.json",
+      "revision": "80b69543f6d4c3abbeb5fcc9cb1bacef76bf974a",
+      "reference_note": "No reference answer is included in this preview.",
+      "reference": null,
+      "reference_language": "python"
+    }
+  ]
+}

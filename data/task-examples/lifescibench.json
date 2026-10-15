@@ -1,0 +1,19 @@
+{
+  "benchmark": "lifescibench",
+  "version": "lifescibench",
+  "attribution": "OpenAI; Tacit Labs",
+  "license": "See linked source terms",
+  "checked_at": "2026-10-15",
+  "selection": "Published example available at the source.",
+  "availability": {
+    "status": "external",
+    "reason": "The author page includes a complete evidence-appraisal example about a micro-dystrophin trial package, followed by a candidate response and rubric. Open “Eval Example” on that page to inspect it.",
+    "sources": [
+      {
+        "label": "View the published evaluation example",
+        "url": "https://openai.com/index/introducing-life-sci-bench/"
+      }
+    ]
+  },
+  "examples": []
+}

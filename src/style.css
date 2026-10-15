@@ -52,6 +52,12 @@ a:focus-visible, summary:focus-visible { outline:2px solid var(--theme-foregroun
 .task-layout h4 { margin-top:20px; }
 .task-context { padding-left:24px; border-left:1px solid var(--theme-foreground-faintest); }
 .task-examples pre { max-height:420px; overflow:auto; font-size:13px; }
+.task-prompt { overflow-wrap:anywhere; }
+.task-prompt img { display:block; max-width:100%; height:auto; max-height:600px; object-fit:contain; }
+.task-prompt figure { margin:20px 0; }
+.task-prompt figcaption { color:var(--theme-foreground-muted); font-size:12px; margin-top:8px; }
+.task-prompt table { display:block; max-width:100%; overflow:auto; }
+.task-availability { max-width:85ch; }
 .task-examples details { margin:18px 0; }
 .task-examples summary { cursor:pointer; font-weight:500; }
 .task-choices li { margin:12px 0; padding-left:6px; }

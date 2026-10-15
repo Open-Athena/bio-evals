@@ -1,0 +1,42 @@
+{
+  "benchmark": "scigym",
+  "version": "scigym",
+  "attribution": "University of Toronto; SickKids; Axiom; Mila; Vector Institute; source: h4duan/scigym-eval",
+  "license": "See linked source terms",
+  "checked_at": "2026-10-15",
+  "selection": "One curated public example. Initial task and incomplete model extracted from a public trajectory; solver thoughts and attempts omitted. External datasets and evaluation environments are not bundled.",
+  "examples": [
+    {
+      "id": "BIOMD0000000932",
+      "title": "SciGym example",
+      "kind": "Interactive systems biology",
+      "prompt": "You are investigating a biological system where all species are observable. Your goal is to discover the missing reactions. You do not need to add new species.",
+      "scope": "Initial task and incomplete model extracted from a public trajectory; solver thoughts and attempts omitted",
+      "inputs": [
+        {
+          "name": "Simulation environment",
+          "description": "The interactive experiment interface is required and is not available in this static preview."
+        }
+      ],
+      "output": "Recover missing reactions in the model using the experiment interface.",
+      "grading": "Simulator-grounded recovery of system structure/parameters; use the task’s official metrics.",
+      "source": "https://huggingface.co/datasets/h4duan/scigym-eval/tree/7d472c12855d46702c4915892578290355894c1a",
+      "source_label": "Public source example",
+      "revision": "7d472c12855d46702c4915892578290355894c1a",
+      "reference_note": "No reference answer is included in this preview.",
+      "code": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<sbml xmlns=\"http://www.sbml.org/sbml/level2/version4\" level=\"2\" version=\"4\">\n  <model id=\"id_w1dz\">\n    <listOfUnitDefinitions>\n      <unitDefinition id=\"id_3x54\">\n        <listOfUnits>\n          <unit kind=\"second\" exponent=\"1\" scale=\"0\" multiplier=\"3600\"/>\n        </listOfUnits>\n      </unitDefinition>\n      <unitDefinition id=\"id_cn8n\">\n        <listOfUnits>\n          <unit kind=\"mole\" exponent=\"1\" scale=\"-3\" multiplier=\"1\"/>\n        </listOfUnits>\n      </unitDefinition>\n    </listOfUnitDefinitions>\n    <listOfCompartments>\n      <compartment id=\"id_bhfw\" spatialDimensions=\"3\" size=\"1\" constant=\"true\"/>\n    </listOfCompartments>\n    <listOfSpecies>\n      <species id=\"id_jxje\" compartment=\"id_bhfw\" initialConcentration=\"1\" boundaryCondition=\"false\" constant=\"false\"/>\n      <species id=\"id_sywq\" compartment=\"id_bhfw\" initialConcentration=\"1\" boundaryCondition=\"false\" constant=\"false\"/>\n      <species id=\"id_7cn0\" compartment=\"id_bhfw\" initialConcentration=\"1\" boundaryCondition=\"false\" constant=\"false\"/>\n      <species id=\"id_puar\" compartment=\"id_bhfw\" initialConcentration=\"100000000000\" boundaryCondition=\"false\" constant=\"false\"/>\n    </listOfSpecies>\n  </model>\n</sbml>",
+      "code_language": "xml",
+      "extra_sources": [
+        {
+          "label": "Source viewer query (may change)",
+          "url": "https://datasets-server.huggingface.co/rows?dataset=h4duan%2Fscigym-eval&config=default&split=small&offset=0&length=30"
+        }
+      ]
+    }
+  ],
+  "retrieval": {
+    "url": "https://datasets-server.huggingface.co/rows?dataset=h4duan%2Fscigym-eval&config=default&split=small&offset=0&length=30",
+    "revision_pinned": false,
+    "note": "Public viewer snapshot; dataset revision was checked separately. The rendered task is frozen in this JSON file."
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "benchmark": "biomni-eval1",
+  "version": "biomni-eval1-tool-enabled",
+  "attribution": "Stanford University; source: biomni/Eval1",
+  "license": "apache-2.0",
+  "checked_at": "2026-10-15",
+  "selection": "One curated public source example; not a random or representative performance sample. Source split: test. External datasets and evaluation environments are not bundled.",
+  "examples": [
+    {
+      "id": "0",
+      "title": "Biomni-Eval1 — tool-enabled example",
+      "kind": "Source task",
+      "prompt": "Your task is to identify the most promising variant associated wtih a given GWAS phenotype for futher examination. \nFrom the list, prioritize the top associated variant (matching one of the given variant). \nGWAS phenotype: Bradykinin\nVariants: rs7700133, rs1280, rs7651090, rs4253311, rs3738934, rs7385804, rs1367117, rs4808136, rs10087900, rs855791, rs12678919\n",
+      "inputs": [],
+      "output": "Follow the requested answer or artifact format in the task.",
+      "grading": "Official BiomniEval1 task-specific evaluator; answer matching/structured-output checks vary by task.",
+      "source": "https://huggingface.co/datasets/biomni/Eval1/tree/51f97feb9e377fac7384faae49046bc067283c38",
+      "source_label": "default / test / row 0",
+      "revision": "51f97feb9e377fac7384faae49046bc067283c38",
+      "reference": "rs4253311",
+      "extra_sources": [
+        {
+          "label": "Source viewer query (may change)",
+          "url": "https://datasets-server.huggingface.co/rows?dataset=biomni%2FEval1&config=default&split=test&offset=0&length=30"
+        }
+      ],
+      "scope": "Viewer split test; source record labels this instance val. Tool access is not reproduced in this preview."
+    }
+  ],
+  "source_record_sha256": "18db70e666ff1d4738d42287b3297051f6cc659c3f8703d4fce3fa4fd69aca77",
+  "retrieval": {
+    "url": "https://datasets-server.huggingface.co/rows?dataset=biomni%2FEval1&config=default&split=test&offset=0&length=30",
+    "revision_pinned": false,
+    "note": "Public viewer snapshot; dataset revision was checked separately. The rendered task is frozen in this JSON file."
+  }
+}

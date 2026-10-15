@@ -1,0 +1,38 @@
+{
+  "benchmark": "biocoder",
+  "version": "biocoder",
+  "attribution": "Yale University; Google DeepMind; source: lilbillbiscuit/biocoder_public",
+  "license": "cc-by-4.0",
+  "checked_at": "2026-10-15",
+  "selection": "One curated public source example; not a random or representative performance sample. Source split: train. External datasets and evaluation environments are not bundled.",
+  "examples": [
+    {
+      "id": "61beb3529846e024cdff01d3e2ba1a1ec4212dd64426028deb1065f1975bd376",
+      "title": "BioCoder example",
+      "kind": "Source task",
+      "prompt": "This is in python\nwrite a function that takes in a string as an argument and returns a sanitized version of the string suitable for LaTeX formatting. The function should follow these steps:\n\n1. Replace any occurrences of four backslashes (\\\\\\\\) with the string \\\\textbackslash.\n2. Escape certain characters, including $, %, _, }, {, &, and #, by adding a backslash before them.\n3. Replace special characters such as tilde (~) with the corresponding LaTeX equivalent (e.g. $\\\\sim$).\nThe function should be named sanitize_tex and should have one argument named original_text. It should return the sanitized version of the string.",
+      "inputs": [],
+      "output": "Follow the requested answer or artifact format in the task.",
+      "grading": "Executable correctness tests, including fuzz testing; pass@k depends on sampling and test configuration.",
+      "source": "https://huggingface.co/datasets/lilbillbiscuit/biocoder_public/tree/9893b5cb2b2dafd25dbaa6d122603ac14907b343",
+      "source_label": "default / train / row 0",
+      "revision": "9893b5cb2b2dafd25dbaa6d122603ac14907b343",
+      "code": "import random\nimport hashlib\nimport numpy as np\nimport skimage\nimport skimage.measure\nimport scipy.ndimage\nimport os\nimport logging\nfrom functools import wraps\nfrom scipy import stats\nimport sys\nimport math\nimport subprocess\nfrom pathlib import PurePath\nfrom itertools import islice\nimport pysam\nimport pandas as pd\nfrom scipy.signal import savgol_coeffs, savgol_filter\nfrom scipy.stats import norm\nimport re\nimport fileinput\nimport warnings\nfrom scipy.stats import scoreatpercentile, chisquare\nfrom sklearn.preprocessing import scale\nfrom sklearn.cluster import KMeans, AgglomerativeClustering\n_char_mod = {'~': '$\\\\sim$'}\n_escaped_char = ['$', '%', '_', '}', '{', '&', '#']\ndef format_time(total_seconds, written_time=False):\n    \"\"\"Format time (either \"HH:MM:SS\" or \"H hours, M minutes and S seconds\".\n    Args:\n        total_seconds (int): the total number of seconds\n        written_time (bool): whether to write time in written language\n    Returns:\n        str: a string representation of the total time\n    If ``written_time`` is ``True``, time will be displayed as \"H hours, M\n    minutes and S seconds\". Otherwise, the time will be represented as\n    HH:MM:SS.\n    \"\"\"\n    time_fmt = '{hours:02d}:{minutes:02d}:{seconds:02d}'\n    minutes, seconds = divmod(total_seconds, 60)\n    hours, minutes = divmod(minutes, 60)\n    if not written_time:\n        return time_fmt.format(seconds=seconds, minutes=minutes, hours=hours)\n    written_time = []\n    if hours > 0:\n        written_time.append('{} hour{}'.format(hours, 's' if hours > 1 else '')\n            )\n    if minutes > 0:\n        written_time.append('{} minute{}'.format(minutes, 's' if minutes > \n            1 else ''))\n    if seconds > 0:\n        written_time.append('{} second{}'.format(seconds, 's' if seconds > \n            1 else ''))\n    if len(written_time) == 0:\n        return 'no time'\n    if len(written_time) == 1:\n        return written_time[0]\n    return ', '.join(written_time[:-1]) + ' and ' + written_time[-1]\ndef colorize_time(total_seconds):\n    \"\"\"Colorize the time.\n    Args:\n        total_seconds (int): the total number of seconds\n    Returns:\n        str: a colorized LaTeX string representation of time\n    The time is displayed as ``HH:MM:SS``, but insignificant zeros are\n    grayed-out.\n    \"\"\"\n    formatted_time = format_time(total_seconds)\n    colored_time = formatted_time\n    to_color = re.match('([0:]+)', formatted_time)\n    if to_color is not None:\n        colored_time = '{\\\\color{light_gray}'\n        colored_time += formatted_time[:to_color.end()]\n        colored_time += '}' + formatted_time[to_color.end():]\n    return colored_time\n<<insert solution here>>\ndef main():\n    random.seed(<|int;range=0,100|>)\n    argString = ''.join([random.choice(_escaped_char) for _ in range(100)])\n    print(sanitize_tex(argString))\nif __name__ == \"__main__\":\n    main()\n",
+      "code_language": "Python",
+      "reference": "def sanitize_tex(original_text):\n    \"\"\"Sanitize TeX text.\n\n    Args:\n        original_text (str): the text to sanitize for LaTeX\n\n    Text is sanitized by following these steps:\n\n    1. Replaces ``\\\\\\\\`` by ``\\\\textbackslash``\n    2. Escapes certain characters (such as ``$``, ``%``, ``_``, ``}``, ``{``,\n       ``&`` and ``#``) by adding a backslash (*e.g.* from ``&`` to ``\\\\&``).\n    3. Replaces special characters such as ``~`` by the LaTeX equivalent\n       (*e.g.* from ``~`` to ``$\\\\sim$``).\n\n    \"\"\"\n    sanitized_tex = original_text.replace('\\\\', '\\\\textbackslash ')\n    sanitized_tex = re.sub('([{}])'.format(''.join(_escaped_char)),\n        '\\\\\\\\\\\\g<1>', sanitized_tex)\n    for character, mod in _char_mod.items():\n        sanitized_tex = sanitized_tex.replace(character, mod)\n    return sanitized_tex",
+      "reference_language": "python",
+      "extra_sources": [
+        {
+          "label": "Source viewer query (may change)",
+          "url": "https://datasets-server.huggingface.co/rows?dataset=lilbillbiscuit%2Fbiocoder_public&config=default&split=train&offset=0&length=30"
+        }
+      ]
+    }
+  ],
+  "source_record_sha256": "a7b924376ce81c2fa3e89a9f814eeb8e5960936eebaae9b378b6f770d5d64468",
+  "retrieval": {
+    "url": "https://datasets-server.huggingface.co/rows?dataset=lilbillbiscuit%2Fbiocoder_public&config=default&split=train&offset=0&length=30",
+    "revision_pinned": false,
+    "note": "Public viewer snapshot; dataset revision was checked separately. The rendered task is frozen in this JSON file."
+  }
+}

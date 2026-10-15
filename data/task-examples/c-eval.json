@@ -1,0 +1,41 @@
+{
+  "benchmark": "c-eval",
+  "version": "c-eval-biology",
+  "attribution": "Shanghai Jiao Tong University; Tsinghua University; University of Edinburgh; HKUST; source: ceval/ceval-exam",
+  "license": "cc-by-nc-sa-4.0",
+  "checked_at": "2026-10-15",
+  "selection": "One curated public source example; not a random or representative performance sample. Source split: val. External datasets and evaluation environments are not bundled.",
+  "examples": [
+    {
+      "id": "0",
+      "title": "C-Eval — biology example",
+      "kind": "Multiple choice",
+      "prompt": "下列叙述中最符合自由水生理功能的是:____",
+      "inputs": [],
+      "output": "Choose an answer from the options.",
+      "grading": "Four-choice accuracy; public validation labels, externally scored private test labels.",
+      "source": "https://huggingface.co/datasets/ceval/ceval-exam/tree/617524a00b307ff6f9933702f724131fe12ca7ce",
+      "source_label": "high_school_biology / val / row 0",
+      "revision": "617524a00b307ff6f9933702f724131fe12ca7ce",
+      "choices": [
+        "运输营养物质和代谢废物",
+        "与细胞内的其他物质结合",
+        "作为溶剂，使无机盐成为离子状态",
+        "细胞结构的组成成分"
+      ],
+      "reference": "A",
+      "extra_sources": [
+        {
+          "label": "Source viewer query (may change)",
+          "url": "https://datasets-server.huggingface.co/rows?dataset=ceval%2Fceval-exam&config=high_school_biology&split=val&offset=0&length=30"
+        }
+      ]
+    }
+  ],
+  "source_record_sha256": "211fe68948ebec70ac4943d7f6c620927d4e28b4ba01e6ba34a23afc5b2e91bb",
+  "retrieval": {
+    "url": "https://datasets-server.huggingface.co/rows?dataset=ceval%2Fceval-exam&config=high_school_biology&split=val&offset=0&length=30",
+    "revision_pinned": false,
+    "note": "Public viewer snapshot; dataset revision was checked separately. The rendered task is frozen in this JSON file."
+  }
+}

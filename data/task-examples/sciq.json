@@ -1,0 +1,44 @@
+{
+  "benchmark": "sciq",
+  "version": "sciq-biology",
+  "attribution": "University College London; University of Washington; Allen Institute for AI; source: allenai/sciq",
+  "license": [
+    "cc-by-nc-3.0"
+  ],
+  "checked_at": "2026-10-15",
+  "selection": "One curated public source example; not a random or representative performance sample. Source split: validation. External datasets and evaluation environments are not bundled.",
+  "examples": [
+    {
+      "id": "0",
+      "title": "SciQ — biology example",
+      "kind": "Multiple choice",
+      "prompt": "Who proposed the theory of evolution by natural selection?",
+      "inputs": [],
+      "output": "Choose an answer from the options.",
+      "grading": "Four-choice accuracy under an explicit supplied-support or closed-book protocol.",
+      "source": "https://huggingface.co/datasets/allenai/sciq/tree/2c94ad3e1aafab77146f384e23536f97a4849815",
+      "source_label": "default / validation / row 0",
+      "revision": "2c94ad3e1aafab77146f384e23536f97a4849815",
+      "choices": [
+        "darwin",
+        "Linnaeus",
+        "shaw",
+        "Scopes"
+      ],
+      "reference": "darwin",
+      "extra_sources": [
+        {
+          "label": "Source viewer query (may change)",
+          "url": "https://datasets-server.huggingface.co/rows?dataset=allenai%2Fsciq&config=default&split=validation&offset=0&length=30"
+        }
+      ],
+      "scope": "Answer and distractors displayed in source-field order; evaluation-time option shuffling is not reproduced."
+    }
+  ],
+  "source_record_sha256": "7ab371885b118d777eebb61756cb7fb1ef8e24859350aa1aabbde524e2dbcba9",
+  "retrieval": {
+    "url": "https://datasets-server.huggingface.co/rows?dataset=allenai%2Fsciq&config=default&split=validation&offset=0&length=30",
+    "revision_pinned": false,
+    "note": "Public viewer snapshot; dataset revision was checked separately. The rendered task is frozen in this JSON file."
+  }
+}

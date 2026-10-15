@@ -1,0 +1,43 @@
+{
+  "benchmark": "proteinlmbench",
+  "version": "proteinlmbench",
+  "attribution": "Toursun Synbio; collaborators (see note); source: tsynbio/ProteinLMBench",
+  "license": "apache-2.0",
+  "checked_at": "2026-10-15",
+  "selection": "One curated public source example; not a random or representative performance sample. Source split: train. External datasets and evaluation environments are not bundled.",
+  "examples": [
+    {
+      "id": "0",
+      "title": "ProteinLMBench example",
+      "kind": "Multiple choice",
+      "prompt": "How do the KH1 and KH2 domains of the IMP1 protein interact differently compared to the KH3 and KH4 domains in terms of their inter-domain interface?",
+      "inputs": [],
+      "output": "Choose an answer from the options.",
+      "grading": "Multiple-choice answer accuracy under the official prompting/answer extraction protocol.",
+      "source": "https://huggingface.co/datasets/tsynbio/ProteinLMBench/tree/f1397963c7f727a4a2f00cdd691e6e219c36e992",
+      "source_label": "evaluation / train / row 0",
+      "revision": "f1397963c7f727a4a2f00cdd691e6e219c36e992",
+      "choices": [
+        "option 1: The differences in the inter domain interface in KH1KH2 result in a change in the angle between the two domains and a shorter distance between the RNA binding grooves.",
+        "option 2: The KH1 and KH2 domains form a symmetrical pseudo dimer like KH3 and KH4.",
+        "option 3: KH1 alpha 3 is longer than KH3 alpha 3 and the linker between KH1 and KH2 is three amino acids shorter than that between KH3 and KH4.",
+        "option 4: Many of the amino acids mediating the contacts between the two alpha 3 helices are conserved in KH1KH2 across species, but are different in KH3KH4.",
+        "option 5: The KH1 and KH2 domains interact through the two beta 1 strands, the inter domain linker, and the C terminal alpha helix of each domain.",
+        "option 6: The path between the RNA binding grooves of KH1 and KH2 is negatively charged."
+      ],
+      "reference": "option 1",
+      "extra_sources": [
+        {
+          "label": "Source viewer query (may change)",
+          "url": "https://datasets-server.huggingface.co/rows?dataset=tsynbio%2FProteinLMBench&config=evaluation&split=train&offset=0&length=30"
+        }
+      ]
+    }
+  ],
+  "source_record_sha256": "778d5df3e30d1607e5f7271bf9244f29a56fb0dd8dc66f42bcb0b575cc421b46",
+  "retrieval": {
+    "url": "https://datasets-server.huggingface.co/rows?dataset=tsynbio%2FProteinLMBench&config=evaluation&split=train&offset=0&length=30",
+    "revision_pinned": false,
+    "note": "Public viewer snapshot; dataset revision was checked separately. The rendered task is frozen in this JSON file."
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "benchmark": "biomaze",
+  "version": "biomaze-tool-free-reasoning",
+  "attribution": "Peking University; University of Hong Kong; Xi’an Jiaotong University; source: haitengzhao/BioMaze",
+  "license": "apache-2.0",
+  "checked_at": "2026-10-15",
+  "selection": "One curated public source example; not a random or representative performance sample. Source split: Openended. External datasets and evaluation environments are not bundled.",
+  "examples": [
+    {
+      "id": "0",
+      "title": "BioMaze — tool-free reasoning example",
+      "kind": "Source task",
+      "prompt": "In primary acute myeloid leukemia (AML) blasts, What is the effect of the AML1-ETO, PML-retinoic acid receptor alpha (RARalpha), and PLZF-RARalpha fusion proteins on the expression of plakoglobin (gamma-catenin)?",
+      "inputs": [],
+      "output": "Follow the requested answer or artifact format in the task.",
+      "grading": "Reference correctness for judgments; model-assisted assessment for open responses.",
+      "source": "https://huggingface.co/datasets/haitengzhao/BioMaze/tree/7d64f910b3e26ac76d9cc6f73956c5b1cdcfaa1a",
+      "source_label": "default / Openended / row 0",
+      "revision": "7d64f910b3e26ac76d9cc6f73956c5b1cdcfaa1a",
+      "reference": "AML1-ETO, PML-RARalpha, and PLZF-RARalpha fusion proteins significantly overexpress plakoglobin in primary AML blasts.",
+      "extra_sources": [
+        {
+          "label": "Source viewer query (may change)",
+          "url": "https://datasets-server.huggingface.co/rows?dataset=haitengzhao%2FBioMaze&config=default&split=Openended&offset=0&length=30"
+        }
+      ]
+    }
+  ],
+  "source_record_sha256": "df30a7948c5c7bb723c31cfa087fb8023adfc182cee09731be5eae57e447bec0",
+  "retrieval": {
+    "url": "https://datasets-server.huggingface.co/rows?dataset=haitengzhao%2FBioMaze&config=default&split=Openended&offset=0&length=30",
+    "revision_pinned": false,
+    "note": "Public viewer snapshot; dataset revision was checked separately. The rendered task is frozen in this JSON file."
+  }
+}

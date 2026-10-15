@@ -1,0 +1,35 @@
+{
+  "benchmark": "cardbiomedbench",
+  "version": "cardbiomedbench",
+  "attribution": "NIH CARD; DataTecnica; source: NIH-CARD/CARDBiomedBench",
+  "license": "openrail++",
+  "checked_at": "2026-10-15",
+  "selection": "One curated public source example; not a random or representative performance sample. Source split: test. External datasets and evaluation environments are not bundled.",
+  "examples": [
+    {
+      "id": "Q1.892",
+      "title": "CARDBiomedBench example",
+      "kind": "Source task",
+      "prompt": "Is MME a druggable gene?",
+      "inputs": [],
+      "output": "Follow the requested answer or artifact format in the task.",
+      "grading": "BioScore rubric/model-assisted response evaluation; grader identity and prompts must be pinned.",
+      "source": "https://huggingface.co/datasets/NIH-CARD/CARDBiomedBench/tree/552fdfdbcccb59b13fd5aa283cf83967c4881f75",
+      "source_label": "default / test / row 0",
+      "revision": "552fdfdbcccb59b13fd5aa283cf83967c4881f75",
+      "reference": "There are currently 2 approved drugs which target MME, indicating that it is a druggable gene.",
+      "extra_sources": [
+        {
+          "label": "Source viewer query (may change)",
+          "url": "https://datasets-server.huggingface.co/rows?dataset=NIH-CARD%2FCARDBiomedBench&config=default&split=test&offset=0&length=30"
+        }
+      ]
+    }
+  ],
+  "source_record_sha256": "6e7b957e2b27077397587d9c01bffaaa6734784973e97bcc317ad3b7756b371e",
+  "retrieval": {
+    "url": "https://datasets-server.huggingface.co/rows?dataset=NIH-CARD%2FCARDBiomedBench&config=default&split=test&offset=0&length=30",
+    "revision_pinned": false,
+    "note": "Public viewer snapshot; dataset revision was checked separately. The rendered task is frozen in this JSON file."
+  }
+}

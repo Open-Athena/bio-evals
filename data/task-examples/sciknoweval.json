@@ -1,0 +1,41 @@
+{
+  "benchmark": "sciknoweval",
+  "version": "sciknoweval-v2-biology-closed-choice",
+  "attribution": "Zhejiang University; source: hicai-zju/SciKnowEval",
+  "license": "mit",
+  "checked_at": "2026-10-15",
+  "selection": "One curated public source example; not a random or representative performance sample. Source split: test. External datasets and evaluation environments are not bundled.",
+  "examples": [
+    {
+      "id": "0",
+      "title": "SciKnowEval v2 — biology closed-choice example",
+      "kind": "Multiple choice",
+      "prompt": "In the context of anaerobic metabolism, which of the following correctly describes the function of S- or Se-methyltransferases in relation to thiol and selenol metabolites?",
+      "inputs": [],
+      "output": "Choose an answer from the options.",
+      "grading": "Closed-choice accuracy only for this slice; other tasks can require GPT judging or embedding models.",
+      "source": "https://huggingface.co/datasets/hicai-zju/SciKnowEval/tree/92ef969ad0a8bd6e195e0ac18af2c46e307e0cc2",
+      "source_label": "v2 / test / row 0",
+      "revision": "92ef969ad0a8bd6e195e0ac18af2c46e307e0cc2",
+      "choices": [
+        "They regulate the transport of thiol and selenol metabolites",
+        "They (de)methylate thiol and selenol metabolites",
+        "They break down thiol and selenol metabolites",
+        "They catalyze the formation of thiol and selenol metabolites"
+      ],
+      "reference_note": "No reference answer is included in this public preview.",
+      "extra_sources": [
+        {
+          "label": "Source viewer query (may change)",
+          "url": "https://datasets-server.huggingface.co/rows?dataset=hicai-zju%2FSciKnowEval&config=v2&split=test&offset=0&length=30"
+        }
+      ]
+    }
+  ],
+  "source_record_sha256": "1bc6a4c5bf580935107fa7f2c1a92c15feb05d96f7fc06d326f13141f5c089a5",
+  "retrieval": {
+    "url": "https://datasets-server.huggingface.co/rows?dataset=hicai-zju%2FSciKnowEval&config=v2&split=test&offset=0&length=30",
+    "revision_pinned": false,
+    "note": "Public viewer snapshot; dataset revision was checked separately. The rendered task is frozen in this JSON file."
+  }
+}

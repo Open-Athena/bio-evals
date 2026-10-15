@@ -35,13 +35,14 @@ for(const family of families){
   page+=`<div class="family-meta"><span>${h(family.creators.join('; ') || 'Creator not recorded')}</span>${anchor('Edit this entry ↗',edit)}</div>\n\n`;
   page+=`<p>${family.sources.map(s=>anchor(s.label,s.url)).join(' · ')}</p>\n\n`;
   if(examples.has(family.id)) {
+    const assetEntries=examples.get(family.id).assets.map(path=>`${JSON.stringify(path)}: await FileAttachment(${JSON.stringify(path)}).url()`).join(',');
     await writeFile(new URL(`src/data/examples-${family.id}.json`,root),JSON.stringify(examples.get(family.id)));
     page+=`
 
 \`\`\`js
 import {taskExamples} from '../components/task-examples.js';
 const examples = await FileAttachment('../data/examples-${family.id}.json').json();
-display(taskExamples(examples, Inputs));
+display(taskExamples(examples, Inputs, {${assetEntries}}));
 \`\`\`
 
 `;

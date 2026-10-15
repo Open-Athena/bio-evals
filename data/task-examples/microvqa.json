@@ -1,0 +1,50 @@
+{
+  "benchmark": "microvqa",
+  "version": "microvqa",
+  "attribution": "Stanford University; Chan Zuckerberg Biohub Network; collaborators (see note); source: jmhb/microvqa",
+  "license": "cc-by-sa-4.0",
+  "checked_at": "2026-10-15",
+  "selection": "One curated public source example; not a random or representative performance sample. Source split: test. External datasets and evaluation environments are not bundled.",
+  "examples": [
+    {
+      "id": "0",
+      "title": "MicroVQA example",
+      "kind": "Multiple choice",
+      "prompt": "A cryo-electron tomography (cryo-ET) image showcases primary eukaryotic neurons cultured on a specialized substrate that guides cytoskeletal organization. In the tomographic slice, mitochondria appear in deep blue, and calcium granules are depicted in bright yellow. What potential impact could the accumulation of calcium granules within the mitochondria have on their function?",
+      "inputs": [],
+      "output": "Choose an answer from the options.",
+      "grading": "Multiple-choice answer accuracy; preserve official option formatting and image inputs.",
+      "source": "https://huggingface.co/datasets/jmhb/microvqa/tree/744d656b41f2d9f9bf8f229283271bd67ee782fd",
+      "source_label": "default / test / row 0",
+      "revision": "744d656b41f2d9f9bf8f229283271bd67ee782fd",
+      "choices": [
+        "Regulation of mitochondrial metabolism to meet high ATP demand",
+        "Enhancement of oxidative phosphorylation efficiency under varying energy demands",
+        "Facilitation of mitochondrial biogenesis to support increased cell growth",
+        "Influence on mitochondrial calcium buffering capacity to maintain cellular homeostasis",
+        "Modification of mitochondrial lipid composition affecting membrane fluidity"
+      ],
+      "reference": "Regulation of mitochondrial metabolism to meet high ATP demand",
+      "images": [
+        {
+          "url": "../assets/task-examples/microvqa-1.jpg",
+          "caption": "Source task image 1",
+          "source": "https://datasets-server.huggingface.co/cached-assets/jmhb/microvqa/--/744d656b41f2d9f9bf8f229283271bd67ee782fd/--/default/test/0/images_list/image-1d100e9.jpg",
+          "sha256": "37474fd4d185ea04d081bfed4d20d1c6e0770e2b0e861eb5ac414e6a74799bd8"
+        }
+      ],
+      "extra_sources": [
+        {
+          "label": "Source viewer query (may change)",
+          "url": "https://datasets-server.huggingface.co/rows?dataset=jmhb%2Fmicrovqa&config=default&split=test&offset=0&length=30"
+        }
+      ]
+    }
+  ],
+  "source_record_sha256": "80ff60c1f1bbf3144ff154af7666eebd8426fb8a0a5a66cef6d860b9cd4bb20b",
+  "retrieval": {
+    "url": "https://datasets-server.huggingface.co/rows?dataset=jmhb%2Fmicrovqa&config=default&split=test&offset=0&length=30",
+    "revision_pinned": false,
+    "note": "Public viewer snapshot; dataset revision was checked separately. The rendered task is frozen in this JSON file."
+  }
+}

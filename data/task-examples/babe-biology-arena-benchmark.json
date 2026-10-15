@@ -1,0 +1,19 @@
+{
+  "benchmark": "babe-biology-arena-benchmark",
+  "version": "babe-biology-arena-benchmark",
+  "attribution": "ByteDance Seed; Peking University",
+  "license": "See linked source terms",
+  "checked_at": "2026-10-15",
+  "selection": "Published example available at the source.",
+  "availability": {
+    "status": "external",
+    "reason": "The paper publishes visual example questions in Figures 4–11. Open the original figures to inspect their question text and images together.",
+    "sources": [
+      {
+        "label": "View published example questions (Figures 4–11)",
+        "url": "https://arxiv.org/html/2602.05857v1#S6"
+      }
+    ]
+  },
+  "examples": []
+}

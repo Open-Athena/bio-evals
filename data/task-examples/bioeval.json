@@ -1,0 +1,25 @@
+{
+  "benchmark": "bioeval",
+  "version": "bioeval-repository-stage-suite",
+  "attribution": "Unverified institutional affiliation — jang1563; source: jang1563/BioEval",
+  "license": "See linked source terms",
+  "checked_at": "2026-10-15",
+  "selection": "One curated public example. Published task. External datasets and evaluation environments are not bundled.",
+  "examples": [
+    {
+      "id": "di_qpcr_001",
+      "title": "BioEval — repository-stage suite example",
+      "kind": "Data interpretation",
+      "prompt": "A researcher treated HeLa cells with Drug X for 24 hours and measured gene expression of VEGFA by qPCR. GAPDH was used as the reference gene. Using the ΔΔCt method, calculate the fold-change of VEGFA expression in treated vs. control cells and interpret the result.\n\n```text\nSample          | Gene   | Ct (Rep1) | Ct (Rep2) | Ct (Rep3) | Mean Ct\nControl         | VEGFA  | 25.2      | 25.4      | 25.1      | 25.23\nControl         | GAPDH  | 18.1      | 18.3      | 18.0      | 18.13\nDrug X treated  | VEGFA  | 22.1      | 22.3      | 22.0      | 22.13\nDrug X treated  | GAPDH  | 18.2      | 18.0      | 18.1      | 18.10\n```",
+      "scope": "Published task",
+      "inputs": [],
+      "output": "Follow the output format in the task.",
+      "grading": "Released reference JSON/rubrics and evaluation framework; scorer reliability still needs independent validation.",
+      "source": "https://raw.githubusercontent.com/jang1563/BioEval/457ed134a604b2d6b935d3f92459557b6aeef712/bioeval/datainterp/tasks.py",
+      "source_label": "bioeval/datainterp/tasks.py",
+      "revision": "457ed134a604b2d6b935d3f92459557b6aeef712",
+      "reference": "{\n  \"delta_ct_control\": 7.1,\n  \"delta_ct_treated\": 4.03,\n  \"delta_delta_ct\": -3.07,\n  \"fold_change\": 8.4,\n  \"direction\": \"upregulated\"\n}",
+      "reference_language": "json"
+    }
+  ]
+}

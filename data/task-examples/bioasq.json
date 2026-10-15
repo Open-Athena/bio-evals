@@ -1,0 +1,24 @@
+{
+  "benchmark": "bioasq",
+  "version": "bioasq-retrieval-end-to-end-qa",
+  "attribution": "BioASQ consortium; source: BioASQ/Evaluation-Measures",
+  "license": "See linked source terms",
+  "checked_at": "2026-10-15",
+  "selection": "One curated public example. Public evaluator-format example; placeholder exact-answer labels omitted. External datasets and evaluation environments are not bundled.",
+  "examples": [
+    {
+      "id": "5118dd1305c10fae750000010",
+      "title": "BioASQ — retrieval / end-to-end QA example",
+      "kind": "Biomedical question answering",
+      "prompt": "Is Rheumatoid Arthritis more common in men or women?",
+      "scope": "Public evaluator-format example; placeholder exact-answer labels omitted",
+      "inputs": [],
+      "output": "Return a factoid answer and an ideal-answer explanation.",
+      "grading": "Official retrieval ranking metrics plus task-specific exact/ideal answer scores.",
+      "source": "https://raw.githubusercontent.com/BioASQ/Evaluation-Measures/8c8e689068a41c1370fec55260e5fbfe3a6a6016/flat/BioASQEvaluation/partalas_template_bioasq2.json",
+      "source_label": "flat/BioASQEvaluation/partalas_template_bioasq2.json",
+      "revision": "8c8e689068a41c1370fec55260e5fbfe3a6a6016",
+      "reference": "Disease patterns in RA vary between the sexes; the condition is more commonly seen in women, who exhibit a more aggressive disease and a poorer long-term outcome."
+    }
+  ]
+}

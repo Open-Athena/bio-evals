@@ -1,0 +1,23 @@
+{
+  "benchmark": "dbench-bio",
+  "version": "dbench-bio",
+  "attribution": "National University of Singapore; Tsinghua University; University of Science and Technology of China",
+  "license": "See linked source terms",
+  "checked_at": "2026-10-15",
+  "selection": "No inline example available yet.",
+  "availability": {
+    "status": "unavailable",
+    "reason": "The public repository provides a dynamic question-generation pipeline. No fixed source question was located for this preview; generated questions are not substituted for benchmark examples.",
+    "sources": [
+      {
+        "label": "Benchmark",
+        "url": "https://arxiv.org/abs/2603.03322"
+      },
+      {
+        "label": "Scorer / data",
+        "url": "https://github.com/transcend-0/DBench-Bio/tree/82162e8193e1357fa9d026faaafbbd6c50256d25"
+      }
+    ]
+  },
+  "examples": []
+}

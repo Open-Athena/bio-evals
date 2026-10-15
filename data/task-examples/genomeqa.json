@@ -1,0 +1,28 @@
+{
+  "benchmark": "genomeqa",
+  "version": "genomeqa-sequence-understanding",
+  "attribution": "HKUST (Guangzhou); University of Hong Kong; Peking University; source: ai4nucleome/GenomeQA",
+  "license": "See source terms",
+  "checked_at": "2026-10-15",
+  "selection": "One curated public source example; not a random or representative performance sample. External datasets and evaluation environments are not bundled.",
+  "examples": [
+    {
+      "id": "1",
+      "title": "GenomeQA — sequence understanding example",
+      "kind": "Source task",
+      "prompt": "I have extracted a Human DNA sequence: AGGCCACCTTCTCCAGGATCTTTCCCCAGGCAGGCAAGGCAGTAAGTGACTAAGTGCTGGCACTGGGTGTTCTCTGGTGGTGCGGCTGTGGAGGGGCGCCACACAGCCTCAGCCATGCCATAGCGAACACGGTGCCAGTGGTCCAGCAGTGGCCAGCGTGGCAACACGAGCCTCACACCACTGCACACCATGCAGCCCCCAACACAGACCCTCATCTGCAGCCCTCCCACACTCCTGACAGCCAAGCAGCCCTGCCCAGCTGCTCCAGCCAGAGGCCTTGGCCAGCCAAGGCACACTCAGCCCCCTCATGTGGCCTGGGGGCCCGAGAGGAAAGGGTCACGGCCCCTGCACAGACTGTGCCTGGGCAGGAGTCTGATGGCAGTGAACAGTTTTCCCCTTG. \nCan you confirm if it is an enhancer?",
+      "inputs": [],
+      "output": "Follow the requested answer or artifact format in the task.",
+      "grading": "Task-label classification metrics; reproduce the paper's task-level protocol.",
+      "source": "https://raw.githubusercontent.com/ai4nucleome/GenomeQA/7ccc230e734fc11a365fd1963b593b5fd11e834d/benchmark/binary/1_enhancer_vs_promoter.jsonl",
+      "source_label": "benchmark/binary/1_enhancer_vs_promoter.jsonl",
+      "revision": "7ccc230e734fc11a365fd1963b593b5fd11e834d",
+      "reference": "B",
+      "choices": [
+        "No",
+        "Yes"
+      ]
+    }
+  ],
+  "source_record_sha256": "4ae9fd36ca2f8d6f622fc4589e6bb2bd7687c265abbd71ef2f99c4a5db8b4730"
+}

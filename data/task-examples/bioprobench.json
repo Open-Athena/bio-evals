@@ -1,0 +1,31 @@
+{
+  "benchmark": "bioprobench",
+  "version": "bioprobench-pqa-err",
+  "attribution": "Peking University; source: YuyangSunshine/bioprobench",
+  "license": "See source terms",
+  "checked_at": "2026-10-15",
+  "selection": "One curated public source example; not a random or representative performance sample. External datasets and evaluation environments are not bundled.",
+  "examples": [
+    {
+      "id": "TEST-PQA-000000",
+      "title": "BioProBench — PQA / ERR example",
+      "kind": "Multiple choice",
+      "prompt": "Sedate the pig with midazolam (____ mg/kg, i.m.) and atropine (0.04 mg/kg, i.m.).",
+      "inputs": [],
+      "output": "Choose an answer from the options.",
+      "grading": "PQA exact choice accuracy + confidence Brier score; ERR accuracy/precision/recall/F1. No LLM judge for these slices.",
+      "source": "https://raw.githubusercontent.com/YuyangSunshine/bioprobench/cf00fecd62583b98350cc48e26a29c92d3f21e5d/Data/PQA_test.json",
+      "source_label": "Data/PQA_test.json",
+      "revision": "cf00fecd62583b98350cc48e26a29c92d3f21e5d",
+      "choices": [
+        "0.2",
+        "0.3",
+        "0.5",
+        "0.1",
+        "0.4"
+      ],
+      "reference": "0.3"
+    }
+  ],
+  "source_record_sha256": "7d323f06aa84b6db17edac7223d8a2aba0bc64dabb76631261b1945fa29565b6"
+}

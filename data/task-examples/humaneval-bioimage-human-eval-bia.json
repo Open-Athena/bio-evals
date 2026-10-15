@@ -1,0 +1,27 @@
+{
+  "benchmark": "humaneval-bioimage-human-eval-bia",
+  "version": "humaneval-bioimage-human-eval-bia",
+  "attribution": "Leipzig University / ScaDS.AI; EMBL; Max Planck Institute for Human Cognitive and Brain Sciences; source: haesleinhuepf/human-eval-bia",
+  "license": "See source terms",
+  "checked_at": "2026-10-15",
+  "selection": "One curated public source example; not a random or representative performance sample. External datasets and evaluation environments are not bundled.",
+  "examples": [
+    {
+      "id": "../test_cases/apply_otsu_threshold_and_count_postiive_pixels.ipynb",
+      "title": "HumanEval-BioImage (human-eval-bia) example",
+      "kind": "Source task",
+      "prompt": "Complete the following Python function.",
+      "inputs": [],
+      "output": "Follow the requested answer or artifact format in the task.",
+      "grading": "Unit-test correctness and pass@k; pin Python/image-analysis dependencies.",
+      "source": "https://raw.githubusercontent.com/haesleinhuepf/human-eval-bia/f6edaa15545e84951f5428d07e16db04155f2266/data/human-eval-bia.jsonl",
+      "source_label": "data/human-eval-bia.jsonl",
+      "revision": "f6edaa15545e84951f5428d07e16db04155f2266",
+      "code": "def apply_otsu_threshold_and_count_postiive_pixels(image):\n    \"\"\"\n    Takes an image, applies Otsu's threshold method to it to create a binary image and \n    counts the positive pixels.\n    \"\"\"",
+      "code_language": "python",
+      "reference": "\n    import skimage\n    import numpy as np\n    binary_image = image > skimage.filters.threshold_otsu(image)\n\n    result = np.sum(binary_image)\n\n    return result",
+      "reference_language": "python"
+    }
+  ],
+  "source_record_sha256": "dd1bc5ab196858c89ef68d8af52d30bdfffe4de3801a5d216514f0297c9150e5"
+}

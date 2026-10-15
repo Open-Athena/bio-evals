@@ -1,0 +1,25 @@
+{
+  "benchmark": "scifact",
+  "version": "scifact-llm-protocol",
+  "attribution": "Allen Institute for AI; University of Washington; source: allenai/scifact",
+  "license": "See linked source terms",
+  "checked_at": "2026-10-15",
+  "selection": "One curated public example. Development claim with one cited evidence abstract; not a full-corpus retrieval task. External datasets and evaluation environments are not bundled.",
+  "examples": [
+    {
+      "id": "3",
+      "title": "SciFact — LLM protocol example",
+      "kind": "Scientific claim verification",
+      "prompt": "1,000 genomes project enables mapping of genetic sequence variation consisting of rare variants with larger penetrance effects than common variants.",
+      "scope": "Development claim with one cited evidence abstract; not a full-corpus retrieval task",
+      "inputs": [],
+      "output": "Support, refute, or report insufficient evidence; identify evidence sentences.",
+      "grading": "SciRIFF prompted-LLM protocol: claim-label and evidence scoring; retain original task definitions.",
+      "source": "https://scifact.s3-us-west-2.amazonaws.com/release/latest/data.tar.gz",
+      "source_label": "data/claims_dev.jsonl and data/corpus.jsonl",
+      "revision": "archive sha256 11c621288d41ac144d29b13b0f8503b3820b7d6e8b1f6ff24dff335c196d76be",
+      "context": "**Rare Variants Create Synthetic Genome-Wide Associations**\n\nGenome-wide association studies (GWAS) have now identified at least 2,000 common variants that appear associated with common diseases or related traits (http://www.genome.gov/gwastudies), hundreds of which have been convincingly replicated.\n\nIt is generally thought that the associated markers reflect the effect of a nearby common (minor allele frequency >0.05) causal site, which is associated with the marker, leading to extensive resequencing efforts to find causal sites.\n\nWe propose as an alternative explanation that variants much less common than the associated one may create \"synthetic associations\" by occurring, stochastically, more often in association with one of the alleles at the common site versus the other allele.\n\nAlthough synthetic associations are an obvious theoretical possibility, they have never been systematically explored as a possible explanation for GWAS findings.\n\nHere, we use simple computer simulations to show the conditions under which such synthetic associations will arise and how they may be recognized.\n\nWe show that they are not only possible, but inevitable, and that under simple but reasonable genetic models, they are likely to account for or contribute to many of the recently identified signals reported in genome-wide association studies.\n\nWe also illustrate the behavior of synthetic associations in real datasets by showing that rare causal mutations responsible for both hearing loss and sickle cell anemia create genome-wide significant synthetic associations, in the latter case extending over a 2.5-Mb interval encompassing scores of \"blocks\" of associated variants.\n\nIn conclusion, uncommon or rare genetic variants can easily create synthetic associations that are credited to common variants, and this possibility requires careful consideration in the interpretation and follow up of GWAS signals.",
+      "reference": "{\n  \"14717500\": [\n    {\n      \"sentences\": [\n        2,\n        5\n      ],\n      \"label\": \"SUPPORT\"\n    },\n    {\n      \"sentences\": [\n        7\n      ],\n      \"label\": \"SUPPORT\"\n    }\n  ]\n}"
+    }
+  ]
+}

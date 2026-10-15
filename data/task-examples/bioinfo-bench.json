@@ -1,0 +1,30 @@
+{
+  "benchmark": "bioinfo-bench",
+  "version": "bioinfo-bench",
+  "attribution": "Shanghai Jiao Tong University; source: Qiyuan04/bioinfo-bench",
+  "license": "See source terms",
+  "checked_at": "2026-10-15",
+  "selection": "One curated public source example; not a random or representative performance sample. External datasets and evaluation environments are not bundled.",
+  "examples": [
+    {
+      "id": "0",
+      "title": "Bioinfo-Bench example",
+      "kind": "Multiple choice",
+      "prompt": "Which of the following next-generation sequencing technologies relies on detecting protons released during base incorporation?",
+      "inputs": [],
+      "output": "Choose an answer from the options.",
+      "grading": "Task-specific QA/analysis evaluation; validate released reference fields and answer normalization.",
+      "source": "https://huggingface.co/datasets/Qiyuan04/bioinfo-bench/resolve/0179cb9e256227e374aa615355eed4478fed241c/bioinfo-bench-qa.csv",
+      "source_label": "bioinfo-bench-qa.csv",
+      "revision": "0179cb9e256227e374aa615355eed4478fed241c",
+      "choices": [
+        "Ion Torrent",
+        "Illumina SBS (Sequencing By Synthesis)",
+        "PacBio SMRT",
+        "Oxford Nanopore"
+      ],
+      "reference": "A"
+    }
+  ],
+  "source_record_sha256": "fd25f728ec6c35e7201482eebfd0a4ff3fed2980d11aec1714910070ef94ee33"
+}

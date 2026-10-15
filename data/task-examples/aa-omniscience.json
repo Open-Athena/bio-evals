@@ -1,0 +1,24 @@
+{
+  "benchmark": "aa-omniscience",
+  "version": "aa-omniscience-biology-health-slice",
+  "attribution": "Artificial Analysis; source: author publication",
+  "license": "See linked source terms",
+  "checked_at": "2026-10-15",
+  "selection": "One curated public example. Author website Example 2, Health / Medicine / Pharmacy. External datasets and evaluation environments are not bundled.",
+  "examples": [
+    {
+      "id": "website-example-2",
+      "title": "AA-Omniscience — biology/health slice example",
+      "kind": "Short-answer question",
+      "prompt": "In what year was the Nobel Prize in Medicine awarded to Domagk for discovering prontosil’s chemotherapeutic value?",
+      "scope": "Author website Example 2, Health / Medicine / Pharmacy",
+      "inputs": [],
+      "output": "A year.",
+      "grading": "Official correctness/abstention judge; report accuracy, hallucination and signed Omniscience Index.",
+      "source": "https://artificialanalysis.ai/evaluations/omniscience",
+      "source_label": "Public source example",
+      "revision": "Public page checked 2026-10-15",
+      "reference_note": "No reference answer is included in this preview."
+    }
+  ]
+}

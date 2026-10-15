@@ -1,0 +1,23 @@
+{
+  "benchmark": "sciencearena",
+  "version": "sciencearena-biology",
+  "attribution": "Qiyuan Tech; Tsinghua University; University of Hong Kong; Peking University",
+  "license": "See linked source terms",
+  "checked_at": "2026-10-15",
+  "selection": "No inline example available yet.",
+  "availability": {
+    "status": "unavailable",
+    "reason": "A standalone task record for the biology subset was not located in the public paper. Source question pages and their mapping to the benchmark are needed.",
+    "sources": [
+      {
+        "label": "Benchmark",
+        "url": "https://arxiv.org/abs/2608.30517"
+      },
+      {
+        "label": "Scorer / data",
+        "url": "https://arxiv.org/abs/2608.30517"
+      }
+    ]
+  },
+  "examples": []
+}

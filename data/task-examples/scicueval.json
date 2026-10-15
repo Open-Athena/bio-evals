@@ -1,0 +1,36 @@
+{
+  "benchmark": "scicueval",
+  "version": "scicueval-biology-biomedicine",
+  "attribution": "Zhejiang University; Ant Group; source: HICAI-ZJU/SciCUEval",
+  "license": "See linked source terms",
+  "checked_at": "2026-10-15",
+  "selection": "One curated public example. Question and choices only; the long source-paper context is linked, not bundled. External datasets and evaluation environments are not bundled.",
+  "examples": [
+    {
+      "id": "BioText-inference-1",
+      "title": "SciCUEval — biology / biomedicine example",
+      "kind": "Context reasoning / multiple choice",
+      "prompt": "Based on the framework proposed for the doubly robust estimator in high-dimensional proteomic data imputation, which conclusions can be inferred regarding its performance in real applications?",
+      "scope": "Question and choices only; the long source-paper context is linked, not bundled",
+      "inputs": [
+        {
+          "name": "Context and Correct Context fields",
+          "description": "The published source record contains both context fields. Full-paper text is not reproduced here.",
+          "url": "https://raw.githubusercontent.com/HICAI-ZJU/SciCUEval/423484f99541beed575b28645661afed86dd4ff9/data/BioText/Context-aware_Inference.json"
+        }
+      ],
+      "output": "Follow the output format in the task.",
+      "grading": "Task-dependent context relevance, absence, multi-source and inference metrics; verify judge needs by task.",
+      "source": "https://raw.githubusercontent.com/HICAI-ZJU/SciCUEval/423484f99541beed575b28645661afed86dd4ff9/data/BioText/Context-aware_Inference.json",
+      "source_label": "data/BioText/Context-aware_Inference.json",
+      "revision": "423484f99541beed575b28645661afed86dd4ff9",
+      "choices": [
+        "The doubly robust estimator guarantees significant improvements in statistical power irrespective of the data structure and missingness pattern.",
+        "The doubly robust approach can handle high-dimensional data and leverage auxiliary variables to potentially reduce the variance of regression coefficients under certain conditions.",
+        "If the outcome model or the propensity score model fails to be consistently estimated, the doubly robust estimator will lead to invalid inferences with inflated false discovery rates.",
+        "The doubly robust estimator's advantage persists due to its second-order adjustment for imputation errors, even if one of the nuisance parameters is only moderately well estimated under high-dimensional settings."
+      ],
+      "reference": "B, D"
+    }
+  ]
+}

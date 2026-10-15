@@ -1,0 +1,35 @@
+{
+  "benchmark": "genome-bench",
+  "version": "genome-bench",
+  "attribution": "Princeton University; Stanford University; source: Mingyin0312/Genome-Bench",
+  "license": "See source terms",
+  "checked_at": "2026-10-15",
+  "selection": "One curated public source example; not a random or representative performance sample. Source split: test. External datasets and evaluation environments are not bundled.",
+  "examples": [
+    {
+      "id": "1",
+      "title": "Genome-Bench example",
+      "kind": "Source task",
+      "prompt": "The CRISPR research protocol mentions that a Maxiprepped sgRNA library can be aliquotted and stored at -20°C for at least one year. Given this, is it still possible to use a library that we prepared and stored at -20°C about three years ago? Please choose one of the following options: a. \"It is recommended to prepare a fresh library for accurate results\" b. \"No, the library is too old and should not be used\" c. \"Only if the library was stored in liquid nitrogen\" d. \"Yes, the library should still be fine for screening\" e. \"It depends on the type of sgRNA used in the library\"",
+      "inputs": [],
+      "output": "Follow the requested answer or artifact format in the task.",
+      "grading": "Accuracy on the final a–e choice; optional generated explanation scored separately.",
+      "source": "https://huggingface.co/datasets/Mingyin0312/Genome-Bench/tree/bfa17fbb35fe6b75d80d77d2308081d309ba618e",
+      "source_label": "default / test / row 0",
+      "revision": "bfa17fbb35fe6b75d80d77d2308081d309ba618e",
+      "reference": "<explanation>The library prepared 3 years ago should be fine for screening.</explanation> <answer>d</answer>",
+      "extra_sources": [
+        {
+          "label": "Source viewer query (may change)",
+          "url": "https://datasets-server.huggingface.co/rows?dataset=Mingyin0312%2FGenome-Bench&config=default&split=test&offset=0&length=30"
+        }
+      ]
+    }
+  ],
+  "source_record_sha256": "38f7e0d739a76361f057573ff45d46953540913e16914bdb077c8619eeef1568",
+  "retrieval": {
+    "url": "https://datasets-server.huggingface.co/rows?dataset=Mingyin0312%2FGenome-Bench&config=default&split=test&offset=0&length=30",
+    "revision_pinned": false,
+    "note": "Public viewer snapshot; dataset revision was checked separately. The rendered task is frozen in this JSON file."
+  }
+}

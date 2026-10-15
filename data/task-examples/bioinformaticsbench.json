@@ -1,0 +1,24 @@
+{
+  "benchmark": "bioinformaticsbench",
+  "version": "bioinformaticsbench",
+  "attribution": "Unverified institutional attribution; source: 543090lee/BioinformaticsBench",
+  "license": "See linked source terms",
+  "checked_at": "2026-10-15",
+  "selection": "One curated public example. Public alignment question from the author repository. External datasets and evaluation environments are not bundled.",
+  "examples": [
+    {
+      "id": "alignment-0",
+      "title": "BioinformaticsBench example",
+      "kind": "Binary question",
+      "prompt": "Does Needleman-Wunsch Algorithm use dynamic programming? 0 if it's true and 1 if it's not.",
+      "scope": "Public alignment question from the author repository",
+      "inputs": [],
+      "output": "Follow the output format in the task.",
+      "grading": "Question-type-specific correctness; open-response judge and reproducible scorer need verification.",
+      "source": "https://raw.githubusercontent.com/543090lee/BioinformaticsBench/b4f2d9e239cb666e73527a562d79a04da5f8ce7e/data/alignment.json",
+      "source_label": "data/alignment.json",
+      "revision": "b4f2d9e239cb666e73527a562d79a04da5f8ce7e",
+      "reference": "0"
+    }
+  ]
+}

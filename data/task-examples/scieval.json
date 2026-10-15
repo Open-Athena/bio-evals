@@ -1,0 +1,24 @@
+{
+  "benchmark": "scieval",
+  "version": "scieval-biology",
+  "attribution": "Shanghai Jiao Tong University; source: OpenDFM/SciEval",
+  "license": "See source terms",
+  "checked_at": "2026-10-15",
+  "selection": "One curated public source example; not a random or representative performance sample. External datasets and evaluation environments are not bundled.",
+  "examples": [
+    {
+      "id": "2794a4fd04a6a0731c7ef0688083e850",
+      "title": "SciEval — biology example",
+      "kind": "Source task",
+      "prompt": "Given a question and four options, please select the right answer. Your answer should be \"A\", \"B\", \"C\" or \"D\". Please directly give the answer without any explanation.",
+      "inputs": [],
+      "output": "Follow the requested answer or artifact format in the task.",
+      "grading": "Official task-specific answer accuracy and open-response scoring.",
+      "source": "https://raw.githubusercontent.com/OpenDFM/SciEval/aa61a9dfe75f55145492517fac0b7f05220b0d72/scieval-dev.json",
+      "source_label": "scieval-dev.json",
+      "revision": "aa61a9dfe75f55145492517fac0b7f05220b0d72",
+      "reference": "[\n  \"D\"\n]"
+    }
+  ],
+  "source_record_sha256": "d936115ea4a2b9e72f319c031b15f01050b7b3b364d68f714d400b002a0f56ae"
+}

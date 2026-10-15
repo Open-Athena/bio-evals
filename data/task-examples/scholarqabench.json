@@ -1,0 +1,24 @@
+{
+  "benchmark": "scholarqabench",
+  "version": "scholarqabench-biomedicine",
+  "attribution": "Allen Institute for AI; University of Washington; collaborators (see note); source: AkariAsai/ScholarQABench",
+  "license": "See source terms",
+  "checked_at": "2026-10-15",
+  "selection": "One curated public source example; not a random or representative performance sample. External datasets and evaluation environments are not bundled.",
+  "examples": [
+    {
+      "id": "bio_0",
+      "title": "ScholarQABench — biomedicine example",
+      "kind": "Source task",
+      "prompt": "What are the key mechanisms for lipid nanoparticles (LNPs) to form biomolecular corona with various serum proteins and blood components?",
+      "inputs": [],
+      "output": "Follow the requested answer or artifact format in the task.",
+      "grading": "Answer quality, evidence/citation and task-specific reference grading; some scoring uses model judges.",
+      "source": "https://raw.githubusercontent.com/AkariAsai/ScholarQABench/95e6fc52b0a8a0ce0a74956029991e3bb00c38b9/data/scholarqa_bio/scholarqabench_bio.jsonl",
+      "source_label": "data/scholarqa_bio/scholarqabench_bio.jsonl",
+      "revision": "95e6fc52b0a8a0ce0a74956029991e3bb00c38b9",
+      "reference_note": "No reference answer is included in this public preview."
+    }
+  ],
+  "source_record_sha256": "131e9b71435c2d29663a78c7816dabb1b5bce883f37f6de218011fa4ca4cd365"
+}

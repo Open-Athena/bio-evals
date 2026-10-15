@@ -1,0 +1,24 @@
+{
+  "benchmark": "gaokao-bench",
+  "version": "gaokao-bench-biology",
+  "attribution": "Fudan University; East China Normal University; source: OpenLMLab/GAOKAO-Bench",
+  "license": "See source terms",
+  "checked_at": "2026-10-15",
+  "selection": "One curated public source example; not a random or representative performance sample. External datasets and evaluation environments are not bundled.",
+  "examples": [
+    {
+      "id": "0",
+      "title": "GAOKAO-Bench — biology example",
+      "kind": "Source task",
+      "prompt": "1．（ 6分）下列有关细胞的叙述，正确的是（ 　　） \nA．病毒是一类具有细胞结构的生物   \nB．蓝藻细胞具有细胞核且 DNA分子呈环状   \nC．人体所有细胞的细胞周期持续时间相同   \nD．内质网膜和高尔基体膜都具有流动性\n",
+      "inputs": [],
+      "output": "Follow the requested answer or artifact format in the task.",
+      "grading": "Objective-answer scoring plus model/expert grading for subjective questions; keep the two reports separate.",
+      "source": "https://raw.githubusercontent.com/OpenLMLab/GAOKAO-Bench/6dbb24f8d8439041e5431c4c184a582182a6ce9c/Data/Objective_Questions/2010-2022_Biology_MCQs.json",
+      "source_label": "Data/Objective_Questions/2010-2022_Biology_MCQs.json",
+      "revision": "6dbb24f8d8439041e5431c4c184a582182a6ce9c",
+      "reference": "[\n  \"D\"\n]"
+    }
+  ],
+  "source_record_sha256": "044d37607235c1e63939b07ddccdb6abbed5e2a3a942f276465ad5387029378a"
+}

@@ -103,7 +103,7 @@ try {
   await page.setViewportSize({width:390,height:844});
   await page.screenshot({path:artifacts+'/catalog-mobile.png',fullPage:true});
   assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth+2),'Page should not overflow horizontally; table has its own scroll container');
-  // Visit every collection and switch through all imported examples.
+  // Exercise every option in the original multi-example collections.
   for(const benchmark of ['mmlu','bixbench','scicode','scienceagentbench','genebench']) {
     await browser.close();
     browser=await launchBrowser();page=browser.pages()[0] || await browser.newPage();
@@ -135,6 +135,29 @@ try {
   await page.setViewportSize({width:1440,height:1000});
   await page.goto(`${base}benchmarks/scicode`);await page.waitForSelector('.task-example h3');
   await page.screenshot({path:artifacts+'/example-desktop.png',fullPage:true});
+  // Fresh contexts bound memory while covering the newly supported formats.
+  for(const benchmark of ['microvqa','mmmu','bioreasonbench','genomeqa','biology-instructions','naturebench','biomnibench-da','lifescibench']) {
+    await browser.close();browser=await launchBrowser();page=browser.pages()[0] || await browser.newPage();
+    page.setDefaultTimeout(20000);
+    page.on('pageerror',error=>errors.push(error.message));
+    page.on('response',response=>{if(response.status()>=400 && response.url().startsWith(base))failed.push(`${response.status()} ${response.url()}`);});
+    await page.setViewportSize({width:390,height:844});
+    await page.goto(`${base}benchmarks/${benchmark}`);
+    await page.waitForSelector('#task-examples');
+    assert.equal(await page.getByLabel('Example task',{exact:true}).count(),0,'Single examples and gaps need no picker');
+    if(['microvqa','mmmu','bioreasonbench'].includes(benchmark)) {
+      await page.locator('[data-task-image]').scrollIntoViewIfNeeded();
+      await page.waitForFunction(()=>[...document.querySelectorAll('[data-task-image]')].every(img=>img.complete && img.naturalWidth>0));
+      assert.ok((await page.locator('[data-task-image]').getAttribute('src')).includes('/_file/assets/task-examples/'));
+      await page.screenshot({path:`${artifacts}/${benchmark}-mobile.png`,fullPage:true});
+    }
+    if(benchmark==='genomeqa')assert.equal(await page.locator('.task-choices li').count(),2);
+    if(['biomnibench-da','lifescibench'].includes(benchmark)) {
+      assert.equal(await page.locator('.task-example').count(),0);
+      assert.ok((await page.locator('.task-availability').innerText()).length>30);
+    }
+    assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth+2),`${benchmark} mobile overflow`);
+  }
   assert.deepEqual(errors,[]);assert.deepEqual(failed,[]);
   console.log('Browser checks passed: search, combined filters, work state, keyboard focus, family links, notes, mobile layout; screenshots in artifacts/browser.');
 } catch(error) {

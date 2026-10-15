@@ -1,0 +1,24 @@
+{
+  "benchmark": "scipredict",
+  "version": "scipredict-biology",
+  "attribution": "Scale AI; UCLA; University of Maryland; Princeton University; source: scaleapi/scipredict",
+  "license": "See source terms",
+  "checked_at": "2026-10-15",
+  "selection": "One curated public source example; not a random or representative performance sample. External datasets and evaluation environments are not bundled.",
+  "examples": [
+    {
+      "id": "1",
+      "title": "SciPredict — biology example",
+      "kind": "Source task",
+      "prompt": "Researchers tested whether ventral tegmental area (VTA) dopamine signaling in the basolateral amygdala (BLA) drives fear extinction by acting on reward-responding posterior BLA (pBLA) neurons versus fear-coding anterior BLA (aBLA) neurons, using adult mice (DAT-IRES-Cre; EYFP controls; subtype mapping with Rspo2-Cre for aBLA and Ppp1r1b/Cartpt-Cre for pBLA). DAT-Cre mice received bilateral VTA injections of Cre-dependent ChR2-EYFP (activation) or eNpHR3.0-EYFP (inhibition); controls received EYFP; optic fibers were implanted over pBLA or aBLA to manipulate VTA→BLA terminals. Training: Day 1 contextual fear conditioning (baseline ~3 min, then 3 footshocks, 0.60 mA, 2 s); Day 2 45-min extinction (no shocks); Day 3 10-min retrieval. Intervention (extinction only): starting 5 min into extinction, deliver 8 cycles of 3-min light separated by 2-min no-light (activation: blue 450–470 nm, 8–12 mW, 20 Hz pulses; inhibition: green 520–550 nm, 8–12 mW, continuous) with fibers targeted to pBLA or aBLA. Behavior videos were recorded with VideoFreeze software and freezing level was scored manually by experimenters who were blinded to conditions or automatically with DeepLabCut behavior analysis toolbox and custom Python code (68). Freezing was quantified in 5-min bins across extinction and again during retrieval.\n\n- Extinction learning: Percent freezing per 5-min bin across the 45-min Day 2 session (9 bins). Scored manually by experimenters who were blinded to conditions or automatically with DeepLabCut behavior analysis toolbox and custom Python code (68).\n\n- Extinction memory: Percent freezing during the Day 3 retrieval test (10 min). Scored manually by experimenters who were blinded to conditions or automatically with DeepLabCut behavior analysis toolbox and custom Python code (68).\n\nMice underwent contextual fear conditioning (Day 1: context + three 0.60 mA, 2 s shocks), 45-min extinction (Day 2, no shocks), and 10-min retrieval (Day 3). During extinction, VTA dopamine terminals in pBLA (Ppp1r1b⁺) or aBLA (Rspo2⁺) were optogenetically manipulated beginning 5 min into the session using 8 cycles of 3 min light separated by 2 min: activation (blue 450–470 nm, 8–12 mW, 20 Hz) or inhibition (green 520–550 nm, 8–12 mW, constant). Freezing was binned in 5-min windows across extinction and measured again at retrieval. How do these projection-specific manipulations (activation and inhibition of VTA dopamine terminals in the pBLA and in aBLA) affect fear extinction and retrieval compared with EYFP controls?",
+      "inputs": [],
+      "output": "Follow the requested answer or artifact format in the task.",
+      "grading": "Choice/numerical scoring plus model-based free-response grading, depending on question format.",
+      "source": "https://raw.githubusercontent.com/scaleapi/scipredict/e7f60301bdb61f09e8ed1c54a9b47c063cb4a379/data/main_ds.csv",
+      "source_label": "data/main_ds.csv",
+      "revision": "e7f60301bdb61f09e8ed1c54a9b47c063cb4a379",
+      "reference": "Activation of VTA dopamine terminals in the pBLA promotes faster extinction and improved retrieval, indicating an enhancement of extinction learning. In contrast, inhibition of pBLA dopamine input impairs both extinction and retrieval. Activation of VTA terminals in the aBLA leads to increased freezing later in extinction and poorer retrieval performance, suggesting interference with extinction memory formation, while inhibition of aBLA terminals produces no reliable behavioral change."
+    }
+  ],
+  "source_record_sha256": "44a688c400eb4f86f776b1c23055640f13aa7706d655616d5202de3d5b729119"
+}

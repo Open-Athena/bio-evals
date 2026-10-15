@@ -1,0 +1,23 @@
+{
+  "benchmark": "virology-capabilities-test-vct",
+  "version": "virology-capabilities-test-vct",
+  "attribution": "SecureBio; Center for AI Safety; UFABC; MIT Media Lab",
+  "license": "See linked source terms",
+  "checked_at": "2026-10-15",
+  "selection": "No inline example available yet.",
+  "availability": {
+    "status": "unavailable",
+    "reason": "The public site describes access-controlled evaluation questions. No task text is republished here; an authorized public example is needed.",
+    "sources": [
+      {
+        "label": "Benchmark",
+        "url": "https://securebio.org/virologytest/"
+      },
+      {
+        "label": "Scorer / data",
+        "url": "https://securebio.org/virologytest/"
+      }
+    ]
+  },
+  "examples": []
+}

@@ -1,0 +1,24 @@
+{
+  "benchmark": "sc-arena",
+  "version": "sc-arena",
+  "attribution": "Shenzhen University of Advanced Technology; Northeastern University (China); collaborators (see note); source: SUAT-AIRI/SC-Arena",
+  "license": "See source terms",
+  "checked_at": "2026-10-15",
+  "selection": "One curated public source example; not a random or representative performance sample. External datasets and evaluation environments are not bundled.",
+  "examples": [
+    {
+      "id": "0",
+      "title": "SC-Arena example",
+      "kind": "Source task",
+      "prompt": "How does the disruption of PAX9's ability to bind DNA or interact with MSX1 affect tooth development, considering the gene-environment interactions necessary for odontogenesis?",
+      "inputs": [],
+      "output": "Follow the requested answer or artifact format in the task.",
+      "grading": "Knowledge-augmented, task-specific metrics using ontology, marker and literature information.",
+      "source": "https://raw.githubusercontent.com/SUAT-AIRI/SC-Arena/f4480a220fa4872c4c747f52f8fc784401c592fc/data/ScientificQA_final.json",
+      "source_label": "data/ScientificQA_final.json",
+      "revision": "f4480a220fa4872c4c747f52f8fc784401c592fc",
+      "reference": "PAX9 is a transcription factor essential for tooth development, primarily through its interaction with MSX1 and its ability to bind to specific DNA sequences to activate target promoters like Bmp4. Mutations in PAX9 can impair these functions, leading to tooth agenesis. Specifically, disrupted DNA binding and the loss of synergistic interaction with MSX1 prevent the normal transcriptional activation of genes required for tooth morphogenesis. This highlights the importance of gene-environment interactions, as PAX9 and MSX1 coordinate to induce signaling pathways that drive the morphological events necessary for tooth development. The severity of tooth agenesis generally correlates with the extent to which these interactions are disrupted."
+    }
+  ],
+  "source_record_sha256": "ec8d93c3713102fb7b0e4b5a90bf3b6228bf60ff9e7f4ea700d24ad0d38ece90"
+}
