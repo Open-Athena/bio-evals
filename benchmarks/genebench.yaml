@@ -11,7 +11,7 @@ notes: []
 selected_variant: genebench-pro
 variants:
   - id: genebench-pro
-    name: GeneBench-Pro
+    name: GeneBench-Pro public-10
     description: judgment-heavy genomics and quantitative biology
     creators:
       - OpenAI
