@@ -28,12 +28,19 @@ function link(label,href){const a=node('a',label);a.href=href;return a;}
 export function familyLink(f){return link(f.name,`./benchmarks/${f.id}`);}
 export const implementationLabel = status => ({yes:'Implemented',in_progress:'In progress',no:'To do',blocked:'Blocked'})[status];
 const implementationRank = status => ({yes:0,in_progress:1,no:2,blocked:3})[status];
-const categoryColor = key => ({
-  Evalchemy:'var(--framework-evalchemy)', Harbor:'var(--framework-harbor)',
-  yes:'var(--theme-green)', in_progress:'var(--theme-blue)',
-  no:'var(--theme-foreground-muted)', blocked:'var(--theme-red)'
-})[key] || 'var(--theme-foreground-muted)';
-export function catalogTable(families, snapshot, Inputs) {
+export function catalogColors(Plot) {
+  const palette=Plot.scale({color:{type:'categorical',scheme:'Observable10',domain:Array.from({length:10},(_,i)=>i)}});
+  return {Evalchemy:palette.apply(6),Harbor:palette.apply(1),yes:palette.apply(4),
+    in_progress:palette.apply(0),blocked:palette.apply(2),no:'var(--theme-foreground-muted)'};
+}
+const categoryColor = (key,colors) => colors[key] || 'var(--theme-foreground-muted)';
+function categoryBadge(label,key,className,colors) {
+  const badge=node('span',undefined,`badge category-badge ${className}`);
+  const swatch=node('span',undefined,'category-swatch');
+  swatch.style.backgroundColor=categoryColor(key,colors);swatch.setAttribute('aria-hidden','true');
+  badge.append(swatch,document.createTextNode(label));return badge;
+}
+export function catalogTable(families, snapshot, Inputs, colors={}) {
   // Primitive column values let native Inputs.table sort the displayed content.
   const rows=families.flatMap(f=>f.variants.map(v=>({
     name:f.name, description:f.description, creators:f.creators.join('; '),
@@ -45,8 +52,8 @@ export function catalogTable(families, snapshot, Inputs) {
   })));
   const container=node('div',undefined,'catalog-table card');
   container.append(Inputs.table(rows, {
-    columns:['name','description','creators','variant','assignment','framework','implementation','work'],
-    header:{name:'Benchmark',description:'What it measures',creators:'Creator organization(s)',variant:'Version',assignment:'ID/OOD',framework:'Framework',implementation:'Implementation',work:'Linked work'},
+    columns:['name','creators','description','assignment','framework','implementation','variant','work'],
+    header:{name:'Benchmark',description:'What it measures',creators:'Organization',variant:'Version',assignment:'ID/OOD',framework:'Framework',implementation:'Implementation',work:'Linked work'},
     format:{
       name:(_,i)=>familyLink(rows[i].family),
       variant:(_,i)=>{
@@ -57,8 +64,7 @@ export function catalogTable(families, snapshot, Inputs) {
       framework:(_,index)=>{
         const container=node('div',undefined,'framework-labels');
         for(const framework of new Set(rows[index].detail.implementations.map(i=>i.framework))) {
-          const badge=node('span',framework,'badge framework-badge');
-          badge.style.color=categoryColor(framework);container.append(badge);
+          container.append(categoryBadge(framework,framework,'framework-badge',colors));
         }
         return container;
       },
@@ -66,8 +72,7 @@ export function catalogTable(families, snapshot, Inputs) {
         const container=node('div');
         for(const i of rows[index].detail.implementations) {
           const line=node('div',undefined,'implementation-entry');
-          const badge=node('span',implementationLabel(i.status),`badge ${i.status}`);
-          badge.style.color=categoryColor(i.status);line.append(badge);
+          line.append(categoryBadge(implementationLabel(i.status),i.status,i.status,colors));
           if(i.assessment) {
             const details=node('details',undefined,'status-reason');
             details.append(node('summary','Status details'),node('p',i.assessment.reason));
@@ -109,12 +114,12 @@ export function catalogCounts(benchmarks, field, domain) {
   return domain.map(key=>({key, label:field==='status'?implementationLabel(key):key,
     count:benchmarks.filter(b=>b.variants.some(v=>v.implementations.some(i=>i[field]===key))).length}));
 }
-export function countChart(data, Plot, width, label) {
+export function countChart(data, Plot, width, label, colors=catalogColors(Plot)) {
   return Plot.plot({width, height:170, marginLeft:100, marginRight:32, marginTop:8, marginBottom:30,
     ariaLabel:`${label}: ${data.map(d=>`${d.label} ${d.count}`).join(', ')}`,
     x:{domain:[0,Math.max(1,...data.map(d=>d.count))], label:'Benchmarks', grid:true, ticks:4, tickFormat:d=>Number.isInteger(d)?d:''},
     y:{domain:data.map(d=>d.label), label:null},
-    marks:[Plot.barX(data,{x:'count',y:'label',fill:d=>categoryColor(d.key),insetTop:5,insetBottom:5}),
+    marks:[Plot.barX(data,{x:'count',y:'label',fill:d=>categoryColor(d.key,colors),insetTop:5,insetBottom:5}),
       Plot.text(data,{x:'count',y:'label',text:d=>String(d.count),textAnchor:'start',dx:5}),Plot.ruleX([0])]
   });
 }

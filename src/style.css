@@ -4,13 +4,9 @@
 @import url('observablehq:theme-alt.css');
 @import url('observablehq:theme-wide.css');
 
-:root { --framework-evalchemy:#7c3db5; --framework-harbor:#ad5700; }
-@media (prefers-color-scheme:dark) {
-  :root { --framework-evalchemy:#c399ef; --framework-harbor:#f4ad64; }
-}
 .framework-labels { display:flex; flex-wrap:wrap; gap:6px; }
-.framework-badge { border-color:currentColor; }
-.badge.no { color:var(--theme-foreground-muted); }
+.catalog-table .badge.category-badge { color:var(--theme-foreground); display:inline-flex; align-items:center; gap:6px; }
+.category-swatch { width:10px; height:10px; border-radius:2px; flex:none; }
 
 #observablehq-header { font-size: 13px; }
 .muted, .provenance { color: var(--theme-foreground-muted); font-size: 13px; }

@@ -55,7 +55,7 @@ try {
   assert.match(await page.locator('.framework-chart svg').getAttribute('aria-label'), /Harbor 1/);
   assert.equal(await page.locator('.catalog-table tbody').count(),1);
   assert.equal(await page.locator('.catalog-table tbody tr').count(),1);
-  for(const title of ['Benchmark','What it measures','Creator organization(s)','Version','ID/OOD','Framework','Implementation','Linked work']) {
+  for(const title of ['Benchmark','Organization','What it measures','ID/OOD','Framework','Implementation','Version','Linked work']) {
     assert.equal(await page.getByRole('columnheader',{name:title,exact:false}).count(),1);
   }
   await search.fill('MMLU');

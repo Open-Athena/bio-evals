@@ -7,10 +7,11 @@ title: Biology evaluations
 What the evaluations measure, and where implementation stands. Explore benchmarks and follow the work across repositories.
 
 ```js
-import {filterCatalog, catalogTable, trackedCatalog, catalogCounts, countChart} from './components/catalog.js';
+import {filterCatalog, catalogTable, trackedCatalog, catalogCounts, countChart, catalogColors} from './components/catalog.js';
 const catalog = trackedCatalog(await FileAttachment('./data/catalog.json').json());
 const snapshot = await FileAttachment('./data/github-status.json').json();
 const variants = catalog.flatMap(f => f.variants);
+const colors = catalogColors(Plot);
 ```
 
 ```js
@@ -31,12 +32,12 @@ const statusCounts = catalogCounts(filtered, 'status', ['yes', 'in_progress', 'n
 ```
 
 <div class="catalog-charts">
-  <div class="card framework-chart"><h2>Framework</h2>${resize(width => countChart(frameworkCounts, Plot, width, 'Framework'))}</div>
-  <div class="card status-chart"><h2>Implementation</h2>${resize(width => countChart(statusCounts, Plot, width, 'Implementation'))}</div>
+  <div class="card framework-chart"><h2>Framework</h2>${resize(width => countChart(frameworkCounts, Plot, width, 'Framework', colors))}</div>
+  <div class="card status-chart"><h2>Implementation</h2>${resize(width => countChart(statusCounts, Plot, width, 'Implementation', colors))}</div>
 </div>
 
 ```js
-display(catalogTable(filtered, snapshot, Inputs));
+display(catalogTable(filtered, snapshot, Inputs, colors));
 ```
 
 <p class="muted">GitHub last successfully fetched: ${snapshot.last_successful_fetch_at ? new Date(snapshot.last_successful_fetch_at).toLocaleString() : 'not yet fetched'}. ${snapshot.complete ? '' : 'Some statuses are unavailable or stale; follow the links for current work.'} Refreshes daily and on catalog updates.</p>
