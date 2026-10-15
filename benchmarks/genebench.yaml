@@ -22,24 +22,21 @@ variants:
       - label: Scorer / data
         url: https://huggingface.co/datasets/openai/genebench-pro-public-package/blob/eb75a3c0996b3cedcc9af685bad02fd166848fa2/reference_grader.py
       - label: Harbor / integration
-        url: https://github.com/josancamon19/sci-benches/tree/1fc392943dce9c847a62574dcf4e4c6ad943d2ab/src/genebench_pro
+        url: https://github.com/marin-community/harbor/pull/164
     implementations:
       - framework: Harbor
-        status: in_progress
+        status: yes
         evidence:
           - url: https://github.com/marin-community/harbor/pull/164
-            scope: "GeneBench-Pro public-10: reported solver trials and official deterministic grading; public
-              answers, missing submissions and timeouts constrain interpretation."
-            checked_at: 2026-10-14
+            scope: "GeneBench-Pro public-10: all ten cases completed solver execution and official deterministic grading with Codex CLI 0.162.1 and GPT-6 Luna high. All produced valid submissions, with no recorded agent exceptions or timeouts. One attempt per case and a two-hour limit differ from the paper protocol; public answers and the small sample make this registration validation diagnostic."
+            checked_at: 2026-10-15
         assessment:
-          checked_at: 2026-10-14
-          reason: "Open public-10 adapter PR #164 reports execution and deterministic grading. Integration is
-            still under review; this selected public subset is distinct from the original private
-            GeneBench."
+          checked_at: 2026-10-15
+          reason: "Public-10 adapter PR #164 merged on October 15, 2026, and registration issue #163 is closed. End-to-end validation covers all ten released cases with the unchanged official grader and solver/reference isolation. Implementation covers this public subset, not the full 129-task GeneBench-Pro suite or original private GeneBench."
           sources:
-            - label: Audited framework revision
-              url: https://github.com/marin-community/harbor/tree/1d29d200414b6488a87192f50f617b1b5bd4b6f4/adapters
-            - label: Open implementation PR
+            - label: Completed registration and validation record
+              url: https://github.com/marin-community/harbor/issues/163
+            - label: Merged implementation PR
               url: https://github.com/marin-community/harbor/pull/164
     work:
       - https://github.com/marin-community/harbor/pull/164
@@ -47,10 +44,10 @@ variants:
     notes:
       - "Access: Ten ungated public cases with references and schemas; full 129-task suite not in
         release."
-      - "Grading: Python standard-library numeric, integer, exact-match checks; 30 local interface
-        checks passed."
+      - "Grading: Unchanged official deterministic grader; its passed field maps to binary reward while score and field diagnostics are retained. Missing or invalid submissions receive classified zero rewards; grader failures remain errors. Forty native-grader contract checks and nine adapter tests passed as reported in the merged PR."
       - "Limitations: the public package is a ten-case subset of the full 129-task suite; do not
         equate public-subset coverage with full-suite implementation."
+      - "Protocol: Answers are written to /app/result.json in an offline scientific environment. Validation used one attempt per case with a two-hour limit; response-format failures are included rather than excluded as in the paper. The public-answer validation is diagnostic, not a full hidden-benchmark result."
     provenance:
       - sheet: Agentic (Harbor)
         gid: 846608904
