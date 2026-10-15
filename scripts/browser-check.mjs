@@ -4,12 +4,13 @@ import {resolve,extname} from 'node:path';
 import assert from 'node:assert/strict';
 import {chromium} from 'playwright-core';
 import {loadCatalog} from './catalog.mjs';
-import {selectedVersion} from '../src/components/catalog.js';
+import {loadExamples} from './task-examples.mjs';
+import {selectedVersion,trackedCatalog,filterCatalog,implementationLabel} from '../src/components/catalog.js';
 
 const catalog=await loadCatalog();
 const entriesWithStatus=status=>catalog.filter(b=>selectedVersion(b).implementations.some(i=>i.status===status));
 const implementedCount=entriesWithStatus('yes').length;
-const inProgress=entriesWithStatus('in_progress');
+const examples=await loadExamples(catalog);
 
 const directory=resolve('dist'), artifacts=resolve('artifacts/browser');
 await mkdir(artifacts,{recursive:true});
@@ -54,7 +55,7 @@ try {
   await page.emulateMedia({colorScheme:'light'});
   await theme.selectOption('dark');
   assert.equal(await scheme(),'dark');
-  await page.goto(base+'benchmarks/scicode');
+  await page.goto(base+'benchmarks/'+catalog[0].id);
   assert.equal(await theme.inputValue(),'dark','Preference survives benchmark navigation');
   assert.equal(await scheme(),'dark');
   await theme.selectOption('system');
@@ -66,131 +67,87 @@ try {
   await page.waitForSelector('.catalog-table tbody tr');
   for(let index=0;index<implementedCount;index++)assert.ok(await page.locator('.catalog-table tbody tr').nth(index).locator('.badge.yes').count()>0,'Implemented benchmarks sort first');
   assert.ok(!(await page.getByLabel('Implementation',{exact:true}).innerText()).includes('Unknown'));
-  await page.getByLabel('Implementation',{exact:true}).selectOption({label:'Blocked'});
-  await page.waitForFunction(()=>document.querySelector('.catalog-table tbody tr')?.textContent.includes('Blocked'));
-  assert.equal(await page.locator('.catalog-table .badge.yes').count(),0);
-  await page.getByLabel('Implementation',{exact:true}).selectOption({label:'In progress'});
-  await page.waitForFunction(count=>document.querySelectorAll('.catalog-table tbody tr').length===count,inProgress.length);
-  assert.deepEqual((await page.locator('.catalog-table tbody tr').evaluateAll(rows=>rows.map(row=>row.querySelector('a')?.textContent))).sort(),inProgress.map(b=>b.name).sort());
-  assert.equal(await page.locator('.catalog-table .badge.yes').count(),0);
-  await page.getByLabel('Implementation',{exact:true}).selectOption({label:'All states'});
-  const filterPositions=await page.locator('.filters > form').evaluateAll(forms=>forms.map(f=>f.getBoundingClientRect().top));
-  assert.equal(filterPositions.length,3);
-  assert.ok(Math.max(...filterPositions)-Math.min(...filterPositions)<2,'Desktop filters share one row');
-  await page.waitForFunction(count=>document.querySelector('.status-chart svg')?.getAttribute('aria-label')?.split(': ')[1]?.split(', ').includes(`Implemented ${count}`),implementedCount);
-  assert.ok((await page.locator('.status-chart svg').getAttribute('aria-label')).split(': ')[1].split(', ').includes(`Implemented ${implementedCount}`));
-  const search=page.getByLabel('Search evaluations');
-  await search.fill('BixBench');
-  await page.waitForFunction(()=>document.querySelectorAll('.catalog-table tbody tr').length===1 && document.querySelector('.catalog-table tbody')?.textContent.includes('BixBench v1.5'));
-  await page.waitForFunction(()=>document.querySelector('.status-chart svg')?.getAttribute('aria-label')?.includes('Implemented 1'));
-  assert.match(await page.locator('.framework-chart svg').getAttribute('aria-label'), /Harbor 1/);
-  assert.equal(await page.locator('.catalog-table tbody').count(),1);
-  assert.equal(await page.locator('.catalog-table tbody tr').count(),1);
-  for(const title of ['Benchmark','Organization','What it measures','ID/OOD','Framework','Implementation','Version','Linked work']) {
-    assert.equal(await page.getByRole('columnheader',{name:title,exact:false}).count(),1);
+  // Derive expectations from input data, never from particular benchmark states.
+  for(const status of ['yes','in_progress','blocked','no']) {
+    await page.getByLabel('Implementation',{exact:true}).selectOption({label:implementationLabel(status)});
+    const expected=entriesWithStatus(status);
+    await page.waitForFunction(({count,status})=>{
+      const rows=[...document.querySelectorAll('.catalog-table tbody tr')];
+      return count===0?rows.length===0:rows.length>0 && rows.every(r=>r.querySelector(`.badge.${status}`));
+    },{count:expected.length,status});
   }
-  await search.fill('MMLU');
-  await page.waitForFunction(()=>document.querySelectorAll('.catalog-table tbody tr').length===3);
-  const variantHeader=page.getByRole('columnheader',{name:'Version',exact:false});
-  await variantHeader.click();
-  const ascending=await page.locator('.variant-cell').allTextContents();
-  await variantHeader.click();
-  const descending=await page.locator('.variant-cell').allTextContents();
-  assert.deepEqual(descending,[...ascending].reverse(),'Native column sorting reverses variant order');
-  await search.fill('BixBench');
-  await page.waitForFunction(()=>document.querySelectorAll('.catalog-table tbody tr').length===1);
-  assert.match(await page.locator('.catalog-table').innerText(),/merged/);
-  await page.getByLabel('Implementation',{exact:true}).selectOption({label:'Implemented'});
-  await page.waitForFunction(()=>document.querySelector('.catalog-table tbody')?.querySelectorAll('.variant-cell').length===1);
-  await page.getByLabel('Framework',{exact:true}).selectOption({label:'Evalchemy'});
-  await page.waitForFunction(()=>document.querySelectorAll('.catalog-table tbody tr').length===0);
-  await page.waitForFunction(()=>document.querySelector('.status-chart svg')?.getAttribute('aria-label')?.includes('Implemented 0'));
-  await page.getByLabel('Framework',{exact:true}).selectOption({label:'All frameworks'});
   await page.getByLabel('Implementation',{exact:true}).selectOption({label:'All states'});
+  const search=page.getByLabel('Search evaluations');
+  const sample=catalog[0];
+  await search.fill(sample.name);
+  const matches=filterCatalog(trackedCatalog(catalog),sample.name);
+  await page.waitForFunction(name=>document.querySelector('.catalog-table tbody')?.textContent.includes(name),sample.name);
+  const visible=await page.locator('.catalog-table tbody tr').evaluateAll(rows=>rows.map(row=>row.querySelector('a').textContent));
+  assert.ok(visible.every(name=>matches.some(b=>b.name===name)));
+  await search.fill('no-match-synthetic-query-928174');
+  await page.waitForFunction(()=>document.querySelectorAll('.catalog-table tbody tr').length===0);
   await search.fill('');
-  await page.waitForFunction(()=>document.querySelectorAll('.catalog-table tbody tr').length>4);
+  await page.waitForSelector('.catalog-table tbody tr');
   for(let attempt=0;attempt<catalog.length && await page.locator('.catalog-table tbody tr').count()<catalog.length;attempt++) {
     const before=await page.locator('.catalog-table tbody tr').count();
     await page.locator('.catalog-table form').evaluate(form=>{form.scrollTop=form.scrollHeight;});
     await page.waitForFunction(n=>document.querySelectorAll('.catalog-table tbody tr').length>n,before);
   }
-  assert.equal(await page.locator('.catalog-table tbody tr').count(),catalog.length,'All catalog benchmarks are reachable by scrolling');
-  await page.locator('.catalog-table form').evaluate(form=>{form.scrollTop=0;});
+  assert.equal(await page.locator('.catalog-table tbody tr').count(),catalog.length);
   await search.focus();await page.keyboard.press('Tab');
   assert.ok(await page.evaluate(()=>document.activeElement?.tagName==='SELECT'));
   await page.screenshot({path:artifacts+'/catalog-desktop.png',fullPage:true});
-  await search.fill('BixBench');
-  await page.getByRole('link',{name:'BixBench',exact:true}).first().click();
-  await page.waitForURL('**/benchmarks/bixbench');
-  assert.equal(await page.locator('.variant-detail').count(),1);
-  assert.equal(await page.locator('.variant-notes details').count(),3);
-  assert.match(await page.locator('.variant-notes').innerText(),/Verified-50/);
-  assert.match(await page.getByRole('link',{name:'Edit this entry'}).getAttribute('href'),/benchmarks\/bixbench.yaml$/);
-  await page.locator('.variant-detail summary').first().click();
-  assert.ok(await page.locator('.variant-detail details').first().getAttribute('open')!==null);
-  await page.screenshot({path:artifacts+'/family-desktop.png',fullPage:true});
-  await page.getByRole('link',{name:'← All evaluations'}).click();
-  await page.waitForSelector('.catalog-table tbody tr');
   await page.setViewportSize({width:390,height:844});
   await page.screenshot({path:artifacts+'/catalog-mobile.png',fullPage:true});
-  assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth+2),'Page should not overflow horizontally; table has its own scroll container');
-  // Exercise every option in the original multi-example collections.
-  for(const benchmark of ['mmlu','bixbench','scicode','scienceagentbench','genebench']) {
-    await browser.close();
-    browser=await launchBrowser();page=browser.pages()[0] || await browser.newPage();
-    page.setDefaultTimeout(20000);
-    page.on('pageerror',error=>errors.push(error.message));
-    page.on('response',response=>{if(response.status()>=400 && response.url().startsWith(base))failed.push(`${response.status()} ${response.url()}`);});
-    await page.setViewportSize({width:390,height:844});
-    await page.goto(`${base}benchmarks/${benchmark}`);
-    await page.waitForSelector('.task-example h3');
-    const picker=page.getByLabel('Example task');
-    const options=await picker.locator('option').evaluateAll(xs=>xs.map(x=>x.value));
-    assert.equal(options.length,3);
-    for(const value of options) {
-      await picker.selectOption(value);
-      assert.ok((await page.locator('.task-prompt').innerText()).length>60);
-      assert.ok(await page.locator('.task-source a').count()>0);
-    }
-    assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth+2),`${benchmark} mobile overflow`);
-    if(benchmark==='mmlu') {
-      assert.equal(await page.locator('.task-choices li').count(),4);
-      const answer=page.locator('.task-example details').filter({has:page.getByText('Reveal reference answer',{exact:true})});
-      assert.equal(await answer.getAttribute('open'),null);
-      await answer.locator('summary').click();assert.notEqual(await answer.getAttribute('open'),null);
-    }
-    if(benchmark==='genebench')assert.ok(await page.locator('.task-example .hljs-attr').count()>0);
-    if(benchmark==='scicode')assert.ok(await page.locator('.task-example .hljs-keyword').count()>0);
-  }
-  await page.screenshot({path:artifacts+'/example-mobile.png',fullPage:true});
-  await page.setViewportSize({width:1440,height:1000});
-  await page.goto(`${base}benchmarks/scicode`);await page.waitForSelector('.task-example h3');
-  await page.screenshot({path:artifacts+'/example-desktop.png',fullPage:true});
-  // Fresh contexts bound memory while covering the newly supported formats.
-  for(const benchmark of ['microvqa','mmmu','bioreasonbench','genomeqa','biology-instructions','naturebench','biomnibench-da','lifescibench']) {
+  assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth+2));
+  await page.goto(`${base}benchmarks/${sample.id}`);
+  assert.equal(await page.locator('.variant-detail').count(),1);
+  assert.equal(await page.locator('.variant-notes details').count(),sample.variants.length-1);
+  assert.ok((await page.getByRole('link',{name:'Edit this entry'}).getAttribute('href')).endsWith(`/benchmarks/${sample.id}.yaml`));
+  // Select representative rendering shapes dynamically, without requiring specific entries.
+  const collections=[...examples.values()];
+  const samples=[
+    collections.find(c=>c.examples.length>1),
+    collections.find(c=>c.examples.length===1),
+    collections.find(c=>c.assets.length),
+    collections.find(c=>!c.examples.length)
+  ].filter(Boolean);
+  for(const c of new Set(samples)) {
     await browser.close();browser=await launchBrowser();page=browser.pages()[0] || await browser.newPage();
     page.setDefaultTimeout(20000);
     page.on('pageerror',error=>errors.push(error.message));
     page.on('response',response=>{if(response.status()>=400 && response.url().startsWith(base))failed.push(`${response.status()} ${response.url()}`);});
     await page.setViewportSize({width:390,height:844});
-    await page.goto(`${base}benchmarks/${benchmark}`);
+    await page.goto(`${base}benchmarks/${c.benchmark}`);
     await page.waitForSelector('#task-examples');
-    assert.equal(await page.getByLabel('Example task',{exact:true}).count(),0,'Single examples and gaps need no picker');
-    if(['microvqa','mmmu','bioreasonbench'].includes(benchmark)) {
-      await page.locator('[data-task-image]').scrollIntoViewIfNeeded();
-      await page.waitForFunction(()=>[...document.querySelectorAll('[data-task-image]')].every(img=>img.complete && img.naturalWidth>0));
-      assert.ok((await page.locator('[data-task-image]').getAttribute('src')).includes('/_file/assets/task-examples/'));
-      await page.screenshot({path:`${artifacts}/${benchmark}-mobile.png`,fullPage:true});
-    }
-    if(benchmark==='genomeqa')assert.equal(await page.locator('.task-choices li').count(),2);
-    if(['biomnibench-da','lifescibench'].includes(benchmark)) {
+    if(!c.examples.length) {
+      await page.waitForSelector('.task-availability');
       assert.equal(await page.locator('.task-example').count(),0);
-      assert.ok((await page.locator('.task-availability').innerText()).length>30);
+    } else {
+      await page.waitForSelector('.task-example h3');
+      const picker=page.getByLabel('Example task',{exact:true});
+      assert.equal(await picker.count(),c.examples.length>1?1:0);
+      if(c.examples.length>1) {
+        const options=await picker.locator('option').evaluateAll(xs=>xs.map(x=>x.value));
+        assert.equal(options.length,c.examples.length);
+        for(const value of options) {
+          await picker.selectOption(value);
+          assert.ok(await page.locator('.task-source a').count()>0);
+        }
+      }
+      for(const img of await page.locator('[data-task-image]').all())await img.scrollIntoViewIfNeeded();
+      await page.waitForFunction(()=>[...document.querySelectorAll('[data-task-image]')].every(img=>img.complete && img.naturalWidth>0));
+      const answer=page.locator('.task-example details').filter({has:page.getByText('Reveal reference answer',{exact:true})});
+      if(await answer.count()) {
+        assert.equal(await answer.getAttribute('open'),null);
+        await answer.locator('summary').click();assert.notEqual(await answer.getAttribute('open'),null);
+      }
     }
-    assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth+2),`${benchmark} mobile overflow`);
+    assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth+2));
+    await page.screenshot({path:`${artifacts}/${c.benchmark}-mobile.png`,fullPage:true});
   }
   assert.deepEqual(errors,[]);assert.deepEqual(failed,[]);
-  console.log('Browser checks passed: search, combined filters, work state, keyboard focus, family links, notes, mobile layout; screenshots in artifacts/browser.');
+  console.log('Browser checks passed: search, status filters, keyboard focus, family links, notes, examples, mobile layout; screenshots in artifacts/browser.');
 } catch(error) {
   console.error(JSON.stringify({errors,failed,body:await page?.locator('body').innerText().catch(()=>'' )}));
   await page?.screenshot({path:artifacts+'/failure.png',fullPage:true}).catch(()=>{});

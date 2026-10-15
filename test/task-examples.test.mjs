@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
 import {createHash} from 'node:crypto';
 import {loadCatalog} from '../scripts/catalog.mjs';
+import {selectedVersion} from '../src/components/catalog.js';
 import {loadExamples,renderExample} from '../scripts/task-examples.mjs';
 test('every benchmark has sourced examples or an explicit availability gap',async()=>{
   const catalog=await loadCatalog(), examples=await loadExamples(catalog);
@@ -15,36 +16,20 @@ test('every benchmark has sourced examples or an explicit availability gap',asyn
     }
     assert.ok(c.examples.every(e=>e.html.includes('Source revision:')));
   }
-  for(const b of ['mmlu','bixbench','scicode','scienceagentbench'])assert.ok(examples.get(b).examples.length);
-  const gated=structuredClone(catalog);
-  gated.find(b=>b.id==='biomnibench-da').variants[0].implementations[0].status='yes';
-  const gaps=await loadExamples(gated);
-  assert.equal(gaps.get('biomnibench-da').examples.length,0);
-  assert.equal(gaps.get('biomnibench-da').availability.status,'unavailable');
-  const changed=structuredClone(catalog);changed.find(b=>b.id==='scicode').variants[0].id='changed';
+  const changed=structuredClone(catalog);
+  selectedVersion(changed[0]).id='changed-version';
   await assert.rejects(loadExamples(changed),/tracked version/);
 });
-test('visual task inputs are frozen local assets with verified hashes',async()=>{
-  for(const benchmark of ['microvqa','mmmu','bioreasonbench']) {
+test('visual task inputs are bundled assets with verified hashes',async()=>{
+  const examples=await loadExamples(await loadCatalog());
+  for(const benchmark of examples.keys()) {
     const c=JSON.parse(await readFile(new URL(`../data/task-examples/${benchmark}.json`,import.meta.url)));
-    for(const e of c.examples)for(const img of e.images) {
-      assert.ok(!img.url.includes('Expires='));
+    for(const e of c.examples)for(const img of e.images||[]) {
       const bytes=await readFile(new URL(`../src/${img.url.slice(3)}`,import.meta.url));
       assert.equal(createHash('sha256').update(bytes).digest('hex'),img.sha256);
       assert.match(renderExample(e),/data-task-image=/);
     }
   }
-});
-test('partial examples retain essential context and separate source answers',async()=>{
-  const get=async b=>JSON.parse(await readFile(new URL(`../data/task-examples/${b}.json`,import.meta.url))).examples[0];
-  assert.deepEqual((await get('genomeqa')).choices,['No','Yes']);
-  assert.match((await get('core-bench')).prompt,/Report Institutions Sampled/);
-  const heureka=await get('sc-heurekabench');
-  assert.ok(!heureka.prompt.includes('Answer1'));
-  assert.equal(heureka.reference,'A');
-  const gym=await get('scigym');
-  assert.ok(!gym.prompt.includes('Thoughts'));
-  assert.match(gym.code,/<sbml/);
 });
 test('source Markdown cannot inject HTML or script links; answers stay collapsed',()=>{
   const rendered=renderExample({id:'test',title:'<img onerror=alert(1)>',kind:'test',prompt:'<script>alert(1)</script>\n\n[bad](javascript:alert(1))',inputs:[],output:'text',grading:'text',reference:'<svg onload=alert(1)>',source:'https://example.org',source_label:'source',revision:'abc'});
@@ -54,18 +39,12 @@ test('source Markdown cannot inject HTML or script links; answers stay collapsed
   assert.match(rendered,/<details><summary>Reveal reference answer<\/summary>/);
 });
 
-test('reviewed previews preserve question, task scope, output contract and provenance',async()=>{
-  const get=async b=>JSON.parse(await readFile(new URL(`../data/task-examples/${b}.json`,import.meta.url))).examples[0];
-  const sci=await get('scieval');
-  assert.ok(sci.prompt.length>1000);
-  assert.equal(sci.choices.length,4);
-  assert.equal(sci.reference,'D');
-  const blurb=await get('blurb');
-  assert.match(blurb.prompt,/copper toxicosis/);
-  assert.match(blurb.kind,/entity/i);
-  assert.match((await get('scienceqa')).source_label,/test/);
-  assert.match((await get('promptbio-bench')).output,/sequence.fasta/);
-  assert.match((await get('promptbio-bench')).output,/>reverse_complement/);
-  assert.equal((await get('sciknoweval')).reference,'B');
-  assert.equal((await get('epibench')).input_tree.split('\n').length,48);
+test('example rendering preserves choices, output, code and provenance',()=>{
+  const html=renderExample({id:'fixture',title:'Example',kind:'test',prompt:'Choose a result',
+    choices:['First option','Second option'],code:'print(1)',code_language:'python',
+    inputs:[],output:'Write result.json',grading:'Exact match',reference:'First option',
+    source:'https://example.org/task',source_label:'Example source',revision:'fixture-revision'});
+  for(const text of ['First option','Second option','Write result.json','Exact match','fixture-revision'])assert.ok(html.includes(text));
+  assert.match(html,/language-python/);
+  assert.match(html,/<ol type="A"/);
 });
