@@ -68,6 +68,7 @@ test('tracked statuses require sourced reasons and active work links',()=>{
   delete v.implementations[0].assessment;
   assert.ok(validateCatalog(copy).some(e=>e.includes('sourced assessment')));
   const progress=structuredClone(catalog), active=selectedVersion(progress.find(b=>b.id==='genebench'));
+  active.implementations[0].status='in_progress';
   active.work=[];
   assert.ok(validateCatalog(progress).some(e=>e.includes('in-progress work')));
 });
