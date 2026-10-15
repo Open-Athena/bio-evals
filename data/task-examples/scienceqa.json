@@ -4,7 +4,7 @@
   "attribution": "UCLA; Allen Institute for AI; Arizona State University; source: derek-thomas/ScienceQA",
   "license": "cc-by-sa-4.0",
   "checked_at": "2026-10-15",
-  "selection": "One curated public source example; not a random or representative performance sample. Source split: validation. External datasets and evaluation environments are not bundled.",
+  "selection": "One curated public source example; not a random or representative performance sample. Source split: test. External datasets and evaluation environments are not bundled.",
   "examples": [
     {
       "id": "32",
@@ -15,7 +15,7 @@
       "output": "Choose an answer from the options.",
       "grading": "Multiple-choice accuracy using official split and answer extraction.",
       "source": "https://huggingface.co/datasets/derek-thomas/ScienceQA/tree/f18b0a70359ebfb41f658fd564208d0355b013f4",
-      "source_label": "default / validation / row 32",
+      "source_label": "default / test / row 32",
       "revision": "f18b0a70359ebfb41f658fd564208d0355b013f4",
       "choices": [
         "Chinese alligator",

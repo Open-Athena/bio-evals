@@ -70,6 +70,12 @@
       "url": "https://huggingface.co/datasets/openai/genebench-pro-public-package/resolve/eb75a3c0996b3cedcc9af685bad02fd166848fa2/problems/crispri_casrx_transcript_vs_locus/eval_config.json",
       "sha256": "8b1e141ab84ba981e09884babbcb7593ccf8091dbfb3b3994cd251a43502ddd3",
       "bytes": 2656
+    },
+    {
+      "url": "https://www.ncbi.nlm.nih.gov/CBBresearch/Dogan/DISEASE/NCBItestset_corpus.zip",
+      "sha256": "b978442f39c739deb6619c70e7b07327d9eb1b71aff64996c02a592435583f46",
+      "bytes": 60234,
+      "checked_at": "2026-10-15"
     }
   ]
 }

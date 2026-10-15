@@ -23,13 +23,13 @@
         "They break down thiol and selenol metabolites",
         "They catalyze the formation of thiol and selenol metabolites"
       ],
-      "reference_note": "No reference answer is included in this public preview.",
       "extra_sources": [
         {
           "label": "Source viewer query (may change)",
           "url": "https://datasets-server.huggingface.co/rows?dataset=hicai-zju%2FSciKnowEval&config=v2&split=test&offset=0&length=30"
         }
-      ]
+      ],
+      "reference": "B"
     }
   ],
   "source_record_sha256": "1bc6a4c5bf580935107fa7f2c1a92c15feb05d96f7fc06d326f13141f5c089a5",

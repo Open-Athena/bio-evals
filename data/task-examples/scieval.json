@@ -9,15 +9,22 @@
     {
       "id": "2794a4fd04a6a0731c7ef0688083e850",
       "title": "SciEval — biology example",
-      "kind": "Source task",
-      "prompt": "Given a question and four options, please select the right answer. Your answer should be \"A\", \"B\", \"C\" or \"D\". Please directly give the answer without any explanation.",
+      "kind": "Multiple choice",
+      "prompt": "Given a question and four options, please select the right answer. Your answer should be \"A\", \"B\", \"C\" or \"D\". Please directly give the answer without any explanation.\n\nA 68-year-old woman presents with an intermittent throbbing headache with an onset approximately 3 weeks ago. The pain is bilateral, “band-like,” and extends to the neck. The patient rates the 4 points out of 10 on a visual scale. The headache is not accompanied by nausea, vomiting, photophobia, or phonophobia, and is not aggravated by movements, but gets worse when the patient coughs or laughs. The headache has persisted throughout the day and is usually worse in the morning an hour after she has breakfast and taken her medications. The patient was diagnosed with stage 1 arterial hypertension 2 years ago and stable angina pectoris 3 weeks ago. Currently, she takes aspirin (81 mg once daily), rosuvastatin (10 mg once daily), lisinopril (20 mg once daily), and isosorbide mononitrate (60 mg once daily). She has been menopausal for the last 15 years. In addition to her chief complaint, she also notes that she had a runny nose with a temperature elevation approximately 3 weeks ago, and her headache was linked to that acute illness. The vital signs are as follows: blood pressure 135/80 mm Hg, heart rate 76/min, respiratory rate 14/min, and temperature 36.5℃ (97.7℉). The physical examination reveals S2 accentuation that is best heard in the second intercostal space at the right sternal border. Palpation of the paranasal sinuses is painless. The neurologic exam shows no focal symptoms, no pain on palpation of the trigeminal points, and no meningeal symptoms. What is the most likely mechanism underlying the patient’s headaches?",
       "inputs": [],
-      "output": "Follow the requested answer or artifact format in the task.",
+      "output": "Return A, B, C, or D without explanation.",
       "grading": "Official task-specific answer accuracy and open-response scoring.",
       "source": "https://raw.githubusercontent.com/OpenDFM/SciEval/aa61a9dfe75f55145492517fac0b7f05220b0d72/scieval-dev.json",
       "source_label": "scieval-dev.json",
       "revision": "aa61a9dfe75f55145492517fac0b7f05220b0d72",
-      "reference": "[\n  \"D\"\n]"
+      "reference": "D",
+      "choices": [
+        "Meningeal irritation by blood products originating from a chronic subdural hematoma",
+        "Dissection of an intracerebral vessel",
+        "Meningeal irritation by a growing intracranial neoplasm",
+        "Dilation of the intracerebral arterioles"
+      ],
+      "scope": "Public development-split question; native response instructions are included."
     }
   ],
   "source_record_sha256": "d936115ea4a2b9e72f319c031b15f01050b7b3b364d68f714d400b002a0f56ae"

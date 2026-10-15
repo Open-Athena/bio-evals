@@ -8,7 +8,9 @@
 .catalog-table .badge.category-badge { color:var(--theme-foreground); display:inline-flex; align-items:center; gap:6px; }
 .category-swatch { width:10px; height:10px; border-radius:2px; flex:none; }
 
-#observablehq-header { font-size: 13px; }
+#observablehq-header { font-size:13px; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:8px; }
+.theme-preference { display:inline-flex; align-items:center; gap:6px; }
+.theme-preference select { font:inherit; color:var(--theme-foreground); background:var(--theme-background-alt); border:1px solid var(--theme-foreground-fainter); border-radius:4px; padding:3px 6px; }
 .muted, .provenance { color: var(--theme-foreground-muted); font-size: 13px; }
 .badge { display:inline-block; border:1px solid var(--theme-foreground-faint); border-radius:4px; padding:1px 6px; font-size:12px; white-space:nowrap; }
 .badge.yes, .badge.merged { color:var(--theme-green); }

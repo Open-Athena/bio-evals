@@ -48,3 +48,19 @@ test('source Markdown cannot inject HTML or script links; answers stay collapsed
   assert.ok(!rendered.includes('<svg'));
   assert.match(rendered,/<details><summary>Reveal reference answer<\/summary>/);
 });
+
+test('reviewed previews preserve question, task scope, output contract and provenance',async()=>{
+  const get=async b=>JSON.parse(await readFile(new URL(`../data/task-examples/${b}.json`,import.meta.url))).examples[0];
+  const sci=await get('scieval');
+  assert.ok(sci.prompt.length>1000);
+  assert.equal(sci.choices.length,4);
+  assert.equal(sci.reference,'D');
+  const blurb=await get('blurb');
+  assert.match(blurb.prompt,/copper toxicosis/);
+  assert.match(blurb.kind,/entity/i);
+  assert.match((await get('scienceqa')).source_label,/test/);
+  assert.match((await get('promptbio-bench')).output,/sequence.fasta/);
+  assert.match((await get('promptbio-bench')).output,/>reverse_complement/);
+  assert.equal((await get('sciknoweval')).reference,'B');
+  assert.equal((await get('epibench')).input_tree.split('\n').length,48);
+});

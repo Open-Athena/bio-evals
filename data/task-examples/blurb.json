@@ -1,31 +1,40 @@
 {
   "benchmark": "blurb",
   "version": "blurb-non-qa-task-families",
-  "attribution": "Microsoft BLURB; underlying example by the PubMedQA authors",
-  "license": "See source terms",
+  "attribution": "Microsoft Research (BLURB); Rezarta Islamaj Dogan, Robert Leaman, Zhiyong Lu and NCBI Disease corpus annotators.",
+  "license": "NCBI Disease corpus public-domain notice; see source terms",
   "checked_at": "2026-10-15",
-  "selection": "One example from the PubMedQA component dataset. This illustrates a BLURB task type; membership in the exact BLURB evaluation split has not been verified.",
+  "selection": "One title excerpt from the official NCBI Disease test corpus, a non-QA BLURB component. Native BLURB tokenization and full-document evaluation are not reproduced.",
   "examples": [
     {
-      "id": "21645374",
-      "title": "PubMedQA — labeled abstract QA example",
-      "kind": "Source task",
-      "prompt": "Programmed cell death (PCD) is the regulated death of cells within an organism. The lace plant (Aponogeton madagascariensis) produces perforations in its leaves through PCD. The leaves of the plant consist of a latticework of longitudinal and transverse veins enclosing areoles. PCD occurs in the cells at the center of these areoles and progresses outwards, stopping approximately five cells from the vasculature. The role of mitochondria during PCD has been recognized in animals; however, it has been less studied during PCD in plants.\n\nThe following paper elucidates the role of mitochondrial dynamics during developmentally regulated PCD in vivo in A. madagascariensis. A single areole within a window stage leaf (PCD is occurring) was divided into three areas based on the progression of PCD; cells that will not undergo PCD (NPCD), cells in early stages of PCD (EPCD), and cells in late stages of PCD (LPCD). Window stage leaves were stained with the mitochondrial dye MitoTracker Red CMXRos and examined. Mitochondrial dynamics were delineated into four categories (M1-M4) based on characteristics including distribution, motility, and membrane potential (ΔΨm). A TUNEL assay showed fragmented nDNA in a gradient over these mitochondrial stages. Chloroplasts and transvacuolar strands were also examined using live cell imaging. The possible importance of mitochondrial permeability transition pore (PTP) formation during PCD was indirectly examined via in vivo cyclosporine A (CsA) treatment. This treatment resulted in lace plant leaves with a significantly lower number of perforations compared to controls, and that displayed mitochondrial dynamics similar to that of non-PCD cells.\n\nDo mitochondria play a role in remodelling lace plant leaves during programmed cell death?",
+      "id": "9949209-title",
+      "title": "NCBI Disease: identify disease mentions",
+      "kind": "Named-entity recognition",
+      "scope": "Source corpus test-document title excerpt. This is an annotation task, not an author-written LLM prompt.",
+      "prompt": "Genetic mapping of the copper toxicosis locus in Bedlington terriers to dog chromosome 10, in a region syntenic to human chromosome region 2p13-p16.",
       "inputs": [],
-      "output": "Follow the requested answer or artifact format in the task.",
-      "grading": "Native likelihood accuracy over yes/no/maybe; deterministic reference label.",
-      "source": "https://raw.githubusercontent.com/pubmedqa/pubmedqa/1cbae8e92f72f20c8d3747cbb3bf5bc53554d997/data/ori_pqal.json",
-      "source_label": "data/ori_pqal.json",
-      "revision": "1cbae8e92f72f20c8d3747cbb3bf5bc53554d997",
-      "reference": "yes",
-      "scope": "Component-dataset example, not a verified BLURB test-split record",
+      "output": "Identify disease mention spans. Offsets in this preview are zero-based and end-exclusive, relative to the title.",
+      "grading": "BLURB uses entity-level F1 for disease mentions. The reference also preserves source mention types and concept IDs as metadata; concept normalization is not part of this BLURB score.",
+      "reference": "[\n  {\n    \"start\": 23,\n    \"end\": 39,\n    \"text\": \"copper toxicosis\",\n    \"source_mention_type\": \"Modifier\",\n    \"source_concept_id\": \"OMIM:215600\"\n  }\n]",
+      "reference_language": "json",
+      "source": "https://www.ncbi.nlm.nih.gov/CBBresearch/Dogan/DISEASE/NCBItestset_corpus.zip",
+      "source_label": "NCBItestset_corpus.txt / PMID 9949209 / title",
+      "revision": "archive SHA-256 b978442f39c739deb6619c70e7b07327d9eb1b71aff64996c02a592435583f46",
       "extra_sources": [
         {
-          "label": "BLURB component tasks",
+          "label": "BLURB non-QA component tasks",
           "url": "https://microsoft.github.io/BLURB/tasks.html"
+        },
+        {
+          "label": "NCBI corpus and attribution",
+          "url": "https://www.ncbi.nlm.nih.gov/CBBresearch/Dogan/DISEASE/"
+        },
+        {
+          "label": "Public-domain notice",
+          "url": "https://www.ncbi.nlm.nih.gov/CBBresearch/Dogan/DISEASE/disclaimer.html"
         }
       ]
     }
   ],
-  "source_record_sha256": "35d5d2837f1b1e542c02086087c6231980fcbb2303ad80197de1773630fc919c"
+  "source_record_sha256": "ed500414097e35f3ec06b015fbbd6f2d4e42f0c7e294c711fdda063b90033455"
 }

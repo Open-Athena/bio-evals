@@ -38,7 +38,7 @@ Checked 2026-10-15. Previews are on benchmark detail pages, not links in the cat
 | [BioTIER](biotier.json) | Unavailable | A standalone public task record was not located in the linked publication. A released example or author-provided preview is needed. |
 | [BioXArena](bioxarena.json) | Unavailable | The authors release the task data as an external package. A standalone task prompt has not yet been extracted for this preview. |
 | [BixBench v1.5, Harbor CLI](bixbench.json) | Inline | Curated task IDs bix-1-q1, bix-2-q1 and bix-20-q1 from the pinned 205-question CLI release. |
-| [BLURB — non-QA task families](blurb.json) | Inline | One example from the PubMedQA component dataset. This illustrates a BLURB task type; membership in the exact BLURB evaluation split has not been verified. |
+| [BLURB — non-QA task families](blurb.json) | Inline | One title excerpt from the official NCBI Disease test corpus, a non-QA BLURB component. Native BLURB tokenization and full-document evaluation are not reproduced. |
 | [C-Eval — biology](c-eval.json) | Inline | One curated public source example; not a random or representative performance sample. Source split: val. External datasets and evaluation environments are not bundled. |
 | [CARDBiomedBench](cardbiomedbench.json) | Inline | One curated public source example; not a random or representative performance sample. Source split: test. External datasets and evaluation environments are not bundled. |
 | [CellBench (CellVoyager)](cellbench-cellvoyager.json) | Inline | One curated public example. Published task context, not the full agent system prompt. External datasets and evaluation environments are not bundled. |
@@ -82,7 +82,7 @@ Checked 2026-10-15. Previews are on benchmark detail pages, not links in the cat
 | [SciCUEval — biology / biomedicine](scicueval.json) | Inline | One curated public example. Question and choices only; the long source-paper context is linked, not bundled. External datasets and evaluation environments are not bundled. |
 | [ScienceAgentBench, bioinformatics](scienceagentbench.json) | Inline | Curated bioinformatics instances 11, 69, and 85 from the original annotation CSV used by the Harbor path, not the later verified split. |
 | [ScienceArena — biology](sciencearena.json) | Unavailable | A standalone task record for the biology subset was not located in the public paper. Source question pages and their mapping to the benchmark are needed. |
-| [ScienceQA — biology](scienceqa.json) | Inline | One curated public source example; not a random or representative performance sample. Source split: validation. External datasets and evaluation environments are not bundled. |
+| [ScienceQA — biology](scienceqa.json) | Inline | One curated public source example; not a random or representative performance sample. Source split: test. External datasets and evaluation environments are not bundled. |
 | [SciEval — biology](scieval.json) | Inline | One curated public source example; not a random or representative performance sample. External datasets and evaluation environments are not bundled. |
 | [SciFact — LLM protocol](scifact.json) | Inline | One curated public example. Development claim with one cited evidence abstract; not a full-corpus retrieval task. External datasets and evaluation environments are not bundled. |
 | [SciGym](scigym.json) | Inline | One curated public example. Initial task and incomplete model extracted from a public trajectory; solver thoughts and attempts omitted. External datasets and evaluation environments are not bundled. |

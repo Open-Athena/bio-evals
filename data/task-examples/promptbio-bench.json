@@ -12,7 +12,7 @@
       "kind": "Source task",
       "prompt": "I have a forward sequence, can you help me convert it to reverse complementary sequence? The sequence is: AATTGGGACCAACACTAGAATATCACCCTCCCTCTGGTCCTGAGGGAGAGGAATCCTCCTGGGTTTCCAGATCCTG",
       "inputs": [],
-      "output": "Follow the requested answer or artifact format in the task.",
+      "output": "Save `sequence.fasta` (fasta). FASTA with header >reverse_complement",
       "grading": "LLM-assisted file matching/strategy selection + format-specific comparison; mean file similarity (0–1).",
       "source": "https://huggingface.co/datasets/promptbio-ai/promptbio-bench-data/resolve/078420b69e25c41c99a79135724b6ae6a6c82b69/tasks/a-1-1/task.json",
       "source_label": "tasks/a-1-1/task.json",
