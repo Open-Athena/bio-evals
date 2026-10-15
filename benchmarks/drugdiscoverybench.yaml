@@ -25,25 +25,22 @@ variants:
         url: https://github.com/scaleapi/DrugDiscoveryBench/tree/d58c703841abbad0ba1cc439488e15fbbeae3bd2/benchmark/tasks
     implementations:
       - framework: Harbor
-        status: blocked
+        status: in_progress
         evidence: []
         assessment:
-          checked_at: 2026-10-14
-          reason: The task release is public, but reference answers and rubrics require gated access. Confirm
-            authorized retrieval of grading assets before validating the Harbor tasks.
+          checked_at: 2026-10-15
+          reason: "Issue #266 tracks an evaluation-only adapter for all 82 tasks across seven capabilities. The inspected dataset supplies prompts, reference answers, and outcome/process rubrics, but no Harbor task definitions, runtime environments, or executable grader. Conversion, solver environments, isolated grading, and a three-task end-to-end pilot remain acceptance criteria; the issue does not establish completed execution or grading."
           sources:
-            - label: Audited framework revision
-              url: https://github.com/marin-community/harbor/tree/1d29d200414b6488a87192f50f617b1b5bd4b6f4/adapters
-            - label: Access or release blocker
+            - label: Evaluation-only adapter scope and acceptance criteria
+              url: https://github.com/marin-community/harbor/issues/266
+            - label: Gated dataset
               url: https://huggingface.co/datasets/ScaleAI/DrugDiscoveryBench
-    work: []
+    work:
+      - https://github.com/marin-community/harbor/issues/266
     notes:
-      - "Access: Public Harbor tasks; reference answers/rubrics require gated
-        ScaleAI/DrugDiscoveryBench access."
-      - "Grading: LLM rubric judge; weighted outcome score 0–100, pass only at 100; process rubric
-        reported separately."
-      - "Limitations: Official Harbor release; promising comparison candidate. Community Daytona
-        importer has a syntax error at the audited pin."
+      - "Access: Dataset conditions must be accepted. Keep ground truth and rubrics private, exclude the dataset from training and fine-tuning, and distribute adapter code without gated content."
+      - "Grading: Planned verifier scores final answers against outcome rubrics and recorded agent trajectories against process rubrics, reporting them separately. Retain criterion judgments and judge configuration; treat the judge as an adaptation unless original-protocol parity is established."
+      - "Limitations: The inspected dataset revision 10cbbbb5da6f0fa46a6567c7cae0cbb3baa6c7cc lacks Harbor task definitions, runtime environments, and an executable grader. Issue #266 scopes a three-task pilot; a full benchmark run is outside its scope."
     provenance:
       - sheet: Agentic (Harbor)
         gid: 846608904
