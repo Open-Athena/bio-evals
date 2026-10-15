@@ -23,24 +23,22 @@ variants:
         url: https://github.com/josancamon19/sci-benches/tree/1fc392943dce9c847a62574dcf4e4c6ad943d2ab/src/compbiobench
     implementations:
       - framework: Harbor
-        status: no
+        status: blocked
         evidence: []
         assessment:
-          checked_at: 2026-10-14
-          reason: No matching CompBioBench integration was found in the audited Harbor registry. Port the
-            selected CompBioBench scope and establish an end-to-end graded run. This finding is
-            limited to the checked framework revisions, not all external implementations.
+          checked_at: 2026-10-15
+          reason: "Issue #265 records that integration is not planned under the current official scoring interface: submissions require all 100 answers and expose aggregate results without per-question verdicts for Harbor trial rewards. Unblock when maintainers provide per-question verdicts for batch submissions, a supported per-question grading API, or access to the official answer key and grader."
           sources:
-            - label: Audited framework revision
-              url: https://github.com/marin-community/harbor/tree/1d29d200414b6488a87192f50f617b1b5bd4b6f4/adapters
-    work: []
+            - label: Official scoring blocker and reopening criteria
+              url: https://github.com/marin-community/harbor/issues/265
+    work:
+      - https://github.com/marin-community/harbor/issues/265
     notes:
       - "Access: Public runner/inputs; HF login and answers to all 100 questions for hosted scoring;
         2 submissions/day at audit."
       - "Grading: Hosted exact-match scoring. Community verifier only collects answers; its fixed
         reward=0 is not correctness."
-      - "Limitations: Community packaging covers 100 tasks; official hosted scoring remains
-        necessary."
+      - "Limitations: Community packaging covers 100 tasks. Exporting answers for official batch scoring can yield a benchmark-level score, but the current interface does not expose individual trial correctness rewards."
     provenance:
       - sheet: Agentic (Harbor)
         gid: 846608904
