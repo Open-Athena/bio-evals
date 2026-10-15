@@ -28,6 +28,11 @@ function link(label,href){const a=node('a',label);a.href=href;return a;}
 export function familyLink(f){return link(f.name,`./benchmarks/${f.id}`);}
 export const implementationLabel = status => ({yes:'Implemented',in_progress:'In progress',no:'To do',blocked:'Blocked'})[status];
 const implementationRank = status => ({yes:0,in_progress:1,no:2,blocked:3})[status];
+const categoryColor = key => ({
+  Evalchemy:'var(--framework-evalchemy)', Harbor:'var(--framework-harbor)',
+  yes:'var(--theme-green)', in_progress:'var(--theme-blue)',
+  no:'var(--theme-foreground-muted)', blocked:'var(--theme-red)'
+})[key] || 'var(--theme-foreground-muted)';
 export function catalogTable(families, snapshot, Inputs) {
   // Primitive column values let native Inputs.table sort the displayed content.
   const rows=families.flatMap(f=>f.variants.map(v=>({
@@ -49,11 +54,20 @@ export function catalogTable(families, snapshot, Inputs) {
         const a=link(v.name,`./benchmarks/${f.id}#${v.id}`);a.className='variant-cell';return a;
       },
       assignment:value=>node('span',value,'badge'),
+      framework:(_,index)=>{
+        const container=node('div',undefined,'framework-labels');
+        for(const framework of new Set(rows[index].detail.implementations.map(i=>i.framework))) {
+          const badge=node('span',framework,'badge framework-badge');
+          badge.style.color=categoryColor(framework);container.append(badge);
+        }
+        return container;
+      },
       implementation:(_,index)=>{
         const container=node('div');
         for(const i of rows[index].detail.implementations) {
           const line=node('div',undefined,'implementation-entry');
-          line.append(node('span',implementationLabel(i.status),`badge ${i.status}`));
+          const badge=node('span',implementationLabel(i.status),`badge ${i.status}`);
+          badge.style.color=categoryColor(i.status);line.append(badge);
           if(i.assessment) {
             const details=node('details',undefined,'status-reason');
             details.append(node('summary','Status details'),node('p',i.assessment.reason));
@@ -96,12 +110,11 @@ export function catalogCounts(benchmarks, field, domain) {
     count:benchmarks.filter(b=>b.variants.some(v=>v.implementations.some(i=>i[field]===key))).length}));
 }
 export function countChart(data, Plot, width, label) {
-  const colors={yes:'var(--theme-green)',in_progress:'var(--theme-blue)',no:'var(--theme-foreground-muted)',blocked:'var(--theme-red)'};
   return Plot.plot({width, height:170, marginLeft:100, marginRight:32, marginTop:8, marginBottom:30,
     ariaLabel:`${label}: ${data.map(d=>`${d.label} ${d.count}`).join(', ')}`,
     x:{domain:[0,Math.max(1,...data.map(d=>d.count))], label:'Benchmarks', grid:true, ticks:4, tickFormat:d=>Number.isInteger(d)?d:''},
     y:{domain:data.map(d=>d.label), label:null},
-    marks:[Plot.barX(data,{x:'count',y:'label',fill:d=>colors[d.key] || 'var(--theme-blue)',insetTop:5,insetBottom:5}),
+    marks:[Plot.barX(data,{x:'count',y:'label',fill:d=>categoryColor(d.key),insetTop:5,insetBottom:5}),
       Plot.text(data,{x:'count',y:'label',text:d=>String(d.count),textAnchor:'start',dx:5}),Plot.ruleX([0])]
   });
 }
