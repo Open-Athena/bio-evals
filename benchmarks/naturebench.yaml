@@ -28,15 +28,18 @@ variants:
         url: https://frontisai.github.io/NatureBench/
     implementations:
       - framework: Harbor
-        status: no
+        status: in_progress
         evidence: []
         assessment:
-          checked_at: 2026-10-14
-          reason: Author-provided Harbor task packages and runtime extensions are public. Validate this existing integration and establish a scoped end-to-end graded run in our setup; source availability and the native leaderboard alone do not establish that evidence. No NatureBench issue or PR was found in the Marin Harbor or Evalchemy forks during this check.
+          checked_at: 2026-10-15
+          reason: "Integration is tracked in issue #264, with an unvalidated local importer draft. Remaining work includes Docker Compose service-specific execution, verifier collection hooks and artifact collection from named services, a pinned importer, and the upstream timing extension. The issue reports no task payload downloads or evaluation launches; runtime validation and an explicitly authorized end-to-end graded pilot remain outstanding."
           sources:
+            - label: Integration scope and current status
+              url: https://github.com/marin-community/harbor/issues/264
             - label: Public Harbor adapter, extensions and execution guide
               url: https://github.com/FrontisAI/NatureBench/blob/0f80a67d47a56fcd08ab3f1f586159d264616e2f/harbor/README.md
-    work: []
+    work:
+      - https://github.com/marin-community/harbor/issues/264
     notes:
       - "Scope: Track the original Full 90-task release. It spans six scientific domains, not 90 biology tasks. A biology-only selection and its task count remain to be established."
       - "Access: Public source and converted Harbor packages; task data were not downloaded or executed for this catalog entry."
