@@ -25,22 +25,26 @@ variants:
         url: https://github.com/scaleapi/DrugDiscoveryBench/tree/d58c703841abbad0ba1cc439488e15fbbeae3bd2/benchmark/tasks
     implementations:
       - framework: Harbor
-        status: in_progress
+        status: blocked
         evidence: []
         assessment:
-          checked_at: 2026-10-15
-          reason: "Issue #266 tracks an evaluation-only adapter for all 82 tasks across seven capabilities. The inspected dataset supplies prompts, reference answers, and outcome/process rubrics, but no Harbor task definitions, runtime environments, or executable grader. Conversion, solver environments, isolated grading, and a three-task end-to-end pilot remain acceptance criteria; the issue does not establish completed execution or grading."
+          checked_at: 2026-10-16
+          reason: "Issue #266 and draft PR #269 are on standby pending an agreed shared web-search setup. Unblock by selecting an available provider, explicitly approving departures from the official Brave-backed setup, and checking interface, result-format and blocked-domain compatibility. All 82 prepared official task configurations passed offline validation, with only rubric files changed; runtime compatibility remains unvalidated and the pilot was cancelled before benchmark tasks ran."
           sources:
             - label: Evaluation-only adapter scope and acceptance criteria
               url: https://github.com/marin-community/harbor/issues/266
             - label: Gated dataset
               url: https://huggingface.co/datasets/ScaleAI/DrugDiscoveryBench
+            - label: Blocked task-preparation draft
+              url: https://github.com/marin-community/harbor/pull/269
     work:
       - https://github.com/marin-community/harbor/issues/266
+      - https://github.com/marin-community/harbor/pull/269
     notes:
       - "Access: Dataset conditions must be accepted. Keep ground truth and rubrics private, exclude the dataset from training and fine-tuning, and distribute adapter code without gated content."
-      - "Grading: Planned verifier scores final answers against outcome rubrics and recorded agent trajectories against process rubrics, reporting them separately. Retain criterion judgments and judge configuration; treat the judge as an adaptation unless original-protocol parity is established."
-      - "Limitations: The inspected dataset revision 10cbbbb5da6f0fa46a6567c7cae0cbb3baa6c7cc lacks Harbor task definitions, runtime environments, and an executable grader. Issue #266 scopes a three-task pilot; a full benchmark run is outside its scope."
+      - "Grading: Preparation preserves the official evaluator and hydrates rubric placeholders from the gated release. Together's GPT-OSS-120B judge is an agreed substitution and must be reported separately from the published judge configuration. Report outcome and process scores separately and distinguish grader failures from zero scores."
+      - "Limitations: Official Harbor tasks are prepared from pinned GitHub and gated Hugging Face sources. Offline configuration validation does not establish runtime execution or grading. A three-task pilot is optional and requires an explicitly approved setup; a full benchmark run remains outside issue #266's scope."
+      - "Search: No provider replacement or no-search evaluation is approved. Shared web-search exploration is tracked in https://github.com/marin-community/marin/issues/10189."
     provenance:
       - sheet: Agentic (Harbor)
         gid: 846608904
