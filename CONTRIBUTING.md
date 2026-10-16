@@ -36,6 +36,10 @@ changes may use a PR. GitHub Actions validates and deploys changes.
   `https://github.com/marin-community/harbor/pull/180`. No comment anchors or
   repository-only URLs. The daily refresh fetches state and assignees from
   these links; leave the list empty when there is no linked work.
+  Include only work specific to that benchmark's integration, evaluation, or
+  corrections. Keep shared infrastructure and agent debugging (such as compaction,
+  tokenization, or process cleanup) out of `work`; relevant limitations can remain
+  in the assessment or notes with supporting references.
 - Source dates live in `provenance`. Imported notes are historical evidence,
   not a claim of current access or validation. Refresh them as evidence arrives.
 

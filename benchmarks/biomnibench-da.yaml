@@ -59,9 +59,6 @@ variants:
     work:
       - https://github.com/marin-community/harbor/pull/184
       - https://github.com/marin-community/harbor/issues/181
-      - https://github.com/marin-community/harbor/issues/165
-      - https://github.com/Open-Athena/ortet-inference/issues/2
-      - https://github.com/marin-community/harbor/issues/261
     notes:
       - "Access: Authenticated access and task execution succeeded for the gated 50-task release,
         pinned to e1c8ca5e11a620087bc48d97888eb69176a1f235. Distinguish this release from the
