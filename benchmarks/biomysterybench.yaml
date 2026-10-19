@@ -20,35 +20,30 @@ variants:
       - label: Scorer / data
         url: https://huggingface.co/datasets/Anthropic/BioMysteryBench-full
       - label: Harbor / integration
-        url: https://github.com/josancamon19/sci-benches/tree/1fc392943dce9c847a62574dcf4e4c6ad943d2ab/src/biomistery_bench
+        url: https://github.com/marin-community/harbor/pull/162
     implementations:
       - framework: Harbor
-        status: in_progress
+        status: yes
         evidence:
-          - url: https://github.com/marin-community/harbor/issues/161#issuecomment-5804899659
-            scope: Ten-task development pilot with uniform v6 saved-answer grading. This demonstrates the
-              adapter path, not full 90-task coverage or native-score parity.
-            checked_at: 2026-10-14
+          - url: https://github.com/marin-community/harbor/issues/161
+            scope: "Development evaluation completed execution and protocol-v8 grading for 83 of 90 tasks, with no pending grades; seven storage-heavy tasks remain unrun. Evidence includes experiment-specific environment additions and one separately recorded judge-only recovery with a larger output budget. This is partial execution coverage, not a full-benchmark or held-out score; scoring parity is unverified."
+            checked_at: 2026-10-19
         assessment:
-          checked_at: 2026-10-14
-          reason: "Draft evaluation-only port #162 has a graded ten-task pilot. Full-suite resource
-            feasibility and review remain unfinished; gated access was obtained, so this is active
-            work rather than an unverified access blocker."
+          checked_at: 2026-10-19
+          reason: "Evaluation-only adapter PR #162 merged on October 19, 2026, and integration issue #161 is closed. The adapter provides pinned task conversion, a bioinformatics environment and an isolated verifier, with archived end-to-end execution and grading for 83 tasks. Seven storage-heavy tasks remain unrun; completing them is outside adapter acceptance."
           sources:
-            - label: Audited framework revision
-              url: https://github.com/marin-community/harbor/tree/1d29d200414b6488a87192f50f617b1b5bd4b6f4/adapters
-            - label: Open implementation PR
+            - label: Completed integration and development evaluation
+              url: https://github.com/marin-community/harbor/issues/161
+            - label: Merged implementation PR
               url: https://github.com/marin-community/harbor/pull/162
     work:
       - https://github.com/marin-community/harbor/pull/162
       - https://github.com/marin-community/harbor/issues/161
     notes:
-      - "Access: 90 gated, eval-only tasks; 5 previews. Community importer skips >1 GB archives by
-        default."
-      - "Grading: Community LLM judge uses answer rubric + trajectory/source-lookup compliance;
-        official equivalence unvalidated."
-      - "Limitations: Packaging and a community judge exist; access, judge fidelity and
-        source-lookup compliance remain blockers."
+      - "Access: 90 gated, evaluation-only tasks. Conversion preserves questions, inputs, rubrics, attribution and domain restrictions from a pinned release; benchmark material and evaluation artifacts remain outside Git and training data."
+      - "Grading: Protocol v8 uses Together DeepSeek V4.1 Flash to judge the answer, rubric and recorded tool-call names and arguments together. Reward requires correctness and no prohibited source lookup. Missing answers score zero when transcript collection succeeds; missing or oversized transcripts, context rejection, judge failures and recorded artifact-writer failures remain unscored."
+      - "Protocol limitations: Tool results and reasoning are omitted from judge input, so prohibited retrieval hidden in scripts or responses may escape detection; full transcripts remain archived. Scoring parity with the report's protocol is unverified."
+      - "Coverage: 83/90 tasks were graded, with seven storage-heavy tasks unrun and no grades pending. The development aggregate includes environment additions and one larger-output-budget judge-only recovery. It does not establish full-suite coverage, base-image support for every evaluated task, or held-out performance. No reduced-input benchmark variant was used."
     provenance:
       - sheet: Agentic (Harbor)
         gid: 846608904
