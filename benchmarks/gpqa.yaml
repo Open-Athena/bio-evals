@@ -9,16 +9,14 @@ sources:
   - label: Benchmark
     url: https://arxiv.org/abs/2311.12022
 notes:
-  - "Version selection needs review: GPQA Main / Extended — biology is the provisional tracked
-    scope; the source lists multiple task types or protocols without a single unambiguous default."
-  - "Other-version work: Evalchemy GPQADiamond has an open bounded-run grading failure
-    (https://github.com/marin-community/evalchemy/issues/201). It does not establish a failure of
-    the selected Main/Extended lm-eval path."
-selected_variant: gpqa-main-extended-biology
+  - "GPQA Diamond is the tracked version based on completed Marin evaluations. The full
+    198-question set includes biology; published results cover the full set rather than a separate
+    biology-only score."
+selected_variant: gpqa-diamond-biology
 variants:
   - id: gpqa-diamond-biology
     name: GPQA Diamond — biology
-    description: Graduate-level biology reasoning; 4-choice MCQ.
+    description: Graduate-level biology reasoning within the implemented 198-question Diamond set; 4-choice MCQ.
     creators:
       - New York University
       - Cohere
@@ -33,8 +31,26 @@ variants:
         url: https://github.com/marin-community/evalchemy/tree/f42990450edf4e694fe5a22b3d23ed09ab42da1e/eval/chat_benchmarks/GPQADiamond/eval_instruct.py
     implementations:
       - framework: Evalchemy
-        status: unknown
-        evidence: []
+        status: yes
+        evidence:
+          - url: https://github.com/marin-community/marin/issues/10199#issuecomment-6220303368
+            scope: "Completed GPQA-Diamond evaluations through Marin/Evalchemy. Published cell
+              statistics report graded results for the full 198-question set, including biology;
+              this is not a separately reported biology-only score."
+            checked_at: 2026-10-19
+        assessment:
+          checked_at: 2026-10-19
+          reason: "GPQA-Diamond is implemented and has completed scored Marin runs covering the
+            198-question set, which includes biology. Separate biology-only reporting is not required
+            for this implementation status. The open --limit aggregation bug affects bounded runs
+            and does not erase the completed full-set evaluation evidence."
+          sources:
+            - label: Marin GPQA-Diamond configuration
+              url: https://github.com/marin-community/marin/blob/6cd07c5cb49ea5f4fac6a54446bf0fbcf025b92e/experiments/evaluation/configs/evalchemy/gpqa-diamond.yaml
+            - label: Published graded cell statistics
+              url: https://gist.githubusercontent.com/penfever/8baa8321ad1d08ce514be90a25a5c0d2/raw/ad27185675b409a4c532b93138c53140d5eefd41/baseline_cell_statistics.csv
+            - label: Bounded-run aggregation issue
+              url: https://github.com/marin-community/evalchemy/issues/201
     work: []
     notes:
       - "Access: Native GPQADiamond base task; gated dataset access/terms. Full Diamond=198, biology
@@ -43,8 +59,10 @@ variants:
         aggregation."
       - "Limitations: Existing Marin ID eval. Subset uncertainty will be wider than full Diamond; no
         reclassification to OOD."
-      - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
-        notes are historical."
+      - "Coverage: Completed evaluations cover the full Diamond set, including biology. No separate
+        biology-only score was verified in the published results."
+      - "Maintenance: Evalchemy issue #201 records a --limit aggregation failure for bounded runs
+        (https://github.com/marin-community/evalchemy/issues/201); full-set scored runs are established."
     provenance:
       - sheet: Non-agentic (Evalchemy)
         gid: 776831399
@@ -74,7 +92,7 @@ variants:
           checked_at: 2026-10-14
           reason: "The pinned lm-eval dependency includes GPQA Main/Extended. Configure the biology subset and
             validate grading. Evalchemy issue #201 concerns the separate GPQADiamond custom path,
-            not this selected version."
+            not this Main/Extended version."
           sources:
             - label: Audited framework revision
               url: https://github.com/marin-community/evalchemy/tree/3bb8278078e7ad4b5a6b1f81e8a08db3dd206ae6/eval

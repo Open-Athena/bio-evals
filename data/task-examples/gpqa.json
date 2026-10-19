@@ -1,6 +1,6 @@
 {
   "benchmark": "gpqa",
-  "version": "gpqa-main-extended-biology",
+  "version": "gpqa-diamond-biology",
   "attribution": "New York University; Cohere; Anthropic",
   "license": "See linked source terms",
   "checked_at": "2026-10-15",
