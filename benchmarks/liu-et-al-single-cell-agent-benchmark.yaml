@@ -25,23 +25,28 @@ variants:
         url: https://github.com/lyyang01/bioagent-benchmark/tree/1605e6e38bd69307e2f7b68a4367de21043c89b6/evaluation
       - label: Harbor / integration
         url: https://github.com/marin-community/harbor/tree/abdd67137bcd6e5c44d682d0052fbd1190e63556/adapters
+      - label: Inputs / reference code / reference outputs
+        url: https://zenodo.org/records/17291196
     implementations:
       - framework: Harbor
         status: no
         evidence: []
         assessment:
-          checked_at: 2026-10-14
-          reason: No matching Liu et al. single-cell agent benchmark integration was found in the audited
-            Harbor registry. Port the selected Liu et al., single-cell agent benchmark scope and
-            establish an end-to-end graded run. This finding is limited to the checked framework
-            revisions, not all external implementations.
+          checked_at: 2026-10-21
+          reason: The authors publish the 50-task inputs, prompts, tool documents, reference code and
+            reference outputs on Zenodo, and the evaluation pipeline on GitHub. No missing-release
+            blocker was found. Stage the required assets and validate the selected Harbor execution
+            and scoring protocol; archive contents and native evaluation were not executed in this
+            review.
           sources:
-            - label: Audited framework revision
-              url: https://github.com/marin-community/harbor/tree/1d29d200414b6488a87192f50f617b1b5bd4b6f4/adapters
+            - label: Author release and dataset inventory
+              url: https://github.com/lyyang01/bioagent-benchmark/blob/1605e6e38bd69307e2f7b68a4367de21043c89b6/README.md
+            - label: Author-linked inputs and reference artifacts
+              url: https://zenodo.org/records/17291196
     work: []
     notes:
-      - "Access: Public evaluation code and reference analyses for 50 tasks; downloads/scorer
-        untested."
+      - "Access: Public evaluation code; authors deposit inputs, prompts, tool documents, reference
+        analyses and outputs at Zenodo record 17291196. Data staging and execution remain untested."
       - "Grading: LLM evaluation plus output consistency, code, execution, and knowledge-use
         metrics."
       - "Limitations: Workflow diagnostics. Separate from BioAgent Bench; process metrics do not

@@ -23,8 +23,13 @@ changes may use a PR. GitHub Actions validates and deploys changes.
   PR is insufficient. Keep incomplete/modified protocol coverage explicit.
   Active records require `assessment` with `checked_at`, `reason`, and `sources`.
   In-progress records require an issue/PR in `work`; blocked records explain the
-  concrete prerequisite and how to unblock it. To do includes validation of
-  existing code, not only writing a new adapter. Historical unselected records
+  concrete prerequisite and how to unblock it. Missing access to required data,
+  references or grading assets after source review is a blocker for the selected
+  scope; distinguish a release that was not located from one explicitly withheld.
+  Public subsets and supported hosted scorers may provide viable evaluation
+  routes, but keep their scope and access requirements explicit. To do includes
+  implementation and validation work when those prerequisites are available.
+  Historical unselected records
   may retain `unknown`, but it is not a permitted tracked status.
   Open port PRs remain in progress until the remaining integration work is done;
   pilot execution evidence can coexist with that stage. Maintenance issues do

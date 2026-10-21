@@ -23,8 +23,8 @@ variants:
     sources:
       - label: Benchmark
         url: https://doi.org/10.1101/2023.12.19.572483
-      - label: Scorer / data
-        url: https://doi.org/10.1101/2023.12.19.572483
+      - label: Author tasks / outputs / evaluation notebooks
+        url: https://github.com/Mangul-Lab-USC/BioLLMBench/tree/6b7e685c7bb88919ba5c1686f6b4f72977c74892
       - label: Evalchemy / integration
         url: https://github.com/marin-community/evalchemy/tree/ab8e78f12abb8ed0d1659f56c24f2e01f3c85b54/eval/chat_benchmarks
     implementations:
@@ -32,20 +32,24 @@ variants:
         status: no
         evidence: []
         assessment:
-          checked_at: 2026-10-14
-          reason: No matching BioLLMBench integration was found in the audited Evalchemy registry or its
-            pinned lm-eval task inventory. Port the selected BioLLMBench scope and establish an
-            end-to-end graded run. This finding is limited to the checked framework revisions, not
-            all external implementations.
+          checked_at: 2026-10-21
+          reason: "The author repository publishes task/response documents, reference materials, scored CSVs,
+            and analysis notebooks. Several
+            categories use expert scoring, while released notebooks aggregate scores or compute
+            task-specific metrics. Define and validate the fresh-response grading workflow before an
+            Evalchemy integration; no new external access blocker was established by this review."
           sources:
-            - label: Audited framework revision
-              url: https://github.com/marin-community/evalchemy/tree/3bb8278078e7ad4b5a6b1f81e8a08db3dd206ae6/eval
-            - label: Pinned lm-eval dependency
-              url: https://github.com/EleutherAI/lm-evaluation-harness/tree/6d642546f4688648fced259eb3302efd36ece5af/lm_eval/tasks
+            - label: Author release inventory
+              url: https://github.com/Mangul-Lab-USC/BioLLMBench/tree/6b7e685c7bb88919ba5c1686f6b4f72977c74892
+            - label: Released evaluation analysis
+              url: https://github.com/Mangul-Lab-USC/BioLLMBench/blob/6b7e685c7bb88919ba5c1686f6b4f72977c74892/code/Untitled.ipynb
+            - label: Released summarization metrics
+              url: https://github.com/Mangul-Lab-USC/BioLLMBench/blob/6b7e685c7bb88919ba5c1686f6b4f72977c74892/code/Untitled2.ipynb
     work: []
     notes:
-      - "Access: Paper identified; no authoritative complete runnable dataset/scorer release located
-        in this audit."
+      - "Access: Public author repository contains task/response documents, reference materials,
+        scored CSVs and analysis notebooks; fresh-response expert grading still needs a reproducible
+        workflow."
       - "Grading: Task-specific assessment, including expert review and code/output evaluation;
         executable scoring contract unverified."
       - "Limitations: Paper-reported evaluation suite. Mixed task formats cannot be reduced to one

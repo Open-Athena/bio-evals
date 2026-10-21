@@ -21,8 +21,8 @@ variants:
     sources:
       - label: Benchmark
         url: https://arxiv.org/abs/2605.15766
-      - label: Scorer / data
-        url: https://github.com/mbzuai-ai4bio/BioXArena/blob/29f88d4d573001405abf0694aee72d91c3f47e6c/README.md
+      - label: Author inputs / hosted scoring instructions
+        url: https://github.com/mbzuai-ai4bio/BioXArena/blob/ab2c691fd5bade09af336fcf39779c5ad4b77417/README.md
       - label: Harbor / integration
         url: https://github.com/marin-community/harbor/tree/abdd67137bcd6e5c44d682d0052fbd1190e63556/adapters
     implementations:
@@ -30,17 +30,25 @@ variants:
         status: no
         evidence: []
         assessment:
-          checked_at: 2026-10-14
-          reason: No matching BioXArena integration was found in the audited Harbor registry. Port the
-            selected BioXArena scope and establish an end-to-end graded run. This finding is limited
-            to the checked framework revisions, not all external implementations.
+          checked_at: 2026-10-21
+          reason: The current author README documents public inputs and official CodaBench submission scoring
+            for all 76 tasks; test labels remain private. Retain To do while checking competition
+            access, task-level score readback and Harbor reward compatibility. A failed browser
+            fetch of the competition page does not establish that hosted scoring is unavailable. If
+            per-task scoring cannot be obtained through a supported interface, record that specific
+            integration blocker before proceeding.
           sources:
-            - label: Audited framework revision
-              url: https://github.com/marin-community/harbor/tree/1d29d200414b6488a87192f50f617b1b5bd4b6f4/adapters
+            - label: Current author release and official submission instructions
+              url: https://github.com/mbzuai-ai4bio/BioXArena/blob/ab2c691fd5bade09af336fcf39779c5ad4b77417/README.md
+            - label: Author-linked scoring competition
+              url: https://www.codabench.org/competitions/18373/
     work: []
     notes:
-      - "Access: Public runner/inputs for 76 tasks; no verified complete local scorer."
-      - "Grading: Authors score predictions against private answers.csv; numerical metrics."
+      - "Access: Public inputs and runners; private test labels. Authors document CodaBench scoring,
+        but competition access and per-task reward readback were not verified in this review."
+      - "Grading: Submit predictions to the author-linked CodaBench competition. A complete local
+        scorer/answer key is not public; supported task-level scoring for Harbor needs
+        verification."
       - "Limitations: Biomedical ML across 9 domains; agent inference and task model fitting have
         separate costs."
     provenance:

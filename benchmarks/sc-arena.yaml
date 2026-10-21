@@ -32,24 +32,26 @@ variants:
         status: no
         evidence: []
         assessment:
-          checked_at: 2026-10-14
-          reason: No matching SC-Arena integration was found in the audited Evalchemy registry or its pinned
-            lm-eval task inventory. Port the selected SC-Arena scope and establish an end-to-end
-            graded run. This finding is limited to the checked framework revisions, not all external
-            implementations.
+          checked_at: 2026-10-21
+          reason: "The released data match the paper counts: 608 cell profiles shared by
+            annotation/captioning/generation, 138 perturbation cases, and 254 scientific QA pairs
+            nested under 100 articles. Reference fields, evaluators and knowledge resources are
+            public. No full-data access blocker was found. Port and validate the five task
+            protocols, including judge configuration, knowledge-resource loading and the documented
+            prompt-filename fix; no inference or scoring was run."
           sources:
-            - label: Audited framework revision
-              url: https://github.com/marin-community/evalchemy/tree/3bb8278078e7ad4b5a6b1f81e8a08db3dd206ae6/eval
-            - label: Pinned lm-eval dependency
-              url: https://github.com/EleutherAI/lm-evaluation-harness/tree/6d642546f4688648fced259eb3302efd36ece5af/lm_eval/tasks
+            - label: Author release data and evaluators
+              url: https://github.com/SUAT-AIRI/SC-Arena/tree/f4480a220fa4872c4c747f52f8fc784401c592fc
+            - label: Paper dataset counts (Table 2)
+              url: https://arxiv.org/html/2602.23199v1#S4
     work: []
     notes:
-      - "Access: Public evaluation repository and example data/configurations; complete data
-        coverage needs validation."
+      - "Access: Public data contain 608 cell profiles, 138 perturbations and 254 QA pairs under 100
+        articles, matching paper Table 2. Evaluators and knowledge resources are also released."
       - "Grading: Knowledge-augmented, task-specific metrics using ontology, marker and literature
         information."
-      - "Limitations: Language-model evaluation of single-cell reasoning; keep task metrics distinct
-        and verify full versus example release."
+      - "Limitations: Language-model evaluation of single-cell reasoning; keep task metrics distinct.
+        Runtime dependencies, judge configuration and knowledge-resource loading remain unvalidated."
     provenance:
       - sheet: Non-agentic (Evalchemy)
         gid: 776831399

@@ -23,8 +23,8 @@ variants:
     sources:
       - label: Benchmark
         url: https://arxiv.org/abs/2608.30517
-      - label: Scorer / data
-        url: https://arxiv.org/abs/2608.30517
+      - label: Author code / data release
+        url: https://github.com/stallone0000/Science-Arena-code/releases/tag/cr-final-2026-08-31
       - label: Evalchemy / integration
         url: https://github.com/marin-community/evalchemy/tree/ab8e78f12abb8ed0d1659f56c24f2e01f3c85b54/eval/chat_benchmarks
     implementations:
@@ -32,21 +32,30 @@ variants:
         status: no
         evidence: []
         assessment:
-          checked_at: 2026-10-14
-          reason: The inspected paper does not establish an author-linked runnable release, and the audited
-            Evalchemy registries contain no integration. Locate the release and implement the
-            biology selection and grading.
+          checked_at: 2026-10-21
+          reason: The author demo links a public reproducibility repository and the cr-final-2026-08-31
+            release. Its archived protocol includes the deterministic IBO 2023 objective-key runner
+            and a checksummed data/code/result package. Stage and verify the relevant biology
+            archive, preserve objective-key scoring
+            and the chosen input modality, then validate the Evalchemy integration. Release metadata
+            and source were inspected; archives were not downloaded or executed.
           sources:
-            - label: Audited framework revision
-              url: https://github.com/marin-community/evalchemy/tree/3bb8278078e7ad4b5a6b1f81e8a08db3dd206ae6/eval
-            - label: Pinned lm-eval dependency
-              url: https://github.com/EleutherAI/lm-evaluation-harness/tree/6d642546f4688648fced259eb3302efd36ece5af/lm_eval/tasks
-            - label: Reviewed implementation/release
-              url: https://arxiv.org/html/2608.30517v1
+            - label: Author demo linking the reproducibility release
+              url: https://science-arena.onrender.com/
+            - label: Public reproducibility code
+              url: https://github.com/stallone0000/Science-Arena-code/tree/da6c14d7922edbfea2c72bad1d0c020b7b215b0d
+            - label: Archived IBO protocol
+              url: https://github.com/stallone0000/Science-Arena-code/blob/da6c14d7922edbfea2c72bad1d0c020b7b215b0d/docs/LEGACY.md
+            - label: Data and reproduction archives
+              url: https://github.com/stallone0000/Science-Arena-code/releases/tag/cr-final-2026-08-31
     work: []
     notes:
-      - "Access: Paper identified; official runnable data/scorer release not located."
-      - "Grading: Paper-described answer/process-rubric evaluation; released scorer not verified."
+      - "Access: Public reproducibility repository and checksummed GitHub release assets, including
+        archived IBO data/code/results. Archive contents and execution were not validated in this
+        review."
+      - "Grading: The IBO 2023 biology path uses deterministic official objective-key scoring.
+        Physics/chemistry use separate rubric-judge protocols; do not apply their scoring
+        description to biology."
       - "Limitations: Distinct from OlympicArena; public competition questions may overlap other
         exam benchmarks."
     provenance:

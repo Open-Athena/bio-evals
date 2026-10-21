@@ -26,22 +26,28 @@ variants:
         status: no
         evidence: []
         assessment:
-          checked_at: 2026-10-14
-          reason: No matching LiveProteinBench integration was found in the audited Evalchemy registry or its
-            pinned lm-eval task inventory. Port the selected LiveProteinBench — repository-stage
-            suite scope and establish an end-to-end graded run. This finding is limited to the
-            checked framework revisions, not all external implementations.
+          checked_at: 2026-10-21
+          reason: The public release contains multiple-choice task JSON files with Answer and Answer Text
+            fields and a runner that saves model responses. A labeled text-only evaluation can be
+            implemented without obtaining private labels; answer extraction and accuracy scoring
+            still need integration and validation. The repository contains neither the referenced
+            structure images nor PDB inputs used by its image-generation script, so multimodal runs
+            require separately staged assets and must not be claimed from text-only validation.
           sources:
-            - label: Audited framework revision
-              url: https://github.com/marin-community/evalchemy/tree/3bb8278078e7ad4b5a6b1f81e8a08db3dd206ae6/eval
-            - label: Pinned lm-eval dependency
-              url: https://github.com/EleutherAI/lm-evaluation-harness/tree/6d642546f4688648fced259eb3302efd36ece5af/lm_eval/tasks
+            - label: Author release inventory and usage
+              url: https://github.com/Rongdingyi/LiveProteinBench/tree/8b9710932511f816651fc1a7e8a1bc85c3c77767
+            - label: Labeled example task file
+              url: https://github.com/Rongdingyi/LiveProteinBench/blob/8b9710932511f816651fc1a7e8a1bc85c3c77767/dataset/QA/cofactor.json
+            - label: Image generation requires local PDB inputs
+              url: https://github.com/Rongdingyi/LiveProteinBench/blob/8b9710932511f816651fc1a7e8a1bc85c3c77767/dataset/generate_images.py
     work: []
     notes:
-      - "Access: Public task/prompt files and OpenAI-compatible inference runner; scorer/label
-        completeness needs an audit."
-      - "Grading: Runner saves model answers; complete task-specific scoring contract not verified
-        from release documentation."
+      - "Access: Public multiple-choice JSON files include reference answers. Text-only input access
+        is established; referenced protein images and the PDB inputs for image generation are absent
+        from the checked repository."
+      - "Grading: The runner saves answers; reference choice labels are released. Implement and
+        validate answer extraction and choice accuracy, with modality-specific coverage reported
+        explicitly."
       - "Limitations: Repository-stage LLM benchmark; no peer-reviewed paper or validated full-suite
         grader identified."
     provenance:

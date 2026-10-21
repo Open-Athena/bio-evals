@@ -29,23 +29,25 @@ variants:
         url: https://github.com/marin-community/evalchemy/tree/ab8e78f12abb8ed0d1659f56c24f2e01f3c85b54/eval/chat_benchmarks
     implementations:
       - framework: Evalchemy
-        status: no
+        status: blocked
         evidence: []
         assessment:
-          checked_at: 2026-10-14
-          reason: The paper describes the task collection, but the audited Evalchemy registries contain no
-            integration for this benchmark. Resolve the consolidated task/scorer release and
-            implement the selected scope.
+          checked_at: 2026-10-21
+          reason: Evaluation of the selected Bio-benchmark scope is blocked by the unresolved consolidated
+            task and scoring release. The paper describes 30 tasks, source datasets, prompt
+            templates, and BioFinder answer extraction, but a complete author-linked evaluation
+            package with the exact task instances, splits and extraction/scoring assets was not
+            located. Unblock when that package or authorized access is verified, then select the
+            biology scope and reproduce its metrics. This is an access-verification gap, not a claim
+            that the underlying source datasets are private.
           sources:
-            - label: Audited framework revision
-              url: https://github.com/marin-community/evalchemy/tree/3bb8278078e7ad4b5a6b1f81e8a08db3dd206ae6/eval
-            - label: Pinned lm-eval dependency
-              url: https://github.com/EleutherAI/lm-evaluation-harness/tree/6d642546f4688648fced259eb3302efd36ece5af/lm_eval/tasks
-            - label: Reviewed implementation/release
+            - label: Paper, benchmark construction and inference templates
               url: https://arxiv.org/html/2503.04013v1
     work: []
     notes:
-      - "Access: Paper identified; official consolidated data/scorer release not located."
+      - "Access: Paper and task templates are public; the consolidated evaluation dataset and
+        BioFinder/scoring package have not been located, blocking evaluation of the selected
+        protocol."
       - "Grading: Heterogeneous task-specific metrics; full reproducible evaluation implementation
         not verified."
       - "Limitations: General biomedical coverage; a biology-only score requires an explicit subset
