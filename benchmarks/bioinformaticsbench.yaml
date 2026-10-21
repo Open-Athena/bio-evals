@@ -18,28 +18,30 @@ variants:
     sources:
       - label: Benchmark
         url: https://openreview.net/pdf?id=eKw7delVSM
-      - label: Scorer / data
-        url: https://openreview.net/pdf?id=eKw7delVSM
+      - label: Author code / one-question data sample
+        url: https://github.com/543090lee/BioinformaticsBench/tree/b4f2d9e239cb666e73527a562d79a04da5f8ce7e
       - label: Evalchemy / integration
         url: https://github.com/marin-community/evalchemy/tree/ab8e78f12abb8ed0d1659f56c24f2e01f3c85b54/eval/chat_benchmarks
     implementations:
       - framework: Evalchemy
-        status: no
+        status: blocked
         evidence: []
         assessment:
-          checked_at: 2026-10-14
-          reason: No matching BioinformaticsBench integration was found in the audited Evalchemy registry or
-            its pinned lm-eval task inventory. Port the selected BioinformaticsBench scope and
-            establish an end-to-end graded run. This finding is limited to the checked framework
-            revisions, not all external implementations.
+          checked_at: 2026-10-21
+          reason: "Evaluation of the selected 602-question suite is blocked by missing full-dataset access.
+            The author repository contains only one example question in data/alignment.json; a complete
+            public deposit was not located. Unblock when a verified full question-and-answer release
+            or authorized access is available, then verify the scorer and complete the Evalchemy integration."
           sources:
-            - label: Audited framework revision
-              url: https://github.com/marin-community/evalchemy/tree/3bb8278078e7ad4b5a6b1f81e8a08db3dd206ae6/eval
-            - label: Pinned lm-eval dependency
-              url: https://github.com/EleutherAI/lm-evaluation-harness/tree/6d642546f4688648fced259eb3302efd36ece5af/lm_eval/tasks
+            - label: Paper describing the 602-question suite
+              url: https://openreview.net/pdf?id=eKw7delVSM
+            - label: Author repository at checked revision
+              url: https://github.com/543090lee/BioinformaticsBench/tree/b4f2d9e239cb666e73527a562d79a04da5f8ce7e
+            - label: Only published data file (one question and answer)
+              url: https://github.com/543090lee/BioinformaticsBench/blob/b4f2d9e239cb666e73527a562d79a04da5f8ce7e/data/alignment.json
     work: []
     notes:
-      - "Access: OpenReview paper available; complete author-linked data/scorer not located."
+      - "Access: Author repository publishes one question and answer. Full 602-question dataset access remains unverified and blocks evaluation of the selected suite."
       - "Grading: Question-type-specific correctness; open-response judge and reproducible scorer
         need verification."
       - "Limitations: Catalogued separately from Bioinfo-Bench; reported task count does not

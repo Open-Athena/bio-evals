@@ -26,23 +26,26 @@ variants:
         url: https://github.com/marin-community/harbor/tree/b78a0e52af98015fc8416d5bd5ee649a284e5a4c/adapters
     implementations:
       - framework: Harbor
-        status: no
+        status: blocked
         evidence: []
         assessment:
-          checked_at: 2026-10-14
-          reason: The author page describes the evaluation and links its paper, but no runnable
-            task/artifact/rubric package was located there. Locate or request that release, then
-            implement and validate the Harbor path. This is a release-discovery gap, not a verified
-            claim that the dataset is private.
+          checked_at: 2026-10-21
+          reason: Evaluation of the selected 750-task suite is blocked by unverified access to its complete
+            tasks, 1,062 artifacts, task-specific rubrics and evaluation materials. The author page
+            and paper publish examples; Appendix A.5 describes potential release restrictions for
+            licensing, privacy, proprietary information and biological safety. A full runnable
+            package was not located. Unblock when a verified complete release or authorized
+            evaluation access is available, then validate the Harbor integration. The evidence does
+            not establish that every task is private.
           sources:
-            - label: Audited framework revision
-              url: https://github.com/marin-community/harbor/tree/1d29d200414b6488a87192f50f617b1b5bd4b6f4/adapters
-            - label: Reviewed implementation/release
+            - label: Author benchmark page
               url: https://openai.com/index/introducing-life-sci-bench/
+            - label: Paper, Appendix A.5 and example tasks
+              url: https://cdn.openai.com/pdf/b4299379-0a97-4ffa-8b9b-c3fbb299caa9/lifescibench_preprint.pdf#page=16
     work: []
     notes:
-      - "Access: Paper and examples public; full tasks, artifacts, rubrics and runnable scorer not
-        located. Release may be restricted."
+      - "Access: Public paper and examples; access to the full task/artifact/rubric package remains
+        unverified and blocks evaluation. Appendix A.5 describes possible release restrictions."
       - "Grading: Task-specific weighted rubrics; mean normalized score and pass rate at a 70%
         threshold; automated/model-assisted grading."
       - "Limitations: Single user request permits unrestricted browsing; not a tool-free protocol.

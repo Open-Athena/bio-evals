@@ -21,8 +21,8 @@ variants:
     sources:
       - label: Benchmark
         url: https://arxiv.org/abs/2604.05774
-      - label: Scorer / data
-        url: https://arxiv.org/html/2604.05774v1
+      - label: Author dataset / inference / metrics
+        url: https://github.com/ai4nucleome/GenomeQA/tree/7ccc230e734fc11a365fd1963b593b5fd11e834d
       - label: Evalchemy / integration
         url: https://github.com/marin-community/evalchemy/tree/f42990450edf4e694fe5a22b3d23ed09ab42da1e/eval/chat_benchmarks
     implementations:
@@ -30,20 +30,21 @@ variants:
         status: no
         evidence: []
         assessment:
-          checked_at: 2026-10-14
-          reason: No author-linked runnable release was located in the inspected paper, and no corresponding
-            Evalchemy task appears in the audited registries. Locate the release and implement its
-            scorer.
+          checked_at: 2026-10-21
+          reason: The public author repository includes binary and multiple-choice JSONL datasets across all
+            six task families, an inference runner, and calc_metrics.py for accuracy and F1. The
+            dataset is public. Port the selected protocol to Evalchemy and
+            validate answer extraction, failure handling and task-level metrics; this source
+            inspection does not establish an end-to-end graded integration.
           sources:
-            - label: Audited framework revision
-              url: https://github.com/marin-community/evalchemy/tree/3bb8278078e7ad4b5a6b1f81e8a08db3dd206ae6/eval
-            - label: Pinned lm-eval dependency
-              url: https://github.com/EleutherAI/lm-evaluation-harness/tree/6d642546f4688648fced259eb3302efd36ece5af/lm_eval/tasks
-            - label: Reviewed implementation/release
-              url: https://arxiv.org/html/2604.05774v1
+            - label: Author release and dataset instructions
+              url: https://github.com/ai4nucleome/GenomeQA/blob/7ccc230e734fc11a365fd1963b593b5fd11e834d/README.md
+            - label: Released metrics implementation
+              url: https://github.com/ai4nucleome/GenomeQA/blob/7ccc230e734fc11a365fd1963b593b5fd11e834d/calc_metrics.py
     work: []
     notes:
-      - "Access: Paper accessible; no author-linked runnable release located in this audit."
+      - "Access: Public author repository includes the full dataset under benchmark/ and
+        inference/metrics code; no separate data download is required according to its README."
       - "Grading: Task-label classification metrics; reproduce the paper's task-level protocol."
       - "Limitations: Native sequence capability complement to Genome-Bench's text knowledge QA.
         Distinct from ClawBio's same-name agent benchmark."

@@ -11,29 +11,33 @@ import {filterCatalog, catalogTable, trackedCatalog, catalogCounts, countChart, 
 const catalog = trackedCatalog(await FileAttachment('./data/catalog.json').json());
 const snapshot = await FileAttachment('./data/github-status.json').json();
 const variants = catalog.flatMap(f => f.variants);
+const assignments = [...new Set(['ID', 'OOD', ...variants.map(v => v.assignment || 'Unassigned')])];
 const colors = catalogColors(Plot);
 ```
 
 ```js
 const filters = view(Inputs.form({
   query: Inputs.text({label: 'Search evaluations', placeholder: 'Name, what it measures, organization…', width: 320}),
+  assignment: Inputs.select(['All ID/OOD', ...assignments], {label: 'ID/OOD', width: 220}),
   framework: Inputs.select(['All frameworks', ...new Set(variants.flatMap(v => v.implementations.map(i => i.framework)))], {label: 'Framework', width: 220}),
   implementation: Inputs.select(new Map([['All states','All states'],['Implemented','yes'],['In progress','in_progress'],['To do','no'],['Blocked','blocked']]), {label: 'Implementation', width: 220})
 }, {template: inputs => html`<div class="filters">${Object.values(inputs)}</div>`}));
 ```
 
 ```js
-const filtered = filterCatalog(catalog, filters.query || '', filters.framework, filters.implementation);
+const filtered = filterCatalog(catalog, filters.query || '', filters.framework, filters.implementation, filters.assignment);
 ```
 
 ```js
+const assignmentCounts = catalogCounts(filtered, 'assignment', assignments);
 const frameworkCounts = catalogCounts(filtered, 'framework', [...new Set(variants.flatMap(v => v.implementations.map(i => i.framework)))]);
 const statusCounts = catalogCounts(filtered, 'status', ['yes', 'in_progress', 'no', 'blocked']);
 ```
 
 <div class="catalog-charts">
+  <div class="card assignment-chart"><h2>ID/OOD</h2>${resize(width => countChart(assignmentCounts, Plot, width, 'ID/OOD', colors))}</div>
   <div class="card framework-chart"><h2>Framework</h2>${resize(width => countChart(frameworkCounts, Plot, width, 'Framework', colors))}</div>
-  <div class="card status-chart"><h2>Implementation</h2>${resize(width => countChart(statusCounts, Plot, width, 'Implementation', colors))}</div>
+  <div class="card status-chart"><h2>Implementation</h2>${resize(width => countChart(statusCounts, Plot, width, 'Implementation', colors, true))}</div>
 </div>
 
 ```js

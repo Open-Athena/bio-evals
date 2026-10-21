@@ -23,23 +23,28 @@ variants:
         url: https://github.com/marin-community/evalchemy/tree/ab8e78f12abb8ed0d1659f56c24f2e01f3c85b54/eval/chat_benchmarks
     implementations:
       - framework: Evalchemy
-        status: no
+        status: blocked
         evidence: []
         assessment:
-          checked_at: 2026-10-14
-          reason: No matching BioThreat-Eval integration was found in the audited Evalchemy registry or its
-            pinned lm-eval task inventory. Port the selected BioThreat-Eval — proxy suite scope and
-            establish an end-to-end graded run. This finding is limited to the checked framework
-            revisions, not all external implementations.
+          checked_at: 2026-10-21
+          reason: Evaluation on the curated 93-query bank is blocked because the authors withhold the query
+            texts and provide bank access only on request with justification. The public Hugging
+            Face dataset contains aggregate results, not the query bank; the runner automatically
+            falls back to six benign examples when the bank is absent. Unblock when authorized
+            access to the curated bank is confirmed. Runs on the six examples are illustrative and
+            cannot be reported as results on the curated benchmark.
           sources:
-            - label: Audited framework revision
-              url: https://github.com/marin-community/evalchemy/tree/3bb8278078e7ad4b5a6b1f81e8a08db3dd206ae6/eval
-            - label: Pinned lm-eval dependency
-              url: https://github.com/EleutherAI/lm-evaluation-harness/tree/6d642546f4688648fced259eb3302efd36ece5af/lm_eval/tasks
+            - label: Author release and example fallback
+              url: https://github.com/jang1563/biothreat-eval/blob/243ba9793af0a10dae942610807e392998e3232f/README.md
+            - label: Query-bank access policy
+              url: https://github.com/jang1563/biothreat-eval/blob/243ba9793af0a10dae942610807e392998e3232f/RESPONSIBLE_DISCLOSURE.md
+            - label: Aggregate-only Hugging Face dataset
+              url: https://huggingface.co/datasets/jang1563/biothreat-eval
     work: []
     notes:
-      - "Access: Public framework and HF repository; code ships six benign proxy examples rather
-        than the complete intended bank."
+      - "Access: Public pipeline and aggregate HF results; curated 93-query bank withheld and
+        available only on justified request. Six benign examples support an illustrative pipeline
+        check only."
       - "Grading: Cross-provider model judging and proxy risk summaries; independent validation
         required."
       - "Limitations: Proxy risk scores do not establish real biological capabilities; release scope

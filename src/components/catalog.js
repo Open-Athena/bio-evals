@@ -5,13 +5,14 @@ export function trackedCatalog(benchmarks) {
   return benchmarks.map(b=>({...b, variants:[selectedVersion(b)]}));
 }
 
-export function filterCatalog(families, query='', framework='All frameworks', status='All states') {
+export function filterCatalog(families, query='', framework='All frameworks', status='All states', assignment='All ID/OOD') {
   const words=query.toLowerCase().trim().split(/\s+/).filter(Boolean);
   return families.flatMap(f=>{
     const common=[f.name,f.description,...f.creators,...f.notes].join(' ').toLowerCase();
     const variants=f.variants.filter(v=>{
       const text=[common,v.name,v.description,...v.creators,...v.notes,v.assignment || ''].join(' ').toLowerCase();
-      return words.every(w=>text.includes(w)) && v.implementations.some(i=>
+      return words.every(w=>text.includes(w)) &&
+        (assignment==='All ID/OOD'||(v.assignment || 'Unassigned')===assignment) && v.implementations.some(i=>
         (framework==='All frameworks'||i.framework===framework) && (status==='All states'||i.status===status));
     });
     return variants.length?[{...f,variants}]:[];
@@ -30,7 +31,7 @@ export const implementationLabel = status => ({yes:'Implemented',in_progress:'In
 const implementationRank = status => ({yes:0,in_progress:1,no:2,blocked:3})[status];
 export function catalogColors(Plot) {
   const palette=Plot.scale({color:{type:'categorical',scheme:'Observable10',domain:Array.from({length:10},(_,i)=>i)}});
-  return {Evalchemy:palette.apply(6),Harbor:palette.apply(1),yes:palette.apply(4),
+  return {category:'var(--catalog-category-fill)',yes:palette.apply(4),
     in_progress:palette.apply(0),blocked:palette.apply(2),no:'var(--theme-foreground-muted)'};
 }
 const categoryColor = (key,colors) => colors[key] || 'var(--theme-foreground-muted)';
@@ -59,14 +60,6 @@ export function catalogTable(families, snapshot, Inputs, colors={}) {
       variant:(_,i)=>{
         const {family:f,detail:v}=rows[i];
         const a=link(v.name,`./benchmarks/${f.id}#${v.id}`);a.className='variant-cell';return a;
-      },
-      assignment:value=>node('span',value,'badge'),
-      framework:(_,index)=>{
-        const container=node('div',undefined,'framework-labels');
-        for(const framework of new Set(rows[index].detail.implementations.map(i=>i.framework))) {
-          container.append(categoryBadge(framework,framework,'framework-badge',colors));
-        }
-        return container;
       },
       implementation:(_,index)=>{
         const container=node('div');
@@ -101,7 +94,7 @@ export function workCell(f,snapshot) {
     const short=url.split('/').slice(3).join('/');
     li.append(link(item?.title || short,url));
     const meta=node('small',undefined,'muted');
-    meta.append(' ',node('span',item?.state || 'Unavailable',`badge ${item?.state || ''}`));
+    meta.append(' ',node('span',item?.state || 'Unavailable','badge'));
     if(item?.assignees?.length)meta.append(` · ${item.assignees.map(a=>'@'+a).join(', ')}`);
     if(item?.stale)meta.append(' · stale');
     li.append(meta);list.append(li);
@@ -112,14 +105,16 @@ export function workCell(f,snapshot) {
 // Count benchmarks once per category, even if future entries have multiple integrations.
 export function catalogCounts(benchmarks, field, domain) {
   return domain.map(key=>({key, label:field==='status'?implementationLabel(key):key,
-    count:benchmarks.filter(b=>b.variants.some(v=>v.implementations.some(i=>i[field]===key))).length}));
+    count:benchmarks.filter(b=>b.variants.some(v=>field==='assignment'
+      ? (v.assignment || 'Unassigned')===key
+      : v.implementations.some(i=>i[field]===key))).length}));
 }
-export function countChart(data, Plot, width, label, colors=catalogColors(Plot)) {
+export function countChart(data, Plot, width, label, colors=catalogColors(Plot), colorByStatus=false) {
   return Plot.plot({width, height:170, marginLeft:100, marginRight:32, marginTop:8, marginBottom:30,
     ariaLabel:`${label}: ${data.map(d=>`${d.label} ${d.count}`).join(', ')}`,
     x:{domain:[0,Math.max(1,...data.map(d=>d.count))], label:'Benchmarks', grid:true, ticks:4, tickFormat:d=>Number.isInteger(d)?d:''},
     y:{domain:data.map(d=>d.label), label:null},
-    marks:[Plot.barX(data,{x:'count',y:'label',fill:d=>categoryColor(d.key,colors),insetTop:5,insetBottom:5}),
+    marks:[Plot.barX(data,{x:'count',y:'label',fill:colorByStatus?d=>categoryColor(d.key,colors):colors.category,insetTop:5,insetBottom:5}),
       Plot.text(data,{x:'count',y:'label',text:d=>String(d.count),textAnchor:'start',dx:5}),Plot.ruleX([0])]
   });
 }

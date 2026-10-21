@@ -27,23 +27,23 @@ variants:
         url: https://github.com/marin-community/evalchemy/tree/ab8e78f12abb8ed0d1659f56c24f2e01f3c85b54/eval/chat_benchmarks
     implementations:
       - framework: Evalchemy
-        status: no
+        status: blocked
         evidence: []
         assessment:
-          checked_at: 2026-10-14
-          reason: The author paper describes the benchmark without an author-linked runnable release located
-            in this audit. Locate the task/scorer package and port the selected protocol; no native
-            Evalchemy integration appears in the audited registries.
+          checked_at: 2026-10-21
+          reason: Evaluation of the full BABE suite is blocked by unverified access to the complete question
+            triplets, source figures and documents, reference answers, and grading package. The
+            paper provides visual examples and methodology, but a complete author-linked deposit was
+            not located in this review. Unblock when a verified release or authorized evaluation
+            package is available; preserve the linked triplets and validate the published scoring
+            protocol before integration.
           sources:
-            - label: Audited framework revision
-              url: https://github.com/marin-community/evalchemy/tree/3bb8278078e7ad4b5a6b1f81e8a08db3dd206ae6/eval
-            - label: Pinned lm-eval dependency
-              url: https://github.com/EleutherAI/lm-evaluation-harness/tree/6d642546f4688648fced259eb3302efd36ece5af/lm_eval/tasks
-            - label: Reviewed implementation/release
+            - label: Paper and published visual examples
               url: https://arxiv.org/html/2602.05857v1
     work: []
     notes:
-      - "Access: Paper found; authoritative full data/scorer release not located."
+      - "Access: Paper and visual examples are public; access to the complete selected suite and
+        grading assets remains unverified and blocks full-suite evaluation."
       - "Grading: Paper-described question-group evaluation; executable scorer and exact judge
         configuration unverified."
       - "Limitations: Keep linked question triplets together when defining splits; this is currently

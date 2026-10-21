@@ -23,22 +23,28 @@ variants:
         url: https://github.com/mlbio-epfl/HeurekaBench/tree/c2a2b2fcdc5244220ff60f65483bc084c72a8cf1/scheurekabench
       - label: Harbor / integration
         url: https://github.com/marin-community/harbor/tree/abdd67137bcd6e5c44d682d0052fbd1190e63556/adapters
+      - label: Single-cell input archive
+        url: https://huggingface.co/datasets/sibasmarakp/sc-HeurekaBench/tree/main
     implementations:
       - framework: Harbor
         status: no
         evidence: []
         assessment:
-          checked_at: 2026-10-14
-          reason: No matching sc-HeurekaBench integration was found in the audited Harbor registry. Port the
-            selected sc-HeurekaBench scope and establish an end-to-end graded run. This finding is
-            limited to the checked framework revisions, not all external implementations.
+          checked_at: 2026-10-21
+          reason: The author repository releases questions, reference answers and evaluator code, and links
+            the single-cell inputs on Hugging Face with archive checksums and extraction
+            instructions. Input archive staging and agent/judge execution remain untested, but no
+            missing-release blocker was found. Port the selected protocol to Harbor and validate the
+            separate multiple-choice and open-answer metrics on appropriately sized compute.
           sources:
-            - label: Audited framework revision
-              url: https://github.com/marin-community/harbor/tree/1d29d200414b6488a87192f50f617b1b5bd4b6f4/adapters
+            - label: Author release and input staging instructions
+              url: https://github.com/mlbio-epfl/HeurekaBench/blob/c2a2b2fcdc5244220ff60f65483bc084c72a8cf1/README.md
+            - label: Author-linked single-cell input archive
+              url: https://huggingface.co/datasets/sibasmarakp/sc-HeurekaBench/tree/main
     work: []
     notes:
-      - "Access: Released evaluator; 50 open-ended and 50 multiple-choice questions. Data access
-        untested."
+      - "Access: Public question/answer JSON, evaluator and HF input archive; author instructions
+        describe approximately 44 GB after extraction. Data staging and execution were not tested."
       - "Grading: Open answers: LLM judge (default GPT-4o). MCQ: exact option-set accuracy plus
         precision/recall/F1."
       - "Limitations: Single-cell scientific reasoning; report open-answer and MC results
