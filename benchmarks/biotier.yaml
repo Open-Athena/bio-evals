@@ -16,7 +16,7 @@ variants:
     creators:
       - SecureBio
       - Federal University of ABC (UFABC)
-    assignment: ID
+    assignment: TBD
     sources:
       - label: Benchmark
         url: https://arxiv.org/abs/2607.14479

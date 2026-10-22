@@ -13,7 +13,7 @@ variants:
     description: Chinese Gaokao biology questions in AGIEval.
     creators:
       - Microsoft
-    assignment: ID
+    assignment: TBD
     sources:
       - label: Benchmark
         url: https://arxiv.org/abs/2304.06364

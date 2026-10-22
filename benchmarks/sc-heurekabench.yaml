@@ -15,7 +15,7 @@ variants:
     creators:
       - EPFL
       - ETH Zurich
-    assignment: ID
+    assignment: TBD
     sources:
       - label: Benchmark
         url: https://arxiv.org/abs/2601.01678

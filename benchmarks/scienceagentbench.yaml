@@ -15,7 +15,7 @@ variants:
     creators:
       - Ohio State University
       - University of Wisconsin–Madison
-    assignment: ID
+    assignment: TBD
     sources:
       - label: Benchmark
         url: https://arxiv.org/abs/2410.05080

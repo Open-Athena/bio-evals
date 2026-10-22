@@ -13,7 +13,7 @@ variants:
     description: 100 tasks across omics, genetics, and ML
     creators:
       - Genentech
-    assignment: ID
+    assignment: TBD
     sources:
       - label: Benchmark
         url: https://github.com/Genentech/compbiobench-runner

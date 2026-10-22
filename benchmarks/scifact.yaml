@@ -15,7 +15,7 @@ variants:
     creators:
       - Allen Institute for AI
       - University of Washington
-    assignment: ID
+    assignment: TBD
     sources:
       - label: Benchmark
         url: https://github.com/allenai/SciRIFF/blob/main/doc/evaluation_tasks.md

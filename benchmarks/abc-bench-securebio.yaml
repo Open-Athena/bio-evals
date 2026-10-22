@@ -16,7 +16,7 @@ variants:
     creators:
       - SecureBio
       - Active Site
-    assignment: ID
+    assignment: TBD
     sources:
       - label: Benchmark
         url: https://arxiv.org/abs/2606.11150

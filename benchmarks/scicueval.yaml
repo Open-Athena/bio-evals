@@ -16,7 +16,7 @@ variants:
     creators:
       - Zhejiang University
       - Ant Group
-    assignment: ID
+    assignment: TBD
     sources:
       - label: Benchmark
         url: https://www.nature.com/articles/s41597-026-06594-9

@@ -52,9 +52,10 @@ with the narrower execution evidence attached. Remaining entries are unknown
 where end-to-end validation has not been established for this catalog. This
 is not a claim that their adapters do not exist.
 
-ID/OOD values come from the spreadsheet unchanged. The tracking issue described
-some assignments as unresolved; the requested source of truth is the team's
-editable sheet assignment. BixBench entries retain a note about this conflict.
+ID/OOD values were initially imported from the spreadsheet unchanged. The frozen
+snapshot retains those historical values. The editable catalog now defaults to
+TBD, with ID/OOD exceptions requiring confirmation of inheritance from Marin's
+evaluation policy for the stated variant.
 
 Access, grading, and limitation notes are retained with source evidence dates;
 they have not been independently refreshed for every evaluation. No examples,

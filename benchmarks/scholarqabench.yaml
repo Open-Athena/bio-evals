@@ -18,7 +18,7 @@ variants:
       - Allen Institute for AI
       - University of Washington
       - collaborators (see note)
-    assignment: ID
+    assignment: TBD
     sources:
       - label: Benchmark
         url: https://allenai.org/blog/openscilm

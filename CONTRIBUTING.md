@@ -34,7 +34,10 @@ changes may use a PR. GitHub Actions validates and deploys changes.
   Open port PRs remain in progress until the remaining integration work is done;
   pilot execution evidence can coexist with that stage. Maintenance issues do
   not erase a benchmark's established implementation.
-- ID/OOD is the editable `assignment`. Use ID or OOD, or null when unknown. Existing TBD assignments were changed to ID on October 14, 2026.
+- ID/OOD is the editable `assignment`. Use `TBD` by default. Retain `ID` or `OOD`
+  only for assignments explicitly inherited from Marin's evaluation policy and
+  confirmed for the catalog's variant; cite the policy and explain any scope mapping.
+  The current reference is [Marin Eval Policy (October 16, 2026)](https://github.com/marin-community/marin/issues/10197).
   It is our internal assignment, not a contamination claim. Updating it does
   not require rewriting the historical import snapshot.
 - `work` contains canonical public GitHub issue/PR URLs, for example

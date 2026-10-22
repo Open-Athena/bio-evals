@@ -13,7 +13,7 @@ variants:
     description: Repository-stage biological risk/refusal proxy evaluation.
     creators:
       - Weill Cornell Medicine (author affiliation)
-    assignment: ID
+    assignment: TBD
     sources:
       - label: Benchmark
         url: https://github.com/jang1563/biothreat-eval

@@ -16,7 +16,7 @@ variants:
     creators:
       - OpenAI
       - Tacit Labs
-    assignment: ID
+    assignment: TBD
     sources:
       - label: Benchmark
         url: https://openai.com/index/introducing-life-sci-bench/

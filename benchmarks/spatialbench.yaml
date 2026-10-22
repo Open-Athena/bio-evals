@@ -14,7 +14,7 @@ variants:
     description: spatial transcriptomics analysis
     creators:
       - LatchBio
-    assignment: ID
+    assignment: TBD
     sources:
       - label: Benchmark
         url: https://arxiv.org/abs/2512.21907
@@ -53,7 +53,7 @@ variants:
     description: study-scale spatial biological inference
     creators:
       - LatchBio
-    assignment: ID
+    assignment: TBD
     sources:
       - label: Benchmark
         url: https://arxiv.org/abs/2605.28065

@@ -17,7 +17,7 @@ variants:
     description: BioASQ biomedical document/snippet retrieval and end-to-end question answering.
     creators:
       - BioASQ consortium
-    assignment: ID
+    assignment: TBD
     sources:
       - label: Benchmark
         url: https://www.bioasq.org/
@@ -56,7 +56,7 @@ variants:
     creators:
       - BioASQ consortium
       - Microsoft Research (BLURB adaptation)
-    assignment: ID
+    assignment: TBD
     sources:
       - label: Benchmark
         url: https://microsoft.github.io/BLURB/tasks.html
@@ -88,7 +88,7 @@ variants:
     description: BioASQ factoid/list biomedical QA with supporting snippets supplied to the model.
     creators:
       - BioASQ consortium
-    assignment: ID
+    assignment: TBD
     sources:
       - label: Benchmark
         url: https://www.bioasq.org/
@@ -121,7 +121,7 @@ variants:
     description: BioASQ ideal-answer synthesis from supplied biomedical evidence snippets.
     creators:
       - BioASQ consortium
-    assignment: ID
+    assignment: TBD
     sources:
       - label: Benchmark
         url: https://www.bioasq.org/

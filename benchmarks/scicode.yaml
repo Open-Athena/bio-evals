@@ -21,6 +21,8 @@ variants:
       - collaborators (see note)
     assignment: OOD
     sources:
+      - label: Marin evaluation policy (October 16, 2026)
+        url: https://github.com/marin-community/marin/issues/10197
       - label: Benchmark
         url: https://arxiv.org/abs/2407.13168
       - label: Scorer / data
@@ -49,6 +51,7 @@ variants:
     work:
       - https://github.com/harbor-framework/harbor/pull/404
     notes:
+      - "ID/OOD basis: OOD inherited from the October 16 Marin policy through AAII 4.3. The catalog applies this designation to the biology Harbor variant; the changed execution protocol is not canonical AAII performance. Confirmed for this catalog on October 22, 2026."
       - "Access: Existing Harbor adapter; shared≈1GB HDF5 test data staged once. Test solutions not
         publicly released."
       - "Grading: Executable scientific test cases; main/subproblem reporting must match chosen

@@ -15,7 +15,7 @@ variants:
     creators:
       - Harvard University
       - Capable
-    assignment: ID
+    assignment: TBD
     sources:
       - label: Benchmark
         url: https://doi.org/10.64898/2026.07.27.741045

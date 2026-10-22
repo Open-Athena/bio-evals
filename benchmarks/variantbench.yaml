@@ -13,7 +13,7 @@ variants:
     description: Variant discovery/QC, statistical genetics and personal genomics; 118 main evaluations.
     creators:
       - LatchBio
-    assignment: ID
+    assignment: TBD
     sources:
       - label: Benchmark
         url: https://blog.latch.bio/p/variantbench-an-agentic-benchmark

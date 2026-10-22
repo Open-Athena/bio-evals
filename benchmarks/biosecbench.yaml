@@ -17,7 +17,7 @@ variants:
     description: 100 defensive pathogen-surveillance analysis evaluations.
     creators:
       - LatchBio
-    assignment: ID
+    assignment: TBD
     sources:
       - label: Benchmark
         url: https://github.com/latchbio/biosecbench-surveillance
@@ -57,7 +57,7 @@ variants:
     description: 111 defensive functional-interpretation evaluations.
     creators:
       - LatchBio
-    assignment: ID
+    assignment: TBD
     sources:
       - label: Benchmark
         url: https://github.com/latchbio/biosecbench-function
@@ -89,7 +89,7 @@ variants:
     description: 107 paired routine/hazard-detection scenarios; direct and meta framings.
     creators:
       - LatchBio
-    assignment: ID
+    assignment: TBD
     sources:
       - label: Benchmark
         url: https://github.com/latchbio/biosecbench-refusal
@@ -123,7 +123,7 @@ variants:
       risk-bearing tasks."
     creators:
       - LatchBio
-    assignment: ID
+    assignment: TBD
     sources:
       - label: Benchmark
         url: https://arxiv.org/abs/2607.05462

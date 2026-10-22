@@ -13,7 +13,7 @@ variants:
     description: Bioinformatics knowledge acquisition, analysis and application across 10 domains.
     creators:
       - Shanghai Jiao Tong University
-    assignment: ID
+    assignment: TBD
     sources:
       - label: Benchmark
         url: https://doi.org/10.1101/2023.10.18.563023

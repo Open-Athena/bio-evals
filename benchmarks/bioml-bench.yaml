@@ -13,7 +13,7 @@ variants:
     description: biomedical ML engineering across omics, proteins, imaging, and drug discovery
     creators:
       - ScienceMachine
-    assignment: ID
+    assignment: TBD
     sources:
       - label: Benchmark
         url: https://github.com/science-machine/biomlbench/tree/673f3d8d3462fc6cdcbbd9695fba612b9332ca65

@@ -19,6 +19,8 @@ variants:
       - academic contributors
     assignment: OOD
     sources:
+      - label: Marin evaluation policy (October 16, 2026)
+        url: https://github.com/marin-community/marin/issues/10197
       - label: Benchmark
         url: https://arxiv.org/abs/2501.14249
       - label: Scorer / data
@@ -42,6 +44,7 @@ variants:
               url: https://github.com/marin-community/evalchemy/tree/3bb8278078e7ad4b5a6b1f81e8a08db3dd206ae6/eval/chat_benchmarks/HLE
     work: []
     notes:
+      - "ID/OOD basis: OOD inherited from the October 16 Marin policy through AAII 4.3. The catalog applies this designation to the biology/medicine slice; this is not a canonical full-suite AAII score. Confirmed for this catalog on October 22, 2026."
       - "Access: Native Evalchemy HLE class using cais/hle; public data is still protected by
         Marin's OOD policy."
       - "Grading: Native HLE generation + answer judge; preserve exact variant, image filter and

@@ -15,7 +15,7 @@ variants:
     description: judgment-heavy genomics and quantitative biology
     creators:
       - OpenAI
-    assignment: OOD
+    assignment: TBD
     sources:
       - label: Benchmark
         url: https://huggingface.co/datasets/openai/genebench-pro-public-package
@@ -60,7 +60,7 @@ variants:
       downstream inference."
     creators:
       - OpenAI
-    assignment: OOD
+    assignment: TBD
     sources:
       - label: Benchmark
         url: https://cdn.openai.com/pdf/6dc7175d-d9e7-4b8d-96b8-48fe5798cd5b/oai_genebench_benchmark.pdf

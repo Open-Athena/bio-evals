@@ -15,6 +15,8 @@ variants:
       - Artificial Analysis
     assignment: OOD
     sources:
+      - label: Marin evaluation policy (October 16, 2026)
+        url: https://github.com/marin-community/marin/issues/10197
       - label: Benchmark
         url: https://arxiv.org/abs/2511.13029
       - label: Scorer / data
@@ -38,6 +40,7 @@ variants:
               url: https://artificialanalysis.ai/evaluations/omniscience
     work: []
     notes:
+      - "ID/OOD basis: OOD inherited from the October 16 Marin policy through AAII 4.3. The catalog applies this designation to the biology/health slice; this is not a canonical full-suite AAII score. Confirmed for this catalog on October 22, 2026."
       - "Access: Full benchmark 6,000 questions / 42 topics / 6 domains; public preview is not the
         full canonical suite."
       - "Grading: Official correctness/abstention judge; report accuracy, hallucination and signed

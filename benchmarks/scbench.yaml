@@ -14,7 +14,7 @@ variants:
     description: single-cell analysis from workflow snapshots
     creators:
       - LatchBio
-    assignment: ID
+    assignment: TBD
     sources:
       - label: Benchmark
         url: https://arxiv.org/abs/2602.09063
@@ -51,7 +51,7 @@ variants:
     description: 21 long-horizon single-cell evaluations across 5 study systems.
     creators:
       - LatchBio
-    assignment: ID
+    assignment: TBD
     sources:
       - label: Benchmark
         url: https://latch.bio/scbench-long

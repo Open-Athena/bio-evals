@@ -22,7 +22,7 @@ variants:
       - Columbia University
       - University of Chicago
       - UIUC
-    assignment: ID
+    assignment: TBD
     sources:
       - label: Benchmark
         url: https://arxiv.org/abs/2009.03300
@@ -55,8 +55,9 @@ variants:
       - "Access: Public data and native YAMLs for seven subjects. Three-subject biology integration
         validated with GLM-5.3 (554/554); four optional biomedical subjects remain unrun."
       - "Grading: Native multiple-choice likelihood accuracy; preserve Marin's 5-shot protocol."
-      - "Limitations: Low-effort biology baseline with optional biomedical coverage. Existing ID
-        exposure and possible saturation; keep clinical subjects out of the pooled biology score."
+      - "Limitations: Low-effort biology baseline with optional biomedical coverage. MMLU was ID in
+        the September 16 Marin policy but is absent from the October 16 policy; assignment is TBD.
+        Keep clinical subjects out of the pooled biology score."
     provenance:
       - sheet: Non-agentic (Evalchemy)
         gid: 776831399
@@ -72,6 +73,8 @@ variants:
       - Carnegie Mellon University
     assignment: ID
     sources:
+      - label: Marin evaluation policy (October 16, 2026)
+        url: https://github.com/marin-community/marin/issues/10197
       - label: Benchmark
         url: https://arxiv.org/abs/2406.01574
       - label: Scorer / data
@@ -84,6 +87,7 @@ variants:
         evidence: []
     work: []
     notes:
+      - "ID/OOD basis: ID inherited from the MMLU-Pro entry in the October 16 Marin policy, including its biology category. Original MMLU remains a separate TBD record. Confirmed for this catalog on October 22, 2026."
       - "Access: Native MMLUPro class; public TIGER-Lab/MMLU-Pro category metadata."
       - "Grading: Generated-answer extraction and accuracy; implementation already returns category
         statistics."

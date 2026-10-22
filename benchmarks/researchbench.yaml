@@ -17,7 +17,7 @@ variants:
       - Shanghai AI Laboratory
       - Fudan University
       - collaborators (see note)
-    assignment: ID
+    assignment: TBD
     sources:
       - label: Benchmark
         url: https://aclanthology.org/2026.findings-acl.644/

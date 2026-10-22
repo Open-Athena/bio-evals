@@ -17,7 +17,7 @@ variants:
     creators:
       - Entropic
       - University of Zagreb (TakeLab)
-    assignment: ID
+    assignment: TBD
     sources:
       - label: Benchmark
         url: https://arxiv.org/abs/2601.21800v4

@@ -17,7 +17,7 @@ variants:
       - Peking University
       - University of Hong Kong
       - Xi’an Jiaotong University
-    assignment: ID
+    assignment: TBD
     sources:
       - label: Benchmark
         url: https://arxiv.org/abs/2502.16660

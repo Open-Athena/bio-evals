@@ -19,7 +19,7 @@ variants:
       - Stanford University
       - Chan Zuckerberg Biohub Network
       - collaborators (see note)
-    assignment: ID
+    assignment: TBD
     sources:
       - label: Benchmark
         url: https://arxiv.org/abs/2503.13399
@@ -59,7 +59,7 @@ variants:
     description: Microscopy reasoning dataset/evaluation proposal extending the MicroVQA research direction.
     creators:
       - Fudan University
-    assignment: ID
+    assignment: TBD
     sources:
       - label: Benchmark
         url: https://arxiv.org/abs/2511.11407

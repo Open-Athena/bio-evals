@@ -19,6 +19,8 @@ variants:
       - ScienceMachine
     assignment: ID
     sources:
+      - label: Marin evaluation policy (October 16, 2026)
+        url: https://github.com/marin-community/marin/issues/10197
       - label: Benchmark
         url: https://github.com/harbor-framework/harbor/tree/main/adapters/bixbench
       - label: Scorer / data
@@ -54,8 +56,9 @@ variants:
         calls recovered. Numerical tolerances unchanged; pilot precision caveat remains."
       - "Limitations: First primary-suite candidate: existing Harbor adapter. CLI and
         replacement-judge scores need explicit protocol labels."
-      - ID/OOD retains the spreadsheet assignment. The tracking issue described assignments as
-        unresolved; the catalog uses the internal sheet assignment as requested.
+      - "ID/OOD basis: Marin evaluation policy #10197 lists BixBench CLI corrections @ Pi as ID.
+        CLI v1.5 retains ID by confirmed inheritance of that assignment; the protocols and scores
+        remain distinct."
     provenance:
       - sheet: Agentic (Harbor)
         gid: 846608904
@@ -67,7 +70,7 @@ variants:
     description: 50 bioinformatics analysis questions across 33 capsules; Phylo-curated subset.
     creators:
       - Phylo (verified-subset curator)
-    assignment: ID
+    assignment: TBD
     sources:
       - label: Benchmark
         url: https://phylo.bio/blog/evaluating-ai-agents-in-biology
@@ -94,8 +97,6 @@ variants:
         remaining answers; explicit JSON schema, 1,024-token cap."
       - "Limitations: Curated 50-question subset; two known source defects retained. Harbor grading
         differs from Phylo; scores are not interchangeable with original BixBench."
-      - ID/OOD retains the spreadsheet assignment. The tracking issue described assignments as
-        unresolved; the catalog uses the internal sheet assignment as requested.
     provenance:
       - sheet: Agentic (Harbor)
         gid: 846608904
@@ -107,7 +108,7 @@ variants:
     description: 20 research-scale analyses from raw data
     creators:
       - Edison Scientific
-    assignment: ID
+    assignment: TBD
     sources:
       - label: Benchmark
         url: https://github.com/EdisonScientific/BixBench3
@@ -128,8 +129,6 @@ variants:
         separate."
       - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
         notes are historical."
-      - ID/OOD retains the spreadsheet assignment. The tracking issue described assignments as
-        unresolved; the catalog uses the internal sheet assignment as requested.
     provenance:
       - sheet: Agentic (Harbor)
         gid: 846608904
@@ -143,7 +142,7 @@ variants:
     creators:
       - FutureHouse
       - ScienceMachine
-    assignment: ID
+    assignment: TBD
     sources:
       - label: Benchmark
         url: https://arxiv.org/abs/2503.00096
@@ -165,8 +164,6 @@ variants:
         do not count notebook/CLI as independent tasks."
       - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
         notes are historical."
-      - ID/OOD retains the spreadsheet assignment. The tracking issue described assignments as
-        unresolved; the catalog uses the internal sheet assignment as requested.
     provenance:
       - sheet: Agentic (Harbor)
         gid: 846608904

@@ -13,7 +13,7 @@ variants:
     description: "13 datasets / 6 task families: NER, PICO, relations, similarity, classification and QA."
     creators:
       - Microsoft Research
-    assignment: ID
+    assignment: TBD
     sources:
       - label: Benchmark
         url: https://microsoft.github.io/BLURB/

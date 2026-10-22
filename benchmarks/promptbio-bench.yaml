@@ -13,7 +13,7 @@ variants:
     description: "244 tasks: 131 bioinformatics + 113 data science; 27 subfields and varied difficulty."
     creators:
       - PromptBio
-    assignment: ID
+    assignment: TBD
     sources:
       - label: Benchmark
         url: https://www.biorxiv.org/content/10.64898/2026.05.05.723092v2

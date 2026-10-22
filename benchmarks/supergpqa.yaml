@@ -17,7 +17,7 @@ variants:
       - M-A-P
       - ByteDance Seed
       - 2077.AI
-    assignment: ID
+    assignment: TBD
     sources:
       - label: Benchmark
         url: https://arxiv.org/abs/2502.14739

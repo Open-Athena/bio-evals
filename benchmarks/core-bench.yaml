@@ -15,7 +15,7 @@ variants:
       across three fields.
     creators:
       - Princeton University
-    assignment: ID
+    assignment: TBD
     sources:
       - label: Benchmark
         url: https://arxiv.org/abs/2409.11363

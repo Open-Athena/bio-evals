@@ -19,7 +19,7 @@ variants:
       - Allen Institute for AI
       - OpenLocus
       - University of Massachusetts Amherst
-    assignment: ID
+    assignment: TBD
     sources:
       - label: Benchmark
         url: https://arxiv.org/abs/2407.01725

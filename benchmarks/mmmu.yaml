@@ -21,7 +21,7 @@ variants:
       - Waterloo
       - Ohio State
       - collaborators (see note)
-    assignment: ID
+    assignment: TBD
     sources:
       - label: Benchmark
         url: https://mmmu-benchmark.github.io/
@@ -61,7 +61,7 @@ variants:
     description: More robust multimodal academic questions; biology/basic medical science slice.
     creators:
       - MMMU Team
-    assignment: ID
+    assignment: TBD
     sources:
       - label: Benchmark
         url: https://arxiv.org/abs/2409.02813

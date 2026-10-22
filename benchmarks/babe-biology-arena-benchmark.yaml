@@ -17,7 +17,7 @@ variants:
     creators:
       - ByteDance Seed
       - Peking University
-    assignment: ID
+    assignment: TBD
     sources:
       - label: Benchmark
         url: https://arxiv.org/abs/2602.05857

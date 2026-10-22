@@ -21,7 +21,7 @@ variants:
       - Shanghai Jiao Tong University
       - Microsoft Research Asia
       - University of Melbourne
-    assignment: ID
+    assignment: TBD
     sources:
       - label: Benchmark
         url: https://arxiv.org/abs/2306.09212

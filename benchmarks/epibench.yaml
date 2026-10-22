@@ -13,7 +13,7 @@ variants:
     description: epigenomics workflow steps across accessibility, chromatin, and methylation assays
     creators:
       - LatchBio
-    assignment: ID
+    assignment: TBD
     sources:
       - label: Benchmark
         url: https://arxiv.org/abs/2606.13602

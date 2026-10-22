@@ -15,7 +15,7 @@ variants:
       chemistry, genetics and literature.
     creators:
       - Scale AI
-    assignment: ID
+    assignment: TBD
     sources:
       - label: Benchmark
         url: https://labs.scale.com/leaderboard/drugdiscoverybench

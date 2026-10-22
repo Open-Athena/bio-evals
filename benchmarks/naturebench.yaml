@@ -16,7 +16,7 @@ variants:
     description: Agents develop scientific ML solutions in isolated containers using task data and a hidden evaluator; results are compared with the source paper's reported performance and checked by a validity judge.
     creators:
       - FrontisAI
-    assignment: ID
+    assignment: TBD
     sources:
       - label: Pinned release documentation
         url: https://github.com/FrontisAI/NatureBench/blob/0f80a67d47a56fcd08ab3f1f586159d264616e2f/README.md

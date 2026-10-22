@@ -17,7 +17,7 @@ variants:
       - Tsinghua University
       - Beijing Jiaotong University
       - Capital Medical University
-    assignment: ID
+    assignment: TBD
     sources:
       - label: Benchmark
         url: https://arxiv.org/abs/2505.08341

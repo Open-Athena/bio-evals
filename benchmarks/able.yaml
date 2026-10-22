@@ -13,7 +13,7 @@ variants:
     description: Nine evaluation tasks for LLM planning and use of biological AI/protein-design tools.
     creators:
       - SecureBio
-    assignment: ID
+    assignment: TBD
     sources:
       - label: Benchmark
         url: https://arxiv.org/abs/2609.05818

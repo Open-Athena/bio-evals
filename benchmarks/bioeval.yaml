@@ -13,7 +13,7 @@ variants:
     description: Repository-stage biology reasoning suite; base 296 / extended 400 items across 12 components.
     creators:
       - Unverified institutional affiliation — jang1563
-    assignment: ID
+    assignment: TBD
     sources:
       - label: Benchmark
         url: https://github.com/jang1563/BioEval

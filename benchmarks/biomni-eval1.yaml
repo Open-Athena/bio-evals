@@ -14,7 +14,7 @@ variants:
       reasoning.
     creators:
       - Stanford University
-    assignment: ID
+    assignment: TBD
     sources:
       - label: Benchmark
         url: https://huggingface.co/datasets/biomni/Eval1

@@ -19,7 +19,7 @@ variants:
       - National University of Singapore
       - Tsinghua University
       - University of Science and Technology of China
-    assignment: ID
+    assignment: TBD
     sources:
       - label: Benchmark
         url: https://arxiv.org/abs/2603.03322

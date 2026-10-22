@@ -18,7 +18,7 @@ variants:
     description: 100 assay-grounded preclinical pharmacology decisions.
     creators:
       - LatchBio
-    assignment: ID
+    assignment: TBD
     sources:
       - label: Benchmark
         url: https://latch.bio/txbench-pp
@@ -58,7 +58,7 @@ variants:
     description: 100 evaluations across 10 antibody-discovery competencies.
     creators:
       - LatchBio
-    assignment: ID
+    assignment: TBD
     sources:
       - label: Benchmark
         url: https://latch.bio/txbench-ab
@@ -91,7 +91,7 @@ variants:
     description: 113 ASO/siRNA discovery decision tasks.
     creators:
       - LatchBio
-    assignment: ID
+    assignment: TBD
     sources:
       - label: Benchmark
         url: https://blog.latch.bio/p/an-agent-benchmark-for-therapeutic

@@ -23,6 +23,8 @@ variants:
       - Anthropic
     assignment: ID
     sources:
+      - label: Marin evaluation policy (October 16, 2026)
+        url: https://github.com/marin-community/marin/issues/10197
       - label: Benchmark
         url: https://arxiv.org/abs/2311.12022
       - label: Scorer / data
@@ -53,6 +55,7 @@ variants:
               url: https://github.com/marin-community/evalchemy/issues/201
     work: []
     notes:
+      - "ID/OOD basis: ID inherited from the GPQA Diamond entry in the October 16 Marin policy, including its biology questions. This does not extend the assignment to Main/Extended. Confirmed for this catalog on October 22, 2026."
       - "Access: Native GPQADiamond base task; gated dataset access/terms. Full Diamond=198, biology
         count must be derived from metadata."
       - "Grading: Native generated-answer accuracy; preserve option shuffle, seeds and 3-sample
@@ -76,7 +79,7 @@ variants:
       - New York University
       - Cohere
       - Anthropic
-    assignment: ID
+    assignment: TBD
     sources:
       - label: Benchmark
         url: https://arxiv.org/abs/2311.12022
@@ -105,8 +108,8 @@ variants:
       - "Access: Public password-packaged author release and gated HF dataset; Main/Extended/Diamond
         overlap."
       - "Grading: Four-choice accuracy with official option shuffling and prompt settings."
-      - "Limitations: Treat conservatively as ID because of overlap with GPQA Diamond; not a fresh
-        held-out suite."
+      - "Limitations: Overlaps GPQA Diamond; not a fresh held-out suite. The October 16 Marin
+        policy names Diamond only, so Main/Extended remains TBD."
     provenance:
       - sheet: Non-agentic (Evalchemy)
         gid: 776831399

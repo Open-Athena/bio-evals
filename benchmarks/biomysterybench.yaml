@@ -13,7 +13,7 @@ variants:
     description: analysis of anonymized biological datasets
     creators:
       - Anthropic
-    assignment: OOD
+    assignment: TBD
     sources:
       - label: Benchmark
         url: https://huggingface.co/datasets/Anthropic/BioMysteryBench-full

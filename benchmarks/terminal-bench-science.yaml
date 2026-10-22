@@ -16,6 +16,8 @@ variants:
       - Terminal-Bench-Science Team
     assignment: OOD
     sources:
+      - label: Marin evaluation policy (October 16, 2026)
+        url: https://github.com/marin-community/marin/issues/10197
       - label: Benchmark
         url: https://github.com/harbor-framework/terminal-bench-science
       - label: Scorer / data
@@ -38,6 +40,7 @@ variants:
               url: https://github.com/harbor-framework/terminal-bench-science/tree/ff55a1b0810a5cc2ebac3ebb007cbe6a26aa2e3b/tasks/life-sciences
     work: []
     notes:
+      - "ID/OOD basis: OOD inherited from Terminal-Bench Science in the October 16 Marin policy, including its life-sciences tasks. This does not establish a separate Science-lite designation. Confirmed for this catalog on October 22, 2026."
       - "Access: Task files, fixtures, and oracle available; one Harbor/Daytona oracle passed."
       - "Grading: Executable task verifier; genomic-model-ranking needs no judge API."
       - "Limitations: Prepared smoke test, not a suite score. Diagnostic agent limit 15 minutes
@@ -53,7 +56,7 @@ variants:
     description: Upcoming science-lite life-sciences slice; composition pending release.
     creators:
       - Unverified — upcoming lite release
-    assignment: OOD
+    assignment: TBD
     sources:
       - label: Benchmark
         url: https://docs.google.com/document/d/1UnoAHNlkRAskxC9fAnF1SMpiU4QnFg-A8x9aXoEQ_MI/edit
@@ -70,8 +73,9 @@ variants:
       - "Access: Planning entry only; distinct from existing public Terminal-Bench-Science smoke
         test."
       - "Grading: Expected Harbor task verifiers; exact release and task assets not yet available."
-      - "Limitations: Planning document explicitly says Science-lite should be OOD. Do not reuse
-        inspected public tasks as a clean holdout."
+      - "Limitations: The planning document proposed Science-lite as OOD. The October 16 Marin
+        policy names Terminal-Bench Science without a separate lite release, so Science-lite
+        remains TBD. Do not reuse inspected public tasks as a clean holdout."
       - "Gap: end-to-end implementation has not been verified for this catalog. Imported readiness
         notes are historical."
     provenance:

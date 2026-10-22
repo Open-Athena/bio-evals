@@ -13,7 +13,7 @@ variants:
     description: 34 original executable biological tasks across 10 domains in Bio-Task Bench.
     creators:
       - GPTomics (project team)
-    assignment: ID
+    assignment: TBD
     sources:
       - label: Benchmark
         url: https://github.com/GPTomics/bioTaskBench

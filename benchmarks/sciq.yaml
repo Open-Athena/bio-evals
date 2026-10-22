@@ -17,7 +17,7 @@ variants:
       - University College London
       - University of Washington
       - Allen Institute for AI
-    assignment: ID
+    assignment: TBD
     sources:
       - label: Benchmark
         url: https://arxiv.org/abs/1707.06209
