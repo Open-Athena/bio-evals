@@ -22,8 +22,10 @@ variants:
       - Columbia University
       - University of Chicago
       - UIUC
-    assignment: TBD
+    assignment: ID
     sources:
+      - label: Marin evaluation policy (October 16, 2026; current reference)
+        url: https://github.com/marin-community/marin/issues/10197
       - label: Benchmark
         url: https://arxiv.org/abs/2009.03300
       - label: Scorer / data
@@ -52,12 +54,15 @@ variants:
               url: https://github.com/marin-community/marin/issues/9258
     work: []
     notes:
+      - "ID/OOD basis: Retains the original MMLU ID assignment recorded from the September 16 Marin
+        policy, including the three tracked biology subjects. The October 16 policy lists MMLU-Pro
+        and omits original MMLU; omission alone does not revoke the earlier ID assignment.
+        Confirmed for this catalog by the user on October 30, 2026."
       - "Access: Public data and native YAMLs for seven subjects. Three-subject biology integration
         validated with GLM-5.3 (554/554); four optional biomedical subjects remain unrun."
       - "Grading: Native multiple-choice likelihood accuracy; preserve Marin's 5-shot protocol."
-      - "Limitations: Low-effort biology baseline with optional biomedical coverage. MMLU was ID in
-        the September 16 Marin policy but is absent from the October 16 policy; assignment is TBD.
-        Keep clinical subjects out of the pooled biology score."
+      - "Limitations: Low-effort biology baseline with optional biomedical coverage. Keep clinical
+        subjects out of the pooled biology score."
     provenance:
       - sheet: Non-agentic (Evalchemy)
         gid: 776831399
@@ -87,7 +92,7 @@ variants:
         evidence: []
     work: []
     notes:
-      - "ID/OOD basis: ID inherited from the MMLU-Pro entry in the October 16 Marin policy, including its biology category. Original MMLU remains a separate TBD record. Confirmed for this catalog on October 22, 2026."
+      - "ID/OOD basis: ID inherited from the MMLU-Pro entry in the October 16 Marin policy, including its biology category. Original MMLU is tracked separately. Confirmed for this catalog on October 22, 2026."
       - "Access: Native MMLUPro class; public TIGER-Lab/MMLU-Pro category metadata."
       - "Grading: Generated-answer extraction and accuracy; implementation already returns category
         statistics."
